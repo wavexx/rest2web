@@ -1,0 +1,33 @@
+restindex
+    crumb: Subdirectory
+    target: subdirectory.html
+    page-description:
+        A subdirectory - with pages of it's own.
+    /description
+/restindex
+
+=========================
+ Subdirectory Index Page
+=========================
+--------------
+ The Subtitle
+--------------
+
+.. role:: raw-html(raw)
+    :format: html
+
+.. raw:: html
+
+    <div class="indexblock">
+    <#
+        if not default_section['pages']:
+            print '<h2>No Pages Yet</h2>'
+        else:
+            print_details(default_section)
+    #>
+    </div>
+
+
+.. class:: intro
+
+This page lives at :raw-html:`<em><% pagepath %></em>`. The ``class`` directive applies a style to this paragraph. 

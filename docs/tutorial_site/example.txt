@@ -1,0 +1,29 @@
+restindex
+    crumb: A Page
+    link-title: An Example Page
+    page-description:
+        This description is for the index page.
+        You can use **reST** markup if you want.
+    /description
+/restindex
+
+==============
+ A ReST Title
+==============
+--------------
+ The Subtitle
+--------------
+
+..
+    This is a comment. To use the 'raw-role', we have to define it *first*.
+
+.. role:: raw-html(raw)
+    :format: html
+
+This page is written in {acro;reST;ReStructured Text} markup. That's why it looks like *plain text*.
+
+This page lives at :raw-html:`<em><% pagepath %></em>` [#]_. This tutorial isn't a tutorial on ReStructuredText though. If you're looking for one, you might be better off with the `docutils documentation`_.
+
+.. [#] The file path is dynamically inserted by rest2web.
+
+.. _docutils documentation: http://docutils.sourceforge.net

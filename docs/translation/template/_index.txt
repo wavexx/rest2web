@@ -1,0 +1,32 @@
+
+<div class="zentrum">
+    <h1><* greeting *></h1>
+</div>
+
+<div class="displaybox">
+    <h3><* index_title *></h3>
+    <ul>
+        <#
+            import urllib       
+            pageblock = '''\
+                    <li><a href="%s">%s</a>
+                        <p>%s</p>
+                    </li>    
+            '''
+            
+            pages = sections[None]['pages']  # everything is in the 
+                                             # default section in this index
+            
+            subsections = []
+            for page in pages:
+                print pageblock % (page['target'], page['link-title'], page['page-description'])
+        #>
+        
+    </ul>
+</div>
+
+<div class="indexblock">
+    <p><% para1 %></p>
+</div>
+
+<% Processor.dir_as_list %>

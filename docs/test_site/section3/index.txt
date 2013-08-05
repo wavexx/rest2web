@@ -1,0 +1,3 @@
+restindex
+    index-file: ../archive/strangeindex1.txt
+/restindex

@@ -1,0 +1,9 @@
+restindex
+    crumb: Page Rabbit
+    section: OtherSection
+/restindex
+=============
+ Page Rabbit
+=============
+
+Page rabbit...

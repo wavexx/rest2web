@@ -1,0 +1,260 @@
+restindex
+format: html 
+page-title: Medicine and the New Genetics
+crumb: Medicine
+/restindex
+
+<div align="right">
+<table width="100%">
+<tr valign="top">
+<td><img src="sidebar2.jpg" height="1200" width="90" /></td>
+<td align="left" valign="top">
+<div align="right"><b><font face="Book Antiqua"><font
+color="#800040"><font size="+3">Medicine and the New
+Genetics</font></font></font></b><br />
+<hr align="right" width="80%" />
+<b><font face="Arial,Helvetica"><font color="#000000"><font
+size="-1">Genomics and Its Impact on Science and Society: The Human
+Genome Project and Beyond</font></font></font></b></div>
+
+<div align="right">
+<table>
+<tr>
+<td>
+<div align="right"><a href="4.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="7.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</div>
+
+<font face="Arial,Helvetica">&nbsp;</font> 
+<p><b><font face="Book Antiqua"><font color="#800040"><font
+size="+2">Gene Testing, Pharmacogenomics, and Gene
+Therapy</font></font></font></b><br />
+<img src="cadeusus.jpg" alt="Cadeusus" width="144" height="278"
+align="left" /><font face="Arial,Helvetica">DNA underlies almost
+every aspect of human health, both in function and dysfunction.
+Obtaining a detailed picture of how genes and other DNA sequences
+function together and interact with environmental factors
+ultimately will lead to the discovery of pathways involved in
+normal processes and in disease pathogenesis. Such knowledge will
+have a profound impact on the way disorders are diagnosed, treated,
+and prevented and will bring about revolutionary changes in
+clinical and public health practice. Some of these transformative
+developments are described below.</font></p>
+
+<p><b><font face="Arial,Helvetica"><font color="#800040"><font
+size="+1">Gene Testing</font></font></font></b><br />
+<font face="Arial,Helvetica">DNA-based tests are among the first
+commercial medical applications of the new genetic discoveries.
+Gene tests can be used to diagnose disease, confirm a diagnosis,
+provide prognostic information about the course of disease, confirm
+the existence of a disease in asymptomatic individuals, and, with
+varying degrees of accuracy, predict the risk of future disease in
+healthy individuals or their progeny.</font></p>
+
+<p><font face="Arial,Helvetica">Currently, several hundred genetic
+tests are in clinical use, with many more under development, and
+their numbers and varieties are expected to increase rapidly over
+the next decade. Most current tests detect mutations associated
+with rare genetic disorders that follow Mendelian inheritance
+patterns. These include myotonic and Duchenne muscular dystrophies,
+cystic fibrosis, neurofibromatosis type 1, sickle cell anemia, and
+Huntington&rsquo;s disease.</font></p>
+
+<p><font face="Arial,Helvetica">Recently, tests have been developed
+to detect mutations for a handful of more complex conditions such
+as breast, ovarian, and colon cancers. Although they have
+limitations, these tests sometimes are used to make risk estimates
+in presymptomatic individuals with a family history of the
+disorder. One potential benefit to using these gene tests is that
+they could provide information to help physicians and patients
+manage the disease or condition more effectively. Regular
+colonoscopies for those having mutations associated with colon
+cancer, for instance, could prevent thousands of deaths each
+year.</font></p>
+
+<p><font face="Arial,Helvetica">Some scientific limitations are
+that the tests may not detect every mutation associated with a
+particular condition (many are as yet undiscovered), and the ones
+they do detect may present different risks to different people and
+populations. Another important consideration in gene testing is the
+lack of effective treatments or preventive measures for many
+diseases and conditions now being diagnosed or
+predicted.</font></p>
+
+<p><font face="Arial,Helvetica">Revealing information about the
+risk of future disease can have significant emotional and
+psychological effects as well. Moreover, the absence of privacy and
+legal protections can lead to discrimination in employment and
+insurance or other misuse of personal genetic information.
+Additionally, because genetic tests reveal information about
+individuals and their families, test results can affect family
+dynamics. Results also can pose risks for population groups if they
+lead to group stigmatization.</font></p>
+
+<p><font face="Arial,Helvetica">Other issues related to gene tests
+include their effective introduction into clinical practice, the
+regulation of laboratory quality assurance, the availability of
+testing for rare diseases, and the education of healthcare
+providers and patients about correct interpretation and attendant
+risks.</font></p>
+
+<p><font face="Arial,Helvetica">Families or individuals who have
+genetic disorders or are at risk for them often seek help from
+medical geneticists (an M.D. specialty) and genetic counselors
+(graduate-degree training). These professionals can diagnose and
+explain disorders, review available options for testing and
+treatment, and provide emotional support. (For more information,
+see <a
+href="http://www.ornl.gov/TechResources/Human_Genome/medicine/medicine.html">
+Medicine and the New Genetics</a>)</font></p>
+
+<p><b><font face="Arial,Helvetica"><font color="#800040"><font
+size="+1">Pharmacogenomics: Moving Away from
+&ldquo;One-Size-Fits-All&rdquo;
+Therapeutics</font></font></font></b><br />
+<font face="Arial,Helvetica">Within the next decade, researchers
+will begin to correlate DNA variants with individual responses to
+medical treatments, identify particular subgroups of patients, and
+develop drugs customized for those populations. The discipline that
+blends pharmacology with genomic capabilities is called
+pharmacogenomics.</font><img src="dnabottle.jpg" height="221"
+width="136" align="right" /></p>
+
+<p><font face="Arial,Helvetica">More than 100,000 people die each
+year from adverse responses to medications that may be beneficial
+to others. Another 2.2 million experience serious reactions, while
+others fail to respond at all. DNA variants in genes involved in
+drug metabolism, particularly the cytochrome P450 multigene family,
+are the focus of much current research in this area. Enzymes
+encoded by these genes are responsible for metabolizing most drugs
+used today, including many for treating psychiatric, neurological,
+and cardiovascular diseases. Enzyme function affects patient
+responses to both the drug and the dose. Future advances will
+enable rapid testing to determine the patient&rsquo;s genotype and
+guide treatment with the most effective drugs, in addition to
+drastically reducing adverse reactions.</font><br />
+<br />
+<font face="Arial,Helvetica">Genomic data and technologies also are
+expected to make drug development faster, cheaper, and more
+effective. Most drugs today are based on about 500 molecular
+targets; genomic knowledge of the genes involved in diseases,
+disease pathways, and drug-response sites will lead to the
+discovery of thousands of new targets. New drugs, aimed at specific
+sites in the body and at particular biochemical events leading to
+disease, probably will cause fewer side effects than many current
+medicines. Ideally, the new genomic drugs could be given earlier in
+the disease process. As knowledge becomes available to select
+patients most likely to benefit from a potential drug,
+pharmaco-genomics will speed the design of clinical trials to bring
+the drugs to market sooner.</font></p>
+
+<p><b><font face="Arial,Helvetica"><font color="#800040"
+size="+1">Gene Therapy, Enhancement</font></font></b><br />
+<font face="Arial,Helvetica">The potential for using genes
+themselves to treat disease or enhance particular traits has
+captured the imagination of the public and the biomedical
+community. This largely experimental field&mdash;gene transfer or
+gene therapy&mdash;holds potential for treating or even curing such
+genetic and acquired diseases as cancers and AIDS by using normal
+genes to supplement or replace defective genes or bolster a normal
+function such as immunity.</font></p>
+
+<p><font face="Arial,Helvetica">More than 600 clinical gene-therapy
+trials involving about 3500 patients were identified worldwide in
+2002.* The vast majority take place in the United States (81%),
+followed by Europe (16%). Although most trials focus on various
+types of cancer, studies also involve other multigenic and
+monogenic, infectious, and vascular diseases. Most current
+protocols are aimed at establishing the safety of gene-delivery
+procedures rather than effectiveness.</font></p>
+
+<p><font face="Arial,Helvetica">Gene transfer still faces many
+scientific obstacles before it can become a practical approach for
+treating disease. According to the American Society of Human
+Genetics&rsquo; Statement on Gene Therapy, effective progress will
+be achieved only through continued rigorous research on the most
+fundamental mechanisms underlying gene delivery and gene expression
+in animals.</font></p>
+
+<hr align="left" width="30%" noshade="noshade" />
+<p>*Source: Journal of Gene Medicine Web site (www.wiley.co.uk),
+accessed March 2003.</p>
+
+<center>
+<table>
+<tr>
+<td>
+<div align="right"><a href="4.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="7.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</center>
+</td>
+</tr>
+</table>
+</div>
+
+<table border="1" width="100%">
+<tr>
+<td><a href="http://www.ornl.gov/TechResources/Human_Genome/"><img
+src="HGPlogo1.jpg" border="0" height="107" width="108" /></a></td>
+<td>The online presentation of this publication is a special
+feature of the <a
+href="http://www.ornl.gov/TechResources/Human_Genome/">Human Genome
+Project Information Web site</a>.</td>
+</tr>
+</table>

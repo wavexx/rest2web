@@ -1,0 +1,19 @@
+restindex
+    crumb: Home
+    format: html
+    page-title: rest2web Tutorial Website
+    include: No
+/restindex
+
+<h1 class="title">rest2web Tutorial Website</h1>
+<h2 class="subtitle">An Example Index Page</h2>
+
+<div class="displaybox">
+    <#
+        print_details(default_section)
+    #>
+</div>
+
+<p>This is the index page for the <a href="../tutorial.html">rest2web Tutorial</a> website.
+It's not got much on it - other than this paragraph and links to our other 
+pages.</p>

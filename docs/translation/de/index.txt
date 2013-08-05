@@ -1,0 +1,12 @@
+restindex
+    crumb: German Index
+    format: html
+    page-title: The German Index
+/restindex
+
+uservalues
+    body: ../template/_index.txt 
+    greeting: Guten Tag - Wilkommen
+    para1: Something in German
+    index_title: Index Title in German
+/uservalues

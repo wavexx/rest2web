@@ -1,0 +1,559 @@
+restindex
+    crumb: Macros
+    page-description:
+        The text macro system used by **rest2web**. Includes documentation on
+        all the example macros.
+    /description
+/restindex
+
+====================
+ Macros in rest2web
+====================
+--------------
+ Using Macros
+--------------
+
+
+.. contents:: Macros
+
+
+About macros
+============
+
+Macros allow you to use a shorthand for often-used text or HTML.
+
+As a simple example, let's say that I use a certain link a lot. I don't want to type it over and over again. I can define a macro foo to include this link every time I type ``{foo}``:
+
+.. class:: ex
+
+foo = 'My link'
+
+In this case, the "macro definition" is simply a string that contains the HTML we want to substitute. We can use more sophisticated macros, though.
+
+Let's assume that I use acronyms a lot, and I'm getting tired of having to type that tag again and again. It would be nice if I could type something like ``{curlyl}acronym;IMO;In My Opinion{curlyr}`` 
+
+which expands to {acronym;IMO;In My Opinion}. (Move your mouse over the "IMO" to see the effect. Not all browsers may support this.)
+
+To achieve this, we define a simple Python function:
+
+.. raw:: html
+
+    {+coloring}
+    
+    def acronym(acronym, meaning):
+        return '<acronym title="%s">%s</acronym>' % (
+               meaning, acronym)
+    {-coloring}
+           
+{curlyl}acronym;IMO;In My Opinion{curlyr} is equivalent to the function call ``acronym("IMO", "In My Opinion")``.
+
+These macros can also be used to do more complex things, like insert pictures, include whole files etc. 
+
+.. note::
+
+    Macros pass through the ReST processing untouched (unless you include characters that ReStructured text normal escapes, like '<').
+    
+    This means that macros on a line of their own will be processed as a paragraph. The generated HTML will be between paragraph tags: ``<p>...</p>``.
+    
+
+Where are Macros Defined?
+=========================
+
+As of **rest2web 0.5.0** all the macros described here are built-in to rest2web. That means you can use them without supplying a macros file.
+
+Two of the built in macros require paths to operate properly. You can do this using the `config file <config_file.html>`_. See the smiley_ and emoticon_ macros. {sm;:-)} 
+
+You can still override these built-in macros, by defining them in your own macros file. Anything in the macros file will override the built in ones.
+
+
+The Macros File
+---------------
+
+In the `rest2web config file`_ you can specify a path to a macros module. This can have any name,  but it should be a module that Python can import. Basically that means the filename has to end in *'.py'* [#]_.
+
+So, to get started, here's what you need to do:
+
+* Create a file called *macros.py*.
+* Add definitions to it. (It helps if you know some Python, of course, but even without that you can enter simple string macros of the form ``name = 'text'``.) 
+* Put the location of this file in the rest2web config file for your site.
+ 
+ 
+Things you should know
+======================
+
+* Macros are string-based. If a macro's return value isn't a string, then it's turned into one (if at all possible). 
+* Arguments for a function call are strings too; ``{foobar;42}`` is the function call ``foobar("42")``, not ``foobar(42)``. If you want a different type, you'll have to explicitly convert in inside your function. 
+* Functions with no arguments are called by their name: ``{baz}`` is equivalent to ``baz()``, if baz is a callable object. If not, then the value is taken. 
+* If a macro name isn't found, it is left alone. In fact, this piece of documentation exists as it is because of this rule. Text like ``{knarf}`` would be replaced' if it was a macro. Since we didn't define a macro knarf, it is left alone and shows up in text with curly braces and all. 
+* If an error occurs in a macro (function call), it is left alone as well. So are macros containing newlines. 
+* If you want to include a semicolon (;) or a curly brace in your arguments, you're out of luck. There are currently no ways to do this. You can always define escape sequences in your functions of course.
+* Ditto if you want to suppress a macro call that would normally be substituted.  *other than* the ``{curlyl}curlyl{curlyr}``, and ``{curlyl}curlyr{curlyr}``, macros. See `The Example Macros`_ below.
+* Macros map to Python objects. Usually you'll want to use strings or functions, but other objects are possible as well. 
+* If you define a function you can also give it a shorter name. For example, to give our *smiley* function the shorter name *sm*, I included the line ``sm = smiley`` after the function definition.
+
+
+The Order
+---------
+
+Macros are resolved *after* the pages has been processed by docutils [#]_. This means your macros should return html for direct inclusion in the final page.
+
+They are resolved *before* the page is passed to the template engine. This means that dynamic values like ``<% path_to_root %>`` output by macros *will* be resolved.
+
+Filepaths
+---------
+
+Before the macros are run, the current directory is changed to be the same as the macros file. This means all file paths supplied to macros should be relative to this file.
+
+Modules
+-------
+
+The modules directory in the **rest2web** distribution includes various Python modules used by the macros. If you aren't using macros then you *don't* need this directory. Credits for all the modules here are in the Credits_ section below.
+
+This directory is put in the Python search path. If you move them elsewhere you should make sure they are on the ``sys.path``. If you don't know what I'm on about then leave them where they are {sm;:grin:}
+
+
+Advanced Macros
+===============
+
+As well as the normal macros discussed above, there is a more advanced system of macros as well. This allows you to apply a macro to a whole chunk of text. Unlike the simple macros, these macros can be nested to apply several effects to passages.
+
+The advanced macros work by enclosing a passage of text between a ``{+macro}`` and a ``{-macro}``. The macro is applied to all the text between the **+** and the **-**. In this case it would be applied to *and a*.
+
+You can also nest them So you can do things like : ::
+
+    {cl}+second{cr}{cl}+first{cr} The text {cl}-second{cr}{cl}-first{cr}
+
+    {cl}+whole{cr} Some text {cl}+part{cr} a bit in the middle {cl}-part{cr} more text{cl}-whole{cr}
+
+
+These macros aren't the same  as normal macros though. Here's the idea.  While a regular macro ``{cl}f;x;y{cr}`` translates to a function 
+call ``f("x", "y")``, the + and - versions use a class definition.  A 
+simple example : 
+
+.. raw:: html
+
+    {+coloring}
+    class rot13(textmacros.BaseMacro):
+         def open(self, text):
+             return text.encode("rot13")
+    {-coloring}
+
+Once this is defined, in your macros file (or just imported into it), you can 
+use it as follows : ::
+
+    The solution is {+rot13}not for your eyes{-rot13}.
+
+Upon execution, this will convert the text between the rot13 tags. This becomes : ::
+
+    The solution is abg sbe lbhe rlrf.
+
+In your class the +tag corresponds to the class's ``open(text)`` method, the -tag to the ``close()`` method.
+
+Note that if you are using docutils to process your text then it will be processed by docutils before it is processed by the macro. If you want to bypass this, and pass the text to your macro *only*, then you need to use the ``.. raw:: html`` directive. e.g. : ::
+
+    .. raw:: html  
+    
+        {+rot13}
+        this text will *not* be processed as reST
+        {-rot13}
+
+
+The Example Macros
+==================
+
+These are the macros that come built into rest2web.
+
+curlyl and curlyr
+-----------------
+
+These two macros perform simple substitution. They are a way of including curly left hand brackets and curly right hand brackets in your pages. They are also have the shorter forms ``cl`` and ``cr``.
+
+For example, to include ``{cl}example{cr}`` in your page - without it being interpreted as a macro - you can write ``{cl}curlyl{cr}example{cl}curlyr{cr}`` or ``{cl}cl{cr}example{cl}cr{cr}``.
+
+This came in very handy when creating this page {sm;:lol:}
+
+lt
+--
+
+This is another simple substitution macro. It puts a '<' (less than) symbol into
+pages.
+
+It is especially where you need to include a literal ``{lt}$ ... $>`` or
+``{lt}* .. *>`` in your pages.
+
+Example :
+
+    ``{cl}lt{cr}``
+
+smiley
+------
+
+This is one of the nicest macros. It uses a modified version of *smiley.py* by `Mark Andrews`_ to put smilies onto your site. {sm;:-p}
+
+In order to use the smilies, rest2web needs to know the path to the smiley images on your hard drive, and also what URL path you want to be used in the image links that rest2web generates. You do this in the ``[Macro Paths]`` section of your `config file`_.
+
+The two values to supply are :
+
+* ``smiley_directory``
+
+    The default is to use the standard set which come built in to rest2web.
+
+* ``smiley_url``
+
+    The default is to use the following path, ``'<% path_to_root %>images/smilies/'``.
+
+You can use ``sm`` as a shorter alias for ``smiley``.
+
+Examples :
+
+    ``{cl}smiley;:-){cr}`` becomes {smiley;:-)}
+    
+    ``{cl}sm;:roll:{cr}``  becomes {sm;:roll:}
+
+It will read standard smiley packages like the ones used by phpbb_. Download more from the stylesdb_ site.
+
+You can see a full list of all of the smilies from the example set in the `Smilies Page`_.
+
+
+acronym 
+-------
+
+We`ve seen this in the first example. ``{cl}acronym;acronym;meaning{cr}`` produces {acronym;acronym;meaning}. You can also use ``{cl}acro;acronym;meaning{cr}``.
+
+As an added bonus there are a few standard acronyms that can be called without the acronym definition. These are :
+
+.. raw:: html 
+
+    {+coloring}
+    # a dictionary of standard acronyms
+    # keys should be lowercase
+    acronyms = {
+        'wysiwyg' : 'What You See Is What You Get',
+        'html' : 'HyperText Markup Language',
+        'xml' : 'eXtensible Markup Language',
+        'xhtml' : 'eXtensible HyperText Markup Language',
+            }
+    {-coloring}
+
+So you can do ``{cl}acro;WYSIWYG{cr}``, which becomes {acro;WYSIWYG} {sm;:cool:}. Feel free to add your own of course.
+
+The built in acronyms are : ::
+
+    {
+    'wysiwyg': 'What You See Is What You Get',
+    'html': 'HyperText Markup Language',
+    'xml': 'eXtensible Markup Language',
+    'xhtml': 'eXtensible HyperText Markup Language',
+    'rest': 'ReStructuredText',
+    'css': 'Cascading Style Sheets',
+    'ie': 'Internet Exploder',
+    'afaik': 'As Far as I Know',
+    'ianal': 'I am not a Lawyer',
+    'ssi': 'Server Side Includes',
+    'cgi': 'Common Gateway Interface',
+    'lol': 'Laughing Out Loud',
+    'rotfl': 'Roll On the Floor Laughing',
+    'http': 'HyperText Transfer Protocol',
+    'ascii': 'American Standard Code for Information Interchange',
+    'gui': 'Graphical User Interface',
+    'cli': 'Command Line Interface',
+    'pda': 'Personal Digital Assistant',
+    'rtfm': 'Read the Manual',
+    'ftp': 'File Transfer Protocol',
+    'nntp': 'Network News Transfer Protocol',
+    'uk': 'United Kingdom',
+    'pc': 'Personal Computer',
+    'url': 'Uniform Resource Locator',
+    'uri': 'Uniform Resource Identifier',
+    'tcp/ip': 'Transport Control Protocol/Internet Protocol',
+    'udp': 'User Data Paragram'
+    }
+
+The ``macros.py`` file that comes with rest2web contains an acronyms dictionary. Any acronyms that you add to this dictionary will be available to the acronyms macro.
+
+
+emoticon 
+--------
+
+This is another shorthand way of including images in your pages. It's useful for putting emoticons inline with text, hence the name. Unlike the ``smiley`` macro it doesn't need to read anything of disk.
+
+rest2web needs to know what url path to use for the emoticon images. You can supply this using the ``emoticon_url`` value in the ``[Macro Paths]`` section of your `config file`_. If you don't supply a value, the default is ``'<% path_to_root %>images/'``.
+
+The emoticon macro assumes your images are all 'gif's.
+
+.. warning::
+
+    Including images without specifying a size may slow down the browser rendering of your pages. You could make all your images the same size and hardwire the sizes into the 'img' tag that this macro creates. Alternatively you could do something clever with the {acro;PIL;Python Imaging Library} by Frederik Lundh - and have it work out the sizes and insert them for you.
+    
+Examples :
+    
+    ``{cl}emoticon;eyeballz{cr}`` becomes {emoticon;eyeballz}
+    
+    ``{cl}emo;noise{cr}`` becomes {emo;noise}           
+
+You can use ``emo`` as a shorter alias for ``emoticon``.
+
+
+include 
+-------
+
+This macro is very simple. Give it a filepath (relative to the macro module) and it will include the contents of that file into this page. The optional 'escape' parameter allows you to escape whitespace. This will insert files as they are - without having to use the '<pre>' tag, which breaks my layout - have I mentioned that before ? {sm;:wink:} 
+
+For example ``<tt>{cl}include;r2w.ini;True{cr}</tt>`` escapes the *r2w.ini* file and inserts it into the page  :
+
+.. raw:: html
+
+    <div class="ex"><tt>
+    {include;r2w.ini;True}
+    </tt></div>
+
+You can use ``inc`` as a shorter alias for ``include``.
+
+To include HTML files (without escaping), use ``{cl}include;some_file.html{cr}``.
+
+
+colorize
+--------
+
+This macro takes a file and applies Python syntax highlighting to it. You need the right rules in your CSS file for the coloring to be visible. See the rules that start *py* in ``test.css``.
+
+``{cl}colorize;docs/example_function.txt{cr}`` becomes :
+
+{colorize;docs/example_function.txt}
+
+You can use ``col`` as a shorter alias for ``colorize``.
+
+To use the colorize macro, you need the right definitions in your CSS. Something like : ::
+
+    .pysrc {
+        border: #c0c0ff 2px dotted;  padding:10px;
+        font-weight: normal; background: #e0e0ff; margin: 20px;  
+        padding:10px; 
+    }
+    
+    .pykeyword {
+        font-weight: bold;
+        color: orange;
+    }
+    .pystring {
+        color: green
+    }
+    .pycomment {
+        color: red
+    }
+    .pynumber {
+        color:purple;
+    }
+    .pyoperator {
+        color:purple;
+    }
+    .pytext {
+        color:black;
+    }
+    .pyerror {
+        font-weight: bold;
+        color: red;
+    }
+
+Change the color definitions to alter the appearance.
+
+
++/- coloring
+------------
+
+This is the only example of an advanced macro included. It does the same job as the ``colorize`` macro, but instead of passing it a filename - it works on the text it encloses. This : ::
+
+    .. raw:: html
+        
+        {cl}+coloring{cr}
+        class coloring:
+            """A Macro for coloring chunks of text."""
+            def open(self, data):
+                p = color.Parser(data)
+                p.format(None, None)
+                src = p.getvalue()
+                src = src.replace('\n', '<br />\n')
+                return src.replace('  ', '&nbsp;&nbsp;')        
+        
+            def close(self, *args):
+                pass
+        {cl}-coloring{cr}
+
+Becomes :
+
+.. raw:: html
+    
+    {+coloring}
+    class coloring:
+        """A Macro for coloring chunks of text."""
+        def open(self, data):
+            p = color.Parser(data)
+            p.format(None, None)
+            src = p.getvalue()
+            return src.replace('\n', '<br />\n').replace('  ', '&nbsp;&nbsp;')        
+    
+        def close(self, *args):
+            pass
+    {-coloring}
+
+
+small
+-----
+
+This macro puts the enclosed text between <small>.... </small> tags. This is a
+feature missing from docutils.
+
+<cl}small;Some text that we would like to make smaller{cr} becomes 
+{small;Some text that we would like to make smaller}.
+
+name
+----
+
+This macro inserts a named anchor tag. This means you can link to the tag using
+the name you provide.
+
+{cl}name;anchor} would insert the following HTML - ``<a name="anchor" id="anchor"></a>``.
+
+You link to it using the HTML - ``<a href="#anchor">Link to Anchor</a>``.
+
+title
+-----
+
+This is a shortcut for inserting headlines. You pass in the text and the size
+(which defaults to an ``h3`` headline).
+
+{cl}title;A Headline{cr} becomes : ::
+
+.. raw:: html
+
+    {title;A Headline}
+    
+{cl}title;Another Headline;1{cr} becomes : ::
+
+.. raw:: html
+
+    {title;Another Headline;1}
+    
+
+Including Macros in ReST Pages
+==============================
+
+Macros are just treated as ordinary text by docutils_. That means that they
+must fit into the reST syntax. If they don't, then you should escape them using
+the raw role or the raw directive.
+
+The Raw Role
+------------
+
+The raw role can only be used if it is declared at the start of the document.
+You must include the following declaration : ::
+
+    .. role:: raw-html(raw)
+        :format: html
+
+From then on you can pass anything through docutils untouched, like this :
+``:raw-html:`{cl}small;Something to be made small{cr}```
+
+In the above example it's not very useful. However, macros return HTML. If you
+tried to include HTML in your macro - docutils would escape the *<* tags, and
+they would be included as text (or break your macro).
+
+So ``{cl}small;<em>Something to be made small</em>{cr}`` *doesn't work* in reST
+documents. Try it if you don't believe me. {sm;:-)}
+
+Instead you can do ``:raw-html:`{cl}small;<em>Something to be made small</em>{cr}```,
+which does work.
+
+The Raw Directive
+-----------------
+
+If you use the `Advanced Macros`_ then you almost certainly want to include a
+passage of text to transform it. That transformation will be done *after* 
+docutils has seen the text. Usually you will want the *macro* to transform your
+text verbatim - and have docutils leave it alone. In this case you need to use
+the raw directive.
+
+The classic example of this is the Python source coloring macro : ::
+
+    .. raw:: html
+  
+        {cl}+coloring{cr}
+        
+        section = sections['section-name']
+        pages = section['pages']
+        
+        {cl}-coloring{cr}
+
+If you didn't include the raw directive, docutils would do strange things to the
+chunk of code - and the macro wouldn't be able to process it.
+
+Paragraphs
+----------
+
+Docutils treats macros as ordinary text. That means if it comes across one on
+its own it will treat it as a paragraph. That may not be what you intend.
+
+For example - the {cl}title{cr} macro is used to create headlines. If you put
+this in your document on it's own, then docutils will encase it in paragraph
+tags. The following : ::
+
+    {cl}title;Some Heading{cr}
+
+Produces this HTML : ::
+
+    <p><h3>Some Heading</h3></p>
+
+This is neither valid, nor what you intended. The way round it, is to use the
+raw directive : ::
+
+    .. raw:: html
+  
+        {cl}title;Some Heading{cr}
+
+
+namespace and uservalues
+========================
+
+The ``macros.py`` file that comes with rest2web has a ``set_uservalues`` function. This is used to set the global values ``namespace`` and ``uservalues``.
+
+That means that you can use access the uservalues and namespace for each page from your macros.
+
+
+Credits
+=======
+
+The example macro file uses various Python modules. These are included in the ``modules`` directory that comes with the **rest2web** distribution. If you don't use the macros, you don't need this folder. 
+
+The various modules come from the following people and places :
+
+* A lot of the text in this page comes from the document `Firedrop macros`_ by Hans Nowak
+* The macros module [#]_ comes from Firedrop_ by Hans Nowak
+* The smilies use *smiley.py* by `Mark Andrews`_.
+* *smiley.py* depends on *path.py* by `Jason Orendorff`_.
+* *smiley.py* uses smiley sets that follow the phpbb_ convention, you can download alternative sets from stylesdb_.
+* The smiley set included with **rest2web** is by a gentleman called Spider_.
+* The colorize macro uses a module called *colorize.py*. It originated as part of the MoinMoin_ project. The version we use is the one from the `Python Cookbook`_.
+
+----------
+
+Footnotes
+=========
+
+.. [#] And the filename must only consist of alphanumerics and the underscore character. It should start with a letter, not a number, and is case sensitive, got all that ? {sm;:?:}
+.. [#] Assuming the page is in {acro;reST} format of course.
+.. [#] *textmacros.py* - in the rest2web folder.
+
+.. _rest2web config file: config_file.html
+.. _Jason Orendorff: http://www.jorendorff.com/articles/python/path
+.. _Mark Andrews: http://www.la-la.com
+.. _phpbb: http://www.phpbb.com/
+.. _stylesdb: http://www.stylesdb.com/smilies_styles.html
+.. _Spider: http://web.spidercode.de/smilies
+
+.. _smilies page: reference/smilies.html
+.. _Firedrop Macros: http://zephyrfalcon.org/labs/firedrop_macros.html
+.. _Firedrop: http://zephyrfalcon.org/labs/
+.. _moinmoin: http://moinmoin.wikiwikiweb.de
+.. _Python Cookbook: http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/52298
+.. _docutils: http://docutils.sourceforge.net
+

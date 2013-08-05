@@ -1,0 +1,3 @@
+restindex
+    index-file: ../differentfolder/target.txt
+/restindex

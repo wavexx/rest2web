@@ -1,0 +1,116 @@
+restindex
+    crumb: Encodings
+    page-description:
+        How to handle different character encodings in **rest2web**.
+    /description
+/restindex
+
+================
+ Text Encodings
+================
+
+-------------------------
+ Encodings with rest2web
+-------------------------
+
+.. contents::
+
+Fun With Encodings
+==================
+
+{emo;dove} **rest2web** handles text encodings in ways that are hopefully sensible and simple. 
+
+Whenever you are dealing with text you **should** *know and specify the encoding used* [#]_. If you disagree with me (or haven't a clue what I'm on about), read `The Minimum Every Developer Must Know About Unicode`_, by Joel Spolsky. 
+
+**rest2web** allows you to specify what encodings your content is (source files) and what encoding to write the output as. In order to achieve this, **rest2web** is almost entirely ``Unicode`` internally.
+
+If all of this is gobbledygook, then don't worry **rest2web** will guess what encoding your files are, and write them out using the same encoding. If you're not 'encoding aware', this is usually going to be what you want.
+
+
+Summary
+=======
+
+In a nutshell you use **'encoding'** to specify the encoding of a contents, file **'template-encoding'** to specify the encoding of your templates, and **'output-encoding'** to specify the encoding the file should be saved with. 'output-encoding' used in an 'index file' sets the output encoding for all the files in that directory and below.
+
+
+Input Encodings
+===============
+
+As usual, the way we handle encodings is through the restindex_. 
+
+The first thing we can specify is the encoding of a page of content. We do this with the ``encoding`` keyword. If this keyword is set for a file [#]_, it is used to read and decode the file. If no encoding is specified, **rest2web** will attempt to guess the encoding. It tries a few standard encodings *and* retrieves information from the *locale* [#]_ about the standard encoding for the system. If the page is successfully decoded then it stores the encoding used [#]_, otherwise an error is raised.
+
+From this point on the page content is stores as Unicode inside **rest2web**.
+
+Whichever encoding was used to decode the page, it is available as the variable ``encoding`` inside the templates.
+
+
+Template Encodings
+==================
+
+In the restindex you can also specify the encoding of the template file. This is the value ``template-encoding``. It is only used if you are also specifying a template file. If you specify a template file without specifying an encoding, our friend ``guess_encoding`` will be used to work out what it is. 
+
+This value is available as the variable ``template_encoding``.
+
+
+Output Encodings
+=================
+
+When the page is rendered you can specify what encoding should be used. This is done with the ``output-encoding`` keyword. If you specify an 'output-encoding' in an 'index file' then that encoding will be used for all the files in that directory, and any sub-directories. That means you can specify it once, in your top level index file, and have it apply to the whole site. 
+
+The encoding you specify applies to *all values passed to the template*. This means the variables ``body``, ``title``, ``crumb``, ``sectionlist``, etc. 
+
+As well as the standard Python encodings, there are a couple of special values that ``output-encoding`` can have. These are ``Unicode`` and ``none``. 
+
+If you specify a value of **none** for 'output-encoding', then all string are re-encoded using the original encoding.
+
+If you specify a value of **Unicode** for 'output-encoding' then strings are *not encoded*, but are passed to the template as Unicode strings. Your template will also be decoded to Unicode. The output will be re-encoded using the 'template-encoding', but will be processed in the template as Unicode.
+
+The value for 'output-encoding' is available in your template as the variable ``output_encoding``. Because of the special values of 'output-encdoing' there is an additional variable called ``final_encoding``. ``final_encoding`` contains the actual encoding used to encode the strings. If the value of ``output_encoding`` was **none**, then it will contain the original encoding. If the value of ``output_encoding`` was **unicode**, then it will contain the ``None`` object.
+
+
+Encodings and the Templating System
+===================================
+
+The templating system makes several variables available to you to use. These include ``indextree``, ``thispage``, and ``sections``. These contain information about the current page - and other pages as well. The information contained in these data structures allows you to create simple or complex navigation aids for your website.
+
+See the templating_ page for the details of how these data structures are constructed.
+
+Because these values contain information taken from other pages you can't be certain of their *original encoding*. This isn't a problem though, rest2web will convert these appropriately to the ``final_encoding`` of the current page. (It also converts all target URLs to be relative to the current page).
+
+The slight exception to this is part of the ``sections`` value. This value is a dictionary containing all the pages in the current directory, divided into sections. Each section has information about the section, as well as a list of pages in the section. Each page is itself a dictionary with various members containing information about the page.
+
+One of these members is ``namespace``, which is the namespace the page will be rendered in. This means that the values in the namespace are encoding with the appropriate encoding for *that* page. You can always tell what encoding that is by looking at ``final_encoding`` in the namespace. To be fair you're unlikely to dig that far into ``sections`` from the template - but I thought you ought to know {sm;:roll:} 
+
+
+Problem
+=======
+
+Note the following problem_.
+
+* Unfortunately, the ``guess_encoding`` function can recognise ``cp1252`` [#]_ as ``ISO-8859``. In this case docutils can choke on some of the characters. We probably have to special case the ``cp1252`` and ``ISO-8859`` encodings - but I wonder if this problem applies to other encodings ?
+
+--------
+
+
+Footnotes
+=========
+
+.. [#] The bottom line being, that if you don't know what encoding is used - you don't have text, you have random binary data.
+
+.. [#] It must be an encoding that Python recognises. See the Python `Standard Encodings`_
+
+.. [#] See the python `Locale module`_ documentation.
+
+.. [#] The only exception is if the page successfully decodes using the ``ascii`` codec. In this case we store ``ISO8859-1`` as the encoding. This is a more flexible ascii compatible encoding.
+
+.. [#] The standard windows encoding.
+
+
+.. _The Minimum Every Developer Must Know About Unicode: http://www.joelonsoftware.com/articles/Unicode.html
+.. _restindex: ../restindex.html
+.. _Standard Encodings: http://docs.python.org/lib/standard-encodings.html
+.. _Locale Module: http://docs.python.org/lib/module-locale.html
+.. _templating: ../templating.html
+
+.. _problem: todo.html#ISSUES

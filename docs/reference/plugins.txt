@@ -1,0 +1,172 @@
+restindex
+    crumb: Plugins
+    page-description:
+        A description of the **rest2web** plugin system. A manual on how to 
+        write your own plugins. 
+    /description
+/restindex
+
+============================
+ The rest2web plugin System
+============================
+------------------------
+ Roll Your Own Features
+------------------------
+
+Plugins
+=======
+
+.. note::
+
+    The plugin system is not yet production ready. 
+    
+    The main problem is that plugins currently have to return encoded byte 
+    strings in the same encoding as the content. This is fine so long as you 
+    can gurantee that the output of your plugin can always be expressed in the
+    encoding of your content !
+    
+    I also haven't implemented support for global plugins.
+
+
+* XXXX __init__ should call start !
+* XXXX document that changes to uservalues will have inconsistent results - don't do it !   
+
+The plugin system allows you to integrate your own functionality into rest2web. You can use this to implement plugins that process pages or generate their output in ways too complex for the templates.
+
+Plugins can either be global, or just applied to individual pages.
+
+You create plugins by writing a class that inherits from ``rest2web.PluginClass.PluginClass``, place it in a module in the plugins directory, and configure your pages/site to use it.
+
+An example of a plugin that works for individual pages would be a gallery_ - creating pages from directories of images.
+
+An example of a global plugin could be a sitemap generator or a search engine that indexes every page.
+
+The Basic Principle
+-------------------
+
+Your plugin name is the module name. So ``gallery.py`` is the ``gallery`` plugin. You module must contain a class called ``Plugin`` - this will be imported when it is first used.
+
+Your plugin class only needs to implement the relevant methods. For a global plugin this will include the ``start`` and ``end`` methods. For a normal plugin you might only need to implement the ``page`` method.
+
+.. note::
+
+    You shouldn't override the ``__init__`` method. Use ``start`` instead.
+
+Each page specifies which normal plugins are being used (in the restindex). Each of the plugins (which may not be any of  course), plus all the global ones, are called for every page.
+
+What this means is that the ``page`` method of your ``Plugin`` class is called - and passed the parameters : ::
+
+    page(self, content, encoding, filepath, targetr, estindex, uservalues)
+
+This means that if you want to pass values or settings from the page to the plugin, they can be specified in the *uservalues*.
+
+The page method (when it has done it's work) should return a tuple of : ::
+
+    (content, encoding, newvalues)
+
+*newvalues* is a dictionary that is used to update the uservalues. The values you return here can be used as variables in your page.
+
+When it is first initialised, *every* plugin is given a reference to the processor object and the original config file. You can access this from within your plugin methods using : 
+
+.. raw:: html
+
+    {+coloring}
+    processor = self.processor
+    config = self.config
+    #
+    # config is a dictionary like object
+    value = config['value']
+    {-coloring}
+
+
+This means two things :
+
+1) Global plugins can have universal settings in the site config file.
+2) You can access the processor attributes like ``dir``, ``dir_as_url``, etc. ::
+
+    dir = self.processor.dir
+
+Global Plugins
+--------------
+
+When you run rest2web, global plugins are initialised (and their ``start`` method is called). They are then called for every page.
+
+A global plugin can implement any of the ``start``, ``page``, and ``end`` methods. You only need to implement the methods you are using.
+
+.. raw:: html
+
+    {+coloring}
+    
+    from rest2web.PluginClass import PluginClass
+    
+    class Plugin(PluginClass):
+    
+        def start(self):
+            """
+            Called when the plugin is initialised.
+            For global plugins, this is when rest2web starts up.
+            """
+            pass
+    
+        def end(self):
+            """
+            Called after the last page has been rendered.
+            Only for global plugins.
+            """
+            pass
+    
+        def page(self, content, filepath, target, encoding, restindex, uservalues):
+            """
+            Called for every page with globals.
+            """
+            newvalues = {}
+            return (content, encoding, newvalues)
+
+    {-coloring}
+
+Normal Plugins
+--------------
+
+A normal plugin will only be used for individual pages. You specify plugins to use on a page with the  ``plugins`` keyword in the restindex : ::
+
+    plugins: gallery, plugin2
+
+Normal plugins can implement the ``start`` and ``page`` methods.
+
+.. raw:: html
+
+    {+coloring}
+    
+    from rest2web.PluginClass import PluginClass
+    
+    class Plugin(PluginClass):
+    
+        def start(self):
+            """
+            Called when the plugin is initialised.
+            For normal plugins, this is when they are first used.
+            """
+            pass
+    
+        def page(self, content, encoding, filepath, target, restindex, uservalues):
+            """
+            Called only for pages using the plugin.
+            """
+            newvalues = {}
+            return (content, encoding, newvalues)
+
+    {-coloring}
+    
+For an example of this kind of plugin, have a look at the gallery_ plugin.
+
+The Page Method
+===============
+
+Todo....
+
+Encoding Issues
+===============
+
+Todo...
+
+.. _gallery: http://www.voidspace.org.uk/python/rest2web/reference/gallery.html

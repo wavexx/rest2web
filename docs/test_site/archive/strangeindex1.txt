@@ -1,0 +1,123 @@
+restindex          
+    format: html
+    page-title: Welcome to Section 3 
+    crumb: Thirdy
+    link-title: Come and Explore Section 3
+    page-description:
+        This section comes directly before the fourth section, and directly after the second section. That makes it section 3.
+    /description       
+    sectionlist: topic 1, topic 2, topic 3, Not Real,
+    section-title: , The Default Section
+    section-description: 
+        I haven't included any links in the default section, but if you look in the source for this index page (if you can find it) - you will see how to include the default section in the ``sectionlist``, and give it a title and description.
+        
+        This also makes the template more interesting - when it is handling ``sectionlist`` it has to cope with the fact that ``None`` is in it. 
+    /description
+    section-description: topic 1
+        This is a description of the articles in topic 1.
+    /description
+    section-description: topic 2
+        This is a description of the articles in topic 2.
+    /description    
+    section-description: topic 3
+        This is a description of the articles in topic 3.
+    /description
+    section-description: Not Real
+        This section only contains files that don't really exist. You ought to get **404** errors when you click on the links.
+        
+        They are all pulled in from the file *restindex.txt* and illustrate how you can use **rest2web** to build indexes for content that it isn't actually building. Of course normally you'd set the target to be files that *do really exist*. 
+    /description
+
+/restindex
+
+<div class="title">
+    <h1>Section Number Three</h1>
+</div>
+
+
+<div class="intro">
+    <p>Welcome to something.</p> 
+</div>
+
+
+    <div class="indexblock">
+    <h2>These Are More Articles</h2>
+    <p>A feature of this section is that the index page is in a different directory to the content. You probably wouldn't use it like this - but it has possibilities when using rest2web to only build part of a website. This is more of a test that the link logic works.</p>
+
+
+<div class="sitemap" id="index">
+
+    <table border="1" width="300" summary="Links to some doodahs">
+        <tbody>
+            <tr><th colspan="2" >Funky Stuff Hey</th></tr>
+<# 
+    import urllib
+    blank = '&nbsp;'
+    row = '<tr><td>%s</td><td>%s</td></tr>'
+    entry = '<a href="#%s">%s</a>'
+    
+    sectlist = [(urllib.quote(section), section.title()) for section in sectionlist if section is not None]   
+    if None in sectionlist:
+        sectlist.append(('Default', 'Default'))
+    
+    index = 0
+    while index < len(sectlist):
+        entry_1 = entry % sectlist[index]
+        if index == len(sectlist)-1:
+            entry_2 = blank
+        else:
+            entry_2 = entry % sectlist[index+1]
+        print row % (entry_1, entry_2) 
+        index += 2   
+#>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+                    
+        </tbody>
+    </table>
+</div>
+
+
+<#
+
+indexblock = '''\
+    <a name="%s" id="%s"></a>
+    <div class="indexblock">
+    <h2>%s</h2>
+    <p>%s</p>
+    
+    <ul>
+    %s
+    </ul>
+    </div>
+'''
+
+pageblock = '''\
+        <li><a href="%s">%s</a>
+            <p>%s</p>
+        </li>    
+'''
+
+for section in sectionlist:
+    thepages = []
+    for page in sections[section]['pages']:
+        a_page = pageblock % (page['target'], page['link-title'], page['page-description'])
+        if type(a_page) is unicode:
+            a_page = a_page.encode('utf8')
+        thepages.append(a_page)   
+
+    thepages = '\n'.join(thepages)
+    if section is None:
+        id = 'default'
+    else:
+        id = urllib.quote(section)
+    sect_title = sections[section]['title']
+    desc = sections[section]['description']
+    
+    this_sect = indexblock % ( id, id, sect_title, desc, thepages)
+    print this_sect
+
+#>

@@ -1,0 +1,709 @@
+restindex
+    tags: tutorial, introduction, beginners, site builder, website, basics, guide, basic guide
+    crumb: Tutorial
+    link-title: Tutorial
+    page-description:
+        An tutorial showing how to use **rest2web** to create a simple website.
+    /description
+/restindex
+
+==========================
+ Introduction to rest2web
+==========================
+
+----------------------------------
+ Creating a Website With rest2web
+----------------------------------
+
+.. contents:: rest2web Tutorial
+
+
+Introduction
+============
+
+{emo;paper} Creating a website with **rest2web** is easy. Looking at the
+bewildering array of options in the restindex_ can make it seem very complex.
+In fact, you can build a simple website in a few minutues - using only a few
+features. You can then add things as you need them. If you look in the source
+files for the `example site`_ [#]_, you can see that most of the pages have
+only two or three items in the ``restindex``.
+
+This tutorial explains the basics of creating a website - and shows you an
+example.
+
+.. note::
+
+    This tutorial assumes you are basically familiar with {acro;HTML} and
+    creating/editing text files.
+
+A Basic Site
+============
+
+The principles of **rest2web** are simple. A rest2web site has at least the
+following elements :
+
+1) `Config file`_ - this tells rest2web where to read files from (the start
+   directory), and where to put the files it creates (the target directory).
+
+2) template.txt_ - This is the {acro;HTML} template for your website.
+
+3) **index.txt** - This is the source file (content) for your main index page.
+   Each directory *must* have this file.
+
+4) Optionally other text files for your other pages.
+
+5) Subdirectories with more content.
+
+We'll briefly look at these things, and then create a basic site.
+
+The Config File
+---------------
+
+**rest2web** goes through all the files in your source directory (and
+subdirectories). It builds the contents, indexes, etc - puts  them into the
+templates, and then saves the results in the target directory.
+
+So at the minimum, rest2web needs to know the source directory and target
+directory. It gets these from the config file.
+
+You tell **rest2web** the name of your config file at the command line : ::
+
+    python r2w.py config_file.ini
+
+If you *don't* specify a config file, then rest2web will look for one called
+``r2w.ini`` in the current directory. On Windoze, this means you can just
+double click on *r2w.py* and it will do it's magic.
+
+There are several other options in the config file- but the source and target
+directories are the two options you must specify for each site.
+
+Look at the example ``r2w.ini`` that comes with rest2web, or the
+`Config file`_ page, for full details.
+
+
+The Template File
+-----------------
+
+The template file is the HTML framework for your website. Special values that
+you put in your template determine where the content, title, and navigation
+elements go.
+
+The name ``template.txt`` is just the default filename. You can change the name
+and location of this file through the ``restindex``. You can also use more than
+one template in your website.
+
+If you are only using one template in your website (as many will) then you can
+do this by just having one file (``template.txt``) in the top level of your 
+source directory.
+
+
+The Index File
+--------------
+
+Every *directory* must have a file called ``index.txt`` in it - or rest2web
+will ignore it. {sm;:-)}
+
+*Every* rest2web page *must* start with a restindex_. This is a set of options
+that tells rest2web how to build the page.
+
+The index page is important. Some of the options you set in the ``restindex``
+of your index page apply to the whole directory.
+
+The index page also has some extra information available to it (about the other
+pages in the directory). This allows you to have in your index page, links to
+each of the pages in that directory along with descriptions (including any
+subdirectories).
+
+
+Other Pages
+-----------
+
+In order to be a **rest2web** source file, a file must be a text file
+(``.txt``) and start with a ``restindex``. There are over twenty different
+options you can set in the restindex - but you will probably only need to use a
+couple on most pages. Some of these options are only relevant to index pages
+anyway.
+
+A restindex looks like this : ::
+
+    restindex
+        format: html
+        page-title: This is the Page Title
+        crumb: Short Title
+        page-description:
+            This is a description of the page.
+            It can be more than one line long.
+        /description
+    /restindex
+
+Immediately after the restindex comes the page contents. If this is in ReST_
+format then docutils_ will be used to turn it into html.
+
+The page contents is then put into the template - and any special values are
+converted. This allows for things like sidebars and navigation trails [#]_ to
+be added to your site.
+
+After all the files in a directory have been processed, rest2web moves on and
+processes any subdirectories.
+
+
+Subdirectories
+--------------
+
+Subdirectories will also get rendered. Each subdirectory should have it's own
+index page. This index page can be automatically linked to in the index page of
+their parent directory.
+
+
+Creating an Example Site
+========================
+
+{acro;Ok;What Does Ok Stand For ?} - so let's see how this works in practise.
+{sm;:biggrin:}
+
+.. note::
+
+    The simple site we create here can be seen in the tutorial_site_ [#]_ folder
+    of the docs.
+
+The first thing we'll do is create a config file.
+
+Config File
+-----------
+
+If you were to create an example site from scratch you would need to create a
+directory for it all to go in. In this tutorial our source directory will be
+``docs/tutorial_site``, and the html will be put in ``docs_html/tutorial_site``.
+
+In our example we won't use any macros, so you can create a text file called
+``r2w.ini`` with the following values : ::
+
+    # these values are all left at the default
+    psyco = True
+    pause = False
+    log_file = 'log.txt'
+    DEBUG = False
+    compare_directory = ''
+    
+    # these values we have edited for our site
+    start_directory = 'docs/tutorial_site'
+    target_directory = 'docs_html/tutorial_site'
+    macros = ''
+
+.. raw:: html
+
+    <p>{small;This config file is actually called <em>'tutorial_site.ini'</em> in the distribution.}</p>
+
+HTML Template
+-------------
+
+.. sidebar:: Embedded Code
+
+    Special values are enclosed in either ``<% ... %>`` tags (for single
+    values) or ``<# ... #>`` tags for multiple statements.
+    
+    Multiple statements are actually Python_ code. You can embed chunks of code
+    into your pages and templates. This allows *unlimited expressiveness* in
+    how dynamic you make your pages and templates.
+    
+    If you wanted you could use your template to fetch information form the web
+    and include it in your pages. You can do anything that Python can do.
+
+The HTML template has the basic framework of our website. We put special values
+into the template - so that **rest2web** knows where to put things like the
+page title, the page content, etc. 
+
+A website can use as many different templates as you want - for different parts
+of the website, or even a different one for each page. {sm;:-o} Most websites
+will only need a single template though.
+
+The full `doc page for templating`_ gives you a list of all the special values
+we can use in our templates. (We can also use these in our page content). Last
+count there were about twenty five of these values. Like the restindex, we can
+create our basic site by only using a few of these.
+
+We use these values in two different ways. For single values we surround the
+values in ``<% ... %>`` tags. For chunks of code, we use ``<# ... #>``.
+
+We only need to use special values for things that are different in each page.
+
+We save the template as ``template.txt`` and put it in the root directory of
+our site. Because it doesn't start with a restindex, rest2web won't attempt to
+process it as a page.
+
+Here's our simple HTML template : ::
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title><% title %></title>
+        <meta http-equiv="Content-Type" 
+            content="text/html; charset=<% final_encoding %>" />
+        <link rel="stylesheet" 
+            href="<% path_to_root %>stylesheets/rest.css" 
+            type="text/css" />
+        <link rel="stylesheet" 
+            href="<% path_to_root %>stylesheets/test.css" 
+            type="text/css" />    
+    </head>
+    <body>
+        <div id="nav">
+            <ul>
+                <# print_crumbs(breadcrumbs) #>
+            </ul>
+        </div>
+    
+        <div id="main>
+            <a name="startcontent" id="startcontent"></a>
+                
+            <% body %>
+        
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                <small>
+                    Page last modified <strong><% modtime %></strong>.
+                </small> 
+                </p>
+            </div>
+        </div>
+    
+    </body>
+    </html>
+
+It's actually {acro;XHTML}, so it starts with the proper DOCTYPE [#]_. The rest
+is a pretty simple document, with no real content.
+
+.. note::
+
+    We use two stylesheets in the template.
+    
+    One is ``test.css``, which contains the styles for our page [#]_.
+    
+    The other is ``rest.css``, which has the styles for docutils generates HTML.
+
+You can see the special values in the template. Let's look at the ones we have
+used :
+
+Special Values
+~~~~~~~~~~~~~~
+
+#. ``<% title %>`` 
+#. ``<% final_encoding %>``
+#. ``<% path_to_root %>``
+#. ``<# print_crumbs(breadcrumbs) #>``
+#. ``<% body %>``
+#. ``<% modtime %>``
+
+title
+#####
+
+``<% title %>`` will be replaced with the title for each page. For index pages,
+and pages in html format, you must specify the title in the restindex.
+
+For pages in ``reST`` format, your top heading becomes the page title.
+
+final_encoding
+##############
+
+``<% final_encoding %>`` is the character encoding used for the page. This can
+vary from page to page *or* you can set it for the whole site in your main
+page.
+
+In order to be valid html you **must** specify an encoding. If you don't know
+about encodings then **rest2web** will attempt to work them all out for you -
+and do the right thing. By default it will output the page using the same
+encoding as the content.
+
+To learn more about how rest2web handles encodings - read the `Text Encodings`_
+page.
+
+path_to_root
+############
+
+``<% path_to_root %>`` is the path from the page being created to the root
+directory (always ending in a ``/`` unless the page is in the root directory).
+
+You might be used to specifying the location of stylesheets using the form
+``/stylesheets/styles.css``. This gives the absolute location of the stylesheet -
+but means that the file cannot be viewed correctly from the filesystem.
+
+Using *path_to_root* for stylesheets and images (etc) puts the correct relative
+path in - meaning that the site can be viewed from the filesystem.
+
+print_crumbs
+############
+
+You can see that ``<# print_crumbs(breadcrumbs) #>`` uses the second style of
+tags - ``<# ... #>``. That's because it's a function call not a value - and we
+use it's output.
+
+``print_crumbs`` is one of the built in functions_. It prints the navigation
+trails that are known by the weird name *breadcrumbs*. Tradition puts them at
+the top of the page.
+
+print_crumbs prints them as a list of items - so we put the function call
+between unordered list tags ``<ul> ... </ul>``. There are some {acro;css} rules
+that cause them to be dispayed properly.
+
+body
+####
+
+``<% body %>`` is the contents of the page. {sm;:-p}
+
+modtime
+#######
+
+``<% modtime %>`` is the date (and time) that the source file was last modified.
+
+
+The Index Page
+--------------
+
+When you run **rest2web** it scans the start directory, processing every text
+file with a restindex. From each text file it creates a corresponding output
+HTML file. By default, the filename of the output file will be the same as the
+source file - except ending in ``.html`` instead of ``.txt``. Having completed
+all the files in a directory, rest2web then does any subdirectories.
+
+.. caution::
+
+   **rest2web** will overwrite files in the target directory, creating all 
+   necessary subdirectories.
+
+So by default ``index.txt`` in the source directory becomes ``index.html`` in
+the target directory. If you don't want your index page to be called
+'index.html' then there are a couple of ways you can affect that. You can
+either use the ``target`` keyword (in the restindex of course) to specify an
+explicit target name for the target file, or you can use the ``index-file``
+keyword. 'index-file' tells rest2web that this file isn't the real index page -
+but another one is instead. rest2web will then read that file and treat it as
+the index page for the directory. Whichever you choose *every* directory must
+have a file called ``index.txt``, with a restindex, or rest2web will ignore
+that directory.
+
+Our file ``index.txt`` starts with a restindex. We're going to make it as
+simple as possible.
+
+Our index page is going to be a short introduction to the site, and have links
+to all the other pages, with descriptions of them. For our main index page
+we'll use HTML rather than ReST : ::
+
+    restindex
+        crumb: Home
+        format: html
+        page-title: rest2web Tutorial Website
+    /restindex
+    
+    <h1 class="title">rest2web Tutorial Website</h1>
+    <h2 class="subtitle">An Example Index Page</h2>
+    
+    <div class="displaybox">
+        <#
+            print_details(default_section)
+        #>
+    </div>
+    
+    <p>This is the index for the <a href="../site.html">rest2web Tutorial
+    </a> website. It's not got much on it - other than this paragraph and 
+    links to our other pages.</p>
+
+The page is divided into two parts - the restindex, and the content.
+
+The restindex
+~~~~~~~~~~~~~
+
+Every **rest2web** source page starts with a restindex. The restindex has
+sensible defaults, so we only need to include values that we're changing. For
+details of *all* the restindex options, read the restindex_ page.
+
+.. sidebar:: Empty restindex
+
+    It's entirely possible that you might be happy with *all* the default
+    values in a restindex.
+    
+    In this case you still need to start your page with an empty restindex : ::
+    
+        restindex
+        /restindex
+
+We are using navigation trails in our template. That means each page should
+have a ``crumb``. Because this is the index page, we use the *traditional*
+value **Home**.
+
+Our page is html. The default format is html - this is **rest2web** after all
+{sm;:-)} - so we need include the ``format: html`` argument.
+
+Because the page is html (and also because it is an index page [#]_) it needs a
+``page-title``.
+
+And that's all we need in our restindex. Wasn't that easy. {sm;:-p}
+
+We are relying on lots of default values - we don't define any sections for our
+directory, we're ging to let rest2web handle all our encodings, and so on. The
+restindex_ page will tell you all the default values for the restindex options.
+
+The Content
+~~~~~~~~~~~
+
+The content is nice and standard html *except*, we can see one of our special
+values turning up again. This time it's a call to one of the
+`standard functions`_ - ``print_details``.
+
+**print_details** displays a nice list of links to all the pages in a
+*section*. Your index page can be divided up into several *sections*. This
+enables you to have one directory with pages on several different topics. Each
+page then has a declaration in the restindex as to which section it is in.
+(The ``section`` keyword in the restindex). You have to declare your list of
+sections in the index page.
+
+As you can see we **haven't** done that {sm;:lol:} - so all the pages in our
+directory will go into the default section. 
+
+You access a lot of data about *all* the pages in a directory using the
+``sections`` special value. You can read about that in the templating_ page
+(along with all the other special values you can include in your pages).
+
+You access information about the default section through ``sections[None]``
+*or* ``default_section``. ``default_section`` is just an easier way to access
+the same information.
+
+.. note::
+
+    ``sections`` is a Python_ object called a dictionary. You access members
+    through their keys. In the ``sections`` data structure each member is a
+    section. Each section is also a dictionary. Each section includes a list of
+    all the pages in that section.
+  
+    .. raw:: html
+  
+        {+coloring}
+        
+        section = sections['section-name']
+        pages = section['pages']
+        
+        {-coloring}
+        
+    Every directory has all the sections you define in the index page *and* the
+    default section. This has the key ``None``. You can also access the default
+    section through the special value ``default_section``.
+  
+    You can use dictionaries to build quite complex data structures. You can
+    learn more about dictionaries in the `Python Tutorial`_ or in the Python
+    docs about `Mapping Types`_.
+
+**print_details** takes an individual section to display all the pages in a
+section. Any subdirectories in a directory can also be displayed as
+'sub-sections'. Because all our pages will be in the default directory we
+call print_details with the default section -
+``<# print_details(default_section) #>``.
+
+
+Other Pages
+-----------
+
+We've created our main page. The main page acts as an index to all the pages in
+the directory. 
+
+So we need some content. Because this is **rest2web**, we'll create the page in
+{acro;reST} format. ::
+
+    restindex
+        crumb: A Page
+        link-title: An Example Page
+        page-description:
+            This description is for the index page.
+            You can use **reST** markup if you want.
+        /description
+    /restindex
+    
+    ==============
+     A ReST Title
+    ==============
+    --------------
+     The Subtitle
+    --------------
+
+    ..
+        This is a comment. To use the 'raw-role', we have to define it 
+        *first*.
+
+    .. role:: raw-html(raw)
+        :format: html
+
+    This page is written in ReStructured Text markup. That's 
+    why it looks like *plain text*.
+
+    This page lives at :raw-html:`<em><% pagepath %></em>` [#]_. This tutorial
+    isn't a tutorial on ReStructuredText though. If you're looking for one, you 
+    might be better off with the `docutils documentation`_.
+
+    .. [#] The file path is dynamically inserted by rest2web.
+
+    .. _docutils documentation: http://docutils.sourceforge.net
+
+The restindex for this page is a bit different to the one for the index page.
+ReST is the default markup, so we don't need to declare it explicitly in the
+restindex. Additionally, docutils will automatically generate a page title for
+us from the top level heading.
+
+If we don't specify a crumb, the page title will be used [#]_. This is too
+long, so we specify a short one.
+
+We want this page to appear in the index page. It's entry will appear as a link
+with a brief description. If we don't specify a link title, the page title will
+be used. Often this will be ok - but here we've specified a different one [#]_.
+
+So the text used for the link is the ``link-title`` value and the text used for
+the description is the ``page-description`` value. This is a multi-line value
+and can contain ReST markup.
+
+
+reST Content
+~~~~~~~~~~~~
+
+.. sidebar:: Embedded Code With reST
+
+    If you want to include multi-line chunks in rest documents, then you can
+    use the raw directive : ::
+
+        .. raw:: html
+    
+            <#
+            big = '<big>%s</big>'
+            print big % 'Hello World'
+            #>
+   
+    Unlike the raw role, this doesn't need to be declared before you use it.
+
+The content is straightforward reStructuredText. If you want an introduction
+to ReST, `A ReStructuredText Primer`_ is a good place to start.
+
+Notice the use of the raw role : ``:raw-html:`<em><% pagepath %></em>```. This
+allows us to insert **rest2web** special values into the page (without docutils
+escaping the *<* symbols). You can only use the raw role if you declare it
+first.
+
+
+Subdirectories
+--------------
+
+Directories can have subdirectories. These appear in the index page as
+'Subsections'. 
+
+The subdirectory must have an 'index.txt' file. The 'link-title' and
+'page-description' specified here are what appear in the index page of the
+directory above.
+
+We'll create a subdirectory - imaginatively called 'subdirectory'. We'll create
+the following file, and save it as 'index.txt' : ::
+
+
+    restindex
+        crumb: Subdirectory
+        target: subdirectory.html
+        page-description:
+            A subdirectory - with pages of it's own.
+        /description
+    /restindex
+    
+    =========================
+     Subdirectory Index Page
+    =========================
+    --------------
+     The Subtitle
+    --------------
+
+    .. role:: raw-html(raw)
+        :format: html
+
+    .. raw:: html
+
+        <div class="indexblock">
+        <#
+            if not default_section['pages']:
+                print '<h2>No Pages Yet</h2>'
+            else:
+                print_details(default_section)
+        #>
+        </div>
+
+
+    .. class:: intro
+
+    This page lives at :raw-html:`<% pagepath %>`. The ``class`` 
+    directive applies a style to this paragraph. 
+
+I didn't want this page to be called ``index.html``. I *could* have used the
+``index-file`` option to specify another file as being the index page. Instead
+I stuck with keeping the source file as *index.txt*, but specifying an
+alternative target filename. That's the ``target`` keyword.
+
+This page is also in rest format. This means that we don't need to specify a
+format in the restindex. 
+
+The content prints an index using ``print_details`` - but *only* if there are
+any pages. It checks first (``if not default_section['pages']:``), and if there
+aren't any it prints the **No Pages Yet** heading.
+
+It also uses the ``class`` directive to apply a class to the paragraph - so
+that it can be styled with CSS.
+
+More Advanced Topics
+====================
+
+In this tutorial we haven't used any macros_, or sidebars. Macros allow you to
+easily insert smilies, python source coloring, and lots more into your pages.
+The functions to create sidebars are described in the `standard functions`_
+page. There are many options in the restindex that we haven't explored here -
+and also lots of special values that we haven't looked at.
+
+Despite what it doesn't show, this tutorial does give you a good overview as to
+how to create a website using **rest2web**. For further examples you can look
+at the source files in the ``docs`` folder. These use most of the features of
+**rest2web** - and you can see the results in the finished documentation.
+
+----------
+
+Footnotes
+=========
+
+.. [#] In the docs folder of the distribution.
+.. [#] For some bizarre reason known as *breadcrumbs*.
+.. [#] The only difference is that the main index page has the ``include: No``
+       option set - so that it doesn't go into the main index. {sm;:-p}
+.. [#] Purists might note that I *haven't* included the {acro;xml} declaration.
+       This is because it puts {acro;IE} into quirks mode.
+.. [#] I've just re-used the main stylesheet for the rest2web docs. This is
+       easier for me - but it means there are a few extra values in there.
+.. [#] Index pages need a ``page-title`` in the restindex. This is so that **rest2web**
+       doesn't have to build the page (for reST content) when examining the 
+       index pages of it's subdirectories.
+.. [#] For index pages the filename is used as the default crumb.
+.. [#] The link title can also be used by sidebars.
+
+.. _A ReStructuredText Primer: http://docutils.sourceforge.net/user/rst/quickstart.html
+.. _macros page: macros.html 
+.. _restindex: restindex.html
+.. _config file: config_file.html
+.. _macros: macros.html
+
+.. _tutorial_site:
+.. _example site: tutorial_site/index.html
+
+.. _doc page for templating:
+.. _template.txt:
+.. _templating: templating.html
+
+.. _text encodings: reference/encodings.html
+
+.. _standard functions: 
+.. _functions: functions.html
+
+.. _python tutorial: http://docs.python.org/tut/node7.html#SECTION007500000000000000000
+.. _Mapping Types: http://docs.python.org/lib/typesmapping.html
+
+.. _docutils:
+.. _rest: http://docutils.sourceforge.net
+
+.. _Python: http://www.python.org

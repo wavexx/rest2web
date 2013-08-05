@@ -1,0 +1,8 @@
+restindex
+    crumb: English Rest
+/restindex
+
+uservalues
+    body: ../template/page.txt 
+    para1: Having a **reST** in English.
+/uservalues

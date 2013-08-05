@@ -1,0 +1,56 @@
+restindex
+    page-title: Test of Uservalues
+    crumb: Uservalues
+/restindex
+uservalues
+    test1: """A value in *ReST*."""
+    test2: A value in <em>HTML</em>
+    test3: Never inserted.
+/uservalues
+
+==========================
+ Testing Uservalues Again
+==========================
+
+.. contents::
+
+This is a test of uservalues. It tests the two different templating styles for
+inserting uservalues into a page.
+
+You can insert single values, or multiple blocks of code.
+
+Testing Single Values
+=====================
+
+This is a test of uservalues. The following paragraph is in ReStructuredText.
+
+    <* test1 *>
+
+The next one is in HTML :
+
+    {esc;test2}
+
+I wonder if it works. {sm;:-)}
+
+This one will be escaped by ``docutils``, and so not executed.
+
+    <% test3 %>
+
+Testing Multiple Code Blocks
+============================
+
+<$
+    print 'A comment in **ReST**.'
+$>
+
+<$
+
+    print
+    try:
+        print uservalue1
+        print
+        print uservalue2 + '. {:-)}'
+    except NameError:
+        print 'Failed to find the uservalues. {sm;:-(}'
+
+$>

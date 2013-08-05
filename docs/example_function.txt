@@ -1,0 +1,26 @@
+#
+# syntax coloring
+try:
+    import colorize as col
+except ImportError:
+    def colorize(filename):
+        raise ImportError, 'Importing colorize.py failed.'
+
+else:
+    def colorize(filename):
+        """
+        format a python script as html
+        Using the appropriate css it will be nicely colored.
+
+        Needs the colorize.py module.
+        """
+        fullname = os.path.join(filename)
+        f = open(fullname, 'r')
+        data = f.read()
+        f.close()
+
+        p = col.Parser(data)
+        p.format(None, None)
+        src = p.getvalue()
+        return src.replace('\n', '<br />\n').replace('  ', '&nbsp;&nbsp;')
+        # to avoid having to use <pre>..

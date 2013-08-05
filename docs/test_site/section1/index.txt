@@ -1,0 +1,121 @@
+restindex          
+    format: html
+    page-title: The Science Index Page  
+    crumb: Science
+    link-title: Science, Computers, and Technology
+    page-description:
+        This section contains books and articles about the wonderful worlds of Science, Computing, and Technology.
+    /description       
+    sectionlist: science, computers, internet
+    section-description: science
+        This is a description of the articles on science.
+        
+        This description is written using **reST**. That means it can include links__.
+        
+        __ http://docutils.sourceforge.net
+        
+    /description
+    section-description: computers
+        This is also a description. It would be easy to extend the range of text markups that *rest2web* supported. If there was any demand we could allow html in the descriptions, and even extend the range of supported markups to include *sextile* and *textile*. This would make the name **rest2web** [#]_ less appropriate of course.
+        
+        .. [#] Obviously reST is my preferred markup...
+    /description
+    section-description: internet
+        This is also a description. 
+        
+    /description
+
+/restindex
+
+<div class="title">
+    <h1>The Science Index Page</h1>
+</div>
+
+
+<div class="intro">
+    <p>Welcome to something.</p> 
+</div>
+
+
+    <div class="indexblock">
+    <h2>These Are the Sections</h2>
+    <p>So enjoy....</p>
+
+
+<div class="sitemap" id="index">
+
+    <table border="1" width="300" summary="Links to the Python Pages">
+        <tbody>
+            <tr><th colspan="2" >The Voidspace Science Sections</th></tr>
+<# 
+    import urllib
+    blank = '&nbsp;'
+    row = '<tr><td>%s</td><td>%s</td></tr>'
+    entry = '<a href="#%s">%s</a>'
+    
+    sectlist = [(urllib.quote(section), section.title()) for section in sectionlist if section is not None]
+    # note we use the variable sectionlist - to loop over the sections in the same order they appear
+    # in 'sectionlist' in the restindex. We also exclude ``None`` - the default section.
+    
+    index = 0
+    while index < len(sectlist):
+        entry_1 = entry % sectlist[index]
+        if index == len(sectlist)-1:
+            entry_2 = blank
+        else:
+            entry_2 = entry % sectlist[index+1]
+        print row % (entry_1, entry_2) 
+        index += 2   
+#>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+                    
+        </tbody>
+    </table>
+</div>
+
+
+<#
+
+indexblock = '''\
+    <a name="%s" id="%s"></a>
+    <div class="indexblock">
+    <h2>%s</h2>
+    <p>%s</p>
+    
+    <ul>
+    %s
+    </ul>
+    </div>
+'''
+
+pageblock = '''\
+        <li><a href="%s">%s</a>
+            <p>%s</p>
+        </li>    
+'''
+
+for section in sections:
+    if section is None:
+        continue
+    thepages = []
+    for page in sections[section]['pages']:
+        a_page = pageblock % (page['target'], page['link-title'], page['page-description'])
+        if type(a_page) is unicode:
+            a_page = a_page.encode('utf8')
+        thepages.append(a_page)   
+
+    thepages = '\n'.join(thepages)
+    id = urllib.quote(section)
+    sect_title = sections[section]['title']
+    desc = sections[section]['description']
+    
+    this_sect = indexblock % ( id, id, sect_title, desc, thepages)
+    print this_sect
+
+#>
+
+</div>

@@ -1,0 +1,12 @@
+restindex
+    crumb: English Index
+    format: html
+    page-title: The English Index    
+/restindex
+
+uservalues
+    body: ../template/_index.txt 
+    greeting: Hello and Welcome
+    para1: We are here... maybe we wish we weren't.
+    index_title: Index Title in English
+/uservalues

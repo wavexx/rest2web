@@ -1,0 +1,285 @@
+restindex
+    crumb: uservalues
+    page-description:
+        A description of the uservalues system. This can be used to communicate
+        with plugins, or for providing alternative translations of sites.
+    /description
+/restindex
+
+==================
+ The User Values
+==================
+
+---------------------------------
+ Extra Values in Your Templates
+---------------------------------
+
+.. contents::
+
+Introduction
+=============
+
+**rest2web** generates pages by inserting special values into your web page
+templates. These values include the body of the page, the title and so on. You can
+see from the templates_ page, all the values that you can use in your templates.
+*uservalues* are a way of inserting extra values into your template. As you
+might guess, you specify the names and values.
+
+One obvious use of this is to provide several different translations [#]_ of
+your website. 
+
+The uservalues can be in HTML *or* in ReST format. They use two slightly
+different syntaxes so that rest2web knows whether to render the uservalue into
+HTML or not.
+
+Uservalues can be put into your pages (via your content or your templates),
+using the `templating system <../templating.html>`_.
+
+uservalues
+==========
+
+*uservalues* can be specified in three ways :
+
+1) In each page. These *uservalues* are local to the page.
+2) At the `command line <../command_line.html>`_.
+3) In the `config file <../config_file.html>`_.
+
+Uservalues are effectively new variables (or names) you can use in your templates.
+For example, if you create a uservalue 'site_wide_title', you can use it in your
+templates like this :
+
+    ``<% site_wide_title %>``
+
+or :
+
+    ``<# print site_wide_title #>``
+    
+For global values (available to every page), the most convenient thing to do is
+to define them in your config file.
+
+.. note::
+
+    Changes to uservalues (in embedded code, through ``{lt}$ ... $>`` tags)
+    are *not* propagated to the main namespace.
+
+uservalues in Pages
+-------------------
+
+*uservalues* can be specified in each page in a similar way to the restindex.
+uservalues are specified *immediately after* the restindex. : ::
+
+    restindex
+        crumb: A Page
+    /restindex
+    
+    uservalues
+        value1: Some Value
+        heading: <h1>A Heading</h1>
+        long_value: """
+    A multi line value
+    which spreads across
+    several lines.
+    """
+        another_long_value:"""
+            This one
+            has a big indent
+            in front of it ! """
+    /uservalues
+
+An addition to the restindex syntax, is that multiline values use triple quotes. 
+
+.. caution:: 
+
+    Indentation is not removed from multi line values. The text between the
+    triple quotes is inserted literally wherever you use the value. You can use
+    single or double quote marks. 
+
+There is one special value, the ``body`` value discussed below.
+
+
+uservalues at the Command Line
+------------------------------
+
+It is also possible to pass uservalues to **rest2web** at the command line.
+These will be available in *every* page.
+
+
+uservalues in the config file
+-----------------------------
+
+You can specify uservalues in the ``uservalues`` section of the config file.
+These are also available in every page.
+
+To do this, you need to add something like the following to the bottom of 
+your site config (``r2w.ini``) file : ::
+
+    [uservalues]
+    site_wide_title = 'Some Title'
+    site_wide_subtitle = 'Some Subtitle'
+
+
+Reserved Names
+--------------
+
+You can't use any name that shadows a name already used by the templating
+system. This means that the following names are all reserved. Trying to use
+them will cause a ``SyntaxError``. : 
+
+.. raw:: html
+
+    {+coloring}
+    reserved_names = [
+        'title', 'breadcrumbs', 'sections', 'pagename', 'pagepath',
+        'encoding', 'output_encoding', 'final_encoding', 'path_to_root',
+        'sectionlist', 'rest_dict', 'doc', 'stdout', 'modified', 'modtime',
+        'template_file', 'template_encoding', 'indexpage', 'indextree',
+        'thispage', 'sidebar', 'minibar', 'print_crumbs', 'Processor', 'tags',
+        'default_section', 'modtime', 'modtimeiso'
+        ]
+    {-coloring}
+
+.. note:: 
+
+    See that ``title`` is a reserved name. If you want to set the page title, you should use the ``page-title`` keyword in your *restindex*.
+
+
+The body Value
+=================
+
+The *body* value is special. This lets you specify a file that is the content for this page. Any content following the uservalues is ignored - and the specified file is used instead.
+
+If that file has template tags that use the uservalues - then they will be substituted when the template is processed. 
+
+The file specified can be an absolute path, or a path relative to the page it is bein used in.
+
+For example, say we have the following for our uservalues : ::
+
+    uservalues
+        body: ../templates/a_page.txt
+        greeting: <h1>Howdy</h1>
+    /uservalues
+
+**rest2web** will use the file ``../templates/a_page.txt`` as the body of this page. If it contains a tag that looks like ``<% greeting %>``, then it will be replaced with ``<h1>Howdy</h1>`` when the template is processed.
+
+.. warning::
+
+    Using the *body* value you separate your content from your file containing the restindex/uservalues. You **must** store them with the *same* encoding. 
+
+Translations
+--------------
+
+A good example of using the *body* value is for multiple translations of websites. A typical example is where you have several pages of content that you want to mirror in different languages. That is, you want the same pages, with the same structure, just key sections swapping over.
+
+The *body* value lets you keep your page frameworks all in one place. The framework should use the uservalues - and then just have several directories of pages which point to the framework... but have the right values set for the uservalues.
+
+There is an example in the example site - the translation_ pages. See the *source* of these pages for a clear illustration how of how it works. 
+
+Now I'll attempt to explain it in words {sm;:razz:}.
+
+Suppose you want three translations for your site. You'll put the english files in a directory called **en**, the French ones in a directory called **fr**, and the German ones in a directory called **de**. The HTML framework of each page is going to be identical in each directory - it's just the viewable words that will be different.
+
+To achieve this we add a fourth directory called templates. It's in here that we are going to put our HTML frameworks. Everywhere we want some text to appear we will put a uservalue placeholder instead. 
+
+We have our usual *template.txt* which contains the outline of the page. We'll create a file in the ``template`` directory called ``index_page.txt`` [#]_. It might look something like : ::
+
+    <div class="someClass">
+        <h1><% greeting %></h1>
+    </div>
+    
+    <div class="para">   
+        <p><% para1 %></p>
+    </div>
+
+This page body has a placeholder for the headline and the paragraph.
+
+In *index.txt* in your ``en`` folder you would then put : ::
+
+    restindex
+        format: html
+        crumb: English Index
+        page-title: English Index
+    /restindex
+    uservalues
+        body:       ../templates/index_page.txt
+        greeting:   Hello and Welcome
+        para1:      """This is the body text, 
+     with <em>some HTML</em> in it."""
+    /uservalues
+
+When rendered, it fetches the ``index_page.txt`` as the body, and inserts the English values into it.
+
+In *index.txt* in your ``fr`` folder you would then put : ::
+
+    restindex
+        format: html
+        crumb: French Index
+        page-title: French Index
+    /restindex
+    uservalues
+        body:       ../templates/index_page.txt
+        greeting:   Bonjour et Bienvenue
+        para1:      """Du Francais ici, 
+     avec <em>du HTML</em>."""
+    /uservalues
+
+When rendered, this creates the French page. 
+
+You create your basic directory structure in the ``templates`` directory. You mirror this in your other directories; but your files are all basically identical and you only need to edit the uservalues.
+
+With a little trickery in the body or the templates it ought to be simple to include links between pages in one language and the other ones.
+
+The Order of Processing
+=======================
+
+There are two ways of inserting values into pages using the template system.
+
+The first way allows you to put *ReST* values into your pages before they are
+turned into HTML. The second way puts html into your pages when the template is
+processed. 
+
+If your pages are in HTML, then the difference doesn't matter.
+
+If your page is in ReST format, then it allows you to have uservalues in ReST;
+which then get rendered along with the rest of your page.
+
+For the full details, see the `templating system`_.
+
+It basically boils down to this, the following template tags will be resolved
+*before* the ReST is processed :
+
+    ``{lt}$ ... $>``
+
+    ``{lt}* ... *>``
+
+and the following template tags will be resolved *after* the ReST is processed
+(and so should contain html values) :
+
+    ``{lt}# ... #>``
+
+    ``{lt}% ... %>``
+
+Don't forget that in order to put HTML tags inside a ReST document, you will
+need to use the raw directive [#]_ : ::
+
+    .. raw:: html
+    
+        {lt}# print '<strong>hello</strong>' #> 
+
+
+
+---------
+
+Footnotes
+===========
+
+.. [#] This footnote is just so that the words internationalization (i18n), and localization (l10n) appear somewhere on this page {sm;:-)}.
+.. [#] We won't call it *index.txt*, which is a `special file`_ in **rest2web**. The example site uses *_index.txt*.
+.. [#] ``<% value %>`` will become ``&lt;% value %&gt;``; which doesn't work {sm;:sad:}. If you do need to do this (by the way) you could also use the raw role.
+
+.. _templates: ../templating.html
+.. _docutils: http://docutils.sourceforge.net
+.. _special file: ../special_files.html
+.. _translation: ../translation/index.html
+.. _let me know: fuzzyman@voidspace.org.uk
+
+

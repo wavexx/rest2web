@@ -1,0 +1,9 @@
+restindex
+    crumb: Page Wibble
+    # This page is in the default section
+/restindex
+=============
+ Page Wibble
+=============
+
+Page wibble...

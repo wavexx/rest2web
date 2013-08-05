@@ -1,0 +1,4 @@
+..
+    restindex
+        index-file: fish.txt
+    /restindex

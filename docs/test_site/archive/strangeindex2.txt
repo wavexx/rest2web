@@ -1,0 +1,19 @@
+restindex
+    target: ../section4/index.html
+    page-title: This is the Famous Section 4 
+    crumb: Fourth of Course
+    page-description:
+        This really is the Famous Section 4.
+    /description       
+/restindex
+
+==========================
+ An Index in reST Format
+==========================
+
+If this works properly `this is a link to a hidden section`__. Again, it illustrates a not so useful feature of rest2web. This is the fact that rest2web will continue to render subdirectories, even if the directories above had no content. Not only that, but the 'crumbs' still work.
+
+This is a link to a page that isn't included__ in the index.
+
+__ empty/somewhere/index.html
+__ notincluded.html

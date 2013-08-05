@@ -1,0 +1,105 @@
+restindex
+    crumb: Smilies
+    page-description:
+        The full set of smilies - for use in the ``smiley`` `macro <../macros.html>`_.
+    /description
+/restindex
+
+======================
+ The Smilies Macro
+======================
+------------------
+ Smilies
+------------------
+
+.. contents::
+
+Introduction
+==============
+
+Included in the example macros file is a function called ``smiley``. This uses a modified version of *smiley.py* by `Mark Andrews`_. It also requires the *path module*. These are both included as part of the **rest2web** distribution in the *modules* directory. If you move them elsewhere you should make sure they are on the *Python search path* [#]_. If you don't know what I'm on about then leave them where they are {sm;:lol:}
+
+The Smilies
+===============
+
+To use the smilies you use the *smiley macro*. This can be either ``{curlyl}smiley;SMILEY{curlyr}`` or the shorter form ``{curlyl}sm;SMILEY{curlyr}``. Replace ``SMILEY`` with the symbols for the the smiley you want to display. For example  ``{curlyl}smiley;8){curlyr}`` becomes {sm;8)}.
+
+Here is the full smiley set :
+
+* ``{sm;:doubt:}`` -- ``:doubt:``
+* ``{sm;:-?}`` -- ``:-?``
+* ``{sm;:!:}`` -- ``:!:``
+* ``{sm;:lol:}`` -- ``:lol:``
+* ``{sm;8)}`` -- ``8)``
+* ``{sm;:(}`` -- ``:(``
+* ``{sm;:)}`` -- ``:)``
+* ``{sm;:eek:}`` -- ``:eek:``
+* ``{sm;:-D}`` -- ``:-D``
+* ``{sm;:cry:}`` -- ``:cry:``
+* ``{sm;:-X}`` -- ``:-X``
+* ``{sm;:?}`` -- ``:?``
+* ``{sm;:evil:}`` -- ``:evil:``
+* ``{sm;:-o}`` -- ``:-o``
+* ``{sm;:mad:}`` -- ``:mad:``
+* ``{sm;:oops:}`` -- ``:oops:``
+* ``{sm;:grin:}`` -- ``:grin:``
+* ``{sm;:-|}`` -- ``:-|``
+* ``{sm;:-p}`` -- ``:-p``
+* ``{sm;:biggrin:}`` -- ``:biggrin:``
+* ``{sm;:idea:}`` -- ``:idea:``
+* ``{sm;:shock:}`` -- ``:shock:``
+* ``{sm;:o}`` -- ``:o``
+* ``{sm;:?:}`` -- ``:?:``
+* ``{sm;:badgrin:}`` -- ``:badgrin:``
+* ``{sm;:roll:}`` -- ``:roll:``
+* ``{sm;:arrow:}`` -- ``:arrow:``
+* ``{sm;:|}`` -- ``:|``
+* ``{sm;:smile:}`` -- ``:smile:``
+* ``{sm;:p}`` -- ``:p``
+* ``{sm;:razz:}`` -- ``:razz:``
+* ``{sm;:wink:}`` -- ``:wink:``
+* ``{sm;:-)}`` -- ``:-)``
+* ``{sm;8-)}`` -- ``8-)``
+* ``{sm;:cool:}`` -- ``:cool:``
+* ``{sm;:D}`` -- ``:D``
+* ``{sm;:neutral:}`` -- ``:neutral:``
+* ``{sm;:sad:}`` -- ``:sad:``
+* ``{sm;:???:}`` -- ``:???:``
+
+The Missing Smilies
+=====================
+
+{emo;exclaim} We can't use the following smilies. ``;-)`` and ``;)``. 
+
+Because they contain a **";"** [#]_, we can't yet use these smilies. They both represent the same smiley. You have to use it in its other form; ``:wink:`` -- ``{sm;:wink:}``.
+
+
+Alternative Smiley Sets
+========================
+
+The nice thing about *smiley.py* is that it supports any smile sets with a **.pak** file. This is the standard for smiley sets that is used by phpbb_. You can find alternative sets of smilies at the stylesdb_ website.
+
+Simply replace the *docs_html/images/smilies* directory with an alternative set to use them. *smiley.py* will automatically create the right links by reading the **.pak** file.
+
+You will need to edit the ``smiley`` function in *macros.py* to have the right path to the smilies directory (to read it) and the right final path to the smilies for your site. 
+
+
+Credits
+========
+
+* The *smilies* come from a gentleman called Spider_. 
+* *smiley.py* is written by `Mark Andrews`_. It is licensed under the BSD license, which is the same one as the `Voidspace License`_ .
+* *path.py* (needed by *smiley.py*) is written by `Jason Orendorff`_. He has placed it in the public domain.
+
+
+.. [#] ``sys.path``
+.. [#] This is a limitation of the macros_ system.
+
+.. _macros: ../macros.html
+
+.. _Jason Orendorff: http://www.jorendorff.com/articles/python/path
+.. _Voidspace License: http://www.voidspace.org.uk/python/license.shtml
+.. _Mark Andrews: http://www.la-la.com
+.. _phpbb: http://www.phpbb.com/
+.. _stylesdb: http://www.stylesdb.com/smilies_styles.html
+.. _Spider: http://web.spidercode.de/smilies

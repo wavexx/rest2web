@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <title><% title %></title>
+    <link rel="stylesheet" href="<% path_to_root %>stylesheets/rest2web.css" type="text/css" />
+    <link rel="stylesheet" href="<% path_to_root %>stylesheets/voidspace_docutils2.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=<# sys.stdout.write(final_encoding) #>" />
+</head>
+
+<body style="background: url(<% path_to_root %>images/logos/img_background.gif) top center repeat-y;">
+  <div id="wrap">
+    <div id="header-section">
+		  <a href="http://www.voidspace.org.uk/index2.shtml" title="Voidspace"><img src="<% path_to_root %>images/logos/header760.gif" alt="Voidspace"/></a>
+		  <p align="center" class="headertitle"><span style="font-size:130%">rest2web:</span> Building Websites Across the Known Universe</p>
+		</div>
+
+    <div id="header">
+      <ul>
+        <#
+            print_crumbs(breadcrumbs)
+        #>
+      </ul>
+    </div>
+
+    <table>
+    <tr>
+     <td><img src="images/logos/1.gif" width="1" height="1" alt="" /></td>
+     <!-- main content cell first, with rowspan=2 -->
+     <td valign="top" align="left" rowspan="2">
+     
+    <div id="middle-column">
+        <a name="startcontent" id="startcontent"></a>
+            
+            <div>
+                <% body %>
+            </div>
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                <small>Testing uservalues for <a href="http://www.voidspace.org.uk/python/rest2web/">rest2web</a></small><br />
+                <small>Page last modified <strong><% modtime %></strong>.</small> 
+                </p>
+            </div>
+   
+    	</div></td>
+    </tr>
+    <tr>
+     <td valign="top" align="left" width="25%">
+    <div id="left-column">
+        <div id="sidie">
+            <ul>
+                <li class="left-navheader-first">
+                    <a href="<% indexpage['target'] %>" class="left-navheader">Index Page</a>
+                </li> 
+                <#
+                    minibar(sections, displayval="crumb", liststart='', listend='',
+                        intro='<li class="left-navheader">Pages</li>',
+                        subintro='<li class="left-navheader">Sub Sections</li>')
+                #>
+            </ul>
+        </div>
+        
+        <p class="sidieimg">
+            <a href="http://www.python.org">
+            <img src="<% path_to_root %>images/logos/new_python.gif" width="88"
+                height="103" border="0" alt="Powered by Python" />
+            </a>
+        </p>
+
+        <p class="sidieimg">
+            <a href="http://sourceforge.net/donate/index.php?group_id=138579">
+            <img src="http://images.sourceforge.net/images/project-support.jpg" width="100"
+                height="32" border="0" alt="Support This Project" />
+            </a>
+        </p>
+
+        <p class="sidieimg">
+            <a href="http://www.voidspace.org.uk/python/rest2web/"><img 
+            src="<% path_to_root %>images/logos/rest2web140x62.gif" width="142" height="62"
+            alt="Site Built with rest2web" /></a><br />
+        </p>
+    </div>
+    </td>
+    </tr>
+</table>
+
+    <hr />
+    
+    <p class="sidieimg">
+        <a href="http://www.voidspace.org.uk/python/rest2web/"><img src="<% path_to_root %>images/logos/rest2web200x80.gif" width="200" height="80" alt="Site Built with rest2web" /></a>
+        <a href="http://sourceforge.net"><img src="http://sourceforge.net/sflogo.php?group_id=138579&amp;type=5" width="210" height="62" alt="SourceForge.net Logo" /></a>
+        <a href="http://www.opensource.org"><img src="<% path_to_root %>images/logos/osi-certified-120x100.gif" width="120" height="100" alt="Certified Open Source" border="1" /></a>
+    </p>
+    
+    <p class="sidieimg">
+        <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+        </script>
+        <script type="text/javascript">
+        _uacct = "UA-203625-1";
+        urchinTracker();
+        </script>
+    </p>
+            
+    <p class="sidieimg">
+        <a href="http://www.voidspace.org.uk/python/index.shtml"><img 
+        src="<% path_to_root %>images/logos/pythonbanner.gif" width="468" height="60"
+        alt="Python on Voidspace" /></a>
+    </p>
+    
+    <div id="footer">
+       Copyright &copy; Voidspace<br />Design by <a href="http://www.fuchsiashockz.co.uk">Fuchsiashockz</a> | <a href="http://validator.w3.org/check?uri=referer" title="Validate code as W3C XHTML 1.1 Strict Compliant">W3C XHTML 1.1</a> | <a href="http://jigsaw.w3.org/css-validator/check?uri=referer" title="Validate Style Sheet as W3C CSS 2.0 Compliant">W3C CSS 2.0</a>
+    </div>
+	</div>
+</body>
+</html>

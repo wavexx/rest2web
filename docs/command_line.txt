@@ -1,0 +1,168 @@
+restindex
+    crumb: Command Line
+    page-description:
+        The different command line options for **rest2web**. This includes
+        passing *uservalues* for use in your pages and templates.
+    /description
+/restindex
+
+======================
+ Command Line Options
+======================
+--------------------------------------------
+ Configuring Rest2web from the Command Line
+--------------------------------------------
+
+.. contents::
+
+Introduction
+============
+
+Most **rest2web** configuration is done through the config file. It is
+generally easier to edit a single text file than to have to remember lots of
+arcane command line options. {sm;:-)}
+
+There are several things you can control from the command line. These include :
+
+* The `Config File <config_file.html>`_ 
+* The verbosity level (how much information rest2web outputs as it runs
+* Override the template file
+* Go into force mode
+* Specify global `uservalues <reference/uservalues.html>`_
+
+Basic Usage
+===========
+
+If you type ``r2w.py --help`` at the command line, this is the message it
+*should* print :
+
+::
+
+    usage: r2w.py [options] config_file
+    
+    options:
+      --version             show program's version number and exit
+      -h, --help            show this help message and exit
+      -v                    Verbose output (default).
+      -a                    Display warnings & actions only.
+      -w                    Display warnings only.
+      -t TEMPLATE, --template-file=TEMPLATE
+                            Specify a template file. (Overrides first template.)
+      -u USERVALUES, --uservalues=USERVALUES
+                            Global uservalues for the site, in the form
+                            "name=value".
+      -f, --force           Force site without indexes, restindexes or template.
+      -n, --nopause         Do not pause after processing (overrides setting in config file).
+      -s, --skiperrors      Skip errors (continue processing).
+
+.. note::
+
+    Command line options are processed using `optparse <http://docs.python.org/lib/module-optparse.html>`_.
+    
+    This only comes with Python 2.3 and more recent. On Python 2.2 you will
+    only be able to pass the config file at the command line.
+
+The Config File
+===============
+
+If you run ``r2w.py`` *without* any command line options, it looks for a file
+called ``r2w.ini`` in the current working directory.
+
+Alternatively you can specify a `config file`_ as the last argument to ``r2w.py``.
+
+
+Verbosity Level
+===============
+
+By default rest2web outputs a lot of information about what it does. This
+includes which directories and files it is processing, as well any errors
+raised along the way.
+
+This may be too much information. There are three different verbosity levels :
+
+* ``-v`` - Verbose, the default level. Information, actions and errors.
+* ``-a`` - Action level. Actions and errors only.
+* ``-w`` - Warning level. Warnings only.
+
+
+Template File
+=============
+
+rest2web uses template files to generate the output pages. See `Templating <templating.html>`_
+for the details of this.
+
+Often you will only use a single template, specified in the `restindex <restindex.shtml>`_
+of your top level index page. Sometimes you may want to use alternative templates
+for the same site. For example one for the online version and one for the
+distributed documentation.
+
+You can override the top level template from the command line, using either :
+
+    ``r2w.py -t path/to/template.txt``
+    
+    ``r2w.py --template-file=path/to/template.txt``
+
+
+Uservalues
+==========
+
+`The Uservalues <reference/uservalues.html>`_ are a way of providing values to
+use in your content and templates. They can be useful for multiple translations,
+or for values that you want to specify at the time you build your site.
+
+You can specify uservalues in the restindex of each page. You can also specify
+*global* uservalues (available in every page) in the config file, or at the
+command line.
+
+If you specify the same values in your config file *and* at the command line,
+the command line takes higher priority.
+
+A uservalue needs a name (this is how you refer to it in pages/templates) and
+a value. The name and value should be separated by an equals sign.
+
+This means that you can specify uservalues at the command line using either :
+
+    ``r2w.py -u "name=value"``
+    
+    ``r2w.py --uservalues="name=value"``
+
+The double quotes are optional, but useful if the value has spaces.
+
+Uservalues in pages will override global uservalues specified in either the
+config file or at the command line.
+
+Force Mode
+==========
+
+`force mode <force_mode.html>`__ allows you to build websites without specifying
+a template, providing indexes, or having restindexes in the ReST documents that
+form your pages.
+
+You can supply any of these that you want, but where they are missing rest2web
+will supply defaults.
+
+To switch force mode onfrom the command line, use :
+
+    ``r2w.py -f``
+    
+    ``r2w.py --force``
+
+No Pause
+========
+
+This overrides the 'pause' option in the config file, and forces 'r2w.py' to
+*not pause* after running.
+
+
+skiperrors
+==========
+
+This option determines how rest2web will handle exceptions (like our old friend ``UnicodeDecodeError``) that happen when processing pages.
+
+If set, rest2web will display the error and move to the next file. The default is off.
+
+.. note::
+
+    If an error occurs whilst trying to process an index file, it will have to skip building the directory.
+    
+    This feature is still 'experimental' and may need refining.

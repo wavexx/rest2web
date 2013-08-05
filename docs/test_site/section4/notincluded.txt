@@ -1,0 +1,10 @@
+restindex
+    include: no
+    crumb: Not Included
+/restindex
+
+==============
+ Not Included
+==============
+
+This page just isn't included.

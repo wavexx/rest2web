@@ -1,0 +1,33 @@
+restindex
+    page-title: The Translation Index
+    crumb: Translation
+    link-title: Translation Example
+    format: html
+    page-description:
+        A very basic example of a website with multiple translations.
+    /description
+/restindex
+
+<div class="zentrum">
+    <h1>Welcome</h1>
+    <h2>Choose Your Language</h2>
+
+    <table align="center">
+    
+        <tr><td>
+        
+        <a href="en/index.html">English</a>
+        
+        </td><td>
+        
+        <a href="fr/index.html">Francais</a>
+        
+        </td><td>
+        
+        <a href="de/index.html">Deutsch</a>
+        
+        </td></tr>
+    
+    </table>
+
+</div>

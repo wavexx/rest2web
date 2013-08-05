@@ -1,0 +1,18 @@
+.thumbnail {
+    float: left;
+    width: 150px;
+    height: 200px;
+    padding: 3px 3px 0px 3px;
+    margin: 5px;
+    border-style: solid;
+    border-width: medium;
+    border-color: blue;
+    text-align: center;
+}
+.thumbnail img {
+    display: block;
+    margin: auto;
+}
+
+.gallery {margin:auto;}
+#end {clear: left; }

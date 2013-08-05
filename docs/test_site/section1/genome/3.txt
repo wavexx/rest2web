@@ -1,0 +1,189 @@
+restindex
+format: html 
+page-title: Genomes to Life: A DOE Systems Biology Program 
+crumb: Genomes to Life
+/restindex
+
+<div align="right">
+<table width="100%">
+<tr valign="top">
+<td><img src="sidebar2.jpg" height="1200" width="90" /></td>
+<td align="left" valign="top">
+<div align="right"><b><font face="Book Antiqua"><font
+color="#800040"><font size="+3">Genomes to Life: A DOE Systems
+Biology Program</font></font></font></b><br />
+<hr align="right" width="80%" />
+<b><font face="Arial,Helvetica"><font color="#000000"><font
+size="-1">Genomics and Its Impact on Science and Society: The Human
+Genome Project and Beyond</font></font></font></b></div>
+
+<div align="right">
+<table>
+<tr>
+<td>
+<div align="right"><a href="5.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="9.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</div>
+
+<p><font face="Arial,Helvetica"><b><font face="Book Antiqua"><font
+color="#800040"><font size="+2">Exploring Microbial Genomes for
+Energy and the Environment</font></font></font></b></font><br />
+ <font face="Arial, Helvetica, sans-serif">The remarkable successes
+of the Human Genome Project (HGP) and spin-offs revealing the
+details of hundreds of genomes provide the richest resource in the
+history of biology. The new Genomes to Life (GTL) program of the
+U.S. Department of Energy (DOE) builds on these successes by
+combining DNA sequence data with advanced technologies to explore
+the amazingly diverse natural capabilities of microbes&mdash;the
+invisible organisms that thrive in every known environment on
+earth. The ultimate goal is to understand and use their diverse
+functions to meet critical DOE mission challenges in energy
+security, global climate change, and toxic waste
+cleanup.</font></p>
+
+<p><font face="Arial,Helvetica"><font color="#800040"><font
+size="+1"><strong>Why Microbes?</strong></font></font></font><br />
+ <font face="Arial, Helvetica, sans-serif">The ability of this
+planet to sustain life is largely dependent on microbes, most of
+which do not cause disease. Microbes are the foundation of the
+biosphere, controlling earth&rsquo;s natural biogeochemical cycles
+and affecting the productivity of the soil, quality of water, and
+global climate. As one of the most exciting frontiers in biology
+today, microbial research is revealing the hidden architectures of
+life and the dynamic, life-sustaining processes they carry out on
+Earth. Although microbes are recognized masters at living in almost
+every environment and harvesting energy in almost any form, we know
+less than 1% of them. Their sophisticated biochemical capabilities
+can be used for transforming wastes and organic matter, cycling
+nutrients, and, as part of the photosynthetic process, converting
+sunlight into energy and storing CO2 from the
+atmosphere.</font></p>
+
+<p><font face="Arial,Helvetica"><font color="#800040"><font
+size="+1"><strong>GTL Scientific
+Challenges</strong></font></font></font><br />
+ <font face="Arial, Helvetica, sans-serif">Although we now have the
+entire genome sequences for hundreds of microbes, we still have
+very little understanding of how the information in DNA creates,
+sustains, and reproduces living systems. Obtaining this knowledge,
+a critical first step in harnessing microbial functions, requires a
+comprehensive approach extending from individual cells to many
+cells functioning in communities. Such studies must encompass
+proteins, multimolecular assemblies (sometimes called
+&ldquo;molecular machines&rdquo;; <a href="1.html">see figure</a>)
+of components that work together, the intricate labyrinth of
+pathways and networks in which they interact, and cells. The wealth
+of data to be collected must be assimilated, understood, and
+modeled on the scale and complexity of real living systems and
+processes.</font></p>
+
+<p><font face="Arial,Helvetica"><font color="#800040"><font
+size="+1"><strong>Large-Scale Technologies and Advanced
+Computing</strong></font></font></font><br />
+ <font face="Arial, Helvetica, sans-serif"><img
+src="HP_Cluster0_os.jpg" alt="computing" width="150" height="207"
+align="left" />Just as DNA sequencing capability was completely
+inadequate at the beginning of the HGP, the quantity and complexity
+of data that must be collected and analyzed for systems biology
+research far exceed current capabilities and capacities. Dozens of
+advanced large-scale technologies and approaches must be developed,
+with mathematics and computing guiding the research questions and
+interpretation at every step. Computational tools must manage and
+integrate the data into mechanistic models that describe how cells
+work. These studies eventually will enable an integrated and
+predictive understanding of how living cells function and respond
+to environmental changes, opening the door to using microbial
+capabilities.</font></p>
+
+<p><font face="Arial, Helvetica, sans-serif"><img src="tech1.jpg"
+alt="technology" width="200" height="117" align="right" />To meet
+these challenges, DOE has planned four major research facilities
+that will make the most advanced technologies and computing
+resources available to the broader life sciences research
+community. Allowing new avenues of inquiry, this unique set of
+facilities will fundamentally change the course of biological
+research and greatly accelerate the pace of discovery. The
+facilities will provide scientists with the enduring and
+comprehensive ability to understand and, ultimately, reap enormous
+benefit from the functioning of microbial systems (see <a
+href="http://www.doegenomestolife.org/">Genomes to
+Life</a>).</font></p>
+
+<center>
+<table>
+<tr>
+<td>
+<div align="right"><a href="8.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="4.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</center>
+</td>
+</tr>
+</table>
+</div>
+
+<table border="1" width="100%">
+<tr>
+<td><a href="http://www.ornl.gov/TechResources/Human_Genome/"><img
+src="HGPlogo1.jpg" border="0" height="107" width="108" /></a></td>
+<td>The online presentation of this publication is a special
+feature of the <a
+href="http://www.ornl.gov/TechResources/Human_Genome/">Human Genome
+Project Information Web site</a>.</td>
+</tr>
+</table>

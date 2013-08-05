@@ -1,0 +1,544 @@
+restindex
+    crumb: Functions
+    page-description:
+        The standard functions for printing indexes, navigation trails, and sidebars.
+    /description
+/restindex
+
+==========================
+ The Standard Functions
+==========================
+---------------------------
+ The Functions in rest2web
+---------------------------
+
+.. contents:: Functions
+
+
+Introduction
+============
+
+{emo;python} **rest2web** provides varous data structures for use in your templates. These can be used to create navigation trails and simple or complex sidebars. It is probable that most people using **rest2web** will want to create similarly constructed results - even if the visual appearance differs.
+
+Included in the namespace the templates are rendered in, are several standard functions that do just this.
+
+The Functions
+=============
+
+The standard functions are defined in the file *functions.py*, in the rest2web directory. They are also good examples of how to use the data structures.
+
+If you find yourself regularly defining and using *different* functions then `let me know`_. I can include them in this file. [#]_
+
+See the templating_ and indextree_ page for more details of the values used by the standard functions.
+
+These functions all have sensible defaults - but can be controlled by passing in keyword arguments. This means you only have to pass in arguments that you need to change from the default.
+
+You include them in the template between ``<# .... #>`` style tags.
+
+For example, you can print the standard *breadcrumbs* trail for a page using : ::
+
+    <# print_crumbs(breadcrumbs) #>
+
+If you wanted all the elements to be in bold you could change the ``item`` keyword : ::
+
+    <# print_crumbs(breadcrumbs, item='<li><strong>%s</strong></li>') #>
+
+Abetter way of doing that would be through {acro;CSS} of course, but you get the idea. {sm;:-p}
+
+print_details
+-------------
+
+This function provides an ultra easy way of printing index pages. It will print a list of all the pages in a section - with a link and the description. You can configure the {acro;HTML} used - and whether or not the description is included.
+
+.. raw:: html
+
+    {+coloring}
+
+    print_details(section,
+            page_title='<h3>Pages</h3>',
+            subsection_title='<h3>Sub Sections</h3>',
+            item_wrapper = '<ul>%s</ul>',
+            item='<li>%s</li>',
+            link='<a href="%s">%s</a>',
+            description='%s',
+            do_description=True,
+            split=True,
+            do_pages=True,
+            do_subsections=True
+            ):
+    
+    {-coloring}
+
+This function is a quick way of printing all the pages and sub-sections in
+a section. You can use it without having to understand the ``sections``
+data structure.
+
+It prints a menu of all pages (links and descriptions) and sub-sections.
+
+It has sensible defaults - and is configurable in terms of the HTML used.
+
+Including the description of each page is optional.
+
+You can also elect to do pages and subsections combined, separately, or 
+just one or the other.
+
+Like the other function it needs "%s" in some of the values - which are
+filled in automatically.
+
+The default layout looks like : ::
+
+    <h3>Page Title</h3> ---> ``page_title``
+    
+    <ul> ---> ``item_wrapper`` along with the corresponding ``</ul>``.
+              This wraps all the links.
+        <li> ---> ``item`` along with the corresponding ``</li>``. This
+                  wraps each item - whether or not it includes the
+                  description.
+        <a href="url">Link Title</a> ---> ``link``. This contains the URL 
+                                          *and* the link title.
+        Page description.        ---> ``description`` . Optional, 
+                                       controlled by ``do_description``
+        </li>
+    </ul>
+
+This is then repeated for the subsections. If ``split`` is ``False`` then
+all the pages and subsections are combined as the pages.
+
+The options are :
+
+*    ``page_title = '<h3>Pages</h3>'``
+    
+        This is the title line printed before the pages.
+    
+*    ``subsection_title = '<h3>Sub Sections</h3>'``
+    
+        This is the title line printed before the Sub Sections.
+    
+*    ``item_wrapper = '<ul>%s</ul>'``
+    
+        This is the wrapper around all the links. It needs one "%s" in it.
+    
+*    ``item = '<li>%s</li>'``
+    
+        This is the wrapper around each link. It needs one "%s" in it.
+    
+*    ``link = '<a href="%s">%s</a>'``
+    
+        This is the link. It needs two "%s" in it.
+    
+*    ``description = '%s'``
+    
+        This is for the description and is put immediately after the link.
+        It needs one "%s" in it. (You could put a tags around the 
+        description to style them separately. E.g. 
+        ``description = '<div class="description>%s</div>'``).
+        
+        .. note::
+        
+            It's not necessary to explicitly put paragraph tags around the
+            description.
+            
+            **rest2web** renders descriptions using `docutils <http://docutils.sf.net>`_
+            which does this automatically.
+    
+*    ``do_description = True``
+    
+        If ``True``, the description is added to each link.
+    
+*    ``split = True``
+    
+        If ``True``, the pages are done separately from the sub-sections.
+    
+*    ``do_pages = True``
+    
+        If ``False``, the pages are not printed.
+    
+*    ``do_subsections = True``
+    
+        If ``False``, the subsections are not printed.
+
+
+So you can print a basic index page for a section with a single function call. Shown below is the call for printing all the pages and subsections in the default section : ::
+
+    <# print_details(default_section) #>
+
+{sm;:-)} Easy hey.
+
+If you have several sections in your index page, here is some example code that does all of them (including section descriptions) :
+
+.. raw:: html
+
+    {+coloring}
+    
+    for section in sections.values():
+        print '<div class="indexblock">'
+        title = '''
+            <h2>%s</h2>
+            %s''' % (section['title'], section['description'])
+        print_details(section, split=False, page_title=title)
+        print '</div>'
+
+    {-coloring}
+
+The above code prints the pages and subsections for every section. Each section is in it's own ``div`` with the section name as a title.
+
+If you want to wrap pages and subsections in their own ``div`` (so you need them outputting separately), you could do : ::
+
+    <div class="pages">
+        <# print_details(default_section, do_subsections=False) #>
+    </div>
+
+    <div class="subsections">
+        <# print_details(sections[None], do_pages=False) #>
+    </div>
+
+section_contents
+----------------
+
+``section_contents`` makes it easier to access the information in the ``sections`` data structure. You pass it an individual section (i.e. ``sections['section_name']``) and it returns a list of the pages and subsections. Usually it is only this information that you want. ::
+
+    section_contents(section, split=True):
+
+Passed in a section - this function returns the pages and subsections.
+
+Each page (or subsection) is returned as a tuple : 
+``(url, link title, description)``
+
+The urllib is escaped for putting straight into the link.
+
+If split is ``True`` (the default) this function returns a list of pages and a
+list of subsections.
+
+If split is ``False`` it just returns a single list.
+
+An example use of this function might be :
+
+.. raw:: html
+
+    {+coloring}
+    
+    pageblock = '''\
+            <li><a href="%s">%s</a>
+                <p>%s</p>
+            </li>
+    '''
+    # just use the default section
+    pages, subsections = section_contents(sections[None])
+    # first print the pages
+    if pages:
+        print '<h3>Pages</h3>'
+        print '<ul>'
+        for page in pages:
+            print pageblock % page
+        print '</ul>'
+    # next - the subsections
+    if subsections:
+        print '<h3>Subsections</h3>'
+        print '<ul>'
+        for page in subsections:
+            print pageblock % page
+        print '</ul>'
+
+    {-coloring}
+
+Another example that only uses the link and link title for each page :
+
+.. raw:: html
+
+    {+coloring}
+    
+    # Get all the pages in the default section
+    # as a single list
+    pages = section_contents(sections[None], split=False)
+    
+    link = '<a href="%s">%s</a>'
+    for page in pages:
+        url = page[0]
+        title = page[1]
+        # we don't use page[2] which is the description
+        print link % (url, title)
+        print '<br />'
+    
+    {-coloring}
+
+You can actually achieve the same as the above examples by using the print_details_ function.
+
+print_crumbs
+-------------
+
+The ``print_crumbs`` function provides a way of easily adding a navigation trail to your website. It uses the ``breadcrumbs`` value. In it's simplest form you put ``<# print_crumbs(breadcrumbs) #>`` in your template.
+
+It also takes other values which define how it prints the trail, and the dividers between the links. Here is the function description, which explains how to use it :
+
+.. raw:: html
+
+    {+coloring}
+    
+    def print_crumbs(
+            breadcrumbs,
+            item = '<li>%s</li>',
+            anchor = '<a href="%s">%s</a>',
+            divider = '&gt;',
+            ):
+            
+    {-coloring}
+
+A function to print the breadcrumbs (navigation) trail for a page.
+
+The idea is that all the index pages above the current page are shown as 
+links. There are dividers in between, and the crumb of the current page is
+shown (but not as a link).
+
+You pass in the breadcrumbs values. It needs an item value with one ``'%s'`` 
+place holder. Every link and divider (and the last value) is put into this item.
+The default value is ``'<li>%s</li>'``.
+
+It needs an anchor value with two ``'%s'`` placeholders. Into this are inserted 
+the link and the 'crumb'. The default value is ``'<a href="%s">%s</a>'``
+The last crumb is printed without the use of the ``'anchor'`` value.
+
+It also needs a divider which is printed between the crumbs.
+The default value is ``'>'``
+
+By default this function uses list items to display the crumbs.
+
+You should surround it using something like : ::
+
+    '<div id="crumbs"><ul>...</ul></div>'
+
+Then use css rules like the following to format the display of the crumbs : ::
+    
+    #crumbs {
+        background-color:#c99;
+        padding:5px;
+        text-align:center;
+        font-size:15pt;
+        font-weight:bold;
+    }
+    
+    #crumbs ul {
+        margin:0;
+        padding:0
+    }
+    
+    #crumbs li {
+        display:inline;
+        list-style:none;
+        margin:0;
+        padding:5px;
+    }
+
+So to display the breadcrumbs trail without using list items, you could put the 
+following in your template : ::
+
+    <# 
+        # item no longer uses ``<li>``
+        item = '%s'
+        print_crumbs(breadcrumbs, item=item)
+    #>
+
+If you specify ``dividers=None``, then no dividers at all will be printed.
+
+minibar
+-------
+
+This function prints a simple sidebar that shows links to all the pages in the current directory. It uses the ``sections`` value to get it's information. It *doesn't* print a link to the index page in a directory. Here is the function definition : 
+
+.. raw:: html
+
+    {+coloring}
+    
+    minibar(sections, 
+            item = '<li><a href="%s">%s</a></li>', 
+            intro = '<h3>Pages</h3>', 
+            subsect=True,  
+            subintro = '<h3>Sub Sections</h3>', 
+            liststart = '<ul>', 
+            listend = '</ul>',
+            displayval = 'link-title'
+            ):
+            
+    {-coloring}
+    
+This function prints an alternative sidebar to the 'sidebar' function.
+
+It uses the ``'sections'`` value rather than indextree and only goes 
+through the pages in the current directory.
+
+It can optionally differentiate between pages that are themselves 
+'subsections' (index pages for sections below) and ordinary pages.
+
+You need to pass in the 'sections' value, as well as any of the following 
+optional keyword arguments :
+
+If ``'subsect'`` is ``True`` (the default) then minibar divides pages 
+into ordinary pages and 'subsections'. Otherwise they're all pages.
+
+If there are any pages then the value 'intro' is printed. Default is ``'<h3>Pages</h3>'``.
+
+Then liststart is printed. Default is ``'<ul>'``.
+
+The for each page the following is printed : ::
+
+    item % (page['target'], page[displayval])
+    
+The default for item is ``'<li><a href="%s">%s</a></li>'``
+
+The default for displayval is ``'link-title'``. (It should be one of the values
+stored in each page. An alternative value would be ``'crumb'``).
+
+Then listend is printed. Default is ``'</ul>'``.
+
+If there are any subsections (and ``'subsect'`` is ``True``) then value 
+``'subintro'`` is printed. Default is ``'<h3>Sub Sections</h3>'``
+
+Then the same sequence as for pages is printed : ::
+
+    list start, the page links, listend
+
+Note: it doesn't include a link to the index page in a section. You will need 
+to include this yourself separately.
+
+     
+To print a link to the index page *and* all the pages in the section you can use something like the following in your template : ::
+
+    <#
+        print '<h3><a href="%s">Main Page</a></h3>' % indexpage['target']
+        minibar(sections)
+    
+    #>
+
+It uses the ``indexpage`` value as well as the ``minibar`` function.    
+
+sidebar
+-------
+
+This is slightly different to the other functions. It can be used to produce sidebars with links to all the pages in the sections above the current page. It is actually a 'generator' rather than a function. This means you iterate over it and it yields pages one at a time. It works from the top level down, and it wraps each section in a 'div' block. This allows you to visually display the nested nature of the sections. ``sidebar`` in it's defualt behaviour does this by indenting the sections 10 pixels each time : 
+
+.. raw:: html
+
+    {+coloring}
+    
+    sidebar(thetree, div='<div style="margin:10px">', undiv='</div>', cmp=None):
+    
+    {-coloring}
+    
+A generator for dealing with the ``'indextree'`` of pages and indexes.
+
+It is recursive for handling the nested 'branches' of the tree.
+
+It goes through all the pages from the top level of the tree 
+provided.
+
+It yields pages one at a time - index page first. (It sets ``page['title'] = True`` 
+on index pages - otherwise  ``page['title'] = False``. This allows you to 
+display them differently).
+
+Before moving down the tree it prints a value called ``'div'`` after finishing
+a branch it prints 'undiv'.
+
+Default value for div is ``'<div style="margin:10px">'``.
+
+Default value for undiv is ``'</div>'``.
+
+You would typically use this in a template with something like :
+
+.. raw:: html
+
+    {+coloring}
+    
+    for page in sidebar(indextree):
+        val = page['crumb']
+        link = page['target']
+        if page['title']:
+            print '<br /><strong><a href="%s">%s</a></strong>' \
+            % (link, val)
+        else:
+            print '<br /><a href="%s">%s</a>' % (link, val)
+    
+    {-coloring}
+        
+It might be more sensible to pass in a div with a named class. This makes it 
+easier to control the style through CSS. For example 
+``for page in sidebar(indextree, '<div class="sidebar-links">'):``.
+
+You can pass in an optional compare function to sort the pages. An example sort function,
+sorting by crumb:
+
+    ``cmp_page = lambda page1, page2 : cmp(page1['crumb'], page2['crumb'])``
+
+You could also have (for example) a date uservalue in each page and sort on the date.
+
+
+include
+-------
+
+This function allows you to include other files within pages or templates. If
+the file is not found in the current directory (and is not supplied as a
+relative or absolute path), then the file will be looked for in the parent
+directories.
+
+    ``<% include('filename.txt') %>``
+    
+    ``<# print include('filename.txt') #>``
+
+This means you can do things like :
+
+    ``<% include('footer.txt') %>``
+
+in your template. This will include 'footer.txt' in your template. The files you
+include can use all the normal template values.
+
+In sub-directories you can provide a different 'footer.txt' which will be used
+instead. This allows you to customise *parts* of the templates in different
+parts of the website.
+
+You can also provide an optional argument to 'include', which is to be used
+if the file does not exist :
+
+    ``<% include('body.txt', body) %>``
+
+    ``<% include('body.txt', alternative=body) %>``
+
+If at the top level you don't provide a 'body.txt', then the body is used as it
+is.
+
+In a sub-directory, you could provide a body text something like : ::
+
+    <div class="different_style">
+        <% body %>
+    </div>
+
+So the body of the page would be wrapped in that sub-directory.
+
+
+formattime
+----------
+
+This is a function to output times in nicely formatted ways. It uses
+format strings from the `Python Time Module <http://docs.python.org/lib/module-time.html>`_.
+
+
+    ``formattime(t=None, format="%a, %d %b %Y %H:%M:%S")``
+
+
+Given a time in seconds since the epoch (e.g. the ``modified`` value),
+convert it into a time formatted using the ``time.strftime`` function.
+
+The default format string is ``"%a, %d %b %Y %H:%M:%S"``. This produces
+dates that look like :
+
+    ``'Fri, 27 Jan 2006 09:53:52'``
+
+If you don't supply a time, then the current time is used. The time is
+always understood as a *local time*.
+
+---------
+
+.. [#] You can keep your own functions in a separate file by putting it somewhere in ``sys.path`` and using normal import statements in your template.
+ 
+.. _let me know: fuzzyman@voidspace.org.uk
+.. _templating: templating.html
+.. _indextree: reference/indextree.html
+
+

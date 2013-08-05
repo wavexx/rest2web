@@ -1,0 +1,18 @@
+restindex
+    crumb: Gallery 3
+    plugins: gallery
+    format: html
+    page-title: A Gallery That Isn't an Index
+/restindex
+
+uservalues
+    thumb_size = 150, 150
+    gallery_dir = ../../docs_html/gallery_test/subfolder/gallery3
+    gallery_url = gallery3
+    data_file = gallery3.ini 
+    page_template = ../page.html
+    entry_template = ../entry.html
+    gallery_mode = 1
+/uservalues
+
+<% gallery %>

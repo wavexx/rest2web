@@ -1,0 +1,20 @@
+restindex
+    crumb: Gallery 1
+    output-encoding: utf8
+    template-encoding: utf8
+    plugins: gallery
+    format: html
+    page-title: Test Gallery
+/restindex
+
+uservalues
+    thumb_size = 150, 150
+    gallery_dir = ../docs_html/gallery_test/gallery
+    gallery_url = gallery
+    data_file = gallery1.ini 
+    page_template = page.html
+    entry_template = entry.html
+    gallery_mode = 1
+/uservalues
+
+<% gallery %>

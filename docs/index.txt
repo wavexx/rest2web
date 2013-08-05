@@ -1,0 +1,111 @@
+restindex
+    crumb: rest2web
+    tags: index, main page, sourceforge, mailing list, svn, svn repository
+    output-encoding: utf8
+    template-encoding: utf8
+    section-pages: , introduction, quickstart, config_file, tutorial, command_line, force_mode, templating, the_restindex, functions, macros, special_files, reference/index, test_site/index, translation/index
+    link-title: rest2web Home
+/restindex
+
+=============================
+ rest2web - The Site Builder
+=============================
+---------------------------------------
+ Autogenerating Websites with Docutils
+---------------------------------------
+
+:Author: Michael Foord {sm;8)}
+:Contact: fuzzyman@voidspace.org.uk
+:Version: 0.5.1
+:Date: 2006/12/16
+:License:  BSD-License_
+:Home Page: rest2web_
+:Quick Download: `rest2web-0.5.1.zip <http://www.voidspace.org.uk/cgi-bin/voidspace/downman.py?file=rest2web-0.5.1.zip>`_
+:Tarball: `rest2web-0.5.1.tar.gz <http://www.voidspace.org.uk/cgi-bin/voidspace/downman.py?file=rest2web-0.5.1.tar.gz>`_
+:Sourceforge: `rest2web Project Page`_
+:Development: `SVN Repository`_
+:Support: `rest2web Mailing List`_
+
+
+.. image:: images/logos/rest2web200x80.gif
+   :height: 80
+   :width: 200
+   :alt: Site Built with rest2web
+   :align: center
+
+
+.. image:: images/screenshot.jpg
+   :height: 308
+   :width: 410
+   :alt: Building with rest2web
+   :class: image
+   :align: center
+   :target: images/screenshot_big.jpg
+
+rest2web - The Website Builder
+==============================
+
+{emo;html} Maintaining websites or project documentation in {acro;HTML} is a pain.
+**rest2web** takes out the pain, and brings back the joy. {sm;:wink:}
+
+**rest2web** is a simple tool that lets you build your website from a single
+template (or as many as you want), and keep the contents in `ReStructured Text <http://docutils.sourceforge.net>`_ [#]_.
+(You can still keep pages in HTML if needed.)
+
+It can also aid in having multiple translations of your site ({acro;i18n;Internationalization})
+and a *host* of other features. {sm;:-)}
+
+Below is an index to all the rest2web documentation, but for more information
+check out the `introduction <introduction.html>`_.
+
+Alternatively, browse the following websites. They are *all* built with **rest2web**
+and show the range of different styles it is capable of creating [#]_ :
+
+* `Voidspace <http://www.voidspace.org.uk/index2.shtml>`_
+* `Project Pipe <http://www.projectpipe.com/>`_
+* `Martin Krafft's PHD Pages <http://martin-krafft.net/phd/>`_
+* `HP Linux Imaging and Printing <http://hplip.sourceforge.net/>`_
+* `Live Off Grid <http://www.liveoffgrid.net/>`_
+* `CRSR <http://www.crsr.net>`_
+* `Civitas <http://bj.spline.de/civitas/>`_
+* `German Website on Text Based Tools <http://www.automatisch.cc/>`_
+* `The Python Academy (English) <http://www.python-academy.com/>`_
+* `The Python Academy (Deutsch) <http://www.python-academy.de/>`_
+* `Creatext <http://creatext.sourceforge.net/>`_
+* `Tibet.net <http://www.tibed.net/>`_
+* `Homesite of Marius Soutier <http://www.soutier.de>`_
+* `Homesite of Paul Bartletts <http://bartletts.pwp.blueyonder.co.uk>`_
+* `Homesite of Peter Brett <http://peter-b.co.uk/>`_
+* `Homepage of Gaël Varoquaux <http://www.gael-varoquaux.info/>`_
+* `The Rhyming Panda <http://www.rhymingpanda.com>`_
+* `Aikido Club Website <http://www.aikido-verein-hannover.de/>`_
+* `Introduction to Scott Mcdermott <http://smm.atspace.com/>`_
+
+
+It also builds the documentation for the following projects :
+
+* rest2web_
+* `PyGeo <http://pygeo.sourceforge.net/>`_
+* `Movable Python <http://www.voidspace.org.uk/python/movpy/>`_
+* `Firedrop2 <http://www.voidspace.org.uk/python/firedrop2/>`_
+
+To see recent changes, visit the `Changelog <reference/changelog.html>`_.
+
+.. raw:: html
+
+        <#
+            print_details(default_section, wrapper_class="displaybox")
+        #>
+
+---------------------
+
+.. [#] {acro;ReST;ReStructuredText} is a plain text {acro;WYSIWYG} markup. It's
+       a great way of keeping documents in a readable and editable form.
+.. [#] If your site is built with **rest2web**, then `Contact Me <http://www.voidspace.org.uk/cgi-bin/contact/contact.py>`_
+       to get it added to this list.
+
+.. _BSD-License: http://www.voidspace.org.uk/python/license.shtml
+.. _rest2web: http://www.voidspace.org.uk/python/rest2web/
+.. _Rest2web Mailing List: http://lists.sourceforge.net/lists/listinfo/rest2web-develop
+.. _SVN Repository: https://svn.rest2web.python-hosting.com/trunk/
+.. _rest2web Project Page: http://sourceforge.net/projects/rest2web

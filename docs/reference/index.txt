@@ -1,0 +1,21 @@
+restindex
+    crumb: Reference
+    link-title: Reference Section
+    page-description:
+        Documentation and reference for **rest2web**.
+    /description
+/restindex
+
+==============================
+ rest2web - Reference Section
+==============================
+
+.. raw:: html
+    
+    <div class="indexblock">
+        <#
+            print_details(sections[None])
+        #>
+    </div>
+
+

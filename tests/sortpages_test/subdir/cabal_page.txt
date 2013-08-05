@@ -1,0 +1,9 @@
+restindex
+    crumb: Page Cabal
+    section: OtherSection
+/restindex
+============
+ Page Cabal
+============
+
+Page cabal...

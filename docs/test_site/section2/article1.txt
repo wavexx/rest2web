@@ -1,0 +1,10 @@
+restindex
+    link-title: An Article
+/restindex
+
+
+=============
+ An Article
+=============
+
+This is an article about nothing in particular.

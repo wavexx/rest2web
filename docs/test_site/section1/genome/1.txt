@@ -1,0 +1,173 @@
+restindex
+format: html 
+page-title: Genomics 101: A Primer 
+crumb: Genomics 101
+/restindex
+
+<div align="right">
+<table width="100%">
+<tr valign="top">
+<td><img src="sidebar2.jpg" height="1200" width="90" /></td>
+<td align="left" valign="top">
+<div align="right"><b><font face="Book Antiqua"><font
+color="#800040"><font size="+3">Genomics 101: A
+Primer</font></font></font></b><br />
+<hr align="right" width="80%" />
+<b><font face="Arial,Helvetica"><font color="#000000"><font
+size="-1">Genomics and Its Impact on Science and Society: The Human
+Genome Project and Beyond</font></font></font></b></div>
+
+<div align="right">
+<table>
+<tr>
+<td>
+<div align="right"><a href="index.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="2.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+</div>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+
+<br />
+<font face="Arial,Helvetica"><b><font
+color="#800040">Cells</font></b> are the fundamental working units
+of every living system. All the instructions needed to direct their
+activities are contained within the chemical DNA (deoxyribonucleic
+acid).</font> 
+<p><font face="Arial,Helvetica"><b><font
+color="#800040">DNA</font></b> from all organisms is made up of the
+same chemical and physical components. The <font
+color="#800040">DNA sequence</font> is the particular side-by-side
+arrangement of bases along the DNA strand (e.g., ATTCCGGA). This
+order spells out the exact instructions required to create a
+particular organism with its own unique traits.</font></p>
+
+<p><font face="Arial,Helvetica">The <b><font
+color="#800040">genome</font></b> is an organism&rsquo;s complete
+set of DNA. Genomes vary widely in size: the smallest known genome
+for a free-living organism (a bacterium) contains about 600,000 DNA
+base pairs, while human and mouse genomes have some 3 billion (see
+<a href="4.html">"Early Insights"</a>). Except for mature red
+blood cells, all human cells contain a complete genome.</font></p>
+
+<p><font face="Arial,Helvetica">DNA in the human genome is arranged
+into 24 distinct <b><font
+color="#800040">chromosomes</font></b>--physically separate
+molecules that range in length from about 50 million to 250 million
+base pairs. A few types of major chromosomal abnormalities,
+including missing or extra copies or gross breaks and rejoinings
+(translocations), can be detected by microscopic examination. Most
+changes in DNA, however, are more subtle and require a closer
+analysis of the DNA molecule to find perhaps single-base
+differences.</font> <img src="molecularmachine.jpg" height="300"
+width="380" align="right" /></p>
+
+<p><font face="Arial,Helvetica">Each chromosome contains many
+<b><font color="#800040">genes</font></b>, the basic physical and
+functional units of heredity. Genes are specific sequences of bases
+that encode instructions on how to make proteins. Genes comprise
+only about 2% of the human genome; the remainder consists of
+noncoding regions, whose functions may include providing
+chromosomal structural integrity and regulating where, when, and in
+what quantity proteins are made. The human genome is estimated to
+contain 30,000 to 40,000 genes.</font></p>
+
+<p><font face="Arial,Helvetica">Although genes get a lot of
+attention, it&rsquo;s the <b><font
+color="#800040">proteins</font></b> that perform most life
+functions and even make up the majority of cellular structures.
+Proteins are large, complex molecules made up of smaller subunits
+called amino acids. Chemical properties that distinguish the 20
+different amino acids cause the protein chains to fold up into
+specific three-dimensional structures that define their particular
+functions in the cell.</font></p>
+
+<p><font face="Arial,Helvetica">The constellation of all proteins
+in a cell is called its <b><font
+color="#800040">proteome</font></b>. Unlike the relatively
+unchanging genome, the dynamic proteome changes from minute to
+minute in response to tens of thousands of intra- and extracellular
+environmental signals. A protein&rsquo;s chemistry and behavior are
+specified by the gene sequence and by the number and identities of
+other proteins made in the same cell at the same time and with
+which it associates and reacts. Studies to explore protein
+structure and activities, known as proteomics, will be the focus of
+much research for decades to come and will help elucidate the
+molecular basis of health and disease.</font></p>
+
+<center>
+<table>
+<tr>
+<td>
+<div align="right"><a href="index.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="2.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</center>
+</td>
+</tr>
+</table>
+</div>
+
+<table border="1" width="100%">
+<tr>
+<td><a href="http://www.ornl.gov/TechResources/Human_Genome/"><img
+src="HGPlogo1.jpg" border="0" height="107" width="108" /></a></td>
+<td>The online presentation of this publication is a special
+feature of the <a
+href="http://www.ornl.gov/TechResources/Human_Genome/">Human Genome
+Project Information Web site</a>.</td>
+</tr>
+</table>
+

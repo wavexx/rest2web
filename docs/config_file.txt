@@ -1,0 +1,230 @@
+restindex
+    crumb: Config File
+    link-title: Configuring
+    page-description:
+        The **rest2web** config file.
+    /description
+/restindex
+
+======================
+ Configuring rest2web
+======================
+-----------------
+ The Config File
+-----------------
+
+.. contents:: r2w.ini
+
+Configuring
+===========
+
+{emo;noise} **rest2web** needs to receive certain configuration details which
+it gets from a config file. By default this is called **'r2w.ini'** [#]_ and is
+located in the same directory as r2w.py. You can supply an alternative
+config file path at the command line, when you run **r2w.py**. ::
+
+    r2w.py ../path/to/r2w.ini
+
+The options all look something like : ::
+
+    start_directory = "../../source_directory"
+
+The quotes are optional.
+
+.. note::
+
+    **rest2web** uses `ConfigObj <http://www.voidspace.org.uk/python/modules.shtml#configobj>`_
+    to read config files. ConfigObj uses a very simple ``ini`` style syntax. If
+    you want to check out the full syntax spec, you'll need to read the
+    `ConfigObj Docs <http://www.voidspace.org.uk/python/configobj.html>`_.
+
+As well as the options in the config file, you can also control some of
+rest2web's behaviour through `Command Line <command_line.html>`_ options.
+
+Config Options
+--------------
+
+The basic list of config options is :
+
+* *'start_directory'*
+* *'target_directory'*
+* *'compare_directory'*
+* *'log_file'*
+* *'skiperrors'*
+* *'macros'*
+* *'Macro Paths'*
+* *'psyco'*
+* *'pause'*
+* *'promote_headers'*
+* *'DEBUG'* (optional)
+
+The options are explained in the config file, but there is also a full
+explanation below. The config options *are* case sensitive. The only one that
+is optional is DEBUG, all the other options must be present or **restweb** will
+fail.
+
+In addition to these, you can also specify |usv|_ in the config file. See the
+uservalues_ section below.
+
+Directory Paths
+===============
+
+1) *'start_directory'*
+2) *'target_directory'*
+3) *'compare_directory'*
+
+**rest2web** reads source files and outputs HTML. THhe directory it reads files from is the - *'start_directory'*. This will be the top level for your website. 
+
+It also needs to know where to put the files it generates - the *'target_directory'*. 
+
+The directory structure of the resulting website will be created in the *'target_directory'*. Existing files will be overwritten without confirmation, but files that don't need to be overwritten won't be deleted.
+
+When rest2web generates files it compares them against existing files to see if the file has changed. This can be useful if you want your target directory to only contain files that have changed (for uploading the new and changed files by {acro;FTP}). In this case you may want to specify a *'compare_directory'* that is different from the *'target_directory'*.
+
+If you don't specify a *'compare_directory'* (set the value to ``''``) then the *'target_directory'* is used. 
+
+
+log_file
+========
+
+*'log_file'* is the path to a file for logging the results of running rest2web. This includes any errors that may occur.
+
+If you set it to ``''`` then no log file will be generated.
+
+
+skiperrors
+==========
+
+This option determines how rest2web will handle exceptions (like our old friend ``UnicodeDecodeError``) that happen when processing pages.
+
+If set to ``True``, rest2web will display the error and move to the next file. The default is ``False``.
+
+.. note::
+
+    If an error occurs whilst trying to process an index file, it will have to skip building the directory.
+    
+    This feature is still 'experimental' and may need refining.
+
+
+macros
+======
+
+This option is the path to an optional *'macros'* file.
+
+rest2web has a standard set of default macros built into it. You can also create additional macros in an external file. This option specifies the path to your macros file. It should be a file called 'macros.py'.
+
+For details of how this works, please see the `macros page`_. This option allows you to have different macro files for all the sites that you create with rest2web.
+
+If you set it to ``''``, then no macros file will be used for this site.
+
+
+Macro Paths
+===========
+
+The default macros include ``smiley`` and ``emoticon``. They provide very easy ways to include smilies and small images in your pages. In order to do this rest2web needs to know the filepath to your smiley directory and the URL paths to the smilies and images on your website.
+
+These options are specified in a section called ``Macro Paths`` : ::
+
+    [Macro Paths]
+    smiley_directory  = ''
+    smiley_url = '<% path_to_root %>images/smilies/'
+    emoticon_url = '<% path_to_root %>images/'
+
+If you are using the standard set of smilies supplied with rest2web, then you need not supply a path to the smiley directory, as in the example above.
+
+See the `macros page`_ for details of all the default macros.
+
+
+psyco
+=====
+
+*'psyco'* should be set to ``True`` or ``False``. If ``True``, **rest2web** will attempt to use ``psyco.full()``.
+
+If you have psyco_ installed **rest2web** runs faster, but I have had a problem with psyco reported on one Linux platform.
+
+Not having *psyco* installled and setting this value to ``True`` will have no effect. It won't prevent rest2web from running though.
+
+.. note::
+
+    If you want psyco for windoze, the latest version is only available from
+    {acro;SVN;Subversion} repository.
+    
+    You can obtain precompiled binaries for windows from
+    `www.voidspace.org.uk/python/modules.shtml#psyco <http://www.voidspace.org.uk/python/modules.shtml#psyco>`_.
+
+
+pause
+=====
+
+*'pause'* should be set to ``True`` or ``False``. If ``True``, after finishing
+**rest2web** will wait for the user to hit enter before exiting.
+
+This can be ueful on the Windoze platform where you launch rest2web by double clicking on r2w.py.
+
+
+promote_headers
+===============
+
+*'promote_headers'* defaults to ``True``. If this is set to ``False`` then lone section headers *won't* be promoted to titles if an explicit 'page-title is set. This is the equivalent of the docutils `doctitle_xform <http://docutils.sourceforge.net/docs/user/config.html#standalone-reader>`_ option.
+
+
+DEBUG
+=====
+
+This value is optional. *'DEBUG'* should be set to ``True`` or ``False``. If
+``True``, then before rendering each page **rest2web** will drop you into an
+interactive interpreter session inside the namespace of the page.
+
+As well as all the normal values in the namespace there is an ``exit()``
+function which calls ``sys.exit()``. You also have the values ``local_vars``,
+``self`` and ``temp_file``. These are the local variables from where the
+namespace was *built*, the processor object, and the template file.
+
+
+Uservalues
+==========
+
+Uservalues are values that use in your pages and templates, using the rest2web
+`Templating <templating.html>`_ system. You can set uservalues in individual
+pages. By using a single page template and different uservalues you can easily
+have different translations of the same content without having to reproduce the
+structure of each page. See `Uservalues <reference/uservalues.html>`_ for more
+details.
+
+You can also store uservalues in your config file. These are 'global'
+uservalues which are available in every page. You could put things like your
+program version number, or a site title in here, and use in any of your pages.
+
+They should appear in the config file in a section called ``uservalues``. Like
+this : ::
+
+    [uservalues]
+    site_title = My Program Documentation
+    version = 1.0.0
+
+You can then use this in your pages or templates, like this : ::
+
+    Welcome to <% site_title %>.
+    
+    This is version <% version %>.
+
+If your uservalues contain non-ascii characters, you can specify the encoding
+with a special value : ``__encoding__``.
+
+For example, to specify the UTF-8 character set : ::
+
+    [uservalues]
+    __encoding__ = UTF-8
+    site_title = My Program Documentation
+    version = 1.0.0
+
+------------------------
+
+.. |usv| replace:: uservalues
+.. _usv: uservalues.html
+.. _macros page: macros.html
+.. _psyco: http://psyco.sourceforge.net
+
+.. [#] The old default filename was ``rest2web.ini``. This is deprecated but
+       still supported. Support for this will be removed in a future version
+       of rest2web.

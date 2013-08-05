@@ -1,0 +1,20 @@
+restindex
+    section: Not Real
+    target: not_real_1.html
+    crumb: The First
+/restindex
+restindex
+    section: Not Real
+    target: not_real_2.html
+    crumb: The Second
+/restindex
+restindex
+    section: Not Real
+    target: somewhere_else/not_real.html
+    crumb: The Third
+/restindex
+restindex
+    section: Not Real
+    target: ../not_real_at_all.html
+    crumb: The Last
+/restindex

@@ -1,0 +1,9 @@
+restindex
+    crumb: Page A
+    # This page is in the default section
+/restindex
+========
+ Page A
+========
+
+Page a...

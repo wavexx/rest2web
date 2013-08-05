@@ -1,0 +1,55 @@
+restindex
+    file: page.txt
+/restindex
+uservalues
+    test1: """A value in *ReST*."""
+    test2: A value in <em>HTML</em>
+/uservalues
+
+==============================
+ Test of Uservalues in a Page
+==============================
+
+This tests the ``file`` keyword in a page that isn't an index page.
+
+It should automatically copy the source for this document; `page.txt <page.txt>`_.
+
+It also has all the same uservalue tests as before.
+
+Uservalues
+==========
+
+This is a test of uservalues. The following paragraph is in ReStructuredText.
+
+    <* test1 *>
+
+The next one is in HTML :
+
+    {esc;test2}
+
+Some Title
+==========
+
+The following uservalues come from the global ones passed in the config file
+and at the command line.
+
+This paragraph should say **A Value** :
+
+    <* uservalue1 *>
+
+If you override the default value at the command line, this should say 
+**The real uservalue2.** :
+
+    <* uservalue2 *>
+
+If you pass the value in at the command line, this should say
+**A value for uservalue3.** :
+
+    <$
+    
+        try:
+            print uservalue3
+        except NameError:
+            print 'uservalue3 was missing. {sm;:-(}'
+    
+    $>

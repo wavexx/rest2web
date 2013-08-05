@@ -1,0 +1,6 @@
+==============
+ A Fake Index
+==============
+
+This is a fake index page, just to prove that you can build (in force mode)
+a directory that has an index page with no restindex. {sm;:-)}

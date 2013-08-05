@@ -1,0 +1,31 @@
+restindex
+    page-title: Test of sections.sortpages
+    sectionlist: OtherSection
+    section-pages: , wibble_page, floogle_page, c_page, smoggle_page, a_page
+    section-pages: OtherSection, b2_page, rabbit_page, cabal_page, rhubarb_page
+/restindex
+
+============================
+ Test of Sections Sortpages
+============================
+
+.. raw:: html
+
+    <#
+        print '<pre>'
+        
+        for name, section in sections.items():
+            pages = str([page['link-title'] for page in section['pages']])
+            print ('Default page order for section \'%s\':' % name), pages 
+            sys.__stdout__.write(('Default page order for section \'%s\':' % name) +  pages + '\n')
+            sections.sortpages('link-title', name)
+        
+            pages = str([page['link-title'] for page in section['pages']])
+            print ('Page order for section \'%s\' after sortpage:' % name), pages
+            print
+            print
+        
+        
+        print '</pre>'
+        sys.__stdout__.write('done\n')
+    #>

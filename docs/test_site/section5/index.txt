@@ -1,0 +1,67 @@
+restindex
+    crumb: Section 5
+    file-extension: shtml
+    include: No
+    file: index.txt
+    file: ../template.txt
+/restindex
+
+===========================
+ The Incredible Section 5
+===========================
+
+.. class:: intro
+
+Welcome to section five. As you might have gathered, this section is built - 
+but not included in the indexes. This little intro section is written in 
+`reST <http://docutils.sf.net>`_. It uses the ``.. class::`` directive to apply 
+a style to the paragraph.
+
+.. class:: index-table
+
++-----------------------+--------------------+
+| A Table of Resources                       |
++=======================+====================+
+| `Text Source`_        | `Template Source`_ |
++-----------------------+--------------------+
+|                       |                    |
++-----------------------+--------------------+
+
+    A table, drawn in reStructured Text. The text files are copied across using
+    the ``file`` keyword - in the restindex.
+
+.. _Text Source: index.txt
+.. _Template Source: template.txt
+
+
+.. class:: indexblock
+
+This is another paragraph with a style applied. I happen to think it's very stylish indeed.
+I stole the {acro;CSS} for this from a nice chap called `Ian Bicking <http://colorstudy.com>`_.
+
+You can visit my subsection if you want :
+
+.. raw:: html
+
+    <blockquote>
+    <#
+        import urllib
+        
+        pageblock = '''\
+                <a href="%s">%s</a>
+                    <p>%s</p>   
+        '''
+        
+        pages = sections[None]['pages']  # everything in default section in this index
+        
+        thepages = []
+        for page in pages:
+            ref = pageblock % (urllib.quote(page['target']), page['link-title'], page['page-description'])
+            thepages.append(ref)   
+        
+        print '\n'.join(thepages)
+    
+    #>
+    </blockquote>
+
+

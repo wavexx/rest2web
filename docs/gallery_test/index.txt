@@ -1,0 +1,9 @@
+restindex
+    build: No
+    crumb: Gallery
+    link-title: Example Gallery
+    page-description:
+        Example gallery from the `gallery plugin <reference/gallery.html>`_. 
+        (Only present if you build it).
+    /description
+/restindex

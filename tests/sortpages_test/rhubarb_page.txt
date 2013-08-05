@@ -1,0 +1,9 @@
+restindex
+    crumb: Page Rhubarb
+    section: OtherSection
+/restindex
+==============
+ Page Rhubarb
+==============
+
+Page rhubarb...

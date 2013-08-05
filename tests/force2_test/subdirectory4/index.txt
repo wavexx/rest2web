@@ -1,0 +1,22 @@
+.. A ReST Comment
+    some text
+    
+    some text
+    
+    restindex
+        page-title: A Silly Title
+        crumb: Silly Crumb
+    /restindex
+    
+    uservalues
+        value: A Uservalue
+    /uservalues
+
+============
+ Index Page
+============
+
+This index page tests the restindex inside a comment.
+
+It has a uservalue *value* = <* value *>
+

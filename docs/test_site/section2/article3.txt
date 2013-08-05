@@ -1,0 +1,9 @@
+restindex
+/restindex
+
+
+=============
+ Article 3
+=============
+
+This article has the smallest restindex possible !.

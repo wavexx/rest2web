@@ -1,0 +1,278 @@
+restindex
+    crumb: Templates
+    link-title: Templates
+    page-description:
+        A description of templating, and the special values available in the
+        namespace.
+    /description
+/restindex
+
+==========================
+ Templating with rest2web
+==========================
+--------------------------
+ Using rest2web Templates
+--------------------------
+
+
+.. contents::
+
+
+Introduction
+============
+
+**rest2web** templates are rendered using a python module called ``embedded_code`` from the firedrop2_ blog tool. It is aptly named; because it allows you to embed chunks of Python_ code into text files. Wherever there is a chunk of Python in the template, this is executed - and the output is put into the text. This means that if you are a Python programmer, the templating system is *very* simple. {sm;:-)}
+
+Even if you've never used Python before, the system is very easy to learn. Have a look at `the tutorial`_, which will get you up and started very quickly. Of course, once you start using Python, it won't be long before you're addicted. {sm;:wink:}
+
+This page describes the templating system - and the *special values* that you use with it. These values can be used in your {acro;HTML} templates *and* your pages.
+
+
+The Templates
+=============
+
+The point of templating is to dynamically insert values into generated pages. The **rest2web** templating system can be used to insert special values into your templates (which go into every page that uses that template) - or into individual pages.
+
+There are two sets of tags to do this, depending on whether you want to insert HTML or ReST into your templates. You would only insert ReST into your *pages*, rather than into your templates. This would usually be done in conjunction with `uservalues <reference/uservalues.html>`_.
+
+Inserting HTML
+--------------
+
+There are two sets of tags to use with template values. The simplest is to insert a single name between template tags. This is evaluated and the value inserted into the page. This looks like -  ``<% name %>`` - where *name* is our special value.
+
+The second way allows you to execute blocks of code. Chunks of code can be inserted between ``<# ... #>`` tags. Anything that is printed [#]_ will be put into the page. The code must be valid python, which includes obeying Python's rules about indentation. Here's a quick example : ::
+
+    <# 
+        import urllib
+        blank = '&nbsp;'
+        row = '<tr><td>%s</td><td>%s</td></tr>'
+        entry = '<a href="#%s">%s</a>'
+        
+        # Get a list of the sections *excluding* the default section
+        sectlist = [(urllib.quote(section), section.title()) 
+                        for section in sections if section is not None]
+        
+        index = 0
+        while index < len(sectlist):
+            entry_1 = entry % sectlist[index]
+            if index == len(sectlist)-1:
+                entry_2 = blank
+            else:
+                entry_2 = entry % sectlist[index+1]
+            print row % (entry_1, entry_2) 
+            index += 2   
+    #>
+
+In case you can't work it out, this chunk of code uses ``urllib.quote`` to make section names safe for inclusion in a {acro;URL} link. It then inserts a link to each section in an anchor tag (*entry*) in a table row (*row*).
+
+``embedded_code`` will automatically remove any (uniform) excess indentation - this means the whole chunk of code can be indented to fit in with your page structure.
+
+The code chunks are all executed inside a **namespace**. This determines what variables (names) are available to you to use. All the code in a page is executed inside the same namespace - this means that changes you make in a chunk of code at the start of a page will be visible to later chunks of code. This can be useful - but it also means you shouldn't mangle variables you intend to use later.
+
+There are a set of `standard functions`_ available to you to perform common tasks. Printing indexes, breadcrumbs, and sidebars can all be done with single line commands.. {sm;:-o}
+
+
+Inserting ReST
+--------------
+
+The basic principle for inserting ReST into your pages (before they are turned
+into HTML) is exactly the same as inserting HTML into your template pages.
+
+The difference is, that you use different tag styles. For single values use :
+
+    ``{lt}* ... *>``
+    
+For chunks of embedded code use :
+
+    ``{lt}$ ... $>``
+    
+
+The List of Values
+==================
+
+So the only thing remaining is for you to know what special values are available. Below is the full list of *normally available values*. You can also add your own values to the namespace, using uservalues_ [#]_ :
+
+#. *title*     - title of the page being rendered.
+
+#. *body*      - full body of the page.
+
+#. *breadcrumbs* - this is a list of tuples that represents the navigation trail for this page. 
+
+    Each tuple is ``(crumb_link, crumb)``. ``crumb_link`` is a relative link from the document being rendered to the target of the crumb. This means the crumb links will still work when the site is viewed from the filesytem, or moved around in a website. 
+    
+    You can use a chunk of code to insert these into links : ::
+    
+        <#
+            # this is the breadcrumbs code
+            # breadcrumbs is a list of tuples
+            anchor = '<a href="%s">%s</a>'
+            divider = ' > '
+            index = -1
+            while index < len(breadcrumbs)-2:
+                index += 1
+                entry = breadcrumbs[index]
+                print (anchor % entry),
+                print divider,
+            if breadcrumbs:
+                print breadcrumbs[-1][1]    # not as a link
+        #>  
+        
+    An alternative way of doing your breadcrumbs, used in the example site, is available as a `standard function`_ **print_crumbs**. It makes each 'crumb' a list item - '<li>..</li>'. CSS is then used to show this as a horizontal list, without bullet decoration. Simply put ``<# print_crumbs(breadcrumbs) #>`` in your template to call it. See the `standard functions`_ page for more details.   
+
+#. *sections*    - This is a data structure with information about all the pages in the current directory. It is a dictionary with all the sections.
+
+    Each key is a section name (the default section is keyed by ``None`` - ``sections[None]``). Each section is also a dictionary. Each section dictionary has the following keys :
+        
+        * title
+        * description
+        * pages - this is a list of dictionaries. Each dictionary represents a page. Each page dictionary has the following keys :
+            * **target** - the page location
+            * **section** - which section it is in
+            * **link-title** - the title to use in the link to the page
+            * **page-description** - a description of the page
+            * **crumb** - the crumb (very short name) for that page
+            * **namespace** - the namespace for the page (a dictionary). Values will be encoded with the ``final_encoding`` for *this page*. If the page isn't being built then this value will be ``None``.
+            * **subdir**    - does this page represent a subsection ? (it will be the index page for a subdirectory if this value is ``True``)
+            
+        The values 'crumb', 'link-title', 'section', and 'page-description', will all be encoded using the ``final_encoding`` for the *page that is accessing them*. This means it is safe to use them directly in your template without worry about the encoding of the page they come from. This is not true for values in the 'namespace' of each page.
+    
+    ``sections`` has a method for sorting the pages contained in all the section dictionaries. By default the pages are sorted according to the ``section-pages`` in the restindex. If you don't use section-pages, the ordering is arbitrary. The ``sortpages`` method allows you to sort the pages by ``link-title`` (alphabetical) or pass in a custom function to do the sorting. (The same sort of function you would pass to the Python ``sort`` method of lists.)
+    
+    .. raw:: html 
+    
+        {+coloring}
+        sections.sortpages(sortorder, section=True)
+        {-coloring}
+    
+    ``sortorder`` can either be the string ``link-title`` or a custom function.
+    
+    By default, calling ``sortpages`` will sort all the sections. Alternatively you can pass in a string (or None), to specify which section to sort.
+    
+    Don't forget that there will always be a section with the key ``None`` - this is the default section. If you're not using sections, all the pages will be in this section. If every page is in a named section then this section will be empty - but it will still exist. This means that if you loop over all the sections (``sections.keys()``) one of them will be ``None``.
+    
+    You can use the 'sections' value to automatically construct things like table of links, like the example at the start of this page. There is also a `standard function`_ called ``minibar`` available to you. This is typically used to create a sidebar that contains links to all the pages in the section. You can call it by putting ``<# minibar(sections) #>`` in your template. See the page on `standard functions`_ for more details (and other parameters you can pass to it).
+    
+    Note that the 'sections' value has *references* to the namespace of each page (in it's 'pages' value) - not a separate copy. That means that if your template changes anything in the pages, this change is likely to affect the rendering of other pages.
+    
+    See the *minibar* function in the `standard functions`_, for one way of handling this value.
+
+#. *default_section* - This is the default section from the ``sections`` value. It is *exactly* the same as ``sections[None]``.
+
+#. *pagename*        - the filename of the page (not the full path).
+
+#. *pagepath*        - full path from top level to current document.
+
+#. *encoding*        - the original encoding supplied or guessed for the document
+
+#. *output_encoding* - the output encoding specified for this page. It can be a specific encoding, or ``none``, or ``unicode`` (both text values). See the docs on the restindex_.
+
+#. *final_encoding*  - This is the final encoding used to encode the output of the page. It may be ``None`` if the value for *output_encoding* was ``unicode``. (In which case the final encoding will follow the template encoding).
+
+#. *path_to_root*    - path from current document to top level site directory (ends in '/'). This can be **very useful** for providing paths to resources without having to use an absolute URL. 
+
+                        For example; if your images folder is in your top level directory you could use ``<img src="<% path_to_root %>images/image.jpg" />`` instead of ``<img src="/images/image.jpg" />``. This means the reference resolves correctly when viewed from the file system. 
+
+#. *sectionlist*     - The list of subsections in this directory.
+
+#. *rest_dict*       - only present if the page generated from reST content, else ``None``. This is the full dictionary of parts returned by the docutils ``html_parts`` function. 
+
+#. *doc*             - everything that has been printed so far (only available for ``<# ... #>`` type code). This is a ``StringIO`` instance.
+
+#. *stdout*          - the *real* ``sys.stdout``. Can be used if you want your code to print a traceback to the shell (only available for ``<# ... #>`` type code).
+
+#. *modified*        - the time the page was last modified, as a number of seconds since the *epoch* [#]_
+
+#. *modtime*         - a string representing the time the page was last modified, created using ``time.ctime(modified)``.
+
+#. *template_file*   - a path to the file we are using as the template for generating this page.
+
+#. *template_encoding* - the encoding used to decode the template file.
+
+#. *indexpage*       - the information dictionary for the index page for this section. This page *isn't* included in the ``sections`` value, so it is available separately.
+
+#. *indextree*       - ``indextree`` is a nested data structure representing the pages that have been rendered so far. This will include all the pages and directories *above* the one currently being rendered. ``indextree`` itself is the top level index page (the 'root' of your site). It has members which represent all the other pages and directories.
+
+                    Each member is a page. If a page is an index page, it may itself have members that are pages in that directory. Get all that. {sm;:-)}
+
+                    You can use this data-structure to build sidebars and menus etc.
+
+                    See the *sidebar* function in the `standard functions`_ for a simple example of using ``indextree`` to do this. 
+                    
+                    For full details on this complicated value, see the indextree_ page.
+
+#. *thispage*        - This is a reference into the ``indextree`` data structure. It just points to the current page. It would allow you to create menus from the 'bottom up'. For example you could create a navigation trail from the current page back to the main index, rather than the other way round.
+                    
+                    Note that if the current page has 'include' set to 'No', then *thispage* will be ``None``, because the current page isn't in *indextree*.
+ 
+#. *sidebar*         - A `standard function`_ for printing sidebars. In fact it is a generator that yields pages one at a time. For details on how to use it see the page on `standard functions`_.
+
+#. *minibar*         - Another `standard function`_ for printing simpler sidebars. It prints a list of all the pages in the current section. For details on how to use it see the page on `standard functions`_.
+
+#. *print_crumbs*    - This is a `standard function`_ for printing navigation trails, known as breadcrumbs. For details on how to use it see the page on `standard functions`_.
+
+#. *print_details*  - This is  a `standard function`_ for printing indexes.
+
+#. *section_contents* - This is a `standard function`_ that returns a list of tuples about pages in a specific section. The data it returns is easier to use than the data contained in ``sections['section_name']['pages']``.
+
+#. *Processor*       - The actual processor object that is doing the work. Be careful with it {sm;:grin:}. A few potentially useful attributes are ``Processor.dir``, ``Processor.dir_as_list``, and ``Processor.dir_as_url`` [#]_.
+
+#. *page_description* - A string with the description of the current page. Can be useful if you only want to write it in one place. {sm;:-)}
+
+#. *include* - This is  a `standard function`_ for including files within templates. These can be nested (included files can include other files). Files are first looked for in the directory being processed, if it isn't found the parent directory is tried, and then its parent etc. Included files *will* be processed, so they can include embedded code tags.
+
+#. *globalValues*   - This is a dictionary of globalValues that will be available to all your pages. Initially it is empty, but anything you put in here will be available in all your pages. You can use this to share information between pages, or setup global values. If you do this in your template, you can check if the values exist already and only set them up once.
+
+#. *current_dir*     - The current directory being rendered, relative to the top level directory. You can turn this into an absolute path using ``os.path.join(os.getcwd(), current_dir)``.
+
+#. *source_file*    - The source filepath for the page.
+
+#. *target_dir*     - The target file directory (as an absolute file path) being rendered into. Note: if the file has a target specified it may not be put in this directory. Use ``os.path.dirname(target_file)`` instead.
+
+#. *full_page_url*  - The full url (starting with '/') for the current page. Using this means that your pages may not work from the filesystem. {sm;:-)}
+
+#. *target_file*     - The full output filepath of the page being rendered.
+
+Pages and templates are passed through ``embedded_code``. This means that if you have HTML pages you can embed code in them. In reST pages you ought to be able to use the *raw* directive to embed code chunks. This is primarily useful for index pages, where you want to use embedded code to dynamically generate the *body* of the page - depending on what sections and links are available.
+
+
+The Template File
+=================
+
+You can specify a template file for every page and index - using the ``template`` value in the restindex. If none is specified it first tries ``template.txt`` in **that** [#]_ directory first (even if the index is in an alternative directory using ``index-file``).
+
+If a template file is specified in the index-file, then the location must be specified relative to the directory the index-file is in.
+
+If no template file is specified, and there is no 'template.txt' in the same directory as the index file, then the template for the directory above will be used. This means that if you have a 'template.txt' in your root directory it can be used for the whole site. 
+
+
+Note About Macros
+=================
+
+There is another way of calling simple functions from within templates. These are called macros. Macros allow you to use a shorthand for often-used text or HTML. Included is an example macro file (and supporting modules), It has macros for inserting smilies, colorizing Python files, acronyms, etc. You will need to modify it for your own sites, by putting the correct paths into the source code at least. See the page on macros_ for more details.
+
+
+----------------
+
+
+Footnotes
+=========
+
+.. [#] Or written to ``stdout``.
+.. [#] You can also specify 'global uservalues' at the command line or in the config file. These will be available to every page.
+.. [#] See the Python ``time`` module. http://docs.python.org/lib/module-time.html
+.. [#] These are different ways of representing the directory being rendered.
+.. [#] By *that directory* - I mean the directory that the ``index.txt`` file is located in, and where probably most of the content will be located.
+
+.. _firedrop2:
+.. _firedrop: http://www.voidspace.org.uk/python/firedrop2/
+
+.. _standard functions:
+.. _standard function: functions.html
+
+.. _the tutorial: tutorial.html
+
+.. _macros: macros.html
+.. _restindex: restindex.html
+.. _python: http://www.python.org
+.. _indextree: reference/indextree.html
+.. _uservalues: reference/uservalues.html

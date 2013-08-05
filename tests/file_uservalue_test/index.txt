@@ -1,0 +1,59 @@
+restindex
+    template: template.txt
+    page-title: Test of Uservalues
+    file: ../../README.txt
+/restindex
+uservalues
+    test1: """A value in *ReST*."""
+    test2: A value in <em>HTML</em>
+/uservalues
+
+====================
+ Test of Uservalues
+====================
+
+This set of pages test *uservalues*, the *file keyword* and also passing an
+alternative template at the command line.
+
+If you created this document using the method described in `README.txt <README.txt>`_,
+then this page will say **The Correct Template** at the top.
+
+If the ``file`` keywords have all worked, then the links in the body of these
+pages should all work.
+
+It should be obvious if the uservalues have worked. {sm;:-)}
+
+This is a test of uservalues. The following paragraph is in ReStructuredText.
+
+    <* test1 *>
+
+The next one is in HTML :
+
+    {esc;test2}
+
+Some Title
+==========
+
+The following uservalues come from the global ones passed in the config file
+and at the command line.
+
+This paragraph should say **A Value** :
+
+    <* uservalue1 *>
+
+If you override the default value at the command line, this should say 
+**The real uservalue2.** :
+
+    <* uservalue2 *>
+
+If you pass the value in at the command line, this should say
+**A value for uservalue3.** :
+
+    <$
+    
+        try:
+            print uservalue3
+        except NameError:
+            print 'uservalue3 was missing. {sm;:-(}'
+    
+    $>

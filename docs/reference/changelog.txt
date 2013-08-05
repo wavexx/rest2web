@@ -1,0 +1,349 @@
+restindex
+    crumb: changelog
+    page-description:
+        **CHANGELOG** for the released versions of rest2web..
+    /description
+    tags: changelog, changes, improvements, diffs
+/restindex
+
+
+============
+ Changelog
+============
+
+.. contents::
+
+Rest2web Releases
+=================
+
+This records the different releases to **rest2web**, with most of the major
+changes. The individual source files have more fine grained changelogs if
+you have a hankering to know the details. {sm;:-)} 
+
+Version 0.5.2 alpha
+-------------------
+
+Fixed bug where 'force' in the config file was required to be spelt 'Force' by mistake.
+
+'template.txt' files (without a restindex) will not be processed in force mode.
+
+In force mode, directories *will* use the templates of their parent directories.
+
+Added optional compare function (for sorting pages) to the ``sidebar`` function. (Thanks to Gael Varoquaux.)
+
+'initialheaderlevel' is now inherited by all pages in a directory, if set in an index page.
+
+
+Version 0.5.1 2006/12/16
+------------------------
+
+Added some extra debugging info to syntax errors in the templates.
+
+Fixed odict and pathutils for Python 2.5 compatibility.
+
+Added the 'promote_headers' option to the `config file <../config_file.html>`_.
+
+Added the ``sortpages`` method to the ``sections``. This sorts the pages in a section (or all sections) alphabetically. You can also pass in a custom sort function.
+
+
+Version 0.5.0 Final 2006/10/11
+------------------------------
+
+Paths in the ``file`` keyword and in the config file now have '~' expanded. This
+means they can use paths relative to the user directory. (Plus the 'colorize' and
+'include' macros.)
+
+Added 'skiperrors' config file / command line option. Errors in processing a file can now be
+ignored and rest2web will attempt to continue processing.
+
+Fixed bug where non-ascii uservalues would blow up.
+
+There was a bug in handling tabs in embedded code. This has been fixed.
+
+The macro system has been revamped. All the standard macros are now built in
+as default macros. The modules needed by the default macros are also now built
+into rest2web. You can still add your own macros, or override the default ones,
+by supplying an additional macros file.
+
+``Macro Paths`` section added to the config file for configuring the default
+macros ``smiley`` and ``emoticon``.
+
+The initial message printed by rest2web has been changed to ``INFO`` level, so
+that it is not displayed by the ``-a`` and ``-w`` verbosity levels.
+
+The namespace and uservalues for each page are now available to the macros,
+using global variables ``uservalues`` and ``namespace`` (dictionaries). This
+means you can write macros that are customised for individual pages.
+
+A config file is no longer required in force mode. (The current directory is
+used as the source directory and html output is put into a subdirectory called
+'html'.)
+
+The restindex and uservalues block may now be in a ReST comment. This means
+that rest2web source documents with a restindex can still be valid ReStructured
+Text documents.
+
+Fixed imports in the gallery plugin. (Thanks to Steve Bethard.)
+
+Changed over to use the latest version of 
+`StandOut <http://www.voidspace.org.uk/python/standout.html>`_.
+
+rest2web now exits with an error code corresponding to the number of warnings and errors generated.
+
+Errors and warnings are now output on ``sys.stderr``.
+
+
+Version 0.5.0 beta 1 2006/08/05
+-------------------------------
+
+Updated docs.
+
+Moved 'pythonutils' distribution into the 'rest2web' directory for ease of
+packaging.
+
+Added a ``#!`` line to ``r2w.py``.
+
+All rest2web imports now absolute imports.
+
+Added 'quickstart.txt' thanks to Andrew Ittner.
+
+Added an ``include`` standard function, this can be used to nest templates or 
+customise sections. (It will walk up the directory tree looking for the 
+file you specify and takes an optional argument if the file doesn't exist -
+useful for templates that allow subdirectories to add to the template, or
+even wrap the body.)
+
+``make_dist.py`` now takes ``nopause`` as a command line argument (``make_dist.py``
+is in `Subversion`_ for creating distributions.)
+
+Default breadcrumb divider is now '&gt;'. Breadcrumbs are also output in HTML
+on separate lines for readability.
+
+Fixed bug when ``final_encoding`` is ``None``.
+
+Default config file is now called ``r2w.ini``. ``rest2web.ini`` will still be
+supported until the next release.
+
+Fixed bug with ``standerr`` where no logfile is used.
+
+``print_crumbs`` can now take ``None`` for the dividers.
+
+Added 'globalValues' to the namespace. (Available in templates and pages for
+storing values which can be accessed across all pages.)
+
+Added 'uservalues' and 'restindex' into each page in the indextree.
+
+A new command line 'nopause' option to override the config file.
+
+Change so that variables (and functions etc) defined in templates can be used
+in single code blocks (like ``<% new_name %>``).
+
+Added more information about pages to the namespace and indextree. The new
+values are :
+
+    'source_file': The source file for the page
+    
+    'current_dir': The current directory being processed - this can be turned
+                   into an absolute filepath by doing ``os.path.join(os.getcwd(), current_dir)``
+    
+    'target_dir': The target file directory (as an absolute file path) being
+                  rendered into. Note if the file has a target specified it may
+                  not be put in this directory. Use ``os.path.dirname(target_file)``
+                  instead.
+    
+    'full_page_url': The full url (starting with '/') for the current page
+    
+    'target_file': The full filename of the page being rendered
+
+Fixed bug where 'thispage' wasn't set on pages in the indextree. (Value should
+be ``True`` for the current page.)
+
+Fixed bug where 'thispage' (in the namespace) would sometimes be incorrectly
+``None``.
+
+Cached template files for faster execution.
+
+Special thanks to Martin Krafft for bugfixes and suggestions.
+
+
+Version 0.5.0 alpha 2006/05/01
+------------------------------
+
+**rest2web** can now build a site with no index pages, no template and no
+restindexes. This is the `force <../force_mode.html>`_ command line option. It can
+be used to automatically build a site from a collection of ReST documents, and
+use default templates.
+
+``uservalues`` can be passed at the `command line <../command_line.html>`_
+and in the config file. (Command line `uservalues <uservalues.html>`_ override
+config file ones.) These uservalues are now available in every page. The
+encoding of uservalues in the config file is specified by the ``__encoding__``
+value.
+
+A ``--template-file`` (or ``-t``) command line option. (Will override the top
+level ``template`` keyword specified in the restindex.) This allows you to have
+alternative templates for a site; for example one for an online version and
+another for distributed documentation.
+
+New website template, created by `Fuchsiashock Design <http://www.fuchsiashock.co.uk>`_.
+
+``final_encoding`` should never be ``utf8`` - should be ``utf-8`` instead. This
+is because ``utf8`` is not recognised by browsers. (This is now automatically
+handled.)
+
+Added ``initialheaderlevel`` a new restindex keyword. It sets the size of
+headers used in ReST documents. Can be set per page.
+
+The ``file`` keyword has been bugfixed. It now only operates if the target file
+doesn't exist or is different to the source file. It copies the timestamp along
+with the file.
+
+The `gallery plugin <gallery.html>`_ now ignores non-image files. It also skips
+image files it can't handle (currently only animated jpgs.
+
+**rest2web** now has three levels of verbosity, controlled from the command
+line :
+    
+    * ``-v`` : Verbose, the default.
+    * ``-a`` : Warnings and actions.
+    * ``-w`` : Warnings only.
+
+``uservalues`` can now be inserted in pages using a new syntax. Where this is
+used, the uservalues are inserted *before* the page is rendered from ReST to
+HTML. This means uservalues can be in ReST format. The syntax for single values
+is ``{lt}* ... *>``. For multiple lines of code it is ``{lt}$ ... $>``.
+
+Added ``modtimeiso`` value to the namespace and the ``formattime``
+`standard function <../functions.html>`_.
+
+The ``namespace`` and ``uservalues`` are both now available (as dictionaries)
+to the macros and the standard functions.
+
+Removed the two ``<br />`` from ``listend`` in the standard function
+``minibar`` and added ``wrapper_class`` to ``print_details``.
+
+Added ``os`` and ``sys`` to the namespace for every page.
+
+The default crumb for index pages (if no ``page-title`` specified) is the 
+filename, minus the extension and turned to title case.
+
+Removed ``urlpath`` from rest2web, because it is now in pythonutils.
+
+It won't run in the distribution directory - need to run "make_dist.py". (This
+only applies if fetched from `subversion <http://svn.rest2web.python-hosting.com>`_).
+
+
+Version 0.4.0 alpha 2005/11/11
+------------------------------
+
+There were a lot of changes between the 0.3.0 and the 0.4.0 release. This is a 
+summary :
+
+Documentation refactored and improved, including the `tutorial <../tutorial.html>`_.
+
+Changes for compatibility with `Pythonutils <http://www.voidspace.org.uk/python/pythonutils.html>`_ 
+0.2.3 and docutils 3.10.
+
+Added ``page_description`` to namespace.
+
+Added ``file`` keyword (reserved word in namespace).
+
+Added ``tags`` keyword.
+
+Added ``section-pages`` keyword (a way of specifying the order of pages in sections).
+
+Added ``__prune__`` (document in special files).
+
+The plugins system and the gallery.
+
+Changes to config file (psyco, pause, DEBUG).
+
+Interactive debug mode.
+
+Added ``section_contents`` and ``print_details`` functions.
+
+Three extra standard macros.
+
+Bugfix (and change) to the 'print_crumbs' function. It now takes an 'item' 
+value - this means the last item is also a list item.
+
+Fixed bug where restindex options from one section could leak into another.
+
+Fixed bug where having ``include: No`` for an index page would cause a crash.
+
+Bugfix to ``thispage`` (not broken anymore).
+
+Fixed bug where subsections with a different 'file-extension' were broken.
+
+Fixed bug where not building an index page would cause a crash.
+
+Some changes for compatibility with py2exe (including addition of a ``py2exe-setup.py``).
+
+
+Version 0.3.0       2005/06/27
+------------------------------
+
+Code refactored and better commented. (Thanks to Nicola Larosa for input).
+
+Minor bugfix - an encoding was missing.
+
+Added stylesheet to docutils options override.
+
+
+Version 0.2.3       2005/06/25
+------------------------------
+
+Code style cleanup with help from Nicola Larosa.
+
+Start of the refactoring (some code is simpler internally)
+
+``uservalues`` now compatible with reST.
+
+docs updated appropriately.
+
+
+Version 0.2.2       2005/06/12
+------------------------------
+
+Added support for ``uservalues``.
+
+
+Version 0.2.1       2005/06/06
+------------------------------
+
+Removed extraneous print statement from ``embedded_code.py``
+
+
+Version 0.2.0       2005/06/01
+------------------------------
+
+Various minor changes - especially additions to the namespace pages are 
+rendered in.
+
+Sites are rendered a whole section at a time. This means pages have index data 
+for that section available. This is the ``sections`` variable in the namespace.
+
+Added the ``output-encoding`` and ``final_encoding`` values to the restindex.
+
+Added the ``template-encoding`` value to the restindex. (rest2web is now 
+entirely unicode internally).
+
+It's now possible to specify title and description for the default section.
+
+Added indextree and thispage, allows building of sidebars.
+
+Added standard functions.
+
+Added macros.
+
+Started using subversion repository.
+
+Changed all line endings to 'LF'.
+
+
+Version 0.1.0       2005/05/08
+------------------------------
+
+First version released.
+
+Thanks to Andrew Ittner for testing on Linux.

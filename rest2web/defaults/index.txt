@@ -1,0 +1,9 @@
+
+
+.. raw:: html
+
+    <h1><% title %></h1>
+
+    <#
+        print_details(default_section, wrapper_class="displaybox")
+    #>

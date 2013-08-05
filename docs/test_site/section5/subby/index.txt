@@ -1,0 +1,16 @@
+restindex
+    crumb: Subby
+/restindex
+
+============================
+ A Subsection for Section 5
+============================
+
+
+.. class:: indexblock
+
+I don't have much of a life of my own. I only exist to be a sub-section to 
+`Section 5 <../index.shtml>`_.
+
+..
+   Can we use ``thispage`` to find a link to the parent page ?

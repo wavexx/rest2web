@@ -1,0 +1,15 @@
+restindex
+    page-title: Target Page 
+    crumb: Target
+    page-description:
+        This page is buried quite deeply.
+    /description       
+/restindex
+
+
+================================
+ Testing, Testing, 1-2-3
+================================
+
+
+Please bear with us, this is testing targets in subsections. Mainly testing that the index page above renders us with the correct link.

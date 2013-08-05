@@ -1,0 +1,13 @@
+restindex
+    include: no
+    crumb: Hidden
+/restindex
+
+
+=====================
+ The Hidden Page
+=====================
+
+There's not a lot to see here, which is probably why it wasn't included in the index. It illustrates that you can have **rest2web** build pages, including navigation links, but not include them in the indexes. 
+
+It doesn't appear in the sidebar either. This may or may not be a good thing of course {sm;:grin:}.

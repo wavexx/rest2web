@@ -1,0 +1,9 @@
+restindex
+    crumb: Page Smoggle
+    # This page is in the default section
+/restindex
+==============
+ Page Smoggle
+==============
+
+Page smoggle...

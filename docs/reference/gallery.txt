@@ -1,0 +1,381 @@
+restindex
+    crumb: Gallery
+    page-description:
+        Reference for the gallery plugin.
+    /description
+/restindex
+
+==============================
+ Picture Galleries and Beyond
+==============================
+--------------------
+ The Gallery Plugin
+--------------------
+
+:Author: Fuzzyman_
+:Date: 2005/08/12
+:Version: 0.2.0
+:Homepage: `Gallery Page`_
+
+.. contents:: Galleries of Images
+
+Introduction
+============
+
+The gallery acts as a plugin to rest2web_. (It can also fuction as a `standalone program`_). It generates an html gallery page from a directory of images, an html template, and a few settings.
+
+It creates a single main gallery page, with thumbnails that act as links to each image. The images themselves appear on their own page, with a title and optional description. Each page has links to the next and previous images, and back to the main gallery.
+
+You can see the sort of output it generates with the `online example`_, which acts as the gallery test site in the rest2web_ distribution.
+
+If you are viewing this from the test docs, you can build the test gallery by running [#]_ : ::
+
+     r2w.py gallery_test.ini
+
+You can then view the gallery at `gallery index`_.
+
+Downloading
+===========
+
+At some point I will package the gallery on it's own. Currently it's only available bundled with **rest2web**.
+
+Using Gallery With rest2web
+===========================
+
+In order to use it with rest2web,  ``gallery.py`` needs to be available in the ``plugins`` subdirectory of rest2web - and also PIL_ must be installed.
+
+In order to use the gallery in a page, you must have 'gallery' in your list of plugins for the page. This is done in the restindex, with a line like : ::
+
+    plugins: gallery
+
+Next you must specify a set of values that tell the gallery what to do. When run as a plugin you specify these as ``uservalues``.
+
+uservalues Settings
+===================
+
+The settings control the gallery program, they specify which directory to read the images from, which templates to use to generate the output pages, and so on.
+
+All the settings must be present, or the gallery will raise an error. Assuming you have no other ``uservalues``, the settings look like : ::
+
+    uservalues
+        thumb_size = 150, 150
+        gallery_dir = ../../FTP Mirror/gallery
+        gallery_url = gallery
+        data_file = gallery_data.ini
+        page_template = page.html
+        entry_template = entry.html
+        gallery_mode = 1
+    /uservalues
+
+See `the settings`_ section for an explanation of what they all mean.
+
+Standalone Program
+==================
+
+*gallery.py* will work as a standalone program as well as a plugin to rest2web. It uses the same settings, but gets them from a config file instead of uservalues.
+
+One of the main reasons to make gallery.py run in this way, was so that Aidan could use it for his online `Pages of Computer Imagery`_.
+
+In order to use gallery.py as a standalone program, you will need Python_ 2.3 or later and a recent version of PIL_. You will also need either pythonutils_ 0.20 *and* rest2web_ installed [#]_ ; or just version 0.2.0 (or higher) of pythonutils [#]_. 
+
+By default the gallery looks for a config file called ``gallery.ini``. You can also specify an alternative config file at the command line [#]_.
+
+All the settings need to be present or the gallery will raise an error. The complete settings are : ::
+
+    thumb_size = 150, 150
+    gallery_dir = ../../FTP Mirror/gallery
+    gallery_url = gallery
+    data_file = gallery_data.ini
+    page_template = page.html
+    entry_template = entry.html
+    gallery_template = gallery.html
+    gallery_mode = 1
+    gallery_page = gallery_page.html
+
+See `the settings`_ for what they mean.
+
+
+The Settings
+============
+
+Most of the settings have the same meaning however you use gallery.
+
+* ``thumb_size`` -> ``width, height``
+
+    e.g. *150, 150*
+
+    This is the *maximum* size of the generated thumbnails. It keeps the proportions of the original image.
+
+*  ``gallery_dir`` -> ``path to directory``
+
+    e.g. *../../FTP Mirror/gallery*
+
+    This is the path from the file to the directory of images.
+
+*  ``gallery_url`` -> ``url path``
+
+    e.g. *gallery*
+
+    The final url path from the gallery to the image directory. This path is used to make paths for all the images/thumbnails/pages.
+
+    .. note::
+
+        When run as a standalone program, the image directory should be in a single subdirectory from the main gallery. Hopefully this limitation will be removed soon.
+
+*  ``data_file`` -> ``filepath``
+
+    e.g. *gallery_data.ini*
+
+    This is the data file that stores details of all the image files and thumbnails. See the `Gallery Data File`_ section for details.
+
+*  ``page_template`` -> ``filepath``
+
+    e.g. *page.html*
+
+    The path to the template file for the individual pages. See `The Templates`_ for details.
+
+*  ``entry_template`` -> ``filepath``
+
+    e.g. *entry.html*
+
+    The path to the template file for every thumbnail on the main page. See `The Templates`_ for details.
+
+*  ``gallery_mode`` -> ``1`` or ``2``
+
+    e.g. *1*
+
+    Whether gallery should scan all the images (1), or just use the stored data file to generate the pages (2). See the `Gallery Data File`_ section for details.
+
+Standalone Specific Settings
+----------------------------
+
+These next two settings are only used when gallery.py is run as a standalone program.
+
+* ``gallery_template`` -> ``filepath``
+
+    e.g. *gallery.html*
+
+    This is the template file used to create the main gallery page.
+
+* ``gallery_page`` -> ``filepath``
+
+    e.g. *gallery_page.html*
+
+    This is the filename to save the main gallery page as. See `The Templates`_ for details.
+
+
+Gallery Data File
+=================
+
+The gallery data file won't exist until the first time you run gallery.  
+
+When *gallery.py* runs it scans the image directory and stores the details of each image. It puts all the thumbnails in a 'thumbnail' subdirectory of the image directory. It puts all the html pages it creates in an 'html' subdirectory of the image directory. If these directories don't exist, it will create them.
+
+The datafile it creates is effectively a config file with sections [#]_ - one section per image !
+
+If you have pythonutils 0.3.0 [#]_ (or more recent) then the order of these sections will be the order that images appear in the gallery. This means you can cut and paste to edit the order.
+
+.. warning::
+
+    If you run gallery (in mode 1) after removing any images from the image directory - it will remove their entry from the data file.
+
+There are two other entries that you can edit per image :
+
+1) *Title* - by default gallery generates a title for the image based on the filename. It replaces '_' with spaces and capitalizes words.
+
+2) *Description* - You can put an optional description for the image here. This will appear below the image, on it's page.
+
+    .. note::
+
+        Entering a description with several lines is only possible with pythonutils 0.3.0 or higher (or configobj 4).
+
+        If you have pythonutils 0.3.0, you should surround entries with multiple lines between triple quotes - ``'''like this'''``.
+
+Gallery Mode
+------------
+
+The details it stores in the data file are sufficient to generate the main gallery page and all the individual pages, without having to scan the image directory again.
+
+If ``gallery_mode`` is set to *2* (see `The Settings`_), then gallery *won't* scan the image directory. Not only is this quicker - but it can be useful when you have finalised the contents of a gallery and want to move the images.
+
+If you *do* want gallery to scan the image directory, set ``gallery_mode`` to *1*. This won't overwrite any titles or descriptions, but it will add new images and remove entries for ones you've deleted. You can also use it to regenerate thumbnails if you change their size.
+
+
+The Templates
+=============
+
+*gallery.py* generates it's output from html templates that you supply. It fills in  values in the template with things like the path to the image or thumbnail, it's height, width, or title, and so on.
+
+If you are using gallery from rest2web there are two templates. If you are running it on it's own there are three. You need to supply the path to each of these files in the settings. 
+
+Obviously a good place to start is by looking at the example ones provided.
+
+The three templates are :
+
+* *entry_template*
+
+    This is a small template. It is used for every thumbnail and link in the main gallery page.
+
+* *page_template*
+
+    This is the template used to make each page (the ones containing the individual images).
+
+* *gallery_template*
+
+    This is only used when running as a `standalone program`_. It is used to make the main page with all the thumbnails on.
+
+The templates have various entries in them, that gallery replaces with the right values for the pages it is building. They all look like ``**some name**``. When you edit the templates, you must keep these for the page to work.
+
+.. note::
+
+    In fact it won't cause an error to remove any of the special entries from the templates - that value will just be missing from the final pages. You can use this to further customize the appearance of your galleries.
+
+entry_template
+--------------
+
+This template is used for every thumbnail and link in the main gallery page.
+
+The special values are :
+
+* ``**link**``
+
+    Link to the image page.
+
+* ``**thumb**``
+
+    Path to the thumbnail (for the ``img`` tag).
+
+* ``**width**``
+
+    Thumbnail width.
+
+* ``**height**``
+
+    Thumbnail height.
+
+* ``**title**``
+
+    Image title.
+
+page_template
+-------------
+
+This is the template used to make each page (the ones containing the individual images).
+
+The special values are :
+
+
+* ``**title**``
+
+    The image title. Used as the page title, and as a heading above the image.
+
+* ``<!-- **leftcomment**``
+* ``**leftcomment** -->``
+* ``<!-- **rightcomment**``
+* ``**rightcomment** -->``
+
+    In the template the 'previous image' and 'next image' are commented out. If they are needed in the page, the comment markers are removed.
+
+    Obviously, the first image doesn't have a previous (left) image, and the last doesn't have a next (right).
+
+* ``**linkleft**``
+* ``**linkright**``
+
+    These are the links to the previous and next image pages.
+
+* ``**thumbleft**``
+* ``**thumbright**``
+
+    These are the paths to the thumbnails for the previous and next images.
+
+* ``**widthleft**``
+* ``**heightleft**``
+* ``**widthright**``
+* ``**heightright**``
+
+    The widths and heights for the next/previous thumbnails.
+
+* ``**titleleft**``
+* ``**titleright**``
+
+    The image titles for the next/previous thumbnails.
+
+* ``**linkgallery**``
+
+    The link back to the main gallery page.
+
+* ``**image**``
+
+    The path to the actual image.
+
+* ``**widthmain**``
+* ``**heightmain**``
+
+    The width and height of the actual image.
+
+* ``**description**``
+
+    Guess what !
+
+gallery_template
+----------------
+
+This template is only needed (or used) when running gallery.py as a standalone program. It is used to make the main page with all the thumbnails on.
+
+The only special value is :
+
+* ``**gallery**``
+
+    This is replaced with the html containing all the thumnail images and links.
+
+Using the Output
+================
+
+..note:: 
+
+    This section is only relevant when the gallery is used from rest2web.
+
+Using the output from the gallery in your page is very easy. It creates an extra value ``gallery`` to use in your page.
+
+If the page format is {acro;reST;reStructured Text}, the ouput is indented and put inside a ``.. raw:: html`` directive [#]_.
+
+The output for the main page contains thumbnails with links to the individual pages. It is made up from the *entry* template - with the value
+ filled in for each image. You would normally use it with something like : ::
+
+    <% gallery %>
+
+TODO
+====
+
+The gallery is still experimental ('alpha' quality). I need to check the following things.
+
+* XXXX Does it delete thumbnails and html pages for deleted images ?
+* XXXX Sort html for multi-line descriptions.
+* XXXX check "file_error" works
+* XXXX If the page format is reST, the ouput is indented and put inside a ``.. raw:: html`` directive.
+* XXXX *except* - shouldn't use plugins with reST
+
+
+-------
+
+Footnotes
+=========
+
+.. [#] On Windoze you can just double click on ``gallery_test.bat``.
+.. [#] Installed means somewhere on your normal PYTHONPATH.
+.. [#] Version 0.2.0 was the first to include *urlpath*, which gallery.py needs in order to run.
+.. [#] Or by creating a ``bat`` file if you use windoze and are unfamiliar with the command line. To run gallery.py with *gallery.ini*, create a text file called *gallery.bat* - with ``python gallery.py gallery.ini``. Double clicking on *gallery.bat* should then run gallery.py with the correct config file.
+.. [#] It uses ConfigObj_ to read/write the 'INI' style config files.
+.. [#] Which has ConfigObj 4 - this retains the order of entries in config files.
+.. [#] Except currently plugins are not compatible with pages in reST format. That will be fixed soon.
+
+.. _gallery index: ../gallery_test/index.html
+.. _rest2web: http://www.voidspace.org.uk/python/rest2web/
+.. _PIL: http://www.pythonware.com/products/pil
+.. _python: http://www.python.org
+.. _pythonutils: http://www.voidspace.org.uk/python/pythonutils.html
+.. _Configobj: http://www.voidspace.org.uk/python/configobj.html
+.. _Pages of Computer Imagery: http://www.nebulae.org.uk
+.. _fuzzyman: fuzzyman@voidspace.org.uk
+.. _gallery page: http://www.voidspace.org.uk/python/rest2web/reference/gallery.html
+.. _online example: http://www.voidspace.org.uk/python/rest2web/gallery_test/index.html

@@ -1,0 +1,9 @@
+restindex
+    crumb: Page Floogle
+    # This page is in the default section
+/restindex
+==============
+ Page Floogle
+==============
+
+Page floogle...

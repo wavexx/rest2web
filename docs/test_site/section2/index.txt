@@ -1,0 +1,55 @@
+restindex          
+    format: html
+    page-title: Section 2  
+/restindex
+
+<div class="title">
+    <h1>An Index Page for Section 2</h1>
+</div>
+
+
+<div class="intro">
+    <p>Welcome to something.</p> 
+</div>
+
+
+    <div class="indexblock">
+    <h2>These Are the Articles</h2>
+    <p>So enjoy....</p>
+
+
+<#
+    import urllib
+    pagelist = '''\    
+        <ul>
+        %s
+        </ul>
+        </div>
+    '''
+    
+    pageblock = '''\
+            <li><a href="%s">%s</a>
+                <p>%s</p>
+            </li>    
+    '''
+    
+    pages = sections[None]['pages']  # everything in default section in this index
+    
+    thepages = []
+    for page in pages:
+        a_page = pageblock % (page['target'], page['link-title'], page['page-description'])
+        if type(a_page) is unicode:
+            a_page = a_page.encode('utf8')
+        thepages.append(a_page)   
+    
+    thepages = '\n'.join(thepages)
+    
+    this_sect = pagelist % thepages
+    print this_sect
+
+#>
+
+    <div class="indexblock">
+    <h2>Find the hidden page.</h2>
+    <p>Here is a <a href="hidden.html">link to a page</a> that isn't included in the index.</p>
+    </div>

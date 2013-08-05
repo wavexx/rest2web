@@ -1,0 +1,19 @@
+restindex
+    crumb: Gallery 2
+    plugins: gallery
+    format: html
+    page-title: Test Gallery in a Subfolder
+    target: gallery2.html
+/restindex
+
+uservalues
+    thumb_size = 150, 150
+    gallery_dir = ../../docs_html/gallery_test/subfolder/gallery2
+    gallery_url = gallery2
+    data_file = gallery2.ini 
+    page_template = ../page.html
+    entry_template = ../entry.html
+    gallery_mode = 1
+/uservalues
+
+<% gallery %>

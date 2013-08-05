@@ -1,0 +1,9 @@
+restindex
+    crumb: Pruned Section
+/restindex
+
+===============================
+ Oh Dear - It's All Gone Wrong
+===============================
+
+This subdirectory has been pruned, and so *shouldn't* appear anywhere.

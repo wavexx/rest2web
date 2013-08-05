@@ -1,0 +1,13 @@
+restindex
+    section: topic 3
+/restindex
+
+
+=============
+ Article 3
+=============
+
+This article has nearly the smallest restindex possible ! If it was in the 'default' section [#]_, it would have the smallest one possible. 
+
+
+.. [#] The *default section* is where articles without a section specified are put. In your index page template, you access the articles in this section using ``pages[None]``.

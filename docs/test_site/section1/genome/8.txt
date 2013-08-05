@@ -1,0 +1,192 @@
+restindex
+format: html 
+page-title: Societal Concerns Arising from the New Genetics
+crumb: Social Concerns
+/restindex
+
+<div align="right">
+<table width="100%">
+<tr valign="top">
+<td><img src="sidebar.jpg" height="800" width="90" /></td>
+<td align="left" valign="top">
+<div align="right"><b><font face="Book Antiqua"><font
+color="#800040"><font size="+3">Societal Concerns Arising from the
+New Genetics</font></font></font></b><br />
+<hr align="right" width="80%" />
+<b><font face="Arial,Helvetica"><font color="#000000"><font
+size="-1">Genomics and Its Impact on Science and Society: The Human
+Genome Project and Beyond</font></font></font></b></div>
+
+<div align="right">
+<table>
+<tr>
+<td>
+<div align="right"><a href="7.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="5.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+
+<p align="left"><font face="Arial,Helvetica"><b><font
+face="Book Antiqua"><font color="#800040"><font size="+2">Critical
+Policy and Ethical Issues<br />
+</font></font></font></b></font> <img src="99-1395man.jpg"
+height="147" width="110" align="left" /><font
+face="Arial,Helvetica">Since its inception, the Human Genome
+Project has dedicated funds toward identifying and addressing the
+ethical, legal, and social issues surrounding the availability of
+the new data and capabilities. Examples of such issues
+follow.*</font></p>
+</div>
+
+<ul>
+<li><font face="Arial,Helvetica"><font color="#800040"><b>Privacy
+and confidentiality of genetic information</b>.</font> <i>Who owns
+and controls genetic information? Is genetic privacy different from
+medical privacy?</i></font></li>
+
+<li><font face="Arial,Helvetica"><b><font color="#800040">Fairness
+in the use of genetic information by insurers, employers, courts,
+schools, adoption agencies, and the military, among
+others.</font></b> <i>Who should have access to personal genetic
+information, and how will it be used?</i></font></li>
+
+<li><font face="Arial,Helvetica"><b><font
+color="#800040">Psychological impact, stigmatization, and
+discrimination due to an individual's genetic makeup.</font></b>
+<i>How does personal genetic information affect self-identity and
+society's perceptions?</i></font></li>
+
+<li><font face="Arial,Helvetica"><b><font
+color="#800040">Reproductive issues including adequate and informed
+consent and the use of genetic information in reproductive decision
+making.</font></b> <i>Do healthcare personnel properly counsel
+parents about risks and limitations? What are the larger societal
+issues raised by new reproductive technologies?</i></font></li>
+
+<li><font face="Arial,Helvetica"><b><font color="#800040">Clinical
+issues including the education of doctors and other health-service
+providers, people identified with genetic conditions, and the
+general public; and the implementation of standards and
+quality-control measures.</font></b> <i>How should health
+professionals be prepared for the new genetics? How can the public
+be educated to make informed choices? How will genetic tests be
+evaluated and regulated for accuracy, reliability, and
+usefulness?</i> (Currently, there is little regulation.) <i>How
+does society balance current scientific limitations and social risk
+with long-term benefits?</i></font></li>
+
+<li><font face="Arial,Helvetica"><b><font color="#800040">Fairness
+in access to advanced genomic technologies.</font></b> <i>Who will
+benefit? Will there be major worldwide inequities?</i></font></li>
+
+<li><font face="Arial,Helvetica" color="#800040"><b>Uncertainties
+associated with gene tests for susceptibilities and complex
+conditions (e.g., heart disease, diabetes, and Alzheimer's
+disease).</b></font><i><font face="Arial,Helvetica">Should testing
+be performed when no treatment is available or when interpretation
+is unsure? Should children be tested for susceptibility to
+adult-onset diseases?</font></i></li>
+
+<li><font face="Arial,Helvetica"><b><font
+color="#800040">Conceptual and philosophical implications regarding
+human responsibility, free will vs genetic determinism, and
+concepts of health and disease.</font></b> <i>Do our genes
+influence our behavior, and can we control it? What is considered
+acceptable diversity? Where is the line drawn between medical
+treatment and enhancement?</i></font></li>
+
+<li><font face="Arial,Helvetica"><b><font color="#800040">Health
+and environmental issues concerning genetically modified (GM) foods
+and microbes.</font></b> <i>Are GM foods and other products safe
+for humans and the environment? How will these technologies affect
+developing nations' dependence on industrialized
+nations?</i></font></li>
+
+<li><font face="Arial,Helvetica"><b><font
+color="#800040">Commercialization of products including property
+rights (patents, copyrights, and trade secrets) and accessibility
+of data and materials.</font></b> <i>Will patenting DNA sequences
+limit their accessibility and development into useful
+products?</i></font></li>
+</ul>
+
+<center>
+<p align="left">*For more information, see <a
+href="http://www.ornl.gov/TechResources/Human_Genome/elsi/elsi.html">
+Ethical, Legal, and Social Issues</a></p>
+
+<table>
+<tr>
+<td>
+<div align="right"><a href="7.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="5.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</center>
+</td>
+</tr>
+</table>
+</div>
+
+<table border="1" width="100%">
+<tr>
+<td><a href="http://www.ornl.gov/TechResources/Human_Genome/"><img
+src="HGPlogo1.jpg" border="0" height="107" width="108" /></a></td>
+<td>The online presentation of this publication is a special
+feature of the <a
+href="http://www.ornl.gov/TechResources/Human_Genome/">Human Genome
+Project Information Web site</a>.</td>
+</tr>
+</table>

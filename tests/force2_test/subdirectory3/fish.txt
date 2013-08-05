@@ -1,0 +1,8 @@
+===============
+ A Fishy Index
+===============
+
+This is a fake index page, just to prove that you can build (in force mode)
+a directory that has an index page with no restindex. This is a weirder
+combination, because the index page is specified by a page using 'index-file'.
+{sm;:-)}

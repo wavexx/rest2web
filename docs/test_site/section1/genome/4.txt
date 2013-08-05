@@ -1,0 +1,247 @@
+restindex
+format: html 
+page-title: Early Insights from the Human DNA Sequence
+crumb: Early Insights
+/restindex
+
+<div align="right">
+<table width="100%">
+<tr valign="top">
+<td><img src="sidebar2.jpg" height="1200" width="90" /></td>
+<td align="left" valign="top">
+<div align="right"><b><font face="Book Antiqua"><font
+color="#800040"><font size="+3">Early Insights from the Human DNA
+Sequence</font></font></font></b><br />
+<hr align="right" width="80%" />
+<b><font face="Arial,Helvetica"><font color="#000000"><font
+size="-1">Genomics and Its Impact on Science and Society: The Human
+Genome Project and Beyond</font></font></font></b></div>
+
+<div align="right">
+<table>
+<tr>
+<td>
+<div align="right"><a href="2.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="6.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</div>
+
+<p><b><font face="Arial,Helvetica"><font color="#800040"><font
+size="+2">What We've Learned Thus
+Far</font></font></font></b><br />
+ <font face="Arial,Helvetica">The first panoramic views of the
+human genetic landscape have revealed a wealth of information and
+some early surprises. Much remains to be deciphered in this vast
+trove of information; as the consortium of HGP scientists concluded
+in their seminal paper, &ldquo;. . .the more we learn about the
+human genome, the more there is to explore.&rdquo; A few highlights
+from the first publications analyzing the sequence
+follow.</font></p>
+
+<ul>
+<li><font face="Arial,Helvetica">The human genome contains 3.2
+billion chemical nucleotide bases (A, C, T, and G).</font></li>
+
+<li><font face="Arial,Helvetica">The average gene consists of 3000
+bases, but sizes vary greatly, with the largest known human gene
+being dystrophin at 2.4 million bases.</font></li>
+
+<li><font face="Arial,Helvetica">The functions are unknown for more
+than 50% of discovered genes.</font></li>
+
+<li><font face="Arial,Helvetica">The human genome sequence is
+almost (99.9%) exactly the same in all people.</font></li>
+
+<li><font face="Arial,Helvetica">About 2% of the genome encodes
+instructions for the synthesis of proteins.</font></li>
+
+<li><font face="Arial,Helvetica">Repeat sequences that do not code
+for proteins make up at least 50% of the human genome.</font></li>
+
+<li><font face="Arial,Helvetica">Repeat sequences are thought to
+have no direct functions, but they shed light on chromosome
+structure and dynamics. Over time, these repeats reshape the genome
+by rearranging it, thereby creating entirely new genes or modifying
+and reshuffling existing genes.</font></li>
+
+<li><font face="Arial,Helvetica">The human genome has a much
+greater portion (50%) of repeat sequences than the mustard weed
+(11%), the worm (7%), and the fly (3%).</font></li>
+
+<li><font face="Arial,Helvetica">Over 40% of the predicted human
+proteins share similarity with fruit-fly or worm
+proteins.</font></li>
+
+<li><font face="Arial,Helvetica">Genes appear to be concentrated in
+random areas along the genome, with vast expanses of noncoding DNA
+between.</font></li>
+
+<li><font face="Arial,Helvetica">Chromosome 1 (the largest human
+chromosome) has the most genes (2968), and the Y chromosome has the
+fewest (231).</font></li>
+
+<li><font face="Arial,Helvetica">Genes have been pinpointed and
+particular sequences in those genes associated with numerous
+diseases and disorders including breast cancer, muscle disease,
+deafness, and blindness.</font></li>
+
+<li><font face="Arial,Helvetica">Scientists have identified about 3
+million locations where single-base DNA differences occur in
+humans. This information promises to revolutionize the processes of
+finding DNA sequences associated with such common diseases as
+cardiovascular disease, diabetes, arthritis, and
+cancers.</font></li>
+</ul>
+
+<table width="100%" border="0" cellspacing="3" cellpadding="3">
+<tr>
+<th>Organism</th>
+<th>Genome Size (Bases)</th>
+<th>Estimated<br />
+Genes</th>
+</tr>
+
+<tr>
+<td>Human (<em>Homo sapiens</em>)</td>
+<td>3.2 billion</td>
+<td>30,000 to 40,000</td>
+</tr>
+
+<tr>
+<td>Laboratory mouse (<em>M. musculus</em>)</td>
+<td>2.6 billion</td>
+<td>30,000</td>
+</tr>
+
+<tr>
+<td>Mustard weed (<em>A. thaliana</em>)</td>
+<td>100 million</td>
+<td>25,000</td>
+</tr>
+
+<tr>
+<td>Roundworm (<em>C. elegans</em>)</td>
+<td>97 million</td>
+<td>19,000</td>
+</tr>
+
+<tr>
+<td>Fruit fly (<em>D. melanogaster</em>)</td>
+<td>137 million</td>
+<td>13,000</td>
+</tr>
+
+<tr>
+<td>Yeast (<em>S. cerevisiae</em>)</td>
+<td>12.1 million</td>
+<td>6,000</td>
+</tr>
+
+<tr>
+<td>Bacterium (<em>E. coli</em>)</td>
+<td>4.6 million</td>
+<td>3,200</td>
+</tr>
+
+<tr>
+<td>Human immunodeficiency virus (HIV)</td>
+<td>9700</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td colspan="3">
+<p>The estimated number of human genes is only one-third as great
+as previously thought, although the numbers may be revised as more
+computational and experimental analyses are performed.</p>
+
+<p>Scientists suggest that the genetic key to human complexity lies
+not in gene number but in how gene parts are used to build
+different products in a process called alternative splicing. Other
+underlying reasons for greater complexity are the thousands of
+chemical modifications made to proteins and the repertoire of
+regulatory mechanisms controlling these processes.</p>
+
+<p align="center"><br />
+ <img src="standardscrp.jpg" width="300" height="64" /></p>
+</td>
+</tr>
+</table>
+
+<center>
+<table>
+<tr>
+<td>
+<div align="right"><a href="2.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="6.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</center>
+</td>
+</tr>
+</table>
+</div>
+
+<table border="1" width="100%">
+<tr>
+<td><a href="http://www.ornl.gov/TechResources/Human_Genome/"><img
+src="HGPlogo1.jpg" border="0" height="107" width="108" /></a></td>
+<td>The online presentation of this publication is a special
+feature of the <a
+href="http://www.ornl.gov/TechResources/Human_Genome/">Human Genome
+Project Information Web site</a>.</td>
+</tr>
+</table>

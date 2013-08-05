@@ -1,0 +1,8 @@
+restindex
+    crumb: Page C
+/restindex
+========
+ Page C
+========
+
+Page c...

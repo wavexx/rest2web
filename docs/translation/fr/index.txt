@@ -1,0 +1,12 @@
+restindex
+    crumb: French Index
+    format: html
+    page-title: The French Index
+/restindex
+
+uservalues
+    body: ../template/_index.txt 
+    greeting: Bonjour et Bievenue
+    para1: Nous sommes ici.
+    index_title: Index Title in French
+/uservalues

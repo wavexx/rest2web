@@ -1,0 +1,26 @@
+restindex
+    page-title: Test of Uservalues
+/restindex
+uservalues
+    test1: """A value in *ReST*."""
+    test2: A value in <em>HTML</em>
+    test3: Never inserted.
+/uservalues
+
+====================
+ Test of Uservalues
+====================
+
+This is a test of uservalues. The following paragraph is in ReStructuredText.
+
+    <* test1 *>
+
+The next one is in HTML :
+
+    {esc;test2}
+
+I wonder if it works. {sm;:-)}
+
+This one will be escaped by ``docutils``, and so not executed.
+
+    <% test3 %>

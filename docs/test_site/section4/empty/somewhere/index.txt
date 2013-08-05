@@ -1,0 +1,10 @@
+restindex
+    page-title: This is an Orphaned Page 
+    crumb: Orphan    
+/restindex
+
+=================
+ A Poor Orphan
+=================
+
+rest2web will render whole orphaned sections. 

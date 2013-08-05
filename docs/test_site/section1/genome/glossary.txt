@@ -1,0 +1,3265 @@
+restindex
+format: html 
+page-title: Dictionary of Genetic Terms
+crumb: Glossary
+/restindex
+
+<div align="right">
+<table width="100%">
+<tr valign="top">
+<td><img src="sidebar.jpg" height="800" width="90" /></td>
+<td align="left" valign="top">
+<div align="right"><b><font face="Book Antiqua"><font
+color="#800040"><font size="+3">Dictionary of Genetic
+Terms</font></font></font></b><br />
+<hr align="right" width="80%" />
+<b><font face="Arial,Helvetica"><font color="#000000"><font
+size="-1">Genomics and Its Impact on Medicine and Society: A 2001
+Primer</font></font></font></b></div>
+
+<div align="right">
+<table>
+<tr>
+<td>
+<div align="right"><a href="9.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="index.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</div>
+
+<dl>
+<dd>
+<h2><a id="A" name="A">A</a></h2>
+</dd>
+
+<dt><a id="acquiredgeneticmutation"
+name="acquiredgeneticmutation"></a> <b>Acquired genetic
+mutation</b></dt>
+
+<dd><i>See:</i> <u><a href="#somaticcellgeneticmutation"
+target="_self">somatic cell genetic mutation</a></u><br />
+</dd>
+
+<dt><a id="additivegeneticeffects"
+name="additivegeneticeffects"></a> <b>Additive genetic
+effects</b></dt>
+
+<dd>When the combined effects of alleles at different loci are
+equal to the sum of their individual effects.<br />
+<i>See also:</i> <u><a href="#anticipation"
+target="_self">anticipation</a></u>,<u><a href="#complextrait"
+target="_self">complex trait</a></u><br />
+</dd>
+
+<dt><a id="adenine" name="adenine"></a> <b>Adenine</b> (A)</dt>
+
+<dd>A nitrogenous base, one member of the base pair AT
+(adenine-thymine).<br />
+<i>See also:</i> <u><a href="#basepair" target="_self">base
+pair</a></u>,<u><a href="#nucleotide"
+target="_self">nucleotide</a></u><br />
+</dd>
+
+<dt><a id="affectedrelativepair" name="affectedrelativepair"></a>
+<b>Affected relative pair</b></dt>
+
+<dd>Individuals related by blood, each of whom is affected with the
+same trait. Examples are affected sibling, cousin, and avuncular
+pairs.<br />
+<i>See also:</i> <u><a href="#avuncularrelationship"
+target="_self">avuncular relationship</a></u><br />
+</dd>
+
+<dt><a id="aggregationtechnique" name="aggregationtechnique"></a>
+<b>Aggregation technique</b></dt>
+
+<dd>A technique used in model organism studies in which embryos at
+the 8-cell stage of development are pushed together to yield a
+single embryo (used as an alternative to microinjection).<br />
+<i>See also:</i> <u><a href="#modelorganisms" target="_self">model
+organisms</a></u><br />
+</dd>
+
+<dt><a id="allele" name="allele"></a> <b>Allele</b></dt>
+
+<dd>Alternative form of a genetic locus; a single allele for each
+locus is inherited from each parent (e.g., at a locus for eye color
+the allele might result in blue or brown eyes).<br />
+<i>See also:</i> <u><a href="#locus"
+target="_self">locus</a></u>,<u><a href="#geneexpression"
+target="_self">gene expression</a></u><br />
+</dd>
+
+<dt><a id="allogeneic" name="allogeneic"></a>
+<b>Allogeneic</b></dt>
+
+<dd>Variation in alleles among members of the same species.</dd>
+
+<dt><a id="alternativesplicing" name="alternativesplicing"></a>
+<b>Alternative splicing</b></dt>
+
+<dd>Different ways of combining a gene's exons to make variants of
+the complete protein</dd>
+
+<dt><a id="aminoacid" name="aminoacid"></a> <b>Amino acid</b></dt>
+
+<dd>Any of a class of 20 molecules that are combined to form
+proteins in living things. The sequence of amino acids in a protein
+and hence protein function are determined by the genetic code.</dd>
+
+<dt><a id="amplification" name="amplification"></a>
+<b>Amplification</b></dt>
+
+<dd>An increase in the number of copies of a specific DNA fragment;
+can be in vivo or in vitro.<br />
+<i>See also:</i> <u><a href="#cloning"
+target="_self">cloning</a></u>,<u><a
+href="#polymerasechainreaction" target="_self">polymerase chain
+reaction</a></u><br />
+</dd>
+
+<dt><a id="animalmodel" name="animalmodel"></a> <b>Animal
+model</b></dt>
+
+<dd><i>See:</i> <u><a href="#modelorganisms" target="_self">model
+organisms</a></u><br />
+</dd>
+
+<dt><a id="annotation" name="annotation"></a>
+<b>Annotation</b></dt>
+
+<dd>Adding pertinent information such as gene coded for, amino acid
+sequence, or other commentary to the database entry of raw sequence
+of DNA bases.<br />
+<i>See also:</i> <u><a href="#bioinformatics"
+target="_self">bioinformatics</a></u><br />
+</dd>
+
+<dt><a id="anticipation" name="anticipation"></a>
+<b>Anticipation</b></dt>
+
+<dd>Each generation of offspring has increased severity of a
+genetic disorder; e.g., a grandchild may have earlier onset and
+more severe symptoms than the parent, who had earlier onset than
+the grandparent.<br />
+<i>See also:</i> <u><a href="#additivegeneticeffects"
+target="_self">additive genetic effects</a></u>,<u><a
+href="#complextrait" target="_self">complex trait</a></u><br />
+</dd>
+
+<dt><a id="antisense" name="antisense"></a> <b>Antisense</b></dt>
+
+<dd>Nucleic acid that has a sequence exactly opposite to an mRNA
+molecule made by the body; binds to the mRNA molecule to prevent a
+protein from being made.<br />
+<i>See also:</i> <u><a href="#transcription"
+target="_self">transcription</a></u><br />
+</dd>
+
+<dt><a id="apoptosis" name="apoptosis"></a> <b>Apoptosis</b></dt>
+
+<dd>Programmed cell death, the body's normal method of disposing of
+damaged, unwanted, or unneeded cells.<br />
+<i>See also:</i> <u><a href="#cell"
+target="_self">cell</a></u><br />
+</dd>
+
+<dt><a id="arrayedlibrary" name="arrayedlibrary"></a> <b>Arrayed
+library</b></dt>
+
+<dd>Individual primary recombinant clones (hosted in phage, cosmid,
+YAC, or other vector) that are placed in two-dimensional arrays in
+microtiter dishes. Each primary clone can be identified by the
+identity of the plate and the clone location (row and column) on
+that plate. Arrayed libraries of clones can be used for many
+applications, including screening for a specific gene or genomic
+region of interest.<br />
+<i>See also:</i> <u><a href="#library"
+target="_self">library</a></u>,<u><a href="#genomiclibrary"
+target="_self">genomic library</a></u>,<u><a
+href="#genechiptechnology" target="_self">gene chip
+technology</a></u><br />
+</dd>
+
+<dt><a id="assembly" name="assembly"></a> <b>Assembly</b></dt>
+
+<dd>Putting sequenced fragments of DNA into their correct
+chromosomal positions.</dd>
+
+<dt><a id="autoradiography" name="autoradiography"></a>
+<b>Autoradiography</b></dt>
+
+<dd>A technique that uses X-ray film to visualize radioactively
+labeled molecules or fragments of molecules; used in analyzing
+length and number of DNA fragments after they are separated by gel
+electrophoresis.</dd>
+
+<dt><a id="autosomaldominant" name="autosomaldominant"></a>
+<b>Autosomal dominant</b></dt>
+
+<dd>A gene on one of the non-sex chromosomes that is always
+expressed, even if only one copy is present. The chance of passing
+the gene to offspring is 50% for each pregnancy.<br />
+<i>See also:</i> <u><a href="#autosome"
+target="_self">autosome</a></u>,<u><a href="#dominant"
+target="_self">dominant</a></u>,<u><a href="#gene"
+target="_self">gene</a></u><br />
+</dd>
+
+<dt><a id="autosome" name="autosome"></a> <b>Autosome</b></dt>
+
+<dd>A chromosome not involved in sex determination. The diploid
+human genome consists of a total of 46 chromosomes: 22 pairs of
+autosomes, and 1 pair of sex chromosomes (the X and Y
+chromosomes).<br />
+<i>See also:</i> <u><a href="#sexchromosome" target="_self">sex
+chromosome</a></u><br />
+</dd>
+
+<dt><a id="avuncularrelationship" name="avuncularrelationship"></a>
+<b>Avuncular relationship</b></dt>
+
+<dd>The genetic relationship between nieces and nephews and their
+aunts and uncles. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="B" name="B">B</a></h2>
+</dd>
+
+<dt><a id="backcross" name="backcross"></a> <b>Backcross</b></dt>
+
+<dd>A cross between an animal that is heterozygous for alleles
+obtained from two parental strains and a second animal from one of
+those parental strains. Also used to describe the breeding protocol
+of an outcross followed by a backcross.<br />
+<i>See also:</i> <u><a href="#modelorganisms" target="_self">model
+organisms</a></u><br />
+</dd>
+
+<dt><a id="bacterialartificialchromosome"
+name="bacterialartificialchromosome"></a> <b>Bacterial artificial
+chromosome</b> (BAC)</dt>
+
+<dd>A vector used to clone DNA fragments (100- to 300-kb insert
+size; average, 150 kb) in <i>Escherichia coli</i> cells. Based on
+naturally occurring F-factor plasmid found in the bacterium <i>E.
+coli</i>.<br />
+<i>See also:</i> <u><a href="#cloningvector" target="_self">cloning
+vector</a></u><br />
+</dd>
+
+<dt><a id="bacteriophage" name="bacteriophage"></a>
+<b>Bacteriophage</b></dt>
+
+<dd><i>See:</i> <u><a href="#phage"
+target="_self">phage</a></u><br />
+</dd>
+
+<dt><a id="base" name="base"></a> <b>Base</b></dt>
+
+<dd>One of the molecules that form DNA and RNA molecules.<br />
+<i>See also:</i> <u><a href="#nucleotide"
+target="_self">nucleotide</a></u>,<u><a href="#basepair"
+target="_self">base pair</a></u>,<u><a href="#basesequence"
+target="_self">base sequence</a></u><br />
+</dd>
+
+<dt><a id="basepair" name="basepair"></a> <b>Base pair</b>
+(bp)</dt>
+
+<dd>Two nitrogenous bases (adenine and thymine or guanine and
+cytosine) held together by weak bonds. Two strands of DNA are held
+together in the shape of a double helix by the bonds between base
+pairs.</dd>
+
+<dt><a id="basesequence" name="basesequence"></a> <b>Base
+sequence</b></dt>
+
+<dd>The order of nucleotide bases in a DNA molecule; determines
+structure of proteins encoded by that DNA.</dd>
+
+<dt><a id="basesequenceanalysis" name="basesequenceanalysis"></a>
+<b>Base sequence analysis</b></dt>
+
+<dd>A method, sometimes automated, for determining the base
+sequence.</dd>
+
+<dt><a id="behavioralgenetics" name="behavioralgenetics"></a>
+<b>Behavioral genetics</b></dt>
+
+<dd>The study of genes that may influence behavior.</dd>
+
+<dt><a id="bioinformatics" name="bioinformatics"></a>
+<b>Bioinformatics</b></dt>
+
+<dd>The science of managing and analyzing biological data using
+advanced computing techniques. Especially important in analyzing
+genomic research data.<br />
+<i>See also:</i> <u><a href="#informatics"
+target="_self">informatics</a></u><br />
+</dd>
+
+<dt><a id="bioremediation" name="bioremediation"></a>
+<b>Bioremediation</b></dt>
+
+<dd>The use of biological organisms such as plants or microbes to
+aid in removing hazardous substances from an area.</dd>
+
+<dt><a id="biotechnology" name="biotechnology"></a>
+<b>Biotechnology</b></dt>
+
+<dd>A set of biological techniques developed through basic research
+and now applied to research and product development. In particular,
+biotechnology refers to the use by industry of recombinant DNA,
+cell fusion, and new bioprocessing techniques.</dd>
+
+<dt><a id="birthdefect" name="birthdefect"></a> <b>Birth
+defect</b></dt>
+
+<dd>Any harmful trait, physical or biochemical, present at birth,
+whether a result of a genetic mutation or some other nongenetic
+factor.<br />
+<i>See also:</i> <u><a href="#congenital"
+target="_self">congenital</a></u>,<u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#mutation"
+target="_self">mutation</a></u>,<u><a href="#syndrome"
+target="_self">syndrome</a></u><br />
+</dd>
+
+<dt><a id="blast" name="blast"></a> <b>BLAST</b></dt>
+
+<dd>A computer program that identifies homologous (similar) genes
+in different organisms, such as human, fruit fly, or nematode. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="C" name="C">C</a></h2>
+</dd>
+
+<dt><a id="cancer" name="cancer"></a> <b>Cancer</b></dt>
+
+<dd>Diseases in which abnormal cells divide and grow unchecked.
+Cancer can spread from its original site to other parts of the body
+and can be fatal.<br />
+<i>See also:</i> <u><a href="#hereditarycancer"
+target="_self">hereditary cancer</a></u>,<u><a
+href="#sporadiccancer" target="_self">sporadic cancer</a></u><br />
+</dd>
+
+<dt><a id="candidategene" name="candidategene"></a> <b>Candidate
+gene</b></dt>
+
+<dd>A gene located in a chromosome region suspected of being
+involved in a disease.<br />
+<i>See also:</i> <u><a href="#positionalcloning"
+target="_self">positional cloning</a></u>,<u><a href="#protein"
+target="_self">protein</a></u><br />
+</dd>
+
+<dt><a id="capillaryarray" name="capillaryarray"></a> <b>Capillary
+array</b></dt>
+
+<dd>Gel-filled silica capillaries used to separate fragments for
+DNA sequencing. The small diameter of the capillaries permit the
+application of higher electric fields, providing high speed, high
+throughput separations that are significantly faster than
+traditional slab gels.</dd>
+
+<dt><a id="carcinogen" name="carcinogen"></a>
+<b>Carcinogen</b></dt>
+
+<dd>Something which causes cancer to occur by causing changes in a
+cell's DNA.<br />
+<i>See also:</i> <u><a href="#mutagene"
+target="_self">mutagene</a></u><br />
+</dd>
+
+<dt><a id="carrier" name="carrier"></a> <b>Carrier</b></dt>
+
+<dd>An individual who possesses an unexpressed, recessive
+trait.</dd>
+
+<dt><a id="cdnalibrary" name="cdnalibrary"></a> <b>cDNA
+library</b></dt>
+
+<dd>A collection of DNA sequences that code for genes. The
+sequences are generated in the laboratory from mRNA
+sequences.<br />
+<i>See also:</i> <u><a href="#messengerrna"
+target="_self">messenger RNA</a></u><br />
+</dd>
+
+<dt><a id="cell" name="cell"></a> <b>Cell</b></dt>
+
+<dd>The basic unit of any living organism that carries on the
+biochemical processes of life.<br />
+<i>See also:</i> <u><a href="#genome"
+target="_self">genome</a></u>,<u><a href="#nucleus"
+target="_self">nucleus</a></u><br />
+</dd>
+
+<dt><a id="centimorgan" name="centimorgan"></a> <b>Centimorgan</b>
+(cM)</dt>
+
+<dd>A unit of measure of recombination frequency. One centimorgan
+is equal to a 1% chance that a marker at one genetic locus will be
+separated from a marker at a second locus due to crossing over in a
+single generation. In human beings, one centimorgan is equivalent,
+on average, to one million base pairs.<br />
+<i>See also:</i> <u><a href="#megabase"
+target="_self">megabase</a></u><br />
+</dd>
+
+<dt><a id="centromere" name="centromere"></a>
+<b>Centromere</b></dt>
+
+<dd>A specialized chromosome region to which spindle fibers attach
+during cell division.</dd>
+
+<dt><a id="chimera(pl.chimaera)" name="chimera(pl.chimaera)"></a>
+<b>Chimera (pl. chimaera)</b></dt>
+
+<dd>An organism that contains cells or tissues with a different
+genotype. These can be mutated cells of the host organism or cells
+from a different organism or species.</dd>
+
+<dt><a id="chimeraplasty" name="chimeraplasty"></a>
+<b>Chimeraplasty</b></dt>
+
+<dd>An experimental targeted repair process in which a desirable
+sequence of DNA is combined with RNA to form a chimeraplast. These
+molecules bind selectively to the target DNA. Once bound, the
+chimeraplast activates a naturally occurring gene-correcting
+mechanism. Does not use viral or other conventional gene-delivery
+vectors.<br />
+<i>See also:</i> <u><a href="#genetherapy" target="_self">gene
+therapy</a></u>,<u><a href="#cloningvector" target="_self">cloning
+vector</a></u><br />
+</dd>
+
+<dt><a id="chloroplastchromosome" name="chloroplastchromosome"></a>
+<b>Chloroplast chromosome</b></dt>
+
+<dd>Circular DNA found in the photosynthesizing organelle
+(chloroplast) of plants instead of the cell nucleus where most
+genetic material is located.</dd>
+
+<dt><a id="chromomere" name="chromomere"></a>
+<b>Chromomere</b></dt>
+
+<dd>One of the serially aligned beads or granules of a eukaryotic
+chromosome, resulting from local coiling of a continuous DNA
+thread.</dd>
+
+<dt><a id="chromosomaldeletion" name="chromosomaldeletion"></a>
+<b>Chromosomal deletion</b></dt>
+
+<dd>The loss of part of a chromosome's DNA.</dd>
+
+<dt><a id="chromosomalinversion" name="chromosomalinversion"></a>
+<b>Chromosomal inversion</b></dt>
+
+<dd>Chromosome segments that have been turned 180 degrees. The gene
+sequence for the segment is reversed with respect to the rest of
+the chromosome.</dd>
+
+<dt><a id="chromosome" name="chromosome"></a>
+<b>Chromosome</b></dt>
+
+<dd>The self-replicating genetic structure of cells containing the
+cellular DNA that bears in its nucleotide sequence the linear array
+of genes. In prokaryotes, chromosomal DNA is circular, and the
+entire genome is carried on one chromosome. Eukaryotic genomes
+consist of a number of chromosomes whose DNA is associated with
+different kinds of proteins.</dd>
+
+<dt><a id="chromosomepainting" name="chromosomepainting"></a>
+<b>Chromosome painting</b></dt>
+
+<dd>Attachment of certain fluorescent dyes to targeted parts of the
+chromosome. Used as a diagnositic for particular diseases, e.g.
+types of leukemia.</dd>
+
+<dt><a id="chromosomeregionp" name="chromosomeregionp"></a>
+<b>Chromosome region p</b></dt>
+
+<dd>A designation for the short arm of a chromosome.</dd>
+
+<dt><a id="chromosomeregionq" name="chromosomeregionq"></a>
+<b>Chromosome region q</b></dt>
+
+<dd>A designation for the long arm of a chromosome.</dd>
+
+<dt><a id="clone" name="clone"></a> <b>Clone</b></dt>
+
+<dd>An exact copy made of biological material such as a DNA segment
+(e.g., a gene or other region), a whole cell, or a complete
+organism.</dd>
+
+<dt><a id="clonebank" name="clonebank"></a> <b>Clone bank</b></dt>
+
+<dd><i>See:</i> <u><a href="#genomiclibrary" target="_self">genomic
+library</a></u><br />
+</dd>
+
+<dt><a id="cloning" name="cloning"></a> <b>Cloning</b></dt>
+
+<dd>Using specialized DNA technology to produce multiple, exact
+copies of a single gene or other segment of DNA to obtain enough
+material for further study. This process, used by researchers in
+the Human Genome Project, is referred to as cloning DNA.&nbsp; The
+resulting cloned (copied) collections of DNA molecules are called
+clone libraries. A second type of cloning exploits the natural
+process of cell division to make many copies of an entire cell. The
+genetic makeup of these cloned cells, called a cell line, is
+identical to the original cell. A third type of cloning produces
+complete, genetically identical animals such as the famous Scottish
+sheep, Dolly.&nbsp;<br />
+<i>See also:</i> <u><a href="#cloningvector" target="_self">cloning
+vector</a></u><br />
+</dd>
+
+<dt><a id="cloningvector" name="cloningvector"></a> <b>Cloning
+vector</b></dt>
+
+<dd>DNA molecule originating from a virus, a plasmid, or the cell
+of a higher organism into which another DNA fragment of appropriate
+size can be integrated without loss of the vector's capacity for
+self-replication; vectors introduce foreign DNA into host cells,
+where the DNA can be reproduced in large quantities. Examples are
+plasmids, cosmids, and yeast artificial chromosomes; vectors are
+often recombinant molecules containing DNA sequences from several
+sources.</dd>
+
+<dt><a id="code" name="code"></a> <b>Code</b></dt>
+
+<dd><i>See:</i> <u><a href="#geneticcode" target="_self">genetic
+code</a></u><br />
+</dd>
+
+<dt><a id="codominance" name="codominance"></a>
+<b>Codominance</b></dt>
+
+<dd>Situation in which two different alleles for a genetic trait
+are both expressed.<br />
+<i>See also:</i> <u><a href="#autosomaldominant"
+target="_self">autosomal dominant</a></u>,<u><a
+href="#recessivegene" target="_self">recessive gene</a></u><br />
+</dd>
+
+<dt><a id="codon" name="codon"></a> <b>Codon</b></dt>
+
+<dd><i>See:</i> <u><a href="#geneticcode" target="_self">genetic
+code</a></u><br />
+</dd>
+
+<dt><a id="coisogenicorcongenic" name="coisogenicorcongenic"></a>
+<b>Coisogenic or congenic</b></dt>
+
+<dd>Nearly identical strains of an organism; they vary at only a
+single locus.</dd>
+
+<dt><a id="comparativegenomics" name="comparativegenomics"></a>
+<b>Comparative genomics</b></dt>
+
+<dd>The study of human genetics by comparisons with model organisms
+such as mice, the fruit fly, and the bacterium <i>E. coli</i>.</dd>
+
+<dt><a id="complementarydna" name="complementarydna"></a>
+<b>Complementary DNA</b> (cDNA)</dt>
+
+<dd>DNA that is synthesized in the laboratory from a messenger RNA
+template.</dd>
+
+<dt><a id="complementarysequence" name="complementarysequence"></a>
+<b>Complementary sequence</b></dt>
+
+<dd>Nucleic acid base sequence that can form a double-stranded
+structure with another DNA fragment by following base-pairing rules
+(A pairs with T and C with G). The complementary sequence to GTAC
+for example, is CATG.</dd>
+
+<dt><a id="complextrait" name="complextrait"></a> <b>Complex
+trait</b></dt>
+
+<dd>Trait that has a genetic component that does not follow strict
+Mendelian inheritance. May involve the interaction of two or more
+genes or gene-environment interactions.<br />
+<i>See also:</i> <u><a href="#mendelianinheritance"
+target="_self">Mendelian inheritance</a></u>,<u><a
+href="#additivegeneticeffects" target="_self">additive genetic
+effects</a></u><br />
+</dd>
+
+<dt><a id="computationalbiology" name="computationalbiology"></a>
+<b>Computational biology</b></dt>
+
+<dd><i>See:</i> <u><a href="#bioinformatics"
+target="_self">bioinformatics</a></u><br />
+</dd>
+
+<dt><a id="confidentiality" name="confidentiality"></a>
+<b>Confidentiality</b></dt>
+
+<dd>In genetics, the expectation that genetic material and the
+information gained from testing that material will not be available
+without the donor's consent.</dd>
+
+<dt><a id="congenital" name="congenital"></a>
+<b>Congenital</b></dt>
+
+<dd>Any trait present at birth, whether the result of a genetic or
+nongenetic factor.<br />
+<i>See also:</i> <u><a href="#birthdefect" target="_self">birth
+defect</a></u><br />
+</dd>
+
+<dt><a id="conservedsequence" name="conservedsequence"></a>
+<b>Conserved sequence</b></dt>
+
+<dd>A base sequence in a DNA molecule (or an amino acid sequence in
+a protein) that has remained essentially unchanged throughout
+evolution.</dd>
+
+<dt><a id="constitutiveablation" name="constitutiveablation"></a>
+<b>Constitutive ablation</b></dt>
+
+<dd>Gene expression that results in cell death.</dd>
+
+<dt><a id="contig" name="contig"></a> <b>Contig</b></dt>
+
+<dd>Group of cloned (copied) pieces of DNA representing overlapping
+regions of a particular chromosome.</dd>
+
+<dt><a id="contigmap" name="contigmap"></a> <b>Contig map</b></dt>
+
+<dd>A map depicting the relative order of a linked library of
+overlapping clones representing a complete chromosomal
+segment.</dd>
+
+<dt><a id="cosmid" name="cosmid"></a> <b>Cosmid</b></dt>
+
+<dd>Artificially constructed cloning vector containing the cos gene
+of phage lambda. Cosmids can be packaged in lambda phage particles
+for infection into <i>E. coli</i>; this permits cloning of larger
+DNA fragments (up to 45kb) than can be introduced into bacterial
+hosts in plasmid vectors.</dd>
+
+<dt><a id="crossingover" name="crossingover"></a> <b>Crossing
+over</b></dt>
+
+<dd>The breaking during meiosis of one maternal and one paternal
+chromosome, the exchange of corresponding sections of DNA, and the
+rejoining of the chromosomes. This process can result in an
+exchange of alleles between chromosomes.<br />
+<i>See also:</i> <u><a href="#recombination"
+target="_self">recombination</a></u><br />
+</dd>
+
+<dt><a id="cytogenetics" name="cytogenetics"></a>
+<b>Cytogenetics</b></dt>
+
+<dd>The study of the physical appearance of chromosomes.<br />
+<i>See also:</i> <u><a href="#karyotype"
+target="_self">karyotype</a></u><br />
+</dd>
+
+<dt><a id="cytologicalband" name="cytologicalband"></a>
+<b>Cytological band</b></dt>
+
+<dd>An area of the chromosome that stains differently from areas
+around it.<br />
+<i>See also:</i> <u><a href="#cytologicalmap"
+target="_self">cytological map</a></u><br />
+</dd>
+
+<dt><a id="cytologicalmap" name="cytologicalmap"></a>
+<b>Cytological map</b></dt>
+
+<dd>A type of chromosome map whereby genes are located on the basis
+of cytological findings obtained with the aid of chromosome
+mutations.</dd>
+
+<dt><a id="cytoplasmic(uniparental)inheritance"
+name="cytoplasmic(uniparental)inheritance"></a> <b>Cytoplasmic
+(uniparental) inheritance</b></dt>
+
+<dd><i>See:</i> <u><a href="#cytoplasmictrait"
+target="_self">cytoplasmic trait</a></u><br />
+</dd>
+
+<dt><a id="cytoplasmictrait" name="cytoplasmictrait"></a>
+<b>Cytoplasmic trait</b></dt>
+
+<dd>A genetic characteristic in which the genes are found outside
+the nucleus, in chloroplasts or mitochondria. Results in offspring
+inheriting genetic material from only one parent.</dd>
+
+<dt><a id="cytosine" name="cytosine"></a> <b>Cytosine</b> (C)</dt>
+
+<dd>A nitrogenous base, one member of the base pair GC (guanine and
+cytosine) in DNA.<br />
+<i>See also:</i> <u><a href="#basepair" target="_self">base
+pair</a></u>,<u><a href="#nucleotide"
+target="_self">nucleotide</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="D" name="D">D</a></h2>
+</dd>
+
+<dt><a id="datawarehouse" name="datawarehouse"></a> <b>Data
+warehouse</b></dt>
+
+<dd>A collection of databases, data tables, and mechanisms to
+access the data on a single subject.</dd>
+
+<dt><a id="deletion" name="deletion"></a> <b>Deletion</b></dt>
+
+<dd>A loss of part of the DNA from a chromosome; can lead to a
+disease or abnormality.<br />
+<i>See also:</i> <u><a href="#chromosome"
+target="_self">chromosome</a></u>,<u><a href="#mutation"
+target="_self">mutation</a></u><br />
+</dd>
+
+<dt><a id="deletionmap" name="deletionmap"></a> <b>Deletion
+map</b></dt>
+
+<dd>A description of a specific chromosome that uses defined
+mutations --specific deleted areas in the genome-- as 'biochemical
+signposts,' or markers for specific areas.</dd>
+
+<dt><a id="deoxyribonucleotide" name="deoxyribonucleotide"></a>
+<b>Deoxyribonucleotide</b></dt>
+
+<dd><i>See:</i> <u><a href="#nucleotide"
+target="_self">nucleotide</a></u><br />
+</dd>
+
+<dt><a id="deoxyribose" name="deoxyribose"></a>
+<b>Deoxyribose</b></dt>
+
+<dd>A type of sugar that is one component of DNA (deoxyribonucleic
+acid).</dd>
+
+<dt><a id="diploid" name="diploid"></a> <b>Diploid</b></dt>
+
+<dd>A full set of genetic material consisting of paired
+chromosomes, one from each parental set. Most animal cells except
+the gametes have a diploid set of chromosomes. The diploid human
+genome has 46 chromosomes.<br />
+<i>See also:</i> <u><a href="#haploid"
+target="_self">haploid</a></u><br />
+</dd>
+
+<dt><a id="directedevolution" name="directedevolution"></a>
+<b>Directed evolution</b></dt>
+
+<dd>A laboratory process used on isolated molecules or microbes to
+cause mutations and identify subsequent adaptations to novel
+environments.</dd>
+
+<dt><a id="directedmutagenesis" name="directedmutagenesis"></a>
+<b>Directed mutagenesis</b></dt>
+
+<dd>Alteration of DNA at a specific site and its reinsertion into
+an organism to study any effects of the change.</dd>
+
+<dt><a id="directedsequencing" name="directedsequencing"></a>
+<b>Directed sequencing</b></dt>
+
+<dd>Successively sequencing DNA from adjacent stretches of
+chromosome.</dd>
+
+<dt><a id="disease-associatedgenes"
+name="disease-associatedgenes"></a> <b>Disease-associated
+genes</b></dt>
+
+<dd>Alleles carrying particular DNA sequences associated with the
+presence of disease.</dd>
+
+<dt><a id="dna" name="dna"></a> <b>DNA</b> (deoxyribonucleic
+acid)</dt>
+
+<dd>The molecule that encodes genetic information. DNA is a
+double-stranded molecule held together by weak bonds between base
+pairs of nucleotides. The four nucleotides in DNA contain the bases
+adenine (A), guanine (G), cytosine (C), and thymine (T). In nature,
+base pairs form only between A and T and between G and C; thus the
+base sequence of each single strand can be deduced from that of its
+partner.</dd>
+
+<dt><a id="dnabank" name="dnabank"></a> <b>DNA bank</b></dt>
+
+<dd>A service that stores DNA extracted from blood samples or other
+human tissue.</dd>
+
+<dt><a id="dnaprobe" name="dnaprobe"></a> <b>DNA probe</b></dt>
+
+<dd><i>See:</i> <u><a href="#probe"
+target="_self">probe</a></u><br />
+</dd>
+
+<dt><a id="dnarepairgenes" name="dnarepairgenes"></a> <b>DNA repair
+genes</b></dt>
+
+<dd>Genes encoding proteins that correct errors in DNA
+sequencing.</dd>
+
+<dt><a id="dnareplication" name="dnareplication"></a> <b>DNA
+replication</b></dt>
+
+<dd>The use of existing DNA as a template for the synthesis of new
+DNA strands. In humans and other eukaryotes, replication occurs in
+the cell nucleus.</dd>
+
+<dt><a id="dnasequence" name="dnasequence"></a> <b>DNA
+sequence</b></dt>
+
+<dd>The relative order of base pairs, whether in a DNA fragment,
+gene, chromosome, or an entire genome.<br />
+<i>See also:</i> <u><a href="#basesequenceanalysis"
+target="_self">base sequence analysis</a></u><br />
+</dd>
+
+<dt><a id="domain" name="domain"></a> <b>Domain</b></dt>
+
+<dd>A discrete portion of a protein with its own function. The
+combination of domains in a single protein determines its overall
+function.</dd>
+
+<dt><a id="dominant" name="dominant"></a> <b>Dominant</b></dt>
+
+<dd>An allele that is almost always expressed, even if only one
+copy is present.<br />
+<i>See also:</i> <u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#genome"
+target="_self">genome</a></u><br />
+</dd>
+
+<dt><a id="doublehelix" name="doublehelix"></a> <b>Double
+helix</b></dt>
+
+<dd>The twisted-ladder shape that two linear strands of DNA assume
+when complementary nucleotides on opposing strands bond
+together.</dd>
+
+<dt><a id="draftsequence" name="draftsequence"></a> <b>Draft
+sequence</b></dt>
+
+<dd>The sequence generated by the HGP as of June 2000 that, while
+incomplete, offers a virtual road map to an estimated 95% of all
+human genes. Draft sequence data are mostly in the form of 10,000
+base pair-sized fragments whose approximate chromosomal locations
+are known.<br />
+<i>See also:</i> <u><a href="#sequencing"
+target="_self">sequencing</a></u>,<u><a href="#finisheddnasequence"
+target="_self">finished DNA sequence</a></u>,<u><a
+href="#workingdraftdnasequence" target="_self">working draft DNA
+sequence</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="E" name="E">E</a></h2>
+</dd>
+
+<dt><a id="electrophoresis" name="electrophoresis"></a>
+<b>Electrophoresis</b></dt>
+
+<dd>A method of separating large molecules (such as DNA fragments
+or proteins) from a mixture of similar molecules. An electric
+current is passed through a medium containing the mixture, and each
+kind of molecule travels through the medium at a different rate,
+depending on its electrical charge and size. Agarose and acrylamide
+gels are the media commonly used for electrophoresis of proteins
+and nucleic acids.</dd>
+
+<dt><a id="electroporation" name="electroporation"></a>
+<b>Electroporation</b></dt>
+
+<dd>A process using high-voltage current to make cell membranes
+permeable to allow the introduction of new DNA; commonly used in
+recombinant DNA technology.<br />
+<i>See also:</i> <u><a href="#transfection"
+target="_self">transfection</a></u><br />
+</dd>
+
+<dt><a id="embryonicstem(es)cells"
+name="embryonicstem(es)cells"></a> <b>Embryonic stem (ES)
+cells</b></dt>
+
+<dd>An embryonic cell that can replicate indefinitely, transform
+into other types of cells, and serve as a continuous source of new
+cells.</dd>
+
+<dt><a id="endonuclease" name="endonuclease"></a>
+<b>Endonuclease</b></dt>
+
+<dd><i>See:</i> <u><a href="#restrictionenzyme"
+target="_self">restriction enzyme</a></u><br />
+</dd>
+
+<dt><a id="enzyme" name="enzyme"></a> <b>Enzyme</b></dt>
+
+<dd>A protein that acts as a catalyst, speeding the rate at which a
+biochemical reaction proceeds but not altering the direction or
+nature of the reaction.</dd>
+
+<dt><a id="epistasis" name="epistasis"></a> <b>Epistasis</b></dt>
+
+<dd>One gene interfers with or prevents the expression of another
+gene located at a different locus.</dd>
+
+<dt><a id="escherichiacoli" name="escherichiacoli"></a>
+<b>Escherichia coli</b></dt>
+
+<dd>Common bacterium that has been studied intensively by
+geneticists because of its small genome size, normal lack of
+pathogenicity, and ease of growth in the laboratory.</dd>
+
+<dt><a id="eugenics" name="eugenics"></a> <b>Eugenics</b></dt>
+
+<dd>The study of improving a species by artificial selection;
+usually refers to the selective breeding of humans.</dd>
+
+<dt><a id="eukaryote" name="eukaryote"></a> <b>Eukaryote</b></dt>
+
+<dd>Cell or organism with membrane-bound, structurally discrete
+nucleus and other well-developed subcellular compartments.
+Eukaryotes include all organisms except viruses, bacteria, and
+bluegreen algae.<br />
+<i>See also:</i> <u><a href="#prokaryote"
+target="_self">prokaryote</a></u>,<u><a href="#chromosome."
+target="_self">chromosome.</a></u><br />
+</dd>
+
+<dt><a id="evolutionarilyconserved"
+name="evolutionarilyconserved"></a> <b>Evolutionarily
+conserved</b></dt>
+
+<dd><i>See:</i> <u><a href="#conservedsequence"
+target="_self">conserved sequence</a></u><br />
+</dd>
+
+<dt><a id="exogenousdna" name="exogenousdna"></a> <b>Exogenous
+DNA</b></dt>
+
+<dd>DNA originating outside an organism that has been introducted
+into the organism.</dd>
+
+<dt><a id="exon" name="exon"></a> <b>Exon</b></dt>
+
+<dd>The protein-coding DNA sequence of a gene.<br />
+<i>See also:</i> <u><a href="#intron"
+target="_self">intron</a></u><br />
+</dd>
+
+<dt><a id="exonuclease" name="exonuclease"></a>
+<b>Exonuclease</b></dt>
+
+<dd>An enzyme that cleaves nucleotides sequentially from free ends
+of a linear nucleic acid substrate.</dd>
+
+<dt><a id="expressedgene" name="expressedgene"></a> <b>Expressed
+gene</b></dt>
+
+<dd><i>See:</i> <u><a href="#geneexpression" target="_self">gene
+expression</a></u><br />
+</dd>
+
+<dt><a id="expressedsequencetag" name="expressedsequencetag"></a>
+<b>Expressed sequence tag</b> (EST)</dt>
+
+<dd>A short strand of DNA that is a part of a cDNA molecule and can
+act as identifier of a gene. Used in locating and mapping
+genes.<br />
+<i>See also:</i> <u><a href="#cdna"
+target="_self">cDNA</a></u>,<u><a href="#sequencetaggedsite"
+target="_self">sequence tagged site</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="F" name="F">F</a></h2>
+</dd>
+
+<dt><a id="filialgeneration" name="filialgeneration"></a> <b>Filial
+generation</b> (F1, F2)</dt>
+
+<dd>Each generation of offspring in a breeding program, designated
+F1, F2, etc.</dd>
+
+<dt><a id="fingerprinting" name="fingerprinting"></a>
+<b>Fingerprinting</b></dt>
+
+<dd>In genetics, the identification of multiple specific alleles on
+a person's DNA to produce a unique identifier for that
+person.<br />
+<i>See also:</i> <u><a href="#forensics"
+target="_self">forensics</a></u><br />
+</dd>
+
+<dt><a id="finisheddnasequence" name="finisheddnasequence"></a>
+<b>Finished DNA Sequence</b></dt>
+
+<dd>High-quality, low error, gap-free DNA sequence of the human
+genome. Achieving this ultimate 2003 HGP goal requires additional
+sequencing to close gaps, reduce ambiguities, and allow for only a
+single error every 10,000 bases, the agreed-upon standard for HGP
+finished sequence.<br />
+<i>See also:</i> <u><a href="#sequencing"
+target="_self">sequencing</a></u>,<u><a href="#draftsequence"
+target="_self">draft sequence</a></u><br />
+</dd>
+
+<dt><a id="flowcytometry" name="flowcytometry"></a> <b>Flow
+cytometry</b></dt>
+
+<dd>Analysis of biological material by detection of the
+light-absorbing or fluorescing properties of cells or subcellular
+fractions (i.e., chromosomes) passing in a narrow stream through a
+laser beam. An absorbance or fluorescence profile of the sample is
+produced. Automated sorting devices, used to fractionate samples,
+sort successive droplets of the analyzed stream into different
+fractions depending on the fluorescence emitted by each
+droplet.</dd>
+
+<dt><a id="flowkaryotyping" name="flowkaryotyping"></a> <b>Flow
+karyotyping</b></dt>
+
+<dd>Use of flow cytometry to analyze and separate chromosomes
+according to their DNA content.</dd>
+
+<dt><a id="fluorescenceinsituhybridization"
+name="fluorescenceinsituhybridization"></a> <b>Fluorescence in situ
+hybridization</b> (FISH)</dt>
+
+<dd>A physical mapping approach that uses fluorescein tags to
+detect hybridization of probes with metaphase chromosomes and with
+the less-condensed somatic interphase chromatin.</dd>
+
+<dt><a id="forensics" name="forensics"></a> <b>Forensics</b></dt>
+
+<dd>The use of DNA for identification. Some examples of DNA use are
+to establish paternity in child support cases; establish the
+presence of a suspect at a crime scene, and identify accident
+victims.</dd>
+
+<dt><a id="fraternaltwin" name="fraternaltwin"></a> <b>Fraternal
+twin</b></dt>
+
+<dd>Siblings born at the same time as the result of fertilization
+of two ova by two sperm. They share the same genetic relationship
+to each other as any other siblings.<br />
+<i>See also:</i> <u><a href="#identicaltwin"
+target="_self">identical twin</a></u><br />
+</dd>
+
+<dt><a id="fullgenesequence" name="fullgenesequence"></a> <b>Full
+gene sequence</b></dt>
+
+<dd>The complete order of bases in a gene. This order determines
+which protein a gene will produce.</dd>
+
+<dt><a id="functionalgenomics" name="functionalgenomics"></a>
+<b>Functional genomics</b></dt>
+
+<dd>The study of genes, their resulting proteins, and the role
+played by the proteins the body's biochemical processes. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="G" name="G">G</a></h2>
+</dd>
+
+<dt><a id="gamete" name="gamete"></a> <b>Gamete</b></dt>
+
+<dd>Mature male or female reproductive cell (sperm or ovum) with a
+haploid set of chromosomes (23 for humans).</dd>
+
+<dt><a id="gc-richarea" name="gc-richarea"></a> <b>GC-rich
+area</b></dt>
+
+<dd>Many DNA sequences carry long stretches of repeated G and C
+which often indicate a gene-rich region.</dd>
+
+<dt><a id="gelelectrophoresis" name="gelelectrophoresis"></a>
+<b>Gel electrophoresis</b></dt>
+
+<dd><i>See:</i> <u><a href="#electrophoresis"
+target="_self">electrophoresis</a></u><br />
+</dd>
+
+<dt><a id="gene" name="gene"></a> <b>Gene</b></dt>
+
+<dd>The fundamental physical and functional unit of heredity. A
+gene is an ordered sequence of nucleotides located in a particular
+position on a particular chromosome that encodes a specific
+functional product (i.e., a protein or RNA molecule).<br />
+<i>See also:</i> <u><a href="#geneexpression" target="_self">gene
+expression</a></u><br />
+</dd>
+
+<dt><a id="geneamplification" name="geneamplification"></a> <b>Gene
+amplification</b></dt>
+
+<dd>Repeated copying of a piece of DNA; a characteristic of tumor
+cells.<br />
+<i>See also:</i> <u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#oncogene"
+target="_self">oncogene</a></u><br />
+</dd>
+
+<dt><a id="genechiptechnology" name="genechiptechnology"></a>
+<b>Gene chip technology</b></dt>
+
+<dd>Development of cDNA microarrays from a large number of genes.
+Used to monitor and measure changes in gene expression for each
+gene represented on the chip.</dd>
+
+<dt><a id="geneexpression" name="geneexpression"></a> <b>Gene
+expression</b></dt>
+
+<dd>The process by which a gene's coded information is converted
+into the structures present and operating in the cell. Expressed
+genes include those that are transcribed into mRNA and then
+translated into protein and those that are transcribed into RNA but
+not translated into protein (e.g., transfer and ribosomal
+RNAs).</dd>
+
+<dt><a id="genefamily" name="genefamily"></a> <b>Gene
+family</b></dt>
+
+<dd>Group of closely related genes that make similar products.</dd>
+
+<dt><a id="genelibrary" name="genelibrary"></a> <b>Gene
+library</b></dt>
+
+<dd><i>See:</i> <u><a href="#genomiclibrary" target="_self">genomic
+library</a></u><br />
+</dd>
+
+<dt><a id="genemapping" name="genemapping"></a> <b>Gene
+mapping</b></dt>
+
+<dd>Determination of the relative positions of genes on a DNA
+molecule (chromosome or plasmid) and of the distance, in linkage
+units or physical units, between them.</dd>
+
+<dt><a id="genepool" name="genepool"></a> <b>Gene pool</b></dt>
+
+<dd>All the variations of genes in a species.<br />
+<i>See also:</i> <u><a href="#allele"
+target="_self">allele</a></u>,<u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#polymorphism"
+target="_self">polymorphism</a></u><br />
+</dd>
+
+<dt><a id="geneprediction" name="geneprediction"></a> <b>Gene
+prediction</b></dt>
+
+<dd>Predictions of possible genes made by a computer program based
+on how well a stretch of DNA sequence matches known gene
+sequences</dd>
+
+<dt><a id="geneproduct" name="geneproduct"></a> <b>Gene
+product</b></dt>
+
+<dd>The biochemical material, either RNA or protein, resulting from
+expression of a gene. The amount of gene product is used to measure
+how active a gene is; abnormal amounts can be correlated with
+disease-causing alleles.</dd>
+
+<dt><a id="genetesting" name="genetesting"></a> <b>Gene
+testing</b></dt>
+
+<dd><i>See:</i> <u><a href="#genetictesting" target="_self">genetic
+testing</a></u>,<u><a href="#geneticscreening"
+target="_self">genetic screening</a></u><br />
+</dd>
+
+<dt><a id="genetherapy" name="genetherapy"></a> <b>Gene
+therapy</b></dt>
+
+<dd>An experimental procedure aimed at replacing, manipulating, or
+supplementing nonfunctional or misfunctioning genes with healthy
+genes.<br />
+<i>See also:</i> <u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#inherit"
+target="_self">inherit</a></u>,<u><a href="#somaticcellgenetherapy"
+target="_self">somatic cell gene therapy</a></u>,<u><a
+href="#germlinegenetherapy" target="_self">germ line gene
+therapy</a></u><br />
+</dd>
+
+<dt><a id="genetransfer" name="genetransfer"></a> <b>Gene
+transfer</b></dt>
+
+<dd>Incorporation of new DNA into and organism's cells, usually by
+a vector such as a modified virus. Used in gene therapy.<br />
+<i>See also:</i> <u><a href="#mutation"
+target="_self">mutation</a></u>,<u><a href="#genetherapy"
+target="_self">gene therapy</a></u>,<u><a href="#vector"
+target="_self">vector</a></u><br />
+</dd>
+
+<dt><a id="geneticcode" name="geneticcode"></a> <b>Genetic
+code</b></dt>
+
+<dd>The sequence of nucleotides, coded in triplets (codons) along
+the mRNA, that determines the sequence of amino acids in protein
+synthesis. A gene's DNA sequence can be used to predict the mRNA
+sequence, and the genetic code can in turn be used to predict the
+amino acid sequence.</dd>
+
+<dt><a id="geneticcounseling" name="geneticcounseling"></a>
+<b>Genetic counseling</b></dt>
+
+<dd>Provides patients and their families with education and
+information about genetic-related conditions and helps them make
+informed decisions.</dd>
+
+<dt><a id="geneticdiscrimination" name="geneticdiscrimination"></a>
+<b>Genetic discrimination</b></dt>
+
+<dd>Prejudice against those who have or are likely to develop an
+inherited disorder.</dd>
+
+<dt><a id="geneticengineering" name="geneticengineering"></a>
+<b>Genetic engineering</b></dt>
+
+<dd>Altering the genetic material of cells or organisms to enable
+them to make new substances or perform new functions.</dd>
+
+<dt><a id="geneticengineeringtechnology"
+name="geneticengineeringtechnology"></a> <b>Genetic engineering
+technology</b></dt>
+
+<dd><i>See:</i> <u><a href="#recombinantdnatechnology"
+target="_self">recombinant DNA technology</a></u><br />
+</dd>
+
+<dt><a id="geneticillness" name="geneticillness"></a> <b>Genetic
+illness</b></dt>
+
+<dd>Sickness, physical disability, or other disorder resulting from
+the inheritance of one or more deleterious alleles.</dd>
+
+<dt><a id="geneticinformatics" name="geneticinformatics"></a>
+<b>Genetic informatics</b></dt>
+
+<dd><i>See:</i> <u><a href="#bioinformatics"
+target="_self">bioinformatics</a></u><br />
+</dd>
+
+<dt><a id="geneticmap" name="geneticmap"></a> <b>Genetic
+map</b></dt>
+
+<dd><i>See:</i> <u><a href="#linkagemap" target="_self">linkage
+map</a></u><br />
+</dd>
+
+<dt><a id="geneticmarker" name="geneticmarker"></a> <b>Genetic
+marker</b></dt>
+
+<dd>A gene or other identifiable portion of DNA whose inheritance
+can be followed.<br />
+<i>See also:</i> <u><a href="#chromosome"
+target="_self">chromosome</a></u>,<u><a href="#dna"
+target="_self">DNA</a></u>,<u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#inherit"
+target="_self">inherit</a></u><br />
+</dd>
+
+<dt><a id="geneticmaterial" name="geneticmaterial"></a> <b>Genetic
+material</b></dt>
+
+<dd><i>See:</i> <u><a href="#genome"
+target="_self">genome</a></u><br />
+</dd>
+
+<dt><a id="geneticmosaic" name="geneticmosaic"></a> <b>Genetic
+mosaic</b></dt>
+
+<dd>An organism in which different cells contain different genetic
+sequence. This can be the result of a mutation during development
+or fusion of embryos at an early developmental stage.</dd>
+
+<dt><a id="geneticpolymorphism" name="geneticpolymorphism"></a>
+<b>Genetic polymorphism</b></dt>
+
+<dd>Difference in DNA sequence among individuals, groups, or
+populations (e.g., genes for blue eyes versus brown eyes).</dd>
+
+<dt><a id="geneticpredisposition" name="geneticpredisposition"></a>
+<b>Genetic predisposition</b></dt>
+
+<dd>Susceptibility to a genetic disease. May or may not result in
+actual development of the disease.</dd>
+
+<dt><a id="geneticscreening" name="geneticscreening"></a>
+<b>Genetic screening</b></dt>
+
+<dd>Testing a group of people to identify individuals at high risk
+of having or passing on a specific genetic disorder.</dd>
+
+<dt><a id="genetictesting" name="genetictesting"></a> <b>Genetic
+testing</b></dt>
+
+<dd>Analyzing an individual's genetic material to determine
+predisposition to a particular health condition or to confirm a
+diagnosis of genetic disease.</dd>
+
+<dt><a id="genetics" name="genetics"></a> <b>Genetics</b></dt>
+
+<dd>The study of inheritance patterns of specific traits.</dd>
+
+<dt><a id="genome" name="genome"></a> <b>Genome</b></dt>
+
+<dd>All the genetic material in the chromosomes of a particular
+organism; its size is generally given as its total number of base
+pairs.</dd>
+
+<dt><a id="genomeproject" name="genomeproject"></a> <b>Genome
+project</b></dt>
+
+<dd>Research and technology-development effort aimed at mapping and
+sequencing the genome of human beings and certain model
+organisms.<br />
+<i>See also:</i> <u><a href="#humangenomeinitiative"
+target="_self">Human Genome Initiative</a></u><br />
+</dd>
+
+<dt><a id="genomiclibrary" name="genomiclibrary"></a> <b>Genomic
+library</b></dt>
+
+<dd>A collection of clones made from a set of randomly generated
+overlapping DNA fragments that represent the entire genome of an
+organism.<br />
+<i>See also:</i> <u><a href="#library"
+target="_self">library</a></u>,<u><a href="#arrayedlibrary"
+target="_self">arrayed library</a></u><br />
+</dd>
+
+<dt><a id="genomicsequence" name="genomicsequence"></a> <b>Genomic
+sequence</b></dt>
+
+<dd><i>See:</i> <u><a href="#dna" target="_self">DNA</a></u><br />
+</dd>
+
+<dt><a id="genomics" name="genomics"></a> <b>Genomics</b></dt>
+
+<dd>The study of genes and their function.</dd>
+
+<dt><a id="genotype" name="genotype"></a> <b>Genotype</b></dt>
+
+<dd>The genetic constitution of an organism, as distinguished from
+its physical appearance (its phenotype).</dd>
+
+<dt><a id="germcell" name="germcell"></a> <b>Germ cell</b></dt>
+
+<dd>Sperm and egg cells and their precursors. Germ cells are
+haploid and have only one set of chromosomes (23 in all), while all
+other cells have two copies (46 in all).</dd>
+
+<dt><a id="germline" name="germline"></a> <b>Germ line</b></dt>
+
+<dd>The continuation of a set of genetic information from one
+generation to the next.<br />
+<i>See also:</i> <u><a href="#inherit"
+target="_self">inherit</a></u><br />
+</dd>
+
+<dt><a id="germlinegenetherapy" name="germlinegenetherapy"></a>
+<b>Germ line gene therapy</b></dt>
+
+<dd>An experimental process of inserting genes into germ cells or
+fertilized eggs to cause a genetic change that can be passed on to
+offspring. May be used to alleviate effects associated with a
+genetic disease.<br />
+<i>See also:</i> <u><a href="#genomics"
+target="_self">genomics</a></u>,<u><a
+href="#somaticcellgenetherapy." target="_self">somatic cell gene
+therapy.</a></u><br />
+</dd>
+
+<dt><a id="germlinegeneticmutation"
+name="germlinegeneticmutation"></a> <b>Germ line genetic
+mutation</b></dt>
+
+<dd><i>See:</i> <u><a href="#mutation"
+target="_self">mutation</a></u><br />
+</dd>
+
+<dt><a id="guanine" name="guanine"></a> <b>Guanine</b> (G)</dt>
+
+<dd>A nitrogenous base, one member of the base pair GC (guanine and
+cytosine) in DNA.<br />
+<i>See also:</i> <u><a href="#basepair" target="_self">base
+pair</a></u>,<u><a href="#nucleotide"
+target="_self">nucleotide</a></u><br />
+</dd>
+
+<dt><a id="gyandromorph" name="gyandromorph"></a>
+<b>Gyandromorph</b></dt>
+
+<dd>Organisms that have both male and female cells and therefore
+express both male and female characteristics. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="H" name="H">H</a></h2>
+</dd>
+
+<dt><a id="haploid" name="haploid"></a> <b>Haploid</b></dt>
+
+<dd>A single set of chromosomes (half the full set of genetic
+material) present in the egg and sperm cells of animals and in the
+egg and pollen cells of plants. Human beings have 23 chromosomes in
+their reproductive cells.<br />
+<i>See also:</i> <u><a href="#diploid"
+target="_self">diploid</a></u><br />
+</dd>
+
+<dt><a id="haplotype" name="haplotype"></a> <b>Haplotype</b></dt>
+
+<dd>A way of denoting the collective genotype of a number of
+closely linked loci on a chromosome.</dd>
+
+<dt><a id="hemizygous" name="hemizygous"></a>
+<b>Hemizygous</b></dt>
+
+<dd>Having only one copy of a particular gene. For example, in
+humans, males are hemizygous for genes found on the Y
+chromosome.</dd>
+
+<dt><a id="hereditarycancer" name="hereditarycancer"></a>
+<b>Hereditary cancer</b></dt>
+
+<dd>Cancer that occurs due to the inheritance of an altered gene
+within a family.<br />
+<i>See also:</i> <u><a href="#sporadiccancer"
+target="_self">sporadic cancer</a></u><br />
+</dd>
+
+<dt><a id="heterozygosity" name="heterozygosity"></a>
+<b>Heterozygosity</b></dt>
+
+<dd>The presence of different alleles at one or more loci on
+homologous chromosomes.</dd>
+
+<dt><a id="heterozygote" name="heterozygote"></a>
+<b>Heterozygote</b></dt>
+
+<dd><i>See:</i> <u><a href="#heterozygosity"
+target="_self">heterozygosity</a></u><br />
+</dd>
+
+<dt><a id="highlyconservedsequence"
+name="highlyconservedsequence"></a> <b>Highly conserved
+sequence</b></dt>
+
+<dd>DNA sequence that is very similar across several different
+types of organisms.<br />
+<i>See also:</i> <u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#mutation"
+target="_self">mutation</a></u><br />
+</dd>
+
+<dt><a id="high-throughputsequencing"
+name="high-throughputsequencing"></a> <b>High-throughput
+sequencing</b></dt>
+
+<dd>A fast method of determining the order of bases in DNA.<br />
+<i>See also:</i> <u><a href="#sequencing"
+target="_self">sequencing</a></u><br />
+</dd>
+
+<dt><a id="homeobox" name="homeobox"></a> <b>Homeobox</b></dt>
+
+<dd>A short stretch of nucleotides whose base sequence is virtually
+identical in all the genes that contain it. Homeoboxes have been
+found in many organisms from fruit flies to human beings. In the
+fruit fly, a homeobox appears to determine when particular groups
+of genes are expressed during development.</dd>
+
+<dt><a id="homolog" name="homolog"></a> <b>Homolog</b></dt>
+
+<dd>A member of a chromosome pair in diploid organisms or a gene
+that has the same origin and functions in two or more species.</dd>
+
+<dt><a id="homologouschromosome" name="homologouschromosome"></a>
+<b>Homologous chromosome</b></dt>
+
+<dd>Chromosome containing the same linear gene sequences as
+another, each derived from one parent.</dd>
+
+<dt><a id="homologousrecombination"
+name="homologousrecombination"></a> <b>Homologous
+recombination</b></dt>
+
+<dd>Swapping of DNA fragments between paired chromosomes.</dd>
+
+<dt><a id="homology" name="homology"></a> <b>Homology</b></dt>
+
+<dd>Similarity in DNA or protein sequences between individuals of
+the same species or among different species.</dd>
+
+<dt><a id="homozygote" name="homozygote"></a>
+<b>Homozygote</b></dt>
+
+<dd>An organism that has two identical alleles of a gene.<br />
+<i>See also:</i> <u><a href="#heterozygote"
+target="_self">heterozygote</a></u><br />
+</dd>
+
+<dt><a id="homozygous" name="homozygous"></a>
+<b>Homozygous</b></dt>
+
+<dd><i>See:</i> <u><a href="#homozygote"
+target="_self">homozygote</a></u><br />
+</dd>
+
+<dt><a id="humanartificialchromosome"
+name="humanartificialchromosome"></a> <b>Human artificial
+chromosome</b> (HAC)</dt>
+
+<dd>A vector used to hold large DNA fragments.<br />
+<i>See also:</i> <u><a href="#chromosome"
+target="_self">chromosome</a></u>,<u><a href="#dna"
+target="_self">DNA</a></u><br />
+</dd>
+
+<dt><a id="humangenetherapy" name="humangenetherapy"></a> <b>Human
+gene therapy</b></dt>
+
+<dd><i>See:</i> <u><a href="#genetherapy" target="_self">gene
+therapy</a></u><br />
+</dd>
+
+<dt><a id="humangenomeinitiative" name="humangenomeinitiative"></a>
+<b>Human Genome Initiative</b></dt>
+
+<dd>Collective name for several projects begun in 1986 by DOE to
+create an ordered set of DNA segments from known chromosomal
+locations, develop new computational methods for analyzing genetic
+map and DNA sequence data, and develop new techniques and
+instruments for detecting and analyzing DNA. This DOE initiative is
+now known as the Human Genome Program. The joint national effort,
+led by DOE and NIH, is known as the Human Genome Project.</dd>
+
+<dt><a id="humangenomeproject" name="humangenomeproject"></a>
+<b>Human Genome Project</b> (HGP)</dt>
+
+<dd>Formerly titled Human Genome Initiative.<br />
+<i>See also:</i> <u><a href="#humangenomeinitiative"
+target="_self">Human Genome Initiative</a></u><br />
+</dd>
+
+<dt><a id="hybrid" name="hybrid"></a> <b>Hybrid</b></dt>
+
+<dd>The offspring of genetically different parents.<br />
+<i>See also:</i> <u><a href="#heterozygote"
+target="_self">heterozygote</a></u><br />
+</dd>
+
+<dt><a id="hybridization" name="hybridization"></a>
+<b>Hybridization</b></dt>
+
+<dd>The process of joining two complementary strands of DNA or one
+each of DNA and RNA to form a double-stranded molecule. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="I" name="I">I</a></h2>
+</dd>
+
+<dt><a id="identicaltwin" name="identicaltwin"></a> <b>Identical
+twin</b></dt>
+
+<dd>Twins produced by the division of a single zygote; both have
+identical genotypes.<br />
+<i>See also:</i> <u><a href="#fraternaltwin"
+target="_self">fraternal twin</a></u><br />
+</dd>
+
+<dt><a id="immunotherapy" name="immunotherapy"></a>
+<b>Immunotherapy</b></dt>
+
+<dd>Using the immune system to treat disease, for example, in the
+development of vaccines. May also refer to the therapy of diseases
+caused by the immune system.<br />
+<i>See also:</i> <u><a href="#cancer"
+target="_self">cancer</a></u><br />
+</dd>
+
+<dt><a id="imprinting" name="imprinting"></a>
+<b>Imprinting</b></dt>
+
+<dd>A phenomenon in which the disease phenotype depends on which
+parent passed on the disease gene. For instance, both Prader-Willi
+and Angelman syndromes are inherited when the same part of
+chromosome 15 is missing. When the father's complement of 15 is
+missing, the child has Prader-Willi, but when the mother's
+complement of 15 is missing, the child has Angelman syndrome.</dd>
+
+<dt><a id="insituhybridization" name="insituhybridization"></a>
+<b>In situ hybridization</b></dt>
+
+<dd>Use of a DNA or RNA probe to detect the presence of the
+complementary DNA sequence in cloned bacterial or cultured
+eukaryotic cells.</dd>
+
+<dt><a id="invitro" name="invitro"></a> <b>In vitro</b></dt>
+
+<dd>Studies performed outside a living organism such as in a
+laboratory.</dd>
+
+<dt><a id="invivo" name="invivo"></a> <b>In vivo</b></dt>
+
+<dd>Studies carried out in living organisms.</dd>
+
+<dt><a id="independentassortment" name="independentassortment"></a>
+<b>Independent assortment</b></dt>
+
+<dd>During meiosis each of the two copies of a gene is distributed
+to the germ cells independently of the distribution of other
+genes.<br />
+<i>See also:</i> <u><a href="#linkage"
+target="_self">linkage</a></u><br />
+</dd>
+
+<dt><a id="informatics" name="informatics"></a>
+<b>Informatics</b></dt>
+
+<dd><i>See:</i> <u><a href="#bioinformatics"
+target="_self">bioinformatics</a></u><br />
+</dd>
+
+<dt><a id="informedconsent" name="informedconsent"></a> <b>Informed
+consent</b></dt>
+
+<dd>An individual willingly agrees to participate in an activity
+after first being advised of the risks and benefits.<br />
+<i>See also:</i> <u><a href="#privacy"
+target="_self">privacy</a></u><br />
+</dd>
+
+<dt><a id="inherit" name="inherit"></a> <b>Inherit</b></dt>
+
+<dd>In genetics, to receive genetic material from parents through
+biological processes.</dd>
+
+<dt><a id="inherited" name="inherited"></a> <b>Inherited</b></dt>
+
+<dd><i>See:</i> <u><a href="#inherit"
+target="_self">inherit</a></u><br />
+</dd>
+
+<dt><a id="insertion" name="insertion"></a> <b>Insertion</b></dt>
+
+<dd>A chromosome abnormality in which a piece of DNA is
+incorporated into a gene and thereby disrupts the gene's normal
+function.<br />
+<i>See also:</i> <u><a href="#chromosome"
+target="_self">chromosome</a></u>,<u><a href="#dna"
+target="_self">DNA</a></u>,<u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#mutation"
+target="_self">mutation</a></u><br />
+</dd>
+
+<dt><a id="insertionalmutation" name="insertionalmutation"></a>
+<b>Insertional mutation</b></dt>
+
+<dd><i>See:</i> <u><a href="#insertion"
+target="_self">insertion</a></u><br />
+</dd>
+
+<dt><a id="intellectualpropertyrights"
+name="intellectualpropertyrights"></a> <b>Intellectual property
+rights</b></dt>
+
+<dd>Patents, copyrights, and trademarks.<br />
+<i>See also:</i> <u><a href="#patent"
+target="_self">patent</a></u><br />
+</dd>
+
+<dt><a id="interference" name="interference"></a>
+<b>Interference</b></dt>
+
+<dd>One crossover event inhibits the chances of another crossover
+event. Also known as positive interference. Negative interference
+increases the chance of a second crossover.<br />
+<i>See also:</i> <u><a href="#crossingover" target="_self">crossing
+over</a></u><br />
+</dd>
+
+<dt><a id="interphase" name="interphase"></a>
+<b>Interphase</b></dt>
+
+<dd>The period in the cell cycle when DNA is replicated in the
+nucleus; followed by mitosis.</dd>
+
+<dt><a id="intron" name="intron"></a> <b>Intron</b></dt>
+
+<dd>DNA sequence that interrupts the protein-coding sequence of a
+gene; an intron is transcribed into RNA but is cut out of the
+message before it is translated into protein.<br />
+<i>See also:</i> <u><a href="#exon"
+target="_self">exon</a></u><br />
+</dd>
+
+<dt><a id="isoenzyme" name="isoenzyme"></a> <b>Isoenzyme</b></dt>
+
+<dd>An enzyme performing the same function as another enzyme but
+having a different set of amino acids. The two enzymes may function
+at different speeds. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="J" name="J">J</a></h2>
+</dd>
+
+<dt><a id="junkdna" name="junkdna"></a> <b>Junk DNA</b></dt>
+
+<dd>Stretches of DNA that do not code for genes; most of the genome
+consists of so-called junk DNA which may have regulatory and other
+functions. Also called non-coding DNA. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="K" name="K">K</a></h2>
+</dd>
+
+<dt><a id="karyotype" name="karyotype"></a> <b>Karyotype</b></dt>
+
+<dd>A photomicrograph of an individual's chromosomes arranged in a
+standard format showing the number, size, and shape of each
+chromosome type; used in low-resolution physical mapping to
+correlate gross chromosomal abnormalities with the characteristics
+of specific diseases.</dd>
+
+<dt><a id="kilobase" name="kilobase"></a> <b>Kilobase</b> (kb)</dt>
+
+<dd>Unit of length for DNA fragments equal to 1000
+nucleotides.</dd>
+
+<dt><a id="knockout" name="knockout"></a> <b>Knockout</b></dt>
+
+<dd>Deactivation of specific genes; used in laboratory organisms to
+study gene function.<br />
+<i>See also:</i> <u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#locus"
+target="_self">locus</a></u>,<u><a href="#modelorganisms"
+target="_self">model organisms</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="L" name="L">L</a></h2>
+</dd>
+
+<dt><a id="library" name="library"></a> <b>Library</b></dt>
+
+<dd>An unordered collection of clones (i.e., cloned DNA from a
+particular organism) whose relationship to each other can be
+established by physical mapping.<br />
+<i>See also:</i> <u><a href="#genomiclibrary"
+target="_self">genomic library</a></u>,<u><a href="#arrayedlibrary"
+target="_self">arrayed library</a></u><br />
+</dd>
+
+<dt><a id="linkage" name="linkage"></a> <b>Linkage</b></dt>
+
+<dd>The proximity of two or more markers (e.g., genes, RFLP
+markers) on a chromosome; the closer the markers, the lower the
+probability that they will be separated during DNA repair or
+replication processes (binary fission in prokaryotes, mitosis or
+meiosis in eukaryotes), and hence the greater the probability that
+they will be inherited together.</dd>
+
+<dt><a id="linkagedisequilibrium" name="linkagedisequilibrium"></a>
+<b>Linkage disequilibrium</b></dt>
+
+<dd>Where alleles occur together more often than can be accounted
+for by chance. Indicates that the two alleles are physically close
+on the DNA strand.<br />
+<i>See also:</i> <u><a href="#mendelianinheritance"
+target="_self">Mendelian inheritance</a></u><br />
+</dd>
+
+<dt><a id="linkagemap" name="linkagemap"></a> <b>Linkage
+map</b></dt>
+
+<dd>A map of the relative positions of genetic loci on a
+chromosome, determined on the basis of how often the loci are
+inherited together. Distance is measured in centimorgans (cM).</dd>
+
+<dt><a id="localize" name="localize"></a> <b>Localize</b></dt>
+
+<dd>Determination of the original position (locus) of a gene or
+other marker on a chromosome.</dd>
+
+<dt><a id="locus(pl.loci)" name="locus(pl.loci)"></a> <b>Locus (pl.
+loci)</b></dt>
+
+<dd>The position on a chromosome of a gene or other chromosome
+marker; also, the DNA at that position. The use of locus is
+sometimes restricted to mean expressed DNA regions.<br />
+<i>See also:</i> <u><a href="#geneexpression" target="_self">gene
+expression</a></u><br />
+</dd>
+
+<dt><a id="long-rangerestrictionmapping"
+name="long-rangerestrictionmapping"></a> <b>Long-Range Restriction
+Mapping</b></dt>
+
+<dd>Restriction enzymes are proteins that cut DNA at precise
+locations. Restriction maps depict the chromosomal positions of
+restriction-enzyme cutting sites. These are used as biochemical
+"signposts," or markers of specific areas along the chromosomes.
+The map will detail the positions where the DNA molecule is cut by
+particular restriction enzymes. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="M" name="M">M</a></h2>
+</dd>
+
+<dt><a id="macrorestrictionmap" name="macrorestrictionmap"></a>
+<b>Macrorestriction map</b></dt>
+
+<dd>Map depicting the order of and distance between sites at which
+restriction enzymes cleave chromosomes.</dd>
+
+<dt><a id="mapping" name="mapping"></a> <b>Mapping</b></dt>
+
+<dd><i>See:</i> <u><a href="#genemapping" target="_self">gene
+mapping</a></u>,<u><a href="#linkagemap" target="_self">linkage
+map</a></u>,<u><a href="#physicalmap" target="_self">physical
+map</a></u><br />
+</dd>
+
+<dt><a id="mappingpopulation" name="mappingpopulation"></a>
+<b>Mapping population</b></dt>
+
+<dd>The group of related organisms used in constructing a genetic
+map.</dd>
+
+<dt><a id="marker" name="marker"></a> <b>Marker</b></dt>
+
+<dd><i>See:</i> <u><a href="#geneticmarker" target="_self">genetic
+marker</a></u><br />
+</dd>
+
+<dt><a id="massspectrometry" name="massspectrometry"></a> <b>Mass
+spectrometry</b></dt>
+
+<dd>An instrument used to identify chemicals in a substance by
+their mass and charge.</dd>
+
+<dt><a id="megabase" name="megabase"></a> <b>Megabase</b> (Mb)</dt>
+
+<dd>Unit of length for DNA fragments equal to 1 million nucleotides
+and roughly equal to 1 cM.<br />
+<i>See also:</i> <u><a href="#centimorgan"
+target="_self">centimorgan</a></u><br />
+</dd>
+
+<dt><a id="meiosis" name="meiosis"></a> <b>Meiosis</b></dt>
+
+<dd>The process of two consecutive cell divisions in the diploid
+progenitors of sex cells. Meiosis results in four rather than two
+daughter cells, each with a haploid set of chromosomes.<br />
+<i>See also:</i> <u><a href="#mitosis"
+target="_self">mitosis</a></u><br />
+</dd>
+
+<dt><a id="mendelianinheritance" name="mendelianinheritance"></a>
+<b>Mendelian inheritance</b></dt>
+
+<dd>One method in which genetic traits are passed from parents to
+offspring. Named for Gregor Mendel, who first studied and
+recognized the existence of genes and this method of
+inheritance.<br />
+<i>See also:</i> <u><a href="#autosomaldominant"
+target="_self">autosomal dominant</a></u>,<u><a
+href="#recessivegene" target="_self">recessive gene</a></u>,<u><a
+href="#sex-linked" target="_self">sex-linked</a></u><br />
+</dd>
+
+<dt><a id="messengerrna" name="messengerrna"></a> <b>Messenger
+RNA</b> (mRNA)</dt>
+
+<dd>RNA that serves as a template for protein synthesis.<br />
+<i>See also:</i> <u><a href="#geneticcode" target="_self">genetic
+code</a></u><br />
+</dd>
+
+<dt><a id="metaphase" name="metaphase"></a> <b>Metaphase</b></dt>
+
+<dd>A stage in mitosis or meiosis during which the chromosomes are
+aligned along the equatorial plane of the cell.</dd>
+
+<dt><a id="microarray" name="microarray"></a>
+<b>Microarray</b></dt>
+
+<dd>Sets of miniaturized chemical reaction areas that may also be
+used to test DNA fragments, antibodies, or proteins.</dd>
+
+<dt><a id="microbialgenetics" name="microbialgenetics"></a>
+<b>Microbial genetics</b></dt>
+
+<dd>The study of genes and gene function in bacteria, archaea, and
+other microorganisms. Often used in research in the fields of
+bioremediation, alternative energy, and disease prevention.<br />
+<i>See also:</i> <u><a href="#modelorganisms" target="_self">model
+organisms</a></u>,<u><a href="#biotechnology"
+target="_self">biotechnology</a></u>,<u><a href="#bioremediation"
+target="_self">bioremediation</a></u><br />
+</dd>
+
+<dt><a id="microinjection" name="microinjection"></a>
+<b>Microinjection</b></dt>
+
+<dd>A technique for introducing a solution of DNA into a cell using
+a fine microcapillary pipet.</dd>
+
+<dt><a id="micronuclei" name="micronuclei"></a>
+<b>Micronuclei</b></dt>
+
+<dd>Chromosome fragments that are not incorporated into the nucleus
+at cell division.</dd>
+
+<dt><a id="mitochondrialdna" name="mitochondrialdna"></a>
+<b>Mitochondrial DNA</b></dt>
+
+<dd>The genetic material found in mitochondria, the organelles that
+generate energy for the cell. Not inherited in the same fashion as
+nucleic DNA.<br />
+<i>See also:</i> <u><a href="#cell"
+target="_self">cell</a></u>,<u><a href="#dna"
+target="_self">DNA</a></u>,<u><a href="#genome"
+target="_self">genome</a></u>,<u><a href="#nucleus"
+target="_self">nucleus</a></u><br />
+</dd>
+
+<dt><a id="mitosis" name="mitosis"></a> <b>Mitosis</b></dt>
+
+<dd>The process of nuclear division in cells that produces daughter
+cells that are genetically identical to each other and to the
+parent cell.<br />
+<i>See also:</i> <u><a href="#meiosis"
+target="_self">meiosis</a></u><br />
+</dd>
+
+<dt><a id="modelorganisms" name="modelorganisms"></a> <b>Model
+organisms</b></dt>
+
+<dd>A laboratory animal or other organism useful for research.</dd>
+
+<dt><a id="modeling" name="modeling"></a> <b>Modeling</b></dt>
+
+<dd>The use of statistical analysis, computer analysis, or model
+organisms to predict outcomes of research.</dd>
+
+<dt><a id="molecularbiology" name="molecularbiology"></a>
+<b>Molecular biology</b></dt>
+
+<dd>The study of the structure, function, and makeup of
+biologically important molecules.</dd>
+
+<dt><a id="molecularfarming" name="molecularfarming"></a>
+<b>Molecular farming</b></dt>
+
+<dd>The development of transgenic animals to produce human proteins
+for medical use.</dd>
+
+<dt><a id="moleculargenetics" name="moleculargenetics"></a>
+<b>Molecular genetics</b></dt>
+
+<dd>The study of macromolecules important in biological
+inheritance.</dd>
+
+<dt><a id="molecularmedicine" name="molecularmedicine"></a>
+<b>Molecular medicine</b></dt>
+
+<dd>The treatment of injury or disease at the molecular level.
+Examples include the use of DNA-based diagnostic tests or medicine
+derived from DNA sequence information.</dd>
+
+<dt><a id="monogenicdisorder" name="monogenicdisorder"></a>
+<b>Monogenic disorder</b></dt>
+
+<dd>A disorder caused by mutation of a single gene.<br />
+<i>See also:</i> <u><a href="#mutation"
+target="_self">mutation</a></u>,<u><a href="#polygenicdisorder"
+target="_self">polygenic disorder</a></u><br />
+</dd>
+
+<dt><a id="monogenicinheritance" name="monogenicinheritance"></a>
+<b>Monogenic inheritance</b></dt>
+
+<dd><i>See:</i> <u><a href="#monogenicdisorder"
+target="_self">monogenic disorder</a></u><br />
+</dd>
+
+<dt><a id="monosomy" name="monosomy"></a> <b>Monosomy</b></dt>
+
+<dd>Possessing only one copy of a particular chromosome instead of
+the normal two copies.<br />
+<i>See also:</i> <u><a href="#cell"
+target="_self">cell</a></u>,<u><a href="#chromosome"
+target="_self">chromosome</a></u>,<u><a href="#geneexpression"
+target="_self">gene expression</a></u>,<u><a href="#trisomy"
+target="_self">trisomy</a></u><br />
+</dd>
+
+<dt><a id="morbidmap" name="morbidmap"></a> <b>Morbid map</b></dt>
+
+<dd>A diagram showing the chromosomal location of genes associated
+with disease.</dd>
+
+<dt><a id="mousemodel" name="mousemodel"></a> <b>Mouse
+model</b></dt>
+
+<dd><i>See:</i> <u><a href="#modelorganisms" target="_self">model
+organisms</a></u><br />
+</dd>
+
+<dt><a id="multifactorialormultigenicdisorder"
+name="multifactorialormultigenicdisorder"></a> <b>Multifactorial or
+multigenic disorder</b></dt>
+
+<dd><i>See:</i> <u><a href="#polygenicdisorder"
+target="_self">polygenic disorder</a></u><br />
+</dd>
+
+<dt><a id="multiplexing" name="multiplexing"></a>
+<b>Multiplexing</b></dt>
+
+<dd>A laboratory approach that performs multiple sets of reactions
+in parallel (simultaneously); greatly increasing speed and
+throughput.</dd>
+
+<dt><a id="murine" name="murine"></a> <b>Murine</b></dt>
+
+<dd>Organism in the genus Mus. A rat or mouse.</dd>
+
+<dt><a id="mutagen" name="mutagen"></a> <b>Mutagen</b></dt>
+
+<dd>An agent that causes a permanent genetic change in a cell. Does
+not include changes occurring during normal genetic
+recombination.</dd>
+
+<dt><a id="mutagenicity" name="mutagenicity"></a>
+<b>Mutagenicity</b></dt>
+
+<dd>The capacity of a chemical or physical agent to cause permanent
+genetic alterations.<br />
+<i>See also:</i> <u><a href="#somaticcellgeneticmutation"
+target="_self">somatic cell genetic mutation</a></u><br />
+</dd>
+
+<dt><a id="mutation" name="mutation"></a> <b>Mutation</b></dt>
+
+<dd>Any heritable change in DNA sequence.<br />
+<i>See also:</i> <u><a href="#polymorphism"
+target="_self">polymorphism</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="N" name="N">N</a></h2>
+</dd>
+
+<dt><a id="nitrogenousbase" name="nitrogenousbase"></a>
+<b>Nitrogenous base</b></dt>
+
+<dd>A nitrogen-containing molecule having the chemical properties
+of a base. DNA contains the nitrogenous bases adenine (A), guanine
+(G), cytosine (C), and thymine (T).<br />
+<i>See also:</i> <u><a href="#dna" target="_self">DNA</a></u><br />
+</dd>
+
+<dt><a id="northernblot" name="northernblot"></a> <b>Northern
+blot</b></dt>
+
+<dd>A gel-based laboratory procedure that locates mRNA sequences on
+a gel that are complementary to a piece of DNA used as a
+probe.<br />
+<i>See also:</i> <u><a href="#dna" target="_self">DNA</a></u>,<u><a
+href="#library" target="_self">library</a></u><br />
+</dd>
+
+<dt><a id="nucleartransfer" name="nucleartransfer"></a> <b>Nuclear
+transfer</b></dt>
+
+<dd>A laboratory procedure in which a cell's nucleus is removed and
+placed into an oocyte with its own nucleus removed so the genetic
+information from the donor nucleus controls the resulting cell.
+Such cells can be induced to form embryos. This process was used to
+create the cloned sheep "Dolly".<br />
+<i>See also:</i> <u><a href="#cloning"
+target="_self">cloning</a></u><br />
+</dd>
+
+<dt><a id="nucleicacid" name="nucleicacid"></a> <b>Nucleic
+acid</b></dt>
+
+<dd>A large molecule composed of nucleotide subunits.<br />
+<i>See also:</i> <u><a href="#dna" target="_self">DNA</a></u><br />
+</dd>
+
+<dt><a id="nucleolarorganizingregion"
+name="nucleolarorganizingregion"></a> <b>Nucleolar organizing
+region</b></dt>
+
+<dd>A part of the chromosome containing rRNA genes.</dd>
+
+<dt><a id="nucleotide" name="nucleotide"></a>
+<b>Nucleotide</b></dt>
+
+<dd>A subunit of DNA or RNA consisting of a nitrogenous base
+(adenine, guanine, thymine, or cytosine in DNA; adenine, guanine,
+uracil, or cytosine in RNA), a phosphate molecule, and a sugar
+molecule (deoxyribose in DNA and ribose in RNA). Thousands of
+nucleotides are linked to form a DNA or RNA molecule.<br />
+<i>See also:</i> <u><a href="#dna" target="_self">DNA</a></u>,<u><a
+href="#basepair" target="_self">base pair</a></u>,<u><a href="#rna"
+target="_self">RNA</a></u><br />
+</dd>
+
+<dt><a id="nucleus" name="nucleus"></a> <b>Nucleus</b></dt>
+
+<dd>The cellular organelle in eukaryotes that contains most of the
+genetic material. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="O" name="O">O</a></h2>
+</dd>
+
+<dt><a id="oligo" name="oligo"></a> <b>Oligo</b></dt>
+
+<dd><i>See:</i> <u><a href="#oligonucleotide"
+target="_self">oligonucleotide</a></u><br />
+</dd>
+
+<dt><a id="oligogenic" name="oligogenic"></a>
+<b>Oligogenic</b></dt>
+
+<dd>A phenotypic trait produced by two or more genes working
+together.<br />
+<i>See also:</i> <u><a href="#polygenicdisorder"
+target="_self">polygenic disorder</a></u><br />
+</dd>
+
+<dt><a id="oligonucleotide" name="oligonucleotide"></a>
+<b>Oligonucleotide</b></dt>
+
+<dd>A molecule usually composed of 25 or fewer nucleotides; used as
+a DNA synthesis primer.<br />
+<i>See also:</i> <u><a href="#nucleotide"
+target="_self">nucleotide</a></u><br />
+</dd>
+
+<dt><a id="oncogene" name="oncogene"></a> <b>Oncogene</b></dt>
+
+<dd>A gene, one or more forms of which is associated with cancer.
+Many oncogenes are involved, directly or indirectly, in controlling
+the rate of cell growth.</dd>
+
+<dt><a id="openreadingframe" name="openreadingframe"></a> <b>Open
+reading frame</b> (ORF)</dt>
+
+<dd>The sequence of DNA or RNA located between the start-code
+sequence (initiation codon) and the stop-code sequence (termination
+codon).</dd>
+
+<dt><a id="operon" name="operon"></a> <b>Operon</b></dt>
+
+<dd>A set of genes transcribed under the control of an operator
+gene.</dd>
+
+<dt><a id="overlappingclones" name="overlappingclones"></a>
+<b>Overlapping clones</b></dt>
+
+<dd><i>See:</i> <u><a href="#genomiclibrary" target="_self">genomic
+library</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="P" name="P">P</a></h2>
+</dd>
+
+<dt><a id="p1-derivedartificialchromosome"
+name="p1-derivedartificialchromosome"></a> <b>P1-derived artificial
+chromosome</b> (PAC)</dt>
+
+<dd>One type of vector used to clone DNA fragments (100- to 300-kb
+insert size; average, 150 kb) in <i>Escherichia coli</i> cells.
+Based on bacteriophage (a virus) P1 genome.<br />
+<i>See also:</i> <u><a href="#cloningvector" target="_self">cloning
+vector</a></u><br />
+</dd>
+
+<dt><a id="patent" name="patent"></a> <b>Patent</b></dt>
+
+<dd>In genetics, conferring the right or title to genes, gene
+variations, or identifiable portions of sequenced genetic material
+to an individual or organization.<br />
+<i>See also:</i> <u><a href="#gene"
+target="_self">gene</a></u><br />
+</dd>
+
+<dt><a id="pedigree" name="pedigree"></a> <b>Pedigree</b></dt>
+
+<dd>A family tree diagram that shows how a particular genetic trait
+or disease has been inherited.<br />
+<i>See also:</i> <u><a href="#inherit"
+target="_self">inherit</a></u><br />
+</dd>
+
+<dt><a id="penetrance" name="penetrance"></a>
+<b>Penetrance</b></dt>
+
+<dd>The probability of a gene or genetic trait being expressed.
+"Complete" penetrance means the gene or genes for a trait are
+expressed in all the population who have the genes. "Incomplete"
+penetrance means the genetic trait is expressed in only part of the
+population. The percent penetrance also may change with the age
+range of the population.</dd>
+
+<dt><a id="peptide" name="peptide"></a> <b>Peptide</b></dt>
+
+<dd>Two or more amino acids joined by a bond called a "peptide
+bond."<br />
+<i>See also:</i> <u><a href="#polypeptide"
+target="_self">polypeptide</a></u><br />
+</dd>
+
+<dt><a id="phage" name="phage"></a> <b>Phage</b></dt>
+
+<dd>A virus for which the natural host is a bacterial cell.</dd>
+
+<dt><a id="pharmacogenomics" name="pharmacogenomics"></a>
+<b>Pharmacogenomics</b></dt>
+
+<dd>The study of the interaction of an individual's genetic makeup
+and response to a drug.</dd>
+
+<dt><a id="phenocopy" name="phenocopy"></a> <b>Phenocopy</b></dt>
+
+<dd>A trait not caused by inheritance of a gene but appears to be
+identical to a genetic trait.</dd>
+
+<dt><a id="phenotype" name="phenotype"></a> <b>Phenotype</b></dt>
+
+<dd>The physical characteristics of an organism or the presence of
+a disease that may or may not be genetic.<br />
+<i>See also:</i> <u><a href="#genotype"
+target="_self">genotype</a></u><br />
+</dd>
+
+<dt><a id="physicalmap" name="physicalmap"></a> <b>Physical
+map</b></dt>
+
+<dd>A map of the locations of identifiable landmarks on DNA (e.g.,
+restriction-enzyme cutting sites, genes), regardless of
+inheritance. Distance is measured in base pairs. For the human
+genome, the lowest-resolution physical map is the banding patterns
+on the 24 different chromosomes; the highest-resolution map is the
+complete nucleotide sequence of the chromosomes.</dd>
+
+<dt><a id="plasmid" name="plasmid"></a> <b>Plasmid</b></dt>
+
+<dd>Autonomously replicating extra-chromosomal circular DNA
+molecules, distinct from the normal bacterial genome and
+nonessential for cell survival under nonselective conditions. Some
+plasmids are capable of integrating into the host genome. A number
+of artificially constructed plasmids are used as cloning
+vectors.</dd>
+
+<dt><a id="pleiotropy" name="pleiotropy"></a>
+<b>Pleiotropy</b></dt>
+
+<dd>One gene that causes many different physical traits such as
+multiple disease symptoms.</dd>
+
+<dt><a id="pluripotency" name="pluripotency"></a>
+<b>Pluripotency</b></dt>
+
+<dd>The potential of a cell to develop into more than one type of
+mature cell, depending on environment.</dd>
+
+<dt><a id="polygenicdisorder" name="polygenicdisorder"></a>
+<b>Polygenic disorder</b></dt>
+
+<dd>Genetic disorder resulting from the combined action of alleles
+of more than one gene (e.g., heart disease, diabetes, and some
+cancers). Although such disorders are inherited, they depend on the
+simultaneous presence of several alleles; thus the hereditary
+patterns usually are more complex than those of single-gene
+disorders.<br />
+<i>See also:</i> <u><a href="#single-genedisorder"
+target="_self">single-gene disorder</a></u><br />
+</dd>
+
+<dt><a id="polymerasechainreaction"
+name="polymerasechainreaction"></a> <b>Polymerase chain
+reaction</b> (PCR)</dt>
+
+<dd>A method for amplifying a DNA base sequence using a heat-stable
+polymerase and two 20-base primers, one complementary to the (+)
+strand at one end of the sequence to be amplified and one
+complementary to the (-) strand at the other end. Because the newly
+synthesized DNA strands can subsequently serve as additional
+templates for the same primer sequences, successive rounds of
+primer annealing, strand elongation, and dissociation produce rapid
+and highly specific amplification of the desired sequence. PCR also
+can be used to detect the existence of the defined sequence in a
+DNA sample.</dd>
+
+<dt><a id="polymerase,dnaorrna" name="polymerase,dnaorrna"></a>
+<b>Polymerase, DNA or RNA</b></dt>
+
+<dd>Enzyme that catalyzes the synthesis of nucleic acids on
+preexisting nucleic acid templates, assembling RNA from
+ribonucleotides or DNA from deoxyribonucleotides.</dd>
+
+<dt><a id="polymorphism" name="polymorphism"></a>
+<b>Polymorphism</b></dt>
+
+<dd>Difference in DNA sequence among individuals that may underlie
+differences in health. Genetic variations occurring in more than 1%
+of a population would be considered useful polymorphisms for
+genetic linkage analysis.<br />
+<i>See also:</i> <u><a href="#mutation"
+target="_self">mutation</a></u><br />
+</dd>
+
+<dt><a id="polypeptide" name="polypeptide"></a>
+<b>Polypeptide</b></dt>
+
+<dd>A protein or part of a protein made of a chain of amino acids
+joined by a peptide bond.</dd>
+
+<dt><a id="populationgenetics" name="populationgenetics"></a>
+<b>Population genetics</b></dt>
+
+<dd>The study of variation in genes among a group of
+individuals.</dd>
+
+<dt><a id="positionalcloning" name="positionalcloning"></a>
+<b>Positional cloning</b></dt>
+
+<dd>A technique used to identify genes, usually those that are
+associated with diseases, based on their location on a
+chromosome.</dd>
+
+<dt><a id="prematurechromosomecondensation"
+name="prematurechromosomecondensation"></a> <b>Premature chromosome
+condensation</b> (PCC)</dt>
+
+<dd>A method of studying chromosomes in the interphase stage of the
+cell cycle.</dd>
+
+<dt><a id="primer" name="primer"></a> <b>Primer</b></dt>
+
+<dd>Short preexisting polynucleotide chain to which new
+deoxyribonucleotides can be added by DNA polymerase.</dd>
+
+<dt><a id="privacy" name="privacy"></a> <b>Privacy</b></dt>
+
+<dd>In genetics, the right of people to restrict access to their
+genetic information.</dd>
+
+<dt><a id="probe" name="probe"></a> <b>Probe</b></dt>
+
+<dd>Single-stranded DNA or RNA molecules of specific base sequence,
+labeled either radioactively or immunologically, that are used to
+detect the complementary base sequence by hybridization.</dd>
+
+<dt><a id="prokaryote" name="prokaryote"></a>
+<b>Prokaryote</b></dt>
+
+<dd>Cell or organism lacking a membrane-bound, structurally
+discrete nucleus and other subcellular compartments. Bacteria are
+examples of prokaryotes.<br />
+<i>See also:</i> <u><a href="#chromosome"
+target="_self">chromosome</a></u>,<u><a href="#eukaryote"
+target="_self">eukaryote</a></u><br />
+</dd>
+
+<dt><a id="promoter" name="promoter"></a> <b>Promoter</b></dt>
+
+<dd>A DNA site to which RNA polymerase will bind and initiate
+transcription.</dd>
+
+<dt><a id="pronucleus" name="pronucleus"></a>
+<b>Pronucleus</b></dt>
+
+<dd>The nucleus of a sperm or egg prior to fertilization.<br />
+<i>See also:</i> <u><a href="#nucleus"
+target="_self">nucleus</a></u>,<u><a href="#transgenic"
+target="_self">transgenic</a></u><br />
+</dd>
+
+<dt><a id="protein" name="protein"></a> <b>Protein</b></dt>
+
+<dd>A large molecule composed of one or more chains of amino acids
+in a specific order; the order is determined by the base sequence
+of nucleotides in the gene that codes for the protein. Proteins are
+required for the structure, function, and regulation of the body's
+cells, tissues, and organs; and each protein has unique functions.
+Examples are hormones, enzymes, and antibodies.</dd>
+
+<dt><a id="proteome" name="proteome"></a> <b>Proteome</b></dt>
+
+<dd>Proteins expressed by a cell or organ at a particular time and
+under specific conditions.</dd>
+
+<dt><a id="proteomics" name="proteomics"></a>
+<b>Proteomics</b></dt>
+
+<dd>The study of the full set of proteins encoded by a genome.</dd>
+
+<dt><a id="pseudogene" name="pseudogene"></a>
+<b>Pseudogene</b></dt>
+
+<dd>A sequence of DNA similar to a gene but nonfunctional; probably
+the remnant of a once-functional gene that accumulated
+mutations.</dd>
+
+<dt><a id="purine" name="purine"></a> <b>Purine</b></dt>
+
+<dd>A nitrogen-containing, double-ring, basic compound that occurs
+in nucleic acids. The purines in DNA and RNA are adenine and
+guanine.<br />
+<i>See also:</i> <u><a href="#basepair" target="_self">base
+pair</a></u><br />
+</dd>
+
+<dt><a id="pyrimidine" name="pyrimidine"></a>
+<b>Pyrimidine</b></dt>
+
+<dd>A nitrogen-containing, single-ring, basic compound that occurs
+in nucleic acids. The pyrimidines in DNA are cytosine and thymine;
+in RNA, cytosine and uracil.<br />
+<i>See also:</i> <u><a href="#basepair" target="_self">base
+pair</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="R" name="R">R</a></h2>
+</dd>
+
+<dt><a id="radiationhybrid" name="radiationhybrid"></a>
+<b>Radiation hybrid</b></dt>
+
+<dd>A hybrid cell containing small fragments of irradiated human
+chromosomes. Maps of irradiation sites on chromosomes for the
+human, rat, mouse, and other genomes provide important markers,
+allowing the construction of very precise STS maps indispensable to
+studying multifactorial diseases.<br />
+<i>See also:</i> <u><a href="#sequencetaggedsite"
+target="_self">sequence tagged site</a></u><br />
+</dd>
+
+<dt><a id="rare-cutterenzyme" name="rare-cutterenzyme"></a>
+<b>Rare-cutter enzyme</b></dt>
+
+<dd><i>See:</i> <u><a href="#restriction-enzymecuttingsite"
+target="_self">restriction-enzyme cutting site</a></u><br />
+</dd>
+
+<dt><a id="recessivegene" name="recessivegene"></a> <b>Recessive
+gene</b></dt>
+
+<dd>A gene which will be expressed only if there are 2 identical
+copies or, for a male, if one copy is present on the X
+chromosome.</dd>
+
+<dt><a id="reciprocaltranslocation"
+name="reciprocaltranslocation"></a> <b>Reciprocal
+translocation</b></dt>
+
+<dd>When a pair of chromosomes exchange exactly the same length and
+area of DNA. Results in a shuffling of genes.</dd>
+
+<dt><a id="recombinantclone" name="recombinantclone"></a>
+<b>Recombinant clone</b></dt>
+
+<dd>Clone containing recombinant DNA molecules.<br />
+<i>See also:</i> <u><a href="#recombinantdnatechnology"
+target="_self">recombinant DNA technology</a></u><br />
+</dd>
+
+<dt><a id="recombinantdnamolecules"
+name="recombinantdnamolecules"></a> <b>Recombinant DNA
+molecules</b></dt>
+
+<dd>A combination of DNA molecules of different origin that are
+joined using recombinant DNA technologies.</dd>
+
+<dt><a id="recombinantdnatechnology"
+name="recombinantdnatechnology"></a> <b>Recombinant DNA
+technology</b></dt>
+
+<dd>Procedure used to join together DNA segments in a cell-free
+system (an environment outside a cell or organism). Under
+appropriate conditions, a recombinant DNA molecule can enter a cell
+and replicate there, either autonomously or after it has become
+integrated into a cellular chromosome.</dd>
+
+<dt><a id="recombination" name="recombination"></a>
+<b>Recombination</b></dt>
+
+<dd>The process by which progeny derive a combination of genes
+different from that of either parent. In higher organisms, this can
+occur by crossing over.<br />
+<i>See also:</i> <u><a href="#crossingover" target="_self">crossing
+over</a></u>,<u><a href="#mutation"
+target="_self">mutation</a></u><br />
+</dd>
+
+<dt><a id="regulatoryregionorsequence"
+name="regulatoryregionorsequence"></a> <b>Regulatory region or
+sequence</b></dt>
+
+<dd>A DNA base sequence that controls gene expression.</dd>
+
+<dt><a id="repetitivedna" name="repetitivedna"></a> <b>Repetitive
+DNA</b></dt>
+
+<dd>Sequences of varying lengths that occur in multiple copies in
+the genome; it represents much of the human genome.</dd>
+
+<dt><a id="reportergene" name="reportergene"></a> <b>Reporter
+gene</b></dt>
+
+<dd><i>See:</i> <u><a href="#marker"
+target="_self">marker</a></u><br />
+</dd>
+
+<dt><a id="resolution" name="resolution"></a>
+<b>Resolution</b></dt>
+
+<dd>Degree of molecular detail on a physical map of DNA, ranging
+from low to high.</dd>
+
+<dt><a id="restrictionenzyme,endonuclease"
+name="restrictionenzyme,endonuclease"></a> <b>Restriction enzyme,
+endonuclease</b></dt>
+
+<dd>A protein that recognizes specific, short nucleotide sequences
+and cuts DNA at those sites. Bacteria contain over 400 such enzymes
+that recognize and cut more than 100 different DNA sequences.<br />
+<i>See also:</i> <u><a href="#restrictionenzymecuttingsite"
+target="_self">restriction enzyme cutting site</a></u><br />
+</dd>
+
+<dt><a id="restrictionfragmentlengthpolymorphism"
+name="restrictionfragmentlengthpolymorphism"></a> <b>Restriction
+fragment length polymorphism</b> (RFLP)</dt>
+
+<dd>Variation between individuals in DNA fragment sizes cut by
+specific restriction enzymes; polymorphic sequences that result in
+RFLPs are used as markers on both physical maps and genetic linkage
+maps. RFLPs usually are caused by mutation at a cutting site.<br />
+<i>See also:</i> <u><a href="#marker"
+target="_self">marker</a></u>,<u><a href="#polymorphism"
+target="_self">polymorphism</a></u><br />
+</dd>
+
+<dt><a id="restriction-enzymecuttingsite"
+name="restriction-enzymecuttingsite"></a> <b>Restriction-enzyme
+cutting site</b></dt>
+
+<dd>A specific nucleotide sequence of DNA at which a particular
+restriction enzyme cuts the DNA. Some sites occur frequently in DNA
+(e.g., every several hundred base pairs); others much less
+frequently (rare-cutter; e.g., every 10,000 base pairs).</dd>
+
+<dt><a id="retroviralinfection" name="retroviralinfection"></a>
+<b>Retroviral infection</b></dt>
+
+<dd>The presence of retroviral vectors, such as some viruses, which
+use their recombinant DNA to insert their genetic material into the
+chromosomes of the host's cells. The virus is then propogated by
+the host cell.</dd>
+
+<dt><a id="reversetranscriptase" name="reversetranscriptase"></a>
+<b>Reverse transcriptase</b></dt>
+
+<dd>An enzyme used by retroviruses to form a complementary DNA
+sequence (cDNA) from their RNA. The resulting DNA is then inserted
+into the chromosome of the host cell.</dd>
+
+<dt><a id="ribonucleotide" name="ribonucleotide"></a>
+<b>Ribonucleotide</b></dt>
+
+<dd><i>See:</i> <u><a href="#nucleotide"
+target="_self">nucleotide</a></u><br />
+</dd>
+
+<dt><a id="ribose" name="ribose"></a> <b>Ribose</b></dt>
+
+<dd>The five-carbon sugar that serves as a component of RNA.<br />
+<i>See also:</i> <u><a href="#ribonucleicacid"
+target="_self">ribonucleic acid</a></u>,<u><a href="#deoxyribose"
+target="_self">deoxyribose</a></u><br />
+</dd>
+
+<dt><a id="ribosomalrna" name="ribosomalrna"></a> <b>Ribosomal
+RNA</b> (rRNA)</dt>
+
+<dd>A class of RNA found in the ribosomes of cells.</dd>
+
+<dt><a id="ribosomes" name="ribosomes"></a> <b>Ribosomes</b></dt>
+
+<dd>Small cellular components composed of specialized ribosomal RNA
+and protein; site of protein synthesis.<br />
+<i>See also:</i> <u><a href="#rna" target="_self">RNA</a></u><br />
+</dd>
+
+<dt><a id="riskcommunication" name="riskcommunication"></a> <b>Risk
+communication</b></dt>
+
+<dd>In genetics, a process in which a genetic counselor or other
+medical professional interprets genetic test results and advises
+patients of the consequences for them and their offspring.</dd>
+
+<dt><a id="rna" name="rna"></a> <b>RNA</b> (Ribonucleic acid)</dt>
+
+<dd>A chemical found in the nucleus and cytoplasm of cells; it
+plays an important role in protein synthesis and other chemical
+activities of the cell. The structure of RNA is similar to that of
+DNA. There are several classes of RNA molecules, including
+messenger RNA, transfer RNA, ribosomal RNA, and other small RNAs,
+each serving a different purpose. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="S" name="S">S</a></h2>
+</dd>
+
+<dt><a id="sangersequencing" name="sangersequencing"></a> <b>Sanger
+sequencing</b></dt>
+
+<dd>A widely used method of determining the order of bases in
+DNA.<br />
+<i>See also:</i> <u><a href="#sequencing"
+target="_self">sequencing</a></u>,<u><a href="#shotgunsequencing"
+target="_self">shotgun sequencing</a></u><br />
+</dd>
+
+<dt><a id="satellite" name="satellite"></a> <b>Satellite</b></dt>
+
+<dd>A chromosomal segment that branches off from the rest of the
+chromosome but is still connected by a thin filament or stalk.</dd>
+
+<dt><a id="scaffold" name="scaffold"></a> <b>Scaffold</b></dt>
+
+<dd>In genomic mapping, a series of contigs that are in the right
+order but not necessarily connected in one continuous stretch of
+sequence.</dd>
+
+<dt><a id="segregation" name="segregation"></a>
+<b>Segregation</b></dt>
+
+<dd>The normal biological process whereby the two pieces of a
+chromosome pair are separated during meiosis and randomly
+distributed to the germ cells.</dd>
+
+<dt><a id="sequence" name="sequence"></a> <b>Sequence</b></dt>
+
+<dd><i>See:</i> <u><a href="#basesequence" target="_self">base
+sequence</a></u><br />
+</dd>
+
+<dt><a id="sequenceassembly" name="sequenceassembly"></a>
+<b>Sequence assembly</b></dt>
+
+<dd>A process whereby the order of multiple sequenced DNA fragments
+is determined.</dd>
+
+<dt><a id="sequencetaggedsite" name="sequencetaggedsite"></a>
+<b>Sequence tagged site</b> (STS)</dt>
+
+<dd>Short (200 to 500 base pairs) DNA sequence that has a single
+occurrence in the human genome and whose location and base sequence
+are known. Detectable by polymerase chain reaction, STSs are useful
+for localizing and orienting the mapping and sequence data reported
+from many different laboratories and serve as landmarks on the
+developing physical map of the human genome. Expressed sequence
+tags (ESTs) are STSs derived from cDNAs.</dd>
+
+<dt><a id="sequencing" name="sequencing"></a>
+<b>Sequencing</b></dt>
+
+<dd>Determination of the order of nucleotides (base sequences) in a
+DNA or RNA molecule or the order of amino acids in a protein.</dd>
+
+<dt><a id="sequencingtechnology" name="sequencingtechnology"></a>
+<b>Sequencing technology</b></dt>
+
+<dd>The instrumentation and procedures used to determine the order
+of nucleotides in DNA.</dd>
+
+<dt><a id="sexchromosome" name="sexchromosome"></a> <b>Sex
+chromosome</b></dt>
+
+<dd>The X or Y chromosome in human beings that determines the sex
+of an individual. Females have two X chromosomes in diploid cells;
+males have an X and a Y chromosome. The sex chromosomes comprise
+the 23rd chromosome pair in a karyotype.<br />
+<i>See also:</i> <u><a href="#autosome"
+target="_self">autosome</a></u><br />
+</dd>
+
+<dt><a id="sex-linked" name="sex-linked"></a>
+<b>Sex-linked</b></dt>
+
+<dd>Traits or diseases associated with the X or Y chromosome;
+generally seen in males.<br />
+<i>See also:</i> <u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#mutation"
+target="_self">mutation</a></u>,<u><a href="#sexchromosome"
+target="_self">sex chromosome</a></u><br />
+</dd>
+
+<dt><a id="shotgunmethod" name="shotgunmethod"></a> <b>Shotgun
+method</b></dt>
+
+<dd>Sequencing method that involves randomly sequenced cloned
+pieces of the genome, with no foreknowledge of where the piece
+originally came from. This can be contrasted with "directed"
+strategies, in which pieces of DNA from known chromosomal locations
+are sequenced. Because there are advantages to both strategies,
+researchers use both random (or shotgun) and directed strategies in
+combination to sequence the human genome.<br />
+<i>See also:</i> <u><a href="#library"
+target="_self">library</a></u>,<u><a href="#genomiclibrary"
+target="_self">genomic library</a></u><br />
+</dd>
+
+<dt><a id="singlenucleotidepolymorphism"
+name="singlenucleotidepolymorphism"></a> <b>Single nucleotide
+polymorphism</b> (SNP)</dt>
+
+<dd>DNA sequence variations that occur when a single nucleotide (A,
+T, C, or G) in the genome sequence is altered.<br />
+<i>See also:</i> <u><a href="#mutation"
+target="_self">mutation</a></u>,<u><a href="#polymorphism"
+target="_self">polymorphism</a></u>,<u><a
+href="#single-genedisorder" target="_self">single-gene
+disorder</a></u><br />
+</dd>
+
+<dt><a id="single-genedisorder" name="single-genedisorder"></a>
+<b>Single-gene disorder</b></dt>
+
+<dd>Hereditary disorder caused by a mutant allele of a single gene
+(e.g., Duchenne muscular dystrophy, retinoblastoma, sickle cell
+disease).<br />
+<i>See also:</i> <u><a href="#polygenicdisorders"
+target="_self">polygenic disorders</a></u><br />
+</dd>
+
+<dt><a id="somaticcell" name="somaticcell"></a> <b>Somatic
+cell</b></dt>
+
+<dd>Any cell in the body except gametes and their precursors.<br />
+<i>See also:</i> <u><a href="#gamete"
+target="_self">gamete</a></u><br />
+</dd>
+
+<dt><a id="somaticcellgenetherapy"
+name="somaticcellgenetherapy"></a> <b>Somatic cell gene
+therapy</b></dt>
+
+<dd>Incorporating new genetic material into cells for therapeutic
+purposes. The new genetic material cannot be passed to
+offspring.<br />
+<i>See also:</i> <u><a href="#genetherapy" target="_self">gene
+therapy</a></u><br />
+</dd>
+
+<dt><a id="somaticcellgeneticmutation"
+name="somaticcellgeneticmutation"></a> <b>Somatic cell genetic
+mutation</b></dt>
+
+<dd>A change in the genetic structure that is neither inherited nor
+passed to offspring. Also called acquired mutations.<br />
+<i>See also:</i> <u><a href="#germlinegeneticmutation"
+target="_self">germ line genetic mutation</a></u><br />
+</dd>
+
+<dt><a id="southernblotting" name="southernblotting"></a>
+<b>Southern blotting</b></dt>
+
+<dd>Transfer by absorption of DNA fragments separated in
+electrophoretic gels to membrane filters for detection of specific
+base sequences by radio-labeled complementary probes.</dd>
+
+<dt><a id="spectralkaryotype" name="spectralkaryotype"></a>
+<b>Spectral karyotype</b> (SKY)</dt>
+
+<dd>A graphic of all an organism's chromosomes, each labeled with a
+different color. Useful for identifying chromosomal
+abnormalities.<br />
+<i>See also:</i> <u><a href="#chromosome"
+target="_self">chromosome</a></u><br />
+</dd>
+
+<dt><a id="splicesite" name="splicesite"></a> <b>Splice
+site</b></dt>
+
+<dd>Location in the DNA sequence where RNA removes the noncoding
+areas to form a continuous gene transcript for translation into a
+protein.</dd>
+
+<dt><a id="sporadiccancer" name="sporadiccancer"></a> <b>Sporadic
+cancer</b></dt>
+
+<dd>Cancer that occurs randomly and is not inherited from parents.
+Caused by DNA changes in one cell that grows and divides, spreading
+throughout the body.<br />
+<i>See also:</i> <u><a href="#hereditarycancer"
+target="_self">hereditary cancer</a></u><br />
+</dd>
+
+<dt><a id="stemcell" name="stemcell"></a> <b>Stem cell</b></dt>
+
+<dd>Undifferentiated, primitive cells in the bone marrow that have
+the ability both to multiply and to differentiate into specific
+blood cells.</dd>
+
+<dt><a id="structuralgenomics" name="structuralgenomics"></a>
+<b>Structural genomics</b></dt>
+
+<dd>The effort to determine the 3D structures of large numbers of
+proteins using both experimental techniques and computer
+simulation</dd>
+
+<dt><a id="substitution" name="substitution"></a>
+<b>Substitution</b></dt>
+
+<dd>In genetics, a type of mutation due to replacement of one
+nucleotide in a DNA sequence by another nucleotide or replacement
+of one amino acid in a protein by another amino acid.<br />
+<i>See also:</i> <u><a href="#mutation"
+target="_self">mutation</a></u><br />
+</dd>
+
+<dt><a id="suppressorgene" name="suppressorgene"></a> <b>Suppressor
+gene</b></dt>
+
+<dd>A gene that can suppress the action of another gene.</dd>
+
+<dt><a id="syndrome" name="syndrome"></a> <b>Syndrome</b></dt>
+
+<dd>The group or recognizable pattern of symptoms or abnormalities
+that indicate a particular trait or disease.</dd>
+
+<dt><a id="syngeneic" name="syngeneic"></a> <b>Syngeneic</b></dt>
+
+<dd>Genetically identical members of the same species.</dd>
+
+<dt><a id="synteny" name="synteny"></a> <b>Synteny</b></dt>
+
+<dd>Genes occurring in the same order on chromosomes of different
+species.<br />
+<i>See also:</i> <u><a href="#linkage"
+target="_self">linkage</a></u>,<u><a href="#conservedsequence"
+target="_self">conserved sequence</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="T" name="T">T</a></h2>
+</dd>
+
+<dt><a id="tandemrepeatsequences" name="tandemrepeatsequences"></a>
+<b>Tandem repeat sequences</b></dt>
+
+<dd>Multiple copies of the same base sequence on a chromosome; used
+as markers in physical mapping.<br />
+<i>See also:</i> <u><a href="#physicalmap" target="_self">physical
+map</a></u><br />
+</dd>
+
+<dt><a id="targetedmutagenesis" name="targetedmutagenesis"></a>
+<b>Targeted mutagenesis</b></dt>
+
+<dd>Deliberate change in the genetic structure directed at a
+specific site on the chromosome. Used in research to determine the
+targeted region's function.<br />
+<i>See also:</i> <u><a href="#mutation"
+target="_self">mutation</a></u>,<u><a href="#polymorphism"
+target="_self">polymorphism</a></u><br />
+</dd>
+
+<dt><a id="technologytransfer" name="technologytransfer"></a>
+<b>Technology transfer</b></dt>
+
+<dd>The process of transferring scientific findings from research
+laboratories to the commercial sector.</dd>
+
+<dt><a id="telomerase" name="telomerase"></a>
+<b>Telomerase</b></dt>
+
+<dd>The enzyme that directs the replication of telomeres.</dd>
+
+<dt><a id="telomere" name="telomere"></a> <b>Telomere</b></dt>
+
+<dd>The end of a chromosome. This specialized structure is involved
+in the replication and stability of linear DNA molecules.<br />
+<i>See also:</i> <u><a href="#dnareplication" target="_self">DNA
+replication</a></u><br />
+</dd>
+
+<dt><a id="teratogenic" name="teratogenic"></a>
+<b>Teratogenic</b></dt>
+
+<dd>Substances such as chemicals or radiation that cause abnormal
+development of a embryo.<br />
+<i>See also:</i> <u><a href="#mutatgen"
+target="_self">mutatgen</a></u><br />
+</dd>
+
+<dt><a id="thymine" name="thymine"></a> <b>Thymine</b> (T)</dt>
+
+<dd>A nitrogenous base, one member of the base pair AT
+(adenine-thymine).<br />
+<i>See also:</i> <u><a href="#basepair" target="_self">base
+pair</a></u>,<u><a href="#nucleotide"
+target="_self">nucleotide</a></u><br />
+</dd>
+
+<dt><a id="toxicogenomics" name="toxicogenomics"></a>
+<b>Toxicogenomics</b></dt>
+
+<dd>The study of how genomes respond to environmental stressors or
+toxicants. Combines genome-wide mRNA expression profiling with
+protein expression patterns using bioinformatics to understand the
+role of gene-environment interactions in disease and
+dysfunction.</dd>
+
+<dt><a id="transcription" name="transcription"></a>
+<b>Transcription</b></dt>
+
+<dd>The synthesis of an RNA copy from a sequence of DNA (a gene);
+the first step in gene expression.<br />
+<i>See also:</i> <u><a href="#translation"
+target="_self">translation</a></u><br />
+</dd>
+
+<dt><a id="transcriptionfactor" name="transcriptionfactor"></a>
+<b>Transcription factor</b></dt>
+
+<dd>A protein that binds to regulatory regions and helps control
+gene expression.</dd>
+
+<dt><a id="transcriptome" name="transcriptome"></a>
+<b>Transcriptome</b></dt>
+
+<dd>The full complement of activated genes, mRNAs, or transcripts
+in a particular tissue at a particular time</dd>
+
+<dt><a id="transfection" name="transfection"></a>
+<b>Transfection</b></dt>
+
+<dd>The introduction of foreign DNA into a host cell.<br />
+<i>See also:</i> <u><a href="#cloningvector" target="_self">cloning
+vector</a></u>,<u><a href="#genetherapy" target="_self">gene
+therapy</a></u><br />
+</dd>
+
+<dt><a id="transferrna" name="transferrna"></a> <b>Transfer RNA</b>
+(tRNA)</dt>
+
+<dd>A class of RNA having structures with triplet nucleotide
+sequences that are complementary to the triplet nucleotide coding
+sequences of mRNA. The role of tRNAs in protein synthesis is to
+bond with amino acids and transfer them to the ribosomes, where
+proteins are assembled according to the genetic code carried by
+mRNA.</dd>
+
+<dt><a id="transformation" name="transformation"></a>
+<b>Transformation</b></dt>
+
+<dd>A process by which the genetic material carried by an
+individual cell is altered by incorporation of exogenous DNA into
+its genome.</dd>
+
+<dt><a id="transgenic" name="transgenic"></a>
+<b>Transgenic</b></dt>
+
+<dd>An experimentally produced organism in which DNA has been
+artificially introduced and incorporated into the organism's germ
+line.<br />
+<i>See also:</i> <u><a href="#cell"
+target="_self">cell</a></u>,<u><a href="#dna"
+target="_self">DNA</a></u>,<u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#nucleus"
+target="_self">nucleus</a></u>,<u><a href="#germline"
+target="_self">germ line</a></u><br />
+</dd>
+
+<dt><a id="translation" name="translation"></a>
+<b>Translation</b></dt>
+
+<dd>The process in which the genetic code carried by mRNA directs
+the synthesis of proteins from amino acids.<br />
+<i>See also:</i> <u><a href="#transcription"
+target="_self">transcription</a></u><br />
+</dd>
+
+<dt><a id="translocation" name="translocation"></a>
+<b>Translocation</b></dt>
+
+<dd>A mutation in which a large segment of one chromosome breaks
+off and attaches to another chromosome.<br />
+<i>See also:</i> <u><a href="#mutation"
+target="_self">mutation</a></u><br />
+</dd>
+
+<dt><a id="transposableelement" name="transposableelement"></a>
+<b>Transposable element</b></dt>
+
+<dd>A class of DNA sequences that can move from one chromosomal
+site to another.</dd>
+
+<dt><a id="trisomy" name="trisomy"></a> <b>Trisomy</b></dt>
+
+<dd>Possessing three copies of a particular chromosome instead of
+the normal two copies.<br />
+<i>See also:</i> <u><a href="#cell"
+target="_self">cell</a></u>,<u><a href="#gene"
+target="_self">gene</a></u>,<u><a href="#geneexpression"
+target="_self">gene expression</a></u>,<u><a href="#chromosome"
+target="_self">chromosome</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="U" name="U">U</a></h2>
+</dd>
+
+<dt><a id="uracil" name="uracil"></a> <b>Uracil</b></dt>
+
+<dd>A nitrogenous base normally found in RNA but not DNA; uracil is
+capable of forming a base pair with adenine.<br />
+<i>See also:</i> <u><a href="#basepair" target="_self">base
+pair</a></u>,<u><a href="#nucleotide"
+target="_self">nucleotide</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="V" name="V">V</a></h2>
+</dd>
+
+<dt><a id="vector" name="vector"></a> <b>Vector</b></dt>
+
+<dd><i>See:</i> <u><a href="#cloningvector" target="_self">cloning
+vector</a></u><br />
+</dd>
+
+<dt><a id="virus" name="virus"></a> <b>Virus</b></dt>
+
+<dd>A noncellular biological entity that can reproduce only within
+a host cell. Viruses consist of nucleic acid covered by protein;
+some animal viruses are also surrounded by membrane. Inside the
+infected cell, the virus uses the synthetic capability of the host
+to produce progeny virus.<br />
+<i>See also:</i> <u><a href="#cloningvector" target="_self">cloning
+vector</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="W" name="W">W</a></h2>
+</dd>
+
+<dt><a id="westernblot" name="westernblot"></a> <b>Western
+blot</b></dt>
+
+<dd>A technique used to identify and locate proteins based on their
+ability to bind to specific antibodies.<br />
+<i>See also:</i> <u><a href="#dna" target="_self">DNA</a></u>,<u><a
+href="#northernblot" target="_self">Northern blot</a></u>,<u><a
+href="#protein" target="_self">protein</a></u>,<u><a href="#rna"
+target="_self">RNA</a></u>,<u><a href="#southernblotting"
+target="_self">Southern blotting</a></u><br />
+</dd>
+
+<dt><a id="wildtype" name="wildtype"></a> <b>Wild type</b></dt>
+
+<dd>The form of an organism that occurs most frequently in
+nature.</dd>
+
+<dt><a id="workingdraftdnasequence"
+name="workingdraftdnasequence"></a> <b>Working Draft DNA
+Sequence</b></dt>
+
+<dd><i>See:</i> <u><a href="#draftdnasequence" target="_self">Draft
+DNA Sequence</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="X" name="X">X</a></h2>
+</dd>
+
+<dt><a id="xchromosome" name="xchromosome"></a> <b>X
+chromosome</b></dt>
+
+<dd>One of the two sex chromosomes, X and Y.<br />
+<i>See also:</i> <u><a href="#ychromosome" target="_self">Y
+chromosome</a></u>,<u><a href="#sexchromosome" target="_self">sex
+chromosome</a></u><br />
+</dd>
+
+<dt><a id="xenograft" name="xenograft"></a> <b>Xenograft</b></dt>
+
+<dd>Tissue or organs from an individual of one species transplanted
+into or grafted onto an organism of another species, genus, or
+family. A common example is the use of pig heart valves in humans. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="Y" name="Y">Y</a></h2>
+</dd>
+
+<dt><a id="ychromosome" name="ychromosome"></a> <b>Y
+chromosome</b></dt>
+
+<dd>One of the two sex chromosomes, X and Y.<br />
+<i>See also:</i> <u><a href="#xchromosome" target="_self">X
+chromosome</a></u>,<u><a href="#sexchromosome" target="_self">sex
+chromosome</a></u><br />
+</dd>
+
+<dt><a id="yeastartificialchromosome"
+name="yeastartificialchromosome"></a> <b>Yeast artificial
+chromosome</b> (YAC)</dt>
+
+<dd>Constructed from yeast DNA, it is a vector used to clone large
+DNA fragments.<br />
+<i>See also:</i> <u><a href="#cloningvector" target="_self">cloning
+vector</a></u>,<u><a href="#cosmid"
+target="_self">cosmid</a></u><br />
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+
+<dd>
+<h2><a id="Z" name="Z">Z</a></h2>
+</dd>
+
+<dt><a id="zinc-fingerprotein" name="zinc-fingerprotein"></a>
+<b>Zinc-finger protein</b></dt>
+
+<dd>A secondary feature of some proteins containing a zinc atom; a
+DNA-binding protein. 
+<p align="right"><a href="#top">Return to Top</a></p>
+</dd>
+</dl>
+
+Updated 15-Apr-03 
+<center>
+<table>
+<tr>
+<td width="15">
+<div align="right"><a href="9.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td width="32">
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td width="16"><a href="index.html"><img src="next.jpg" height="9"
+width="15" border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</center>
+</td>
+</tr>
+</table>
+</div>
+
+<table border="1" width="100%">
+<tr>
+<td><a href="http://www.ornl.gov/TechResources/Human_Genome/"><img
+src="HGPlogo1.jpg" border="0" height="107" width="108" /></a></td>
+<td>The online presentation of this publication is a special
+feature of the <a
+href="http://www.ornl.gov/TechResources/Human_Genome/">Human Genome
+Project Information Web site</a>.</td>
+</tr>
+</table>

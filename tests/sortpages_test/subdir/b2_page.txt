@@ -1,0 +1,9 @@
+restindex
+    crumb: Page B2
+    section: OtherSection
+/restindex
+=========
+ Page B2
+=========
+
+Page b2...

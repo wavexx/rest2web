@@ -1,0 +1,46 @@
+restindex 
+    format: html         
+    page-title: The Big Index   
+    crumb: Test Site
+    link-title: Test and Example Site
+    template-encoding: utf8
+    page-description:
+        This website tests all the features of **rest2web**. If it builds 
+        correctly then all is well. It also serves as an illustration of 
+        rest2web, including some of the more obscure options and capabilities.
+    /description
+/restindex
+
+uservalues
+    name = Fuzzyman
+    paragraph = """Those are all the sections
+in this example site."""
+/uservalues
+
+<div class="title">
+    <h1>The Main Index Page</h1>
+</div>
+
+
+<div class="intro">
+    <p>Welcome to something.</p> 
+    <p>This is the test site for <strong>rest2web</strong>. It tests most of the features of rest2web. It also illustrates most aspects of the <strong>restindex</strong> and <strong>embedded_code</strong>.</p> 
+</div>
+
+
+    <div class="indexblock">
+        <h2>These Are the Sections</h2>
+        <p>So enjoy....<em><% name %></em></p>
+
+
+        <#
+            print_details(default_section,
+            subsection_title='<h3>These are the Sections</h3>')
+        #>
+        
+        <p><% paragraph %></p>
+    </div>
+
+
+<p>We also have <a href="section5/index.shtml">Section 5</a>. This isn't 
+included, so I've added a link especially.</p>

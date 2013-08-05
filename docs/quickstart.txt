@@ -1,0 +1,289 @@
+restindex
+    tags: quickstart, introduction, beginners, site builder, website, basics, guide, basic guide
+    crumb: Quickstart
+    link-title: Quickstart
+    page-description:
+        An quick start guide showing how to use **rest2web** to create a simple website.
+    /description
+/restindex
+.. role:: raw-html(raw)
+    :format: html
+
+======================
+Rest2Web Quick start
+======================
+
+This document shows how to create a very simple site with rest2web_.
+
+.. contents::
+
+Files and Directories
+----------------------
+
+You need:
+
+- a config file (simple text file)
+- an input directory (the directory that rest2web_ will process - your site's source)
+- an output directory (where rest2web_ will place the new HTML files)
+- content!
+
+Do this
+=============
+
+Make the following directory structure, with empty text files (**directories**, *files*).
+
+- **quickstart**
+
+  - *quickstart.ini*
+  - **input**
+
+    - *index.txt*
+    - *template.txt*
+    - *somecontent.txt*
+    - **subdir1**
+
+      - *index.txt*
+
+    - **subdir2**
+
+  - **output**
+
+Things to note
+===============
+
+- rest2web_ will build all the directories and files under ``input/``.  If a directory does not have an ``index.txt`` file in it, **the directory will not be processed**.
+
+Configuration
+-------------
+
+Do this
+============
+
+Add the following to ``quickstart.ini``::
+
+  psyco = False
+  pause = False
+  log_file = '/home/user/quickstart/qs_log.txt'
+  DEBUG = False
+  compare_directory = ''
+
+  # these values we have edited for our site
+  start_directory = '/home/user/quickstart/input'
+  target_directory = '/home/user/quickstart/output'
+  macros = ''
+
+Change the ``/home/user/`` prefix to a suitable location.  For windows users, simply use the appropriate syntax (e.g. ``C:\data\quickstart\``).
+
+Explanation
+============
+
+log_file
+  where to write the log file
+
+start_directory
+  the root directory of the source files
+
+target_directory
+  where to write the HTML files
+
+.. note:: You may use any location for the start and target directories; they do **not** have to be siblings, **nor** do they have to reside underneath the same directory as the ini file.
+
+Source files
+-------------
+
+Each source file corresponds to a content file, except under special circumstances (like telling rest2web_ **not** to process a directory, which we will cover later).  Every source file needs a ``restindex`` block at the very top.  The ``restindex`` can contain multiple options.
+
+Do this
+==========
+
+Add the following to ``quickstart/input/index.txt``::
+
+  restindex
+      crumb: quickstart root
+      format: rest
+      page-title: the quickstart root!
+      encoding: utf-8
+      output-encoding: None
+  /restindex
+
+restindex format
+=================
+
+* Must be at the very top of the file
+* Must start with ``restindex`` and end with ``/restindex``
+* Each option must be indented by a consistent amount
+* An option with values must be in this format: ``option: value``
+* A block of options must start with ``option`` (indented) and end with ``/option`` (same indentation)
+
+What it means
+==============
+
+crumb
+  what should be shown on the breadcrumb trail for this page.
+
+format
+  the two most common formats are ``rest`` for ReStructuredText; and html for HTML
+
+page-title
+  The name of the page.  You do not need this if you specify a title in-line.
+
+encoding
+  The encoding that *the source file* is in.  ``iso-8859-1`` and ``utf-8`` are common.
+
+output-encoding
+  The encoding for the *output file*.  ``None`` means "use the same encoding as the input file."
+
+Do this
+===========
+
+Add a restindex block to each ``index.txt`` file in the ``input/`` tree, and also to any text files you want included in the build.  The easiest way is copy the example, or modify what you placed in the ``input/index.txt`` root source file, and add it to each.
+
+Remember to customize the ``crumb`` and ``page-title`` options!
+
+Oh, and **add some content to each page**.  That *is* the whole point, right?
+
+Templates
+----------
+
+The template controls how your site looks, what navigation features to include - basically anything outside of the content.  We will use `the same template`__ as in the tutorial_, and add the ``print_details(default_section)`` macro.
+
+__ ./tutorial.html#html-template
+
+Do this
+===========
+
+Add the following to ``quickstart/template.txt``::
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title><% title %></title>
+        <meta http-equiv="Content-Type"
+            content="text/html; charset=<% final_encoding %>" />
+        <link rel="stylesheet"
+            href="<% path_to_root %>stylesheets/rest.css"
+            type="text/css" />
+        <link rel="stylesheet"
+            href="<% path_to_root %>stylesheets/test.css"
+            type="text/css" />
+    </head>
+    <body>
+        <div id="nav">
+            <ul>
+                <# print_crumbs(breadcrumbs) #>
+            </ul>
+        </div>
+
+        <div id="menu">
+        <#
+            print_details(default_section)
+        #>
+        <p/>
+        </div><!--#menu-->
+
+        <div id="main>
+            <a name="startcontent" id="startcontent"></a>
+
+            <% body %>
+
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                <small>
+                    Page last modified <strong><% modtime %></strong>.
+                </small>
+                </p>
+            </div>
+        </div>
+    </body>
+    </html>
+
+Build your site
+------------------
+
+Run the following at the command line::
+
+  python /path/to/rest2web/r2w.py /path/to/quickstart/quickstart.ini -w
+
+This builds your site, and display any warnings (``-w``).  If you see any errors, read them from the bottom up (especially if they are Python_ errors like ``traceback``) and fix them.  If you cannot resolve an error, many helpful people on `the rest2web mailing list`__ are happy to help.
+
+__ http://lists.sourceforge.net/lists/listinfo/rest2web-develop
+
+Ignoring and including files
+------------------------------
+
+rest2web_ normally builds the entire site, ignoring any files not ending in "``.txt``"  This can be a problem if you have pre-existing content, perhaps built by another process, that you simply want rest2web_ to link to.
+
+How to not overwrite a directory
+=================================
+
+Assume we already have ``subdir2`` in the ``output/`` directory, and rest2web_ should not overwrite that directory or the index.html file within it.
+
+Do this
+=========
+
+Create ``quickstart/input/subdir2/index.txt`` and add the following::
+
+  restindex
+    # NOTE: the files listed here must reside in the OUTPUT directory; r2w will NOT copy them over
+    crumb: subdir2
+    format: html
+    page-title: subdir2's index
+    encoding: utf-8
+    output-encoding: None
+    target: index.html
+    # "build: no" prevents this page from overwriting the existing subdir2/index.html page!
+    build: no
+  /restindex
+
+Then rebuild the site.
+
+As you may have guessed, the relevant option in the ``restindex`` block is ``build: no``.  This tells rest2web_ that there is a ``output/subdir2/index.html`` file, so **do not overwrite it**.  The ``crumb`` and ``page-title`` options mean that rest2web_ will include those values in any site maps or sections.  The section of your site that rest2web_ did *not* build will still be connected to the part that rest2web_ *did* build.
+
+.. note:: rest2web_ will not create ``subdir2/`` or ``subdir2/index.html``, so make sure you create it yourself.
+
+How to include a file
+======================
+
+Have files that you want to include but do not want them to get built?  Or files that rest2web_ skips over, like ``.py`` text files or ``.png`` image files?  Never fear!  ``file:`` is here!
+
+Do this
+========
+
+- Create a new file and save it to ``quickstart/input/somefile.abc``.
+- In ``quickstart/input/index.txt``, add this option to the ``restindex`` block: ``file: somefile.abc``
+- Save `index.txt`.
+- Build your site.
+
+Result: ``quickstart/output/`` now has ``somefile.abc``!
+
+Some reasons to use rest2web_ to handle files that it does not build:
+
+- rest2web_ will never overwrite it in the ``output/`` directory, because it already knows about it.
+- The modification times will remain the same.
+- The file will *only* get copied over if it is newer than what is already in ``output/``.
+
+Congratulations
+-----------------
+
+You finished the rest2web_ quickstart!
+
+Next steps
+------------
+
+- Templates_ are powerful ways to customize your site's look and navigation.
+- The stylesheets are probably not connected correctly.  Make new ones and use the ``file:`` keyword to have rest2web process them.
+- Macros_ are powerful ways to customize your site's look and naviga - oh wait, I already said that.  Well, they are *different* powerful ways.
+- The tutorial_ gives much more detail about creating your site using rest2web_.
+
+Author and copyright
+----------------------
+Written by `Andrew Ittner`__, :raw-html:`&copy;` 2006.  Licensed under the same license as rest2web_.
+
+__ http://www.rhymingpanda.com/
+
+.. _rest2web: http://www.voidspace.org.uk/python/rest2web/
+.. _Python: http://www.python.org/
+.. _templates: ./templating.html
+.. _macros: ./macros.html
+.. _tutorial: ./tutorial.html

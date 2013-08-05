@@ -1,0 +1,51 @@
+restindex
+    crumb: Special Files
+    page-description:
+        A list of all the *special filenames* that **rest2web** uses - and what
+        they are for.
+    /description
+/restindex
+
+===============
+ Special Files
+===============
+
+----------------------------------------
+ Filenames With Particular Significance
+----------------------------------------
+
+
+.. contents::
+
+**rest2web** works by scanning files in the directories it is working with. Some files have particular significance. This page lists all the *special files* used by rest2web - and what they do.
+
+
+index.txt
+=========
+
+A directory will only be processed if it has an 'index.txt' file. This file needn't contain the contents of the index page, but it must exist. At the least it should contain the keyword ``index-file`` which tells **rest2web** which file *does* contain the index page contents.
+
+If the restindex for 'index.txt' does have an ``index-file`` keyword, then this is the only value that is read. All other values will be read from the real index file.
+
+
+template.txt
+============
+
+If the index file doesn't specify a template file, using the ``template`` keyword in the restindex, but a file called 'template.txt' does exist - then it will be used as the template for that page and directory. If you wanted to include a page of contents called 'template.txt' then you would need to include a ``template`` keyword explicitly pointing to the real template file.
+
+
+restindex.txt
+=============
+
+If you are only using **rest2web** to generate part of a website then you may want to include in your indexes pages that rest2web isn't building. You may also want to reproduce your website structure (including whole sections that rest2web isn't building), so that the navigation links are built correctly.
+
+In this situation you may have several pages that **rest2web** isn't building in a section. Rather than having to include a separate file for each one, you can combine several restindexes in one file called 'restindex.txt'. You don't need to explicitly set the ``build`` keyword to 'No' - that's assumed. Each restindex *must* have a target value though (unless you want a link pointing to 'restindex.html' !).
+
+
+__prune__
+==========
+
+If a directory has a file called ``__prune__`` in it, then **rest2web** won't attempt to build the files in that directory or below.
+
+This is useful if you are testing minor changes to a site, and don't want **rest2web** to rebuild the whole site every time you make a change.
+

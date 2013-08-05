@@ -1,0 +1,195 @@
+restindex
+format: html 
+page-title: The Human Genome Project, 1990-2003
+crumb: The Project
+/restindex
+
+<div align="right">
+<table width="100%">
+<tr valign="top">
+<td><img src="sidebar2.jpg" height="1200" width="90" /></td>
+<td align="left" valign="top">
+<div align="right"><b><font face="Book Antiqua"><font
+color="#800040"><font size="+3">The Human Genome Project,
+1990-2003</font></font></font></b><br />
+<hr align="right" width="80%" />
+<b><font face="Arial,Helvetica"><font color="#000000"><font
+size="-1">Genomics and Its Impact on Science and Society: The Human
+Genome Project and Beyond</font></font></font></b></div>
+
+<div align="right">
+<table>
+<tr>
+<td>
+<div align="right"><a href="1.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="4.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</div>
+
+<p><b><font face="Arial,Helvetica"><font color="#800040"><font
+size="+2">A Brief Overview</font></font></font></b><br />
+ <img src="HGPlogo1.jpg" height="107" width="108"
+align="left" /><font face="Arial,Helvetica">Though surprising to
+many, the Human Genome Project (HGP) traces its roots to an
+initiative in the U.S. Department of Energy (DOE). Since 1947, DOE
+and its predecessor agencies have been charged by Congress with
+developing new energy resources and technologies and pursuing a
+deeper understanding of potential health and environmental risks
+posed by their production and use. Such studies, for example, have
+provided the scientific basis for individual risk assessments of
+nuclear medicine technologies.</font></p>
+
+<p><font face="Arial,Helvetica">In 1986, DOE took a bold step in
+announcing the Human Genome Initiative, convinced that its missions
+would be well served by a reference human genome sequence. Shortly
+thereafter, DOE joined with the National Institutes of Health (NIH)
+to develop a plan for a joint HGP that officially began in 1990.
+During the early years of the HGP, the Wellcome Trust, a private
+charitable institution in the United Kingdom, joined the effort as
+a major partner. Important contributions also came from other
+collaborators around the world, including Japan, France, Germany,
+and China.</font></p>
+
+<p><b><font face="Arial,Helvetica"><font color="#800040"><font
+size="+2">Ambitious Goals</font></font></font></b><br />
+<font face="Arial,Helvetica">The HGP&rsquo;s ultimate goal was to
+generate a high-quality reference DNA sequence for the human
+genome&lsquo;s 3 billion base pairs and to identify all human
+genes. Other important goals included sequencing the genomes of
+model organisms to interpret human DNA, enhancing computational
+resources to support future research and commercial applications,
+exploring gene function through mouse-human comparisons, studying
+human variation, and training future scientists in
+genomics.</font></p>
+
+<p><font face="Arial,Helvetica">The powerful analytic technology
+and data arising from the HGP raise complex ethical and policy
+issues for individuals and society. These challenges include
+privacy, fairness in use and access of genomic information,
+reproductive and clinical issues, and commercialization (see p. 8).
+Programs that identify and address these implications have been an
+integral part of the HGP and have become a model for bioethics
+programs worldwide.</font></p>
+
+<p><b><font face="Arial,Helvetica"><font color="#800040"><font
+size="+2">A Lasting Legacy</font></font></font></b></p>
+
+<p><font face="Arial,Helvetica">In June 2000, to much excitement
+and fanfare, scientists announced the completion of the first
+working draft of the entire human genome. First analyses of the
+details appeared in the February 2001 issues of the journals Nature
+and Science. The high-quality reference sequence was completed in
+April 2003, marking the end of the Human Genome Project&mdash;2
+years ahead of the original schedule. Coincidentally, this was also
+the 50th anniversary of Watson and Crick&rsquo;s publication of DNA
+structure that launched the era of molecular biology.</font></p>
+
+<p><font face="Arial,Helvetica">Available to researchers worldwide,
+the human genome reference sequence provides a magnificent and
+unprecedented biological resource that will serve throughout the
+century as a basis for research and discovery and, ultimately,
+myriad practical applications. The sequence already is having an
+impact on finding genes associated with human disease (see p. 3).
+Hundreds of other genome sequence projects&mdash;on microbes,
+plants, and animals&mdash;have been completed since the inception
+of the HGP, and these data now enable detailed comparisons among
+organisms, including humans.</font></p>
+
+<p><font face="Arial,Helvetica">Many more sequencing projects are
+under way or planned because of the research value of DNA sequence,
+the tremendous sequencing capacity now available, and continued
+improvements in technologies. Sequencing projects on the genomes of
+many microbes, as well as the honeybee, cow, and chicken are in
+progress.</font></p>
+
+<p><font face="Arial,Helvetica">Beyond sequencing, growing areas of
+research focus on identifying important elements in the DNA
+sequence responsible for regulating cellular functions and
+providing the basis of human variation. Perhaps the most daunting
+challenge is to begin to understand how all the &ldquo;parts&rdquo;
+of cells&mdash;genes, proteins, and many other molecules&mdash;work
+together to create complex living organisms. Future analyses on
+this treasury of data will provide a deeper and more comprehensive
+understanding of the molecular processes underlying life and will
+have an enduring and profound impact on how we view our own place
+in it.</font></p>
+
+<center>
+<table>
+<tr>
+<td>
+<div align="right"><a href="1.html"><img src="previous.jpg"
+height="9" width="15" border="0" /></a></div>
+</td>
+<td>
+<div align="right"><a href="index.html"><img src="atcg.jpg"
+height="30" width="30" border="0" /></a></div>
+</td>
+<td><a href="4.html"><img src="next.jpg" height="9" width="15"
+border="0" /></a></td>
+</tr>
+</table>
+
+<div align="center"><a href="1.html"><font size="-1"
+face="Arial,Helvetica">Primer</font></a> <font size="-1">- <a
+href="2.html"><font face="Arial,Helvetica">History</font></a> - <a
+href="4.html"><font face="Arial,Helvetica">Insights</font></a> -
+<a href="6.html"><font face="Arial,Helvetica">Medicine</font></a>
+- <a href="7.html"><font
+face="Arial,Helvetica">Benefits</font></a> - <a
+href="8.html"><font face="Arial,Helvetica">Concerns</font></a> -
+<a href="5.html"><font
+face="Arial, Helvetica, sans-serif">Beyond</font></a> - <a
+href="3.html"><font
+face="Arial, Helvetica, sans-serif">Systems</font></a> - <a
+href="9.html"><font
+face="Arial, Helvetica, sans-serif">Microbes</font></a> - <a
+href="glossary.html"><font
+face="Arial,Helvetica">Dictionary</font></a> - <a
+href="index.html"><font
+face="Arial, Helvetica, sans-serif">Home</font></a></font></div>
+</center>
+</td>
+</tr>
+</table>
+</div>
+
+<table border="1" width="100%">
+<tr>
+<td><a href="http://www.ornl.gov/TechResources/Human_Genome/"><img
+src="HGPlogo1.jpg" border="0" height="107" width="108" /></a></td>
+<td>The online presentation of this publication is a special
+feature of the <a
+href="http://www.ornl.gov/TechResources/Human_Genome/">Human Genome
+Project Information Web site</a>.</td>
+</tr>
+</table>
+
+

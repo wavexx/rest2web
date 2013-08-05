@@ -1,0 +1,118 @@
+restindex
+    crumb: indextree
+    page-description:
+        Reference to the weird and wonderful data-structure *indextree*.
+    /description
+/restindex
+
+=========================
+ indextree and thispage
+=========================
+
+-------------------------------
+ Representing Site Structure
+-------------------------------
+
+**rest2web** provides your templates with three variables that give you information about the site structure. The first is called **sections**. This gives you information about all the pages in the same directory as the one that is being rendered. See the templating_ page for the description of that data structure.
+
+The other two variables are called **indextree** and **thispage**. **indextree** is a data structure that represents more of the whole site than **sections**. **thispage** is a pointer to a specific part of **indextree**.
+
+**indextree** itself represents the top level page. It has members representing the pages inside the top level directory. Any index pages for sub-directories will be represented here, and will themselves have pages.
+
+Because of the order that sites are processed in, any page can know that every directory above it will have been *fully* processed. This means that **indextree** can be used to construct 'sidebar' type links that look a bit like the following : ::
+
+    (root directory)
+    
+        index page  <- indextree
+            |
+            |
+        section1
+            |       (a sub-directory)
+            |       
+        section 2 - Index Page
+            |           |
+            |           |
+        section 3       |
+            |       sub-section 1
+            |           |
+        section 4   sub-section 2   (another sub-directory)
+                        |
+                    sub-section 3 - Index Page
+                                        | 
+                                        |
+                                   **This Page**  <- thispage
+                                        |
+                                    Another Page
+                                        |
+                                   And Another One
+                                       
+                                       
+This allows a sidebar that is a set of links to all the sections above the current page. It doesn't yet allow you to know what pages might be in ``section 3`` or ``section 4`` of the root directory - but it would be unusual to need to put that amount of links just in a sidebar [#]_ !
+
+You can see an example of using **sections** for sidebar information in the `rest2web docs`_. The `test site`_ is an example of a site using **indextree** for the sidebar. You can use the `standard function`_ ``sidebar`` to generate these sidebars from indextree. 
+
+The actual data structure **indextree** is a dictionary that represents the index page for the top level directory. The dictionary contains links to dictionaries that represent the other pages and indexes. ``indextree`` is actually just part of the whole tree - it only contains the branches needed to get from the root directory to the current page that is being rendered.
+
+The dictionaries in **indextree** all follow the same pattern [#]_ and contain the following members : 
+
+#. **parent** : a reference to the parent directory (also a dictionary like this). 
+
+    If this is the top level directory, then this member is ``None``.
+
+#. **sectionlist** : a list of sections for this directory. This retains the order that the sections are listed in the ``sectionlist`` value of the restindex.
+
+#. **sections** : this is actually a dictionary keyed by section name. Each value is a tuple ``(section_title, section_description)``
+
+#. **pages** : a *list* of pages that are in this section. For pages that don't represent subsections this will be the value ``None``. For pages that do represent subsections, this list will only be populated if our page is somewhere down this tree. 
+
+    If the page currently being rendered (**thispage**) is not further down this branch, then this will be an empty list ``[]``. 
+
+    Each *page* in this list is also a dictionary like this one. 
+
+#. **subdir** : This will be ``True`` for pages that are index pages (i.e. represent sub-directories). It is ``False`` for pages that aren't index pages for sections.
+
+#. **target** : A relative link from the current page to the one that this dictionary represents.
+
+#. **section** : What section this page is in. For an index page, this section will refer to what section in the *directory above* this index belongs to.
+
+#. **link-title** 
+
+#. **crumb**
+
+#. **page-description**
+
+#. **thispage** : ``True`` if this page represents the one currently being rendered, ``False`` otherwise.
+
+#. **uservalues** : The uservalues for this page.
+
+#. **restindex** : The restindex for the page.
+
+#. *current_dir*     - The directory the page was rendered in, relative to the top level directory. You can turn this into an absolute path using ``os.path.join(os.getcwd(), current_dir)``.
+
+#. *source_file*    - The source filepath for the page.
+
+#. *target_dir*     - The target file directory (as an absolute file path) being rendered into. Note: if the file has a target specified it may not be put in this directory. Use ``os.path.dirname(target_file)`` instead.
+
+#. *full_page_url*  - The full url (starting with '/') for the page. Using this means that your pages may not work from the filesystem. {sm;:-)}
+
+#. *target_file*     - The full output filepath of the page.
+
+As well as **indextree**, templates also have access to a value called **thispage**. **thispage** is an entry in the **indextree** structure, but it points to the current page. If you like **indextree** is the top of the tree, and **thispage** is the bottom.
+
+.. note::
+
+    Pages that have 'include' set to 'No' aren't in indextree. For those pages the value *thispage* will be ``None``.
+
+All string values in the **indextree** structure are encoded using the appropriate encoding for the page being rendered (as determined by the value ``final_encoding``).
+
+.. [#] It would be possible to do this by generating the site in two passes. On the first pass we'd generate the link structure and on the second pass actually render the pages. This would take longer, mean keeping the whole site in memory, and mean parsing the whole site before basic errors in the template are discovered ! 
+
+.. [#] They follow as closely as possible the pattern for pages in the *sections* variable that is also passed to templates. See *sections* in the templating_ page.
+
+.. _templating: ../templating.html
+.. _rest2web docs: ../index.html
+.. _test site: ../test_site/index.html
+.. _standard function: ../functions.html
+        
+        
+        

@@ -1,0 +1,83 @@
+restindex
+    crumb: Force Mode
+    page-description:
+        A special mode (set from the command line) allows **rest2web** to build
+        a website from a collection of ReST documents. In this mode templates,
+        index pages and restindexes are optional.
+    /description
+    tags: website, force, automatic, quick, shortcut
+/restindex
+
+================================
+ Building Websites the Easy Way
+================================
+----------------
+ The Force Mode
+----------------
+
+.. contents::
+
+Introduction
+============
+
+Sometimes you just want to throw some ReST documents together as HTML. Or
+perhaps you need to keep your documents in normal ReST syntax, and you don't
+want to add a ``restindex``.
+
+In this case, you want the *force mode*. {sm;:-)}
+
+In essence the force mode makes templates, restindexes and index pages
+optional. It does this by supplying defaults where they are missing.
+
+The default template (complete with sidebar) and default index page are stored
+in the ``rest2web/defaults/`` directory. You are of course free to edit them. 
+
+.. note::
+
+    This functionality is new, and needs to mature. For example, at the moment
+    you will probably want to edit the supplied defaults.
+    
+    An obvious feature to add would be to allow the overriding of the defaults
+    at the command line.
+    
+    If you have any opinions about how this feature should develop, then please
+    comment on the `rest2web-develop mailing list <http://lists.sourceforge.net/lists/listinfo/rest2web-develop>`_.
+
+Files in your site can still be contained in a directory tree. rest2web will
+create an index page for each directory, and link between them via the index
+pages, sidebar and breadcrumbs.
+
+
+Using Force Mode
+================
+
+You activate force mode through the command line, with either the ``-f`` or
+``--force`` option.
+
+When force is on and no template is specified, then the default one
+(``restweb/defaults/template.txt``) is used.
+
+If a template is specified in the restindex of any index page, then that will
+be used for that directory (and all subdirectories) in the usual way.
+
+Every directory that has no ``index.txt`` will use the default one.
+(``restweb/defaults/index.txt``)
+
+Every text file without a restindex will be assumed to be in ReST format. It
+will use the normal defaults for a restindex.
+
+The index page for the top level will have the title *Index for Site*.
+
+Other index pages will have *Site* replaced with the directory name.
+
+The page title will be used as the crumb and link-title for all pages.
+
+
+Force Mode and Config File
+==========================
+
+If you are in force mode, the config file is also optional.
+
+In this case, the current directory is used as the source directory.
+
+The output is put into a subdirectory called 'html'. This directory will be created if it doesn't exist, it will also not be scanned for source text files.

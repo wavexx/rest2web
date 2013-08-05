@@ -1,0 +1,17 @@
+restindex
+    section: internet
+    link-title: Click here to be whisked away from it all.
+    page-description: 
+        A very, very short article on the internet [#]_.
+        
+        .. [#] Testing footnotes in page descriptions.
+    /description
+    crumb: Internet Article
+/restindex
+
+
+======================
+ Internet Article
+======================
+
+This is an article about the internet. Or at least it *could be*.

@@ -1,0 +1,226 @@
+==========================
+ Introduction to rest2web
+==========================
+-------------------------------------------
+ A Gentle Introduction to the Site Builder
+-------------------------------------------
+
+.. contents::
+    
+What is rest2web ?
+==================
+
+{emo;python} **rest2web** is a tool for autogenerating wesites, or parts of
+websites. It's main features are :
+
+* Integrated with docutils_.
+* Automatically builds index pages and navigation links (sidebars and
+  {acro;breadcrumbs;Weird name for navigation links ?}).
+* Embedded code in templates for unlimited expressiveness.
+* Flexible macro system.
+* Uses relative links, so sites can be viewed from the filesystem.
+* Unicode internally - so you don't have to be. {sm;:-p}
+* Includes features for multiple translations of sites.
+* Built-in gallery creator plugin.
+* The basic system is very easy to use.
+* Lots of powerful (optional) features.
+
+The content can be stored as {acro;HTML}, or in ReST_ format; in which case the
+HTML will be generated using docutils_. **rest2web** inserts each page into a
+template, and automatically creates index pages for sections, and navigation
+links. {sm;:-)}
+
+{acro;ReST} is a {acro;WYSIWYG} text markup format. It is simpler than HTML -
+but *very* flexible. A document marked up with reST is still readable as text.
+This means that maintaining article contents in reST is a *lot* easier than
+maintaining them in HTML.
+
+Adding new pages is as easy as dropping a text file into the right folder.
+**rest2web** builds the new page and adds a link to it in the index (optionally
+with a description as well). Removing a page is just as easy. Delete the file,
+and when you run **rest2web** again it removes the entry. 
+
+**rest2web** includes standard functions to build a sidebar, with links to the
+other pages in the directory, or to the other sections in the website. 
+
+Another advantage is that a website can be easily restyled by only changing
+template files. It is likely that only a few template files will be needed for
+most websites [#]_.
+
+Because rest2web generates sites using *relative paths*, the results can be
+viewed from the filesystem. This means that it is an effective way of bundling
+documentation.
+
+
+Internationalization
+--------------------
+
+With uservalues_ you can use **rest2web** to create versions of a website in
+different languages. Simply create the framework once with your uservalues as
+place markers - then create your files with different translations.
+**rest2web** will build the website and can handle linking the sites together.
+
+An example of a site that uses this feature is, the `Website of Marius Soutier <http://www.soutier.de>`_.
+
+
+Static Versus Dynamic
+---------------------
+
+{emo;html} rest2web is a dynamic website generation tool - that generates
+static (HTML) pages. The rationale of creating static content, is that most
+pages will only change occasionally - serving static HTML content is quicker
+than generating pages dynamically. Not only that, but static 
+content can be served by a lot cheaper hosting account!
+
+Distributing HTML documentation is another reason for wanting static pages.
+
+Why rest2web ?
+--------------
+
+**rest2web** comes about from a need for me to restyle a whole website from
+badly marked up HTML 4, into beautiful {acro;XHTML} and {acro;CSS;Cascading Style Sheets}.
+{sm;:grin:} See the `Voidspace Manifesto`_ for a discussion of my aims and
+objectives in the restyle.
+
+An added challenge is that part of the website is already restyled - and the
+blog pages are built using a different tool (Firedrop2_, which also uses ReST
+incidentally). All this means that rest2web needs to be able to handle
+generating just *part* of a website, and indexes for the existing parts where
+necessary.
+
+A rest2web Site
+===============
+
+{emo;firefox} **rest2web** is optimized for creating websites with a particular structure. It is aimed at the sort of sites that have sections and subsections. The basic structure is closely related to the directory structure on disk. It is based on having an index page in each directory. Files in that directory are listed in the index page, which can be divided into various sections. {sm;8-)}
+
+Subdirectories have their own index page - that index page will be link to from the 'directory' above. Your website structure is modelled on the directory structure. This is the hierarchy of sections and subsections.
+
+Every text file ('.txt' extension) in a directory will be scanned. If the file starts with a restindex_, then it will be processed.
+
+If you want links to some prebuilt files on an index page, then you can put a relevant text file in the directory with the details (target name, link title, page description, etc) and set ``build: No``. This allows you to use rest2web to just build part of a website - but still include in the index pages that it doesn't build. [#]_
+
+For a good introduction, read the tutorial - `Creating a Site`_. You can also peruse the `Test Site`_ included with this documentation. It illustrates most features of rest2web.
+
+Every page can *also* have a set of uservalues_ that will be inserted into the template. This is another way of putting dynamic values into a template. An obvious use of this system is for providing a website in several different languages.
+
+
+Downloading
+===========
+
+{emo;file1} All distributions include all the documentation and the example site.
+
+Source Distribution
+-------------------
+
+**rest2web** is a pure Python programme. If you have Python installed you don't need to compile anything to use the source distribution.
+
+Download **restweb** (1.9mb) from `rest2web-0.4.0alpha.zip <http://www.voidspace.org.uk/cgi-bin/voidspace/downman.py?file=rest2web-0.4.0alpha.zip>`_
+
+Executable Distribution
+-----------------------
+
+Download the executable version of **restweb** (3.5mb) from `rest2web-0.4.0alpha-EXE.zip <http://www.voidspace.org.uk/cgi-bin/voidspace/downman.py?file=rest2web-0.4.0alpha-EXE.zip>`_
+
+Subversion Repository
+---------------------
+
+You can browse (or download using SVN) the latest development version over at the `SVN Repository`_.  [#]_
+
+The version in SVN is often more up to date than the latest release version - and I *try* not to break the version in SVN (but no guarantees).
+
+The full command is : ``svn co https://svn.rest2web.python-hosting.com/trunk/`` [#]_
+
+Sourceforge
+-----------
+
+**rest2web** can also be downloaded from the Sourceforge `rest2web Project Page`_.
+
+
+Installing
+==========
+
+{emo;eyeballz} If you are running the source version of **rest2web**, you need docutils_ installed. It works best with the latest version [#]_.
+
+rest2web itself shouldn't actually need installing. You *can* place the 'rest2web' directory in your 'site-packages' folder if you want to. You should then be able to run 'r2w.py' from anywhere.
+
+You can test rest2web by just double clicking on it. This should build the docs and example site as html, in the *docs_html* directory. It will generate a log of the process in 'log.txt'. If there are any problems then they will be recorded in the log. Please report any bugs to the `rest2web Mailing List`_.
+
+rest2web uses the `Pythonutils module`_. This has the modules for reading the config file and generating the log etc. rest2web comes with these modules included. If you install Pythonutils properly, then you can delete the *pythonutils* folder from your distribution.
+
+At the Heart
+------------
+
+**rest2web** and docutils are both projects written in a language called Python_. In order to use the source version you will need Python installed. 
+
+.. hint::
+
+    If you don't want to (or can't) install Python, then you can use the pre-built executable version instead.
+    
+    This does limit slightly what you can do with macros and embedded code in the templates. (Basically you can only use the modules that come included or that you create yourself).
+
+The templates_ and macros_ are also done using Python code. If you've never used Python before, don't let this put you off. It's a very easy language to learn and you can learn the basics very quickly. The main Python_ website has distributions for most platforms available for download, as well as links to tutorials and resources for learning Python.
+
+Useful Links
+============
+
+* rst-ht2html_ - This is a project with a similar aim, the automatic creation of websites from restructured text. It uses ht2html_, the scripts that generate sites like Python.org_, and Jython.org_. rest2web is more flexible with the templating it allows. It should be possible to generate a much wider range of sites with rest2web.
+
+* docutils_ - this is the Python project that turns reStructuredText into nice XHTML.
+
+* Firedrop2_ - the blog client originally created by `Hans Nowak`_. 
+
+  This project [#]_ produced ``embedded_code.py`` and ``textmacros.py`` which are used by rest2web.  ``embedded_code.py`` is the templating engine used by rest2web.  ``textmacros.py`` adds a simple system of macros_ into **rest2web**.
+  
+  Firedrop2 also supports alternative text markups *sextile* and *textile*. rest2web may be enhanced to support these (if there is any demand).
+
+    .. note::
+    
+        I now maintain **Firedrop2**. You can download the latest distribution, and browse the docs over at : http://www.voidspace.org.uk/python/firedrop2/index.shtml. {sm;:cool:}
+
+* webgen_ - A ruby_ project that does a similar thing to **rest2web**. It is *scarily* similar in the way it works. {sm;:lol:} It doesn't work with ReST_ markup however.
+
+* Tahchee_    - an alternative to *rest2web* that uses the cheetah_ templating system.
+
+---------------
+
+Footnotes
+=========
+
+.. [#] Many websites will only need a single template file. 
+       `Voidspace <http://www.voidspace.org.uk>`_ actually uses two for *all* the
+       parts of the site built by rest2web. 
+.. [#] It's possible to include details of several of these pages in a single file 
+       called 'restindex.txt'. It is basically a series of restindexes in a single file.
+.. [#] Many thanks to the decent folks over at `python-hosting.com <http://www.python-hosting.com>`_.
+.. [#] For Windoze users, I recommend the SVN client TortoiseSVN_.
+.. [#] Version 0.3.9 or later.
+.. [#] And **Kaa**, the predecessor to firedrop.
+
+.. _rst-ht2html: http://www.rutherfurd.net/articles/rst-ht2html.html
+.. _ht2html: http://ht2html.sourceforge.net/
+.. _Python:
+.. _python.org: http://www.python.org
+.. _jython.org: http://www.jython.org
+.. _docutils: http://docutils.sourceforge.net
+.. _Hans Nowak: http://zephyrfalcon.org
+..  _Firedrop:
+.. _firedrop2: http://www.voidspace.org.uk/python/firedrop2/index.shtml
+.. _rest: http://docutils.sourceforge.net/rst.html
+.. _Voidspace Manifesto: http://www.voidspace.org.uk/documents/voidspace_manifesto.html
+.. _pythonutils module: http://www.voidspace.org.uk/python/pythonutils.html
+.. _restindex: restindex.html
+.. _Creating a site: tutorial.html
+.. _rest2web: http://www.voidspace.org.uk/python/rest2web
+.. _BSD-License: http://www.voidspace.org.uk/python/license.shtml
+.. _Rest2web Mailing List: http://lists.sourceforge.net/lists/listinfo/rest2web-develop
+.. _SVN Repository: https://svn.rest2web.python-hosting.com/trunk/
+.. _templates: templating.html
+.. _macros: macros.html
+.. _Test Site: test_site/index.html
+.. _rest2web Project Page: http://sourceforge.net/projects/rest2web
+.. _uservalues: reference/uservalues.html
+.. _TortoiseSVN: http://tortoisesvn.tigris.org/
+.. _webgen: http://webgen.rubyforge.org/
+.. _ruby: http://www.ruby-lang.org/en/
+.. _tahchee: http://www.ivy.fr/tahchee/
+.. _cheetah: http://www.cheetahtemplate.org/
