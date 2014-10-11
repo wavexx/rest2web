@@ -36,7 +36,7 @@ from rest2web.pythonutils.cgiutils import replace
 
 # image imports
 try:
-    import Image
+    from PIL import Image
 except ImportError:
     raise ImportError('Importing PIL - Python Imaging Library - failed.')
 
