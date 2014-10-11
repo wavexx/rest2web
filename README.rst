@@ -11,7 +11,7 @@ Changes so far
 
 - Improved gallery plugin:
 
-  * Does not regeneate existing thumbnails when it's not needed.
+  * Do not regenerate existing thumbnails when possible (mtime-based check).
   * Ability to link directly to images instead of generating a page for each
     (which works great with javascript lightboxes).
   * Templates interpreted using ``embedded_code`` (same template engine as
@@ -22,13 +22,15 @@ Changes so far
 The plan
 --------
 
-- RSS plugin to generate feeds from directories.
-- Per-directory overrides and defaults.
 - Allow external restindex so that plain "rst" files can be re-used/linked in
   the tree without editing.
-- Switch all configuration/restindex/uservalues to YaML.
-- Use jinja2 for templating.
 - Integrate aafigure_.
+- Per-directory overrides and defaults.
+- RSS plugin to generate feeds from directories.
+- Remove configobj.
+- Switch all configuration/restindex/uservalues to YaML.
+- Use ``setuptools/pkg_resources``.
+- Use jinja2 for templating.
 
 
 .. _rest2web: http://www.voidspace.org.uk/python/rest2web/
