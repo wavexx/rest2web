@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>**title**</title>
+<title><% title %></title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <style type="text/css">
     #nav {
@@ -66,49 +66,34 @@
         <tr>
             <td width="30%" align="center" valign="middle" class="thumbnail">
             &nbsp;
-            <!-- **leftcomment
-                <a href="**linkleft**">
-                    <img src="**thumbleft**" width="**widthleft**" height="**heightleft**" alt="Thumbnail Image" title="**titleleft**" />
-                    <br />**titleleft**                
-                </a>
-            leftcomment** -->
+            <#
+                if not first:
+                    print '<a href="' + linkleft + '">'
+                    print '<img src="' + thumbleft + '" width="' + widthleft + '" height="' + heightleft + '" alt="Thumbnail Image" title="' + titleleft + '" />'
+                    print '<br />' + titleleft + '</a>'
+            #>
             </td>
             
             <td width="30%" align="center" valign="middle">
-                <a href="**linkgallery**" class="middle">Return to Gallery</a>
+                <a href="<% linkgallery %>" class="middle">Return to Gallery</a>
             </td>
 
             <td width="30%" align="center" valign="middle" class="thumbnail">
-                <!-- **rightcomment
-                    <a href="**linkright**">
-                        <img src="**thumbright**" width="**widthright**" height="**heightright**"  alt="Thumbnail Image" title="**titleright**" />
-                        <br />**titleright**                
-                    </a>
-                rightcomment** -->            
+            <#
+                if not last:
+                    print '<a href="' + linkright + '">'
+                    print '<img src="' + thumbright + '" width="' + widthright + '" height="' + heightright + '" alt="Thumbnail Image" title="' + titleright + '" />'
+                    print '<br />' + titleright + '</a>'
+            #>
             </td>
         </tr>
     </table>
     
     <div class="main">
-        <h2>**title**</h2>
-            <!-- **rightcomment
-                <a href="**linkright**">
-            rightcomment** --> 
-                <img src="**image**" width="**widthmain**" height="**heightmain**"/>
-            <!-- **rightcomment
-                </a>
-            rightcomment** --> 
-        <p>**description**</p>
-            <script type="text/javascript"><!--
-                google_ad_client = "pub-6692675105069245";
-                google_ad_width = 468;
-                google_ad_height = 60;
-                google_ad_format = "468x60_as";
-                google_ad_type = "text_image";
-                google_ad_channel ="";
-            //--></script>
-            <script type="text/javascript"
-              src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-            </script>
+        <h2><% title %></h2>
+            <# if not last: print '<a href="' + linkright + '">' #>
+                <img src="<% image %>" width="<% widthmain %>" height="<% heightmain %>"/>
+            <# if not last: print '</a>' #>
+        <p><% description %></p>
     </div>
 </body></html>

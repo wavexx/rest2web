@@ -27,12 +27,11 @@ Requires PIL, pythonutils, and rest2web to be installed
 """
 
 import os
-from posixpath import join as posixjoin
 from copy import deepcopy
 
 from rest2web.pythonutils.urlpath import relpathto, pathjoin
 from rest2web.pythonutils.configobj import ConfigObj
-from rest2web.pythonutils.cgiutils import replace
+from rest2web.embedded_code import render_well
 
 # image imports
 try:
@@ -44,6 +43,9 @@ image_types = ('.bmp', '.png', '.gif', '.ico', '.jpg', '.ecw', '.emf', '.fsh',
     '.jpm', '.ldf', '.lwf', '.pcx', '.pbm', '.pgm', '.ppm', '.raw', '.tga',
     '.tif')
 
+def normjoin(a, *p):
+    """Join two or more pathname components and normalize them."""
+    return os.path.normpath(os.path.join(a, *p))
 
 class Plugin(object):
     def __init__(self, processor):
@@ -52,9 +54,7 @@ class Plugin(object):
         # XXXX to the initital config file here
 
     def page(self, filepath, target, restindex, uservalues):
-        param_list = ['thumb_size', 'gallery_dir', 'gallery_url',
-                    'data_file', 'page_template', 'entry_template',
-                    'gallery_mode']
+        param_list = ['thumb_size', 'gallery_dir', 'data_file', 'entry_template']
         for entry in param_list:
             if entry not in uservalues:
                 raise ValueError, ('Missing value required by Gallery - "%s"'
@@ -66,23 +66,34 @@ class Plugin(object):
         # this is how we know we're coming from the Plugin
         # rather than running standalone
         params['gallery_page'] = None
+        if 'gallery_mode' not in params:
+            params['gallery_mode'] = 1
+        #
+        # defaults
+        if 'gallery_url' not in params:
+            params['gallery_url'] = params['gallery_dir']
+        if 'thumb_dir' not in params:
+            params['thumb_dir'] = 'thumbnails'
+        if 'thumb_url' not in params:
+            params['thumb_url'] = normjoin(params['gallery_dir'], params['thumb_dir'])
         #
         # make the values in the uservalues
         # relative to the right place
-        params['gallery_dir'] = os.path.join(self.processor.dir,
-                                                params['gallery_dir'])
-        params['data_file'] = os.path.join(self.processor.dir,
-                                                params['data_file'])
-        params['page_template'] = os.path.join(self.processor.dir,
-                                                params['page_template'])
+        params['gallery_dir'] = os.path.join(self.processor.dir, params['gallery_dir'])
+        params['thumb_dir'] = os.path.join(params['gallery_dir'], params['thumb_dir'])
+        params['data_file'] = os.path.join(self.processor.dir, params['data_file'])
         params['entry_template'] = os.path.join(self.processor.dir,
                                                 params['entry_template'])
         #
-        gall_url = posixjoin('/', self.processor.dir_as_url, target)
-        html_url = posixjoin(pathjoin(gall_url, params['gallery_url']),
-                                                                    'html/')
-        params['path_back'] = relpathto('/', html_url, gall_url)
-##        print target, gall_url, html_url, params['path_back']
+        if 'page_template' not in params or not params['page_template']:
+            params['page_template'] = None
+        else:
+            params['page_template'] = os.path.join(self.processor.dir,
+                                                   params['page_template'])
+            gall_url = os.path.join('/', self.processor.dir_as_url, target)
+            html_url = os.path.join(pathjoin(gall_url, params['gallery_url']), 'html/')
+            params['path_back'] = relpathto('/', html_url, gall_url)
+##            print target, gall_url, html_url, params['path_back']
         data = get_info(params)
         #
         return {'gallery': make_pages(params, data)}
@@ -92,8 +103,8 @@ def get_info(config):
     # config data
     # x, y
     thumb_size = [int(val) for val in config['thumb_size']]
+    thumb_dir = config['thumb_dir']
     gallery_dir = config['gallery_dir']
-    thumb_dir = os.path.join(gallery_dir, 'thumbnails')
     thumb_prefix = 'tn_'
     data_file = config['data_file']
     #
@@ -150,17 +161,19 @@ def get_info(config):
                 this['size'] = size
                 this['filesize'] = os.path.getsize(path)
         #
-        # always regenerate thumb nails
-        thumb_name = os.path.join(thumb_dir, thumb_prefix + name + ext)
-        im.thumbnail(thumb_size)
-        try:
-            im.save(thumb_name)
-        except IOError:
-            # FIXME: This causes us to skip animated jpgs
-            del data[image]
-        else:
-            this['thumb_size'] = im.size
-            this['thumbnail'] = thumb_prefix + name + ext
+        # regenerate thumb nails if needed
+        thumb_name = os.path.join(config['thumb_dir'], thumb_prefix + name + ext)
+        if not os.path.exists(thumb_name) \
+                or os.stat(thumb_name)[8] < os.stat(path)[8]:
+            im.thumbnail(thumb_size, Image.ANTIALIAS)
+            try:
+                im.save(thumb_name)
+            except IOError:
+                # FIXME: This causes us to skip animated jpgs
+                del data[image]
+            else:
+                this['thumb_size'] = im.size
+                this['thumbnail'] = thumb_prefix + name + ext
     #
     # save image data
     data.write()
@@ -174,17 +187,18 @@ def make_pages(config, data):
     gallery_dir = config['gallery_dir']
     thumb_prefix = 'tn_'
     entry = open(config['entry_template']).read()
-
-    page = open(config['page_template']).read()
+    #
     gallery_page = config['gallery_page']
-    #
     gallery_url = config['gallery_url']
-    thumb_url = posixjoin(gallery_url, 'thumbnails')
-    html_url = posixjoin(gallery_url, 'html')
-    html_dir = os.path.join(gallery_dir, 'html')
+    thumb_url = config['thumb_url']
     #
-    if not os.path.isdir(html_dir):
-        os.makedirs(html_dir)
+    if config['page_template'] is not None:
+        page = open(config['page_template']).read()
+        html_url = os.path.join(gallery_url, 'html')
+        html_dir = os.path.join(gallery_dir, 'html')
+        #
+        if not os.path.isdir(html_dir):
+            os.makedirs(html_dir)
     #
     main_out = []
     i = -1
@@ -231,52 +245,61 @@ def make_pages(config, data):
         #
         # generate the entry for the main page
         replace_dict = {}
-        replace_dict['**link**'] = posixjoin(html_url, link)
-        replace_dict['**thumb**'] = posixjoin(thumb_url, thumb)
-        replace_dict['**width**'] = str(thumb_width)
-        replace_dict['**height**'] = str(thumb_height)
-        replace_dict['**title**'] = title
-        main_out.append(replace(entry, replace_dict))
+        if not config['page_template']:
+            replace_dict['link'] = os.path.join(gallery_url, name)
+        else:
+            replace_dict['link'] = os.path.join(html_url, link)
+        replace_dict['thumb'] = os.path.join(thumb_url, thumb)
+        replace_dict['width'] = str(thumb_width)
+        replace_dict['height'] = str(thumb_height)
+        replace_dict['title'] = title
+        replace_dict['description'] = image['description']
+        main_out.append(render_well(entry, replace_dict))
         #
         # next we need to build the individual page
-        replace_dict = {}
-        replace_dict['**title**'] = title
-        if i != 1:
-            # not the first image
-            replace_dict['<!-- **leftcomment'] = ''
-            replace_dict['leftcomment** -->'] = ''
-            replace_dict['**linkleft**'] = left_link
-            replace_dict['**thumbleft**'] = posixjoin('../thumbnails/',
-                                                        left_thumb)
-            replace_dict['**widthleft**'] = left_thumb_width
-            replace_dict['**heightleft**'] = left_thumb_height
-            replace_dict['**titleleft**'] = left_title
-        # XXXX
-        replace_dict['**linkgallery**'] = config['path_back']
-        if i != length:
-            # not the last image
-            replace_dict['<!-- **rightcomment'] = ''
-            replace_dict['rightcomment** -->'] = ''
-            replace_dict['**linkright**'] = right_link
-            replace_dict['**thumbright**'] = posixjoin('../thumbnails/',
-                                                        right_thumb)
-            replace_dict['**widthright**'] = right_thumb_width
-            replace_dict['**heightright**'] = right_thumb_height
-            replace_dict['**titleright**'] = right_title
+        if not config['page_template']:
+            continue;
         #
-        replace_dict['**image**'] = posixjoin('../', name)
-        replace_dict['**widthmain**'] = width
-        replace_dict['**heightmain**'] = height
-        replace_dict['**description**'] = image['description']
+        replace_dict = {}
+        replace_dict['title'] = title
+        if i == 1:
+            # first image
+            replace_dict['first'] = True
+        else:
+            # not the first image
+            replace_dict['first'] = False
+            replace_dict['linkleft'] = left_link
+            replace_dict['thumbleft'] = os.path.join('../thumbnails/', left_thumb)
+            replace_dict['widthleft'] = left_thumb_width
+            replace_dict['heightleft'] = left_thumb_height
+            replace_dict['titleleft'] = left_title
+        # XXXX
+        replace_dict['linkgallery'] = config['path_back']
+        if i == length:
+            # last image
+            replace_dict['last'] = True
+        else:
+            # not the last image
+            replace_dict['last'] = False
+            replace_dict['linkright'] = right_link
+            replace_dict['thumbright'] = os.path.join('../thumbnails/', right_thumb)
+            replace_dict['widthright'] = right_thumb_width
+            replace_dict['heightright'] = right_thumb_height
+            replace_dict['titleright'] = right_title
+        #
+        replace_dict['image'] = os.path.join('../', name)
+        replace_dict['widthmain'] = width
+        replace_dict['heightmain'] = height
+        replace_dict['description'] = image['description']
         # make the substitutions in the page
-        this_page = replace(page, replace_dict)
+        this_page = render_well(page, replace_dict)
         page_path = os.path.join(html_dir, os.path.splitext(name)[0] + '.html')
         open(page_path, 'w').write(this_page)
     #
     if gallery_page:
         # are we running as a standalone ?
         gallery_template = open(config['gallery_template']).read()
-        main_page = gallery_template.replace('**gallery**', ''.join(main_out))
+        main_page = render_well(gallery_template, {'gallery': ''.join(main_out)})
         open(gallery_page, 'w').write(main_page)
     else:
         # or called from the plugin
@@ -318,7 +341,7 @@ if __name__ == '__main__':
     # FIXME: we *assume* the gallery dir is a single directory down
     #        so the html file is then two directories down
     #        need a better way of calculating path back
-    config['path_back'] = posixjoin('../../', config['gallery_page'])
+    config['path_back'] = os.path.join('../../', config['gallery_page'])
     data = get_info(config)
     # we have now created all the thumbnails and saved the config file
     make_pages(config, data)
@@ -354,6 +377,15 @@ work-around ?
 
 CHANGELOG
 =========
+
+2010/02/21
+----------
+
+Made optional page_template: if no template is set, then a direct link to the
+image is made. Switched 'cgi.replace' to use embedded_code, like everywhere
+else (for consistency). Regenerate the thumbnails only when needed.
+Make gallery_mode optional (defaults to 1). Allow to customize both
+thumb_dir and thumb_url.
 
 2006/04/03
 ----------
