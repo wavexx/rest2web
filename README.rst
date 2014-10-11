@@ -28,6 +28,8 @@ The plan
   the tree without editing.
 - Switch all configuration/restindex/uservalues to YaML.
 - Use jinja2 for templating.
+- Integrate aafigure_.
 
 
 .. _rest2web: http://www.voidspace.org.uk/python/rest2web/
+.. _aafigure: https://launchpad.net/aafigure
