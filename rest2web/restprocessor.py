@@ -49,7 +49,6 @@ from docutils import ApplicationError
 from rest2web.pythonutils.odict import OrderedDict
 from rest2web.pythonutils.pathutils import import_path
 from rest2web.pythonutils.urlpath import pathjoin, relpathto, tslash
-from rest2web.pythonutils.cgiutils import istrue
 
 import rest2web.defaultmacros as macros
 

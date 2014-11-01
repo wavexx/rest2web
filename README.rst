@@ -27,6 +27,11 @@ Changes so far
   * Post-processing can also be controlled on a per-directory/page basis with
     the ``typogrify`` setting in the restindex.
 
+- Removed local copy of ``configobj`` and ``cgiutils`` (Debian's #555342):
+
+  * You now need to install `configobj
+    <http://www.voidspace.org.uk/python/configobj.html>`_ separately.
+
 
 The plan
 --------

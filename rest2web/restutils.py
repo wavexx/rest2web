@@ -25,6 +25,7 @@ import os
 import sys
 import random
 import locale
+import validate
 from docutils import core
 
 # do a quick test that we have a recent enough version of docutils
@@ -50,6 +51,7 @@ __all__ = (
         'interactive',
         'comparefiles',
         'decode',
+        'istrue'
         )
 
 def gen_prefix(length = 4):
@@ -268,6 +270,10 @@ def listswap(inlist, val1, val2):
         i += 1
         if inlist[i] == val1:
             inlist[i] = val2
+
+def istrue(string):
+    v = validate.Validator()
+    return v.check('boolean', string)
 
 def interactive(localvars=None):
     """Interactive interpreter for debugging."""

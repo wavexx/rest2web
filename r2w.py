@@ -52,6 +52,7 @@ import time
 import imp
 from StringIO import StringIO
 from traceback import print_exc
+from configobj import ConfigObj
 
 # add the pythonutils directory to the path
 # in case it's not properly installed
@@ -59,15 +60,13 @@ if os.path.isdir('pythonutils'):
     sys.path.append(os.path.abspath('pythonutils'))
 
 from rest2web.pythonutils.standout import StandOut
-from rest2web.pythonutils.configobj import ConfigObj
-from rest2web.pythonutils.cgiutils import istrue
 
 import rest2web
 from rest2web import __version__
 from rest2web.restprocessor import Processor
 from rest2web.command_line import handle_args
 from rest2web.printing import WARN, ACTION, INFO, OVERRIDE, THRESHOLD, out
-from rest2web.restutils import decode
+from rest2web.restutils import decode, istrue
 
 from rest2web import printing
 

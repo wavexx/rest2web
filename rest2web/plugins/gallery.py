@@ -28,9 +28,9 @@ Requires PIL, pythonutils, and rest2web to be installed
 
 import os
 from copy import deepcopy
+from configobj import ConfigObj
 
 from rest2web.pythonutils.urlpath import relpathto, pathjoin
-from rest2web.pythonutils.configobj import ConfigObj
 from rest2web.embedded_code import render_well
 
 # image imports
