@@ -31,7 +31,6 @@ Changes so far
 The plan
 --------
 
-- RSS plugin to generate feeds from directories.
 - Allow external restindex so that plain "rst" files can be re-used/linked in
   the tree without editing.
 - Integrate aafigure_.
