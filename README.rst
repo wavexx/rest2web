@@ -32,6 +32,12 @@ Changes so far
   * You now need to install `configobj
     <http://www.voidspace.org.uk/python/configobj.html>`_ separately.
 
+- Fixed directory pruning (Debian's #640643):
+
+  * Correctly ignore pruned directories when one of the parent directories
+    doesn't include an index.
+  * Also automatically ignore ``.git``, ``.bzr``, ``.hg`` subdirectories.
+
 
 The plan
 --------
@@ -39,7 +45,6 @@ The plan
 - Allow external restindex so that plain "rst" files can be re-used/linked in
   the tree without editing.
 - Integrate aafigure_.
-- Per-directory overrides and defaults.
 - RSS plugin to generate feeds from directories.
 - Remove configobj.
 - Switch all configuration/restindex/uservalues to YaML.

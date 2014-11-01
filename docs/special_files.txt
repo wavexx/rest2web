@@ -1,8 +1,8 @@
 restindex
     crumb: Special Files
     page-description:
-        A list of all the *special filenames* that **rest2web** uses - and what
-        they are for.
+	A list of all the *special filenames* that **rest2web** uses - and what
+	they are for.
     /description
 /restindex
 
@@ -49,3 +49,4 @@ If a directory has a file called ``__prune__`` in it, then **rest2web** won't at
 
 This is useful if you are testing minor changes to a site, and don't want **rest2web** to rebuild the whole site every time you make a change.
 
+Sub-directories named ``.git``, ``.svn``, ``.hg`` and ``.bzr`` are also automatically skipped.
