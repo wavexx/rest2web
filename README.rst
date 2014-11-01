@@ -32,11 +32,17 @@ Changes so far
   * You now need to install `configobj
     <http://www.voidspace.org.uk/python/configobj.html>`_ separately.
 
+
+Bug fixes
+---------
+
 - Fixed directory pruning (Debian's #640643):
 
   * Correctly ignore pruned directories when one of the parent directories
     doesn't include an index.
   * Also automatically ignore ``.git``, ``.bzr``, ``.hg`` subdirectories.
+
+- Fixed ``.. include::`` path (Debian's #719440).
 
 
 The plan

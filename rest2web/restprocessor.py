@@ -956,7 +956,7 @@ class Processor(object):
                 if 'page-title' in restindex and not self.promote_headers:
                     doctitle = 0
                 entry = html_parts(
-                    content, source_path=filename, input_encoding=encoding,
+                    content, source_path=join(self.dir, filename), input_encoding=encoding,
                     initial_header_level=int(restindex['initialheaderlevel']),
                     doctitle=doctitle)
             except ApplicationError:
