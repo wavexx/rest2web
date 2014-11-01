@@ -293,6 +293,28 @@ class Processor(object):
                     out('Copying "%s".' % entry, ACTION)
                     copy2(src, dest)
 
+
+    def pruned(self, dir_list):
+        if not dir_list:
+            # Skip empty directories
+            return True
+        if '__prune__' in dir_list:
+            # Pruned directories
+            return True
+        return False
+
+
+    def skipentry(self, entry):
+        if entry in ['.svn', '.bzr', '.git', '.hg']:
+            return None
+        path = join(self.dir, entry)
+        if isdir(path):
+            dir_list = os.listdir(path)
+            if self.pruned(dir_list):
+                return None
+        return path
+
+
     def walk(self):
         """
         Walk the directory tree from the start directory.
@@ -337,14 +359,8 @@ class Processor(object):
             self.this_section = []
             # contents of this directory
             dir_list = os.listdir(self.dir or os.curdir)
-            #
-            if '__prune__' in dir_list:
+            if self.pruned(dir_list):
                 continue
-            #
-            if not dir_list:
-                # Skip empty directories
-                continue
-            #
             if self.skip_html and not self.dir:
                 dir_list = [entry for entry in dir_list if not entry.lower() == 'html']
             #
@@ -399,11 +415,9 @@ class Processor(object):
             #
             # process every file in this directory
             for entry in dir_list:
-                # skip '.svn' directories
-                if entry == '.svn':
+                thisentry = self.skipentry(entry)
+                if thisentry is None:
                     continue
-                # a file path
-                thisentry = join(self.dir, entry)
                 subdir = False
                 # we only process files that end with '.txt'
                 if isfile(thisentry) and not entry.endswith('.txt'):
@@ -414,9 +428,6 @@ class Processor(object):
                     # not on windows !
                     continue
                 elif isdir(thisentry):
-                    # skip pruned subdirectories
-                    if isfile(join(thisentry, '__prune__')):
-                        continue
                     # creates a *new* list and adds it to dir_stack
                     dir_stack.append(self.dir_as_list + [entry])
                     #
@@ -493,10 +504,10 @@ class Processor(object):
         # but we need to make sure all the subdirectories get scanned
         # FIXME: do we really want to recurse into subdirectories ?
         for entry in dir_list:
-            # ignore the repository directories
-            if entry == '.svn':
+            path = self.skipentry(entry)
+            if path is None:
                 continue
-            if isdir(join(self.dir, entry)):
+            if isdir(path):
                 # We want to add any subdirectories to the stack
                 # creates a *new* list and adds it to dir_stack
                 dir_stack.append(self.dir_as_list + [entry])
