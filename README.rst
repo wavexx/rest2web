@@ -46,7 +46,6 @@ The plan
   the tree without editing.
 - Integrate aafigure_.
 - RSS plugin to generate feeds from directories.
-- Remove configobj.
 - Switch all configuration/restindex/uservalues to YaML.
 - Use ``setuptools/pkg_resources``.
 - Use jinja2 for templating.
