@@ -33,7 +33,7 @@ class restindexError(SyntaxError):
 true_false_list = ['yes', 'no', 'true', 'false', 'on', 'off', '1', '0']
 
 # keywords that are on or off
-true_false_keywords = ['include', 'build']
+true_false_keywords = ['include', 'build', 'typogrify']
 
 # any keywords that take normal text values
 text_keywords = [
@@ -326,6 +326,7 @@ default_restindex = {
     'tags': [],
     'section-pages': {},
     'plugins': [],
+    'typogrify': 'yes',
     'file': [],
 #    'filemask': [],
 #    'nofile': [],

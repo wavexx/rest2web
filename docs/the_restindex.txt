@@ -3,7 +3,7 @@ restindex
     # we can't call the source file restindex.txt !
     target: restindex.html
     page-description:
-        An explanation of the options and default values in the restindex.
+	An explanation of the options and default values in the restindex.
     /description
 /restindex
 
@@ -15,7 +15,7 @@ restindex
  Controlling rest2web Through the restindex
 --------------------------------------------
 
-.. contents:: The restindex 
+.. contents:: The restindex
 
 Introduction
 ============
@@ -31,47 +31,48 @@ This shows every option in the **restindex** - with an example value. In practis
 
 ::
 
-    restindex          
+    restindex
     # this is a comment
-        include: yes 
-        format: html        
-        file-extension: shtml       
-        template: template.txt 
-        template-encoding: utf8
-        index-file: index.txt
-        section:  section name                  
-        link-title: This is the text to use in the link
-        page-title: We *usually* only need a title for HTML
-        page-description: 
-            this is a description
-            It can go across several line
-            And even be indented a bit.
-            It will be interpreted as *reST*.
-        /description
-        crumb: Short Name  
-        build: yes
-        initialheaderlevel: 1
-        tags: keyword1, keyword2, keyword3
-        file: filename1
-        file: filename2
-        file: filename3
-        target: thisfile.html   
-        encoding: utf8  
-        output-encoding: utf8 
-        sectionlist: section-name1, section-name2, section-name3
-        section-pages: section-name1, page1, page2, page3
-        section-title: section-name1, title
-        section-description: section-name1
-            This is also a description.
-            
-        /description
-        section-pages: , page1, page2, page3
-        section-title: , Default Section Title
-        # note the leading ',' to specify the default section
-        section-description: 
-            Default section description.
-            
-        /description        
+	include: yes
+	format: html
+	file-extension: shtml
+	template: template.txt
+	template-encoding: utf8
+	index-file: index.txt
+	section:  section name
+	link-title: This is the text to use in the link
+	page-title: We *usually* only need a title for HTML
+	page-description:
+	    this is a description
+	    It can go across several line
+	    And even be indented a bit.
+	    It will be interpreted as *reST*.
+	/description
+	crumb: Short Name
+	build: yes
+	typogrify: yes
+	initialheaderlevel: 1
+	tags: keyword1, keyword2, keyword3
+	file: filename1
+	file: filename2
+	file: filename3
+	target: thisfile.html
+	encoding: utf8
+	output-encoding: utf8
+	sectionlist: section-name1, section-name2, section-name3
+	section-pages: section-name1, page1, page2, page3
+	section-title: section-name1, title
+	section-description: section-name1
+	    This is also a description.
+
+	/description
+	section-pages: , page1, page2, page3
+	section-title: , Default Section Title
+	# note the leading ',' to specify the default section
+	section-description:
+	    Default section description.
+
+	/description
     /restindex
 
 Every **rest2web** source file must start with a 'restindex' chunk. This tells rest2web how to render the page. If a text file doesn't start with a restindex, it won't be processed.
@@ -96,18 +97,18 @@ Since rest2web 0.5.0, you can put the restindex (and `uservalues <reference/user
 That means that your source documents can contain a restindex *and* still be valid ReStructured Text documents : ::
 
     ..
-        This is a ReST Comment
-        This page is copyright by me, 1941
-        
-        restindex
-            format: html
-            page-title: This is a Phantasmagorical Page
-        /restindex
-        
-        uservalues
-            site_title: My Great Site
-            copyright: A Copyright Message
-        /uservalues
+	This is a ReST Comment
+	This page is copyright by me, 1941
+
+	restindex
+	    format: html
+	    page-title: This is a Phantasmagorical Page
+	/restindex
+
+	uservalues
+	    site_title: My Great Site
+	    copyright: A Copyright Message
+	/uservalues
 
 Due to technical limitations (read laziness), the restindex and the uservalues *must* be the last part of the comment. {sm;:-)}
 
@@ -119,8 +120,8 @@ The keywords are as follows. [#]_ :
 
 #. **include** - include this file in the index ? Should be yes or no. If no, the page is still generated from the template - but not included in the index page.
 
-    This value applies to both normal files and index files. 
-    
+    This value applies to both normal files and index files.
+
     Default value is yes.
 
 
@@ -136,39 +137,39 @@ The keywords are as follows. [#]_ :
 
 #. **template:** - this is the file to use as the template file. Relative locations will be relative to this directory of course. The template is processed for each page - and the body inserted, title created, dynamic elements are processed etc. See note on `Handling Paths`_.
 
-    In an 'index.txt' this can specify the template file for the whole directory (and directories below it as well). 
-    
+    In an 'index.txt' this can specify the template file for the whole directory (and directories below it as well).
+
     The default value for this is 'template.txt'. If none is specified in 'index.txt' and 'template.txt' doesn't exist, then 'template.txt' in the directory above will be tried. (moving up directories until one is found)
 
 
-#. **template-encoding:** - This is the encoding of the specified template file. If an encoding isn't supplied then it will be guessed. 
+#. **template-encoding:** - This is the encoding of the specified template file. If an encoding isn't supplied then it will be guessed.
 
 
 #. **index-file:** - this specifies which page to use as the index file. (This file is used as the source to *build* the index file and as the target to link to in the index for the next level up). If 'index.txt' has this value, then all other values will be read from the restindex of the specified file. See note on `Handling Paths`_.
 
     It only has any meaning in the 'index.txt'. It can be used to specify an alternative page as being the main index page for this directory. The index page in the next level up will link to the target of the specified file.
-    
+
     Default value is 'index.txt'.
 
 
 #. **section:** - This specifies what section this page should appear in, in the relevant index page.
-    
+
     For 'index.txt', the relevant index page is the next level up. The section is the section this index page will appear in, in *the index above* ! Got it ? (So for the 'root index' this value will never be used).
-    
+
     The default value is for a page to be in the ``None`` section.
 
 
 #. **link-title:** - this is the text used in the *link* to this page from the index page.
 
     In an 'index.txt', this will be the link to the index from the next level up.
-    
+
     The page title will be uased as the default value, if none is specified.
 
 
 #. **page-title:** - this is the page title. You should specify the ``page-title`` for index pages *and* for html pages. If the page body is in rest, this value overrides any autogenerated value.
 
     In an 'index.txt' this has the same meaning as in ordinary pages.
-    
+
     There is no default value for this *FIXME: could use the filename ?*
 
 
@@ -182,23 +183,29 @@ The keywords are as follows. [#]_ :
 #. **crumb:** - this is a short name for the page. It will be used for generating the 'breadcrumb' navigation links.
 
     For index pages, this name will form a link back to the page.
-    
+
     The default value is to use the page title [#]_. (Which will usually be too long).
-    
+
     For index pages (or if no page title is available), the filename is used as
     the default crumb instead.
-    
+
 
 #. **target:** - This specifies the target file. This will be the filename of the 'built' file, and the filename linked to in the index. If this keyword is used, the 'file-extension' keyword is ignored. (So a file extension must be included in the value for this keyword). The target can be a relative path to the file. See note on `Handling Paths`_.
 
-    This value applies equally to 'index.txt' as other files. 
+    This value applies equally to 'index.txt' as other files.
 
-    The default value is the filename, minus '.txt', plus the value of the 'file-extension' keyword. 
+    The default value is the filename, minus '.txt', plus the value of the 'file-extension' keyword.
 
 
 #. **build:** - This should be 'yes' or 'no'. This allows you to specify that a file is not to be built, but should be included in the index. This allows you to include prebuilt files in the index.  In conjunction with the target keyword, it can be used to link to files in other locations.
 
-    This value applies equally to 'index.txt' as other files. 
+    This value applies equally to 'index.txt' as other files.
+
+    The default value is 'yes'.
+
+#. **typogrify:** - Apply the typogrify filter to the final page.
+
+    This value applies equally to 'index.txt' as other files.
 
     The default value is 'yes'.
 
@@ -206,50 +213,50 @@ The keywords are as follows. [#]_ :
    this value is passed to docutils when the page is built. This specifies the
    starting level (``h1``, ``h2``  etc) for headers in the page.
 
-    This value applies equally to 'index.txt' as other files. 
+    This value applies equally to 'index.txt' as other files.
 
     The default value is '1'.
 
 #. **encoding** - this is the encoding of the file. The value must be a recognised python standard encoding.
 
-    This value applies equally to an index file. 
-    
+    This value applies equally to an index file.
+
     The default value is to ignore encoding and leave the 'subtools' (docutils) to guess encoding.
 
 
-#. **output-encoding** - this is the encoding the page is written out as. The ``output-encoding`` ought to match the encoding used for the template ! The value must be a recognised python standard encoding, or one of two special values. **unicode** means don't encode the page - but present it to the template as a unicode string. **None** means use the encoding the page was originally encoded with. 
+#. **output-encoding** - this is the encoding the page is written out as. The ``output-encoding`` ought to match the encoding used for the template ! The value must be a recognised python standard encoding, or one of two special values. **unicode** means don't encode the page - but present it to the template as a unicode string. **None** means use the encoding the page was originally encoded with.
 
     This value applies equally to an index file. Setting it in an index file will set this value as the default for the whole directory *and* any subdirectories. (Unless an alternative is explicitly specified).
-    
+
     The default value is 'None', which encodes the page using the encoding the page was originally encoded with. If a value is specified in any of the index pages above this page, then that will be used *instead* of the default.
-    
+
     .. warning::
-    
-        Not including this keyword *is not* the same as including the keyword with no value.
-        
-        Not including it will cause the default for this directory to be used. 
-        
-        Including it, but leaving it empty is the same as specifying ``None``.
+
+	Not including this keyword *is not* the same as including the keyword with no value.
+
+	Not including it will cause the default for this directory to be used.
+
+	Including it, but leaving it empty is the same as specifying ``None``.
 
 
 #. **sectionlist:** - This is a list of different sections for an index page. Links to pages in this directory appear in these different sections. The names should be unique as they will be used as "id's" to reference the section in the index.
 
     This value *only* has meaning in an index page.
-    
+
     The default value is to have a single section referenced as 'default' if it isn't named.
 
 
 #. **section-title:** - This is how you specify the title for each section. The first value is the nameof the section, followed by the title to be used for the section. This can be made into a link back up to a section table at the top of the index page. You can have multiple section titles, one per section.
 
     This value *only* has meaning in an index page.
-    
-    The default value is to use the section name as the title. (In 'Title-Case').  
+
+    The default value is to use the section name as the title. (In 'Title-Case').
 
 
-#. **section-pages** - This specifies the *order* that pages appear in the section, for example in sidebars and in the ``sections`` data structure (used by the ``print_details`` `standard function`_). 
+#. **section-pages** - This specifies the *order* that pages appear in the section, for example in sidebars and in the ``sections`` data structure (used by the ``print_details`` `standard function`_).
 
    The first value is the section name (or a leading comma for the default section). You use the filename (minus the '.txt') to specify a page. You don't have to list all the pages - but including a page that doesn't exist will raise an error. The pages you specify will appear in that order, followed by the rest of the pages in an arbitrary order.
-   
+
    If you want to specify a subdirectory then use the directory name followed by 'index'. For example - ``subdirectory/index``.
 
     This value *only* has meaning in an index page.
@@ -267,14 +274,14 @@ The keywords are as follows. [#]_ :
 #. **tags** - This option takes a list of keywords that applies to the page. You can then use this list in your template and pages. (E.g. for the ``meta type="keywords"`` data).
 
     This value applies equally to an index file.
-    
+
     The default value is for it to be an empty list.
 
 
 #. **file** - This option specifies an additonal file to copy from the source directory to the same directory as the target file. You can use this keyword multiple times in the restindex.
 
     This value applies equally to an index file.
-    
+
     The default is for no additional files to be copied.
 
 #. **plugins** - A list of plugins that should be applied to the page. See the plugins_ page for more details.
@@ -289,14 +296,14 @@ First - the 'index.txt' file can contain the content, but have a *target* value 
 Alternatively, 'index.txt' can have an *index-file* value. This will specify an alternative file that is to be used as the index page. In this case *all* the other values in 'index.txt' will be ignored and the values from the specified file will be used. This means the restindex will be very short : ::
 
     restindex
-        index-file: anotherfile.txt
+	index-file: anotherfile.txt
     /restindex
 
 
 Handling Paths
 ==============
 
-Windows, Linux, and the Mac, all handle paths differently. rest2web uses the file structure on disk to represent the structure of the website [#]_. This means we are using the same relative file paths to represent the file path on the local computer (on which rest2web is running) and the links within the website. Because the different OS's represent filepaths differently - we have a conflict between specifing file paths and urls. 
+Windows, Linux, and the Mac, all handle paths differently. rest2web uses the file structure on disk to represent the structure of the website [#]_. This means we are using the same relative file paths to represent the file path on the local computer (on which rest2web is running) and the links within the website. Because the different OS's represent filepaths differently - we have a conflict between specifing file paths and urls.
 
 A few of the restindex keywords expect a path. Specifically ``template``, ``index-file``, and ``target``. ``template`` is always a filepath - because it specifies a file which is built into other pages. This means it can be specified as an absolute location - or using a native, relative file path.
 
@@ -326,4 +333,3 @@ Footnotes
 .. _tutorial: tutorial.html
 .. _standard function: functions.html
 .. _plugins: reference/plugins.html
-

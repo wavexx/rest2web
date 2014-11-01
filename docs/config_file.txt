@@ -54,6 +54,7 @@ The basic list of config options is :
 * *'macros'*
 * *'Macro Paths'*
 * *'psyco'*
+* *'typogrify'*
 * *'pause'*
 * *'promote_headers'*
 * *'DEBUG'* (optional)
@@ -151,6 +152,15 @@ Not having *psyco* installled and setting this value to ``True`` will have no ef
     
     You can obtain precompiled binaries for windows from
     `www.voidspace.org.uk/python/modules.shtml#psyco <http://www.voidspace.org.uk/python/modules.shtml#psyco>`_.
+
+
+typogrify
+=========
+
+*'typogrify'* should be set to ``True`` or ``False``. If ``True``, **rest2web** will post-process all html files using typogrify_. Both typogrify_ and smartypants_ need to be installed. You can control this setting on a per-file basis with the *'typogrify'* keyword in the restindex.
+
+.. _typogrify: https://github.com/mintchaos/typogrify/
+.. _smartypants: https://pypi.python.org/pypi/smartypants/
 
 
 pause

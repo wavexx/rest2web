@@ -18,10 +18,20 @@ Changes so far
     normally used in rest2web). **Incompatible change!**
   * ``thumb_dir`` and ``thumb_url`` can be customized.
 
+- Typogrify support:
+
+  * Supports post-processing all the output pages with `Typogrify
+    <https://github.com/mintchaos/typogrify>`_.
+  * A new configuration option ``typogrify`` is available and enabled by
+    default in the configuration file.
+  * Post-processing can also be controlled on a per-directory/page basis with
+    the ``typogrify`` setting in the restindex.
+
 
 The plan
 --------
 
+- RSS plugin to generate feeds from directories.
 - Allow external restindex so that plain "rst" files can be re-used/linked in
   the tree without editing.
 - Integrate aafigure_.

@@ -79,9 +79,9 @@ except NameError:
         newlist = list(inlist)
         newlist.sort()
         return newlist
-    
+
 class SectionDict(OrderedDict):
-    
+
     def sortpages(self, sortorder, section=True):
         if sortorder == 'link-title':
             sortorder = lambda x, y : cmp(x['link-title'], y['link-title'])
@@ -185,6 +185,11 @@ class Processor(object):
         # Set self.force if set at the command line
         self.force = self.force or options['force']
         self.skiperrors = self.skiperrors or options['skiperrors']
+        #
+        self.typogrify = options['typogrify']
+        if self.typogrify:
+            global typogrify
+            import typogrify.filters
 
 
     def setmacros(self, macrofile):
@@ -232,8 +237,8 @@ class Processor(object):
             else:
                 self.last_error = None
                 return val
-    
-    
+
+
     def output_error(self, msg):
         out(msg + '\n' + self.last_error + '\n', WARN)
 
@@ -264,7 +269,7 @@ class Processor(object):
         out('Copying "%s".' % entry, ACTION)
         copy2(src, dest)
 
-    
+
     def copy_filemask(self, filemasks, nofiles, filename, target, index=False):
         # below needs testing thoroughly :-)
         if not index:
@@ -479,9 +484,9 @@ class Processor(object):
         If a directory has no "index.txt" there are certain things to be
         taken care of - so that subdirectories can find the right crumb
         for example.
-        
+
         Returns any sub-directories which should be scanned.
-        
+
         This sets appropriate values in :
             templatedict
             outputencoding
@@ -536,15 +541,15 @@ class Processor(object):
     def setdefaults(self, thelist, toplevel):
         """
         Set the default values for this directory.
-        
+
         This reads default values from 'index.txt'.
         *Some* of these may be used for other entries in the directory.
         (For example members of 'default_keywords', the 'crumb', the template
         used for this directory, etc)
-        
+
         This method is called once per directory, before any of the files
         are processed.
-        
+
         It does the following things:
             remove 'index.txt' *and* the real index file from ``thelist``
             read the restindex from the index file
@@ -556,7 +561,7 @@ class Processor(object):
             returns the information it has obtained about the index page:
                 (index_page, indexfile, restindex, content, target,
                 encoding, final_encoding)
-        
+
         Because we resolve crumbs here we save them as unicode.
         This means we have to detect encoding of the index page.
         """
@@ -779,10 +784,10 @@ class Processor(object):
     def get_real_restindex(self, filename, subdir=False):
         """
         Get the parsed restindex for a directory.
-        
+
         This includes following the 'index-file' value for
         a subdirectory we are including in a section.
-        
+
         Returns: restindex, content, filename
         (or None if there is no restindex)
         """
@@ -821,7 +826,7 @@ class Processor(object):
                 # the real restindex for this directory
                 restindex, content = read_restindex(open(indexfile))
                 if restindex is None:
-                    restindex, _ = self.provide_default_index(indexfile)   
+                    restindex, _ = self.provide_default_index(indexfile)
                 restindex['build'] = 'no'
                 # this is now unix (URL) format
                 filename = pathjoin(thedir + '/', real_index)
@@ -843,18 +848,18 @@ class Processor(object):
         """
         Process a page - ready to be built.
         Return the data structure to add to the current section.
-        
+
         If the file is an index file from a subdirectory
         then set ``subdir = True``
-        
+
         Most of the job is building the right values to put in the namespace
         for when rendering the final page, and also the entry in the index.
         A lot of this is dictated by the restindex.
-        
+
         Some text is saved as unicode. This means that when the details
         of this page are referenced by other pages (i.e. building sidebars)
         they can be converted to the encoding expected by the other page.
-        
+
         Other text will be stored in the ``final_encoding`` expected by the
         page when it is rendered.
         """
@@ -941,7 +946,7 @@ class Processor(object):
                 if 'page-title' in restindex and not self.promote_headers:
                     doctitle = 0
                 entry = html_parts(
-                    content, source_path=filename, input_encoding=encoding, 
+                    content, source_path=filename, input_encoding=encoding,
                     initial_header_level=int(restindex['initialheaderlevel']),
                     doctitle=doctitle)
             except ApplicationError:
@@ -1105,10 +1110,10 @@ class Processor(object):
     def processindex(self):
         """
         Process the index page for a directory.
-        
+
         Most of the work has been done by ``setdefaults``,
         so we just need to put the namespace (etc) together.
-        
+
         This will also establish some data that is going to be made available
         to all the pages in their namespaces, *including* building the
         sections data structure.
@@ -1283,7 +1288,6 @@ class Processor(object):
             #
             namespace = {}
             namespace['title'] = title
-            namespace['body'] = None
             namespace['breadcrumbs'] = breadcrumbs
             namespace['tags'] = [encode(unicode(tag, encoding), final_encoding)
                                         for tag in restindex['tags']]
@@ -1353,10 +1357,10 @@ class Processor(object):
     def buildsection(self):
         """
         Actually build and save the pages for the current directory.
-        
+
         This means put the content into the templates, including processing
         any embedded code.
-        
+
         It must handle all the relative locations and different encodings
         properly. (Particularly for the indextree data structure).
         """
@@ -1417,7 +1421,7 @@ class Processor(object):
                     del namespace['sections'][None]
                 else:
                     namespace['sectionlist'].append(None)
-            namespace['sections'].setkeys(namespace['sectionlist'] or 
+            namespace['sections'].setkeys(namespace['sectionlist'] or
                 namespace['sections'].keys())
             #
             indextree, thispage = self.buildtree(page, final_encoding)
@@ -1461,6 +1465,9 @@ class Processor(object):
                 interactive(namespace)
             add_modules(namespace)
             thepage = render_well(temp_file, namespace, final_encoding=final_encoding)
+            #
+            if self.typogrify and page['restindex']['typogrify']:
+                thepage = typogrify.filters.typogrify(thepage)
             #
             # if final_encoding was ``None`` thepage is now unicode
             # so we need to re-encode
@@ -1507,7 +1514,7 @@ class Processor(object):
             # FIXME: Warning, encoding isn't handled
             for entry in ('restindex', 'uservalues', 'source_file', 'current_dir', 'target_dir',
                           'full_page_url', 'target_file'):
-                newpage[entry] = page[entry]    
+                newpage[entry] = page[entry]
             #
             if not page['index']:
                 if secs.has_key(page['section']):
@@ -1516,7 +1523,7 @@ class Processor(object):
                     secs[page['section']] = [newpage]
             else:
                 this_sect.update(newpage)
-        # Order of pages in this list should follow 
+        # Order of pages in this list should follow
         # sectionlist and section-pages
         pages = []
         for sec in sectionlist or [None]:
@@ -1653,7 +1660,7 @@ class Processor(object):
     def order_pages(self, sections):
         """
         Order the pages in each section as 'section-pages' (if specified).
-        
+
         Additionally, create a list of all the pages in order.
         """
         self.page_index = []
@@ -1691,19 +1698,19 @@ def sort_page(inpage, encoding):
     # FIXME: Warning, encoding isn't handled
     for entry in ('restindex', 'uservalues', 'source_file', 'current_dir', 'target_dir',
                   'full_page_url', 'target_file'):
-        outpage[entry] = inpage[entry]    
+        outpage[entry] = inpage[entry]
     return outpage
 
 def handle_sections(sections, encoding, cur_loc, target):
     """
     Given a 'sections' datastructure appropriately encode.
-    
+
     The 'sections' data structure is a dictionary of dictionaries.
     All the members are unicode strings, or lists of unicode strings... etc.
-    
+
     This function returns a new data structure
     with all the unicode turned to encoded strings. (unless encoding is None)
-    
+
     This *also* handles making the targets to all of the pages relative
     to the right location.
     """
@@ -1736,7 +1743,7 @@ def handle_sections(sections, encoding, cur_loc, target):
             # FIXME: Warning, encoding isn't handled
             for entry in ('restindex', 'uservalues', 'source_file', 'current_dir', 'target_dir',
                           'full_page_url', 'target_file'):
-                newpage[entry] = page[entry]    
+                newpage[entry] = page[entry]
             new_sect['pages'].append(newpage)
         out_dict[enc_entry] = new_sect
     return out_dict

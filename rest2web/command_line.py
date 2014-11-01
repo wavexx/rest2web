@@ -51,6 +51,7 @@ DEFAULTS = {
     'force': False,
     'nopause': False,
     'skiperrors': False,
+    'typogrify': True,
 }
 
 usage = "%prog [options] config_file"

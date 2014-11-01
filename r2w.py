@@ -159,6 +159,12 @@ if __name__ == '__main__':
         except ImportError:
             out('Cannot find Psyco, skipping it', INFO)
     #
+    options['typogrify'] = istrue(config.get('typogrify', 'True'))
+    if options['typogrify']:
+        import typogrify.filters
+        import smartypants
+        smartypants.Attr.default |= smartypants.Attr.w
+    #
     out(versionstring, INFO)
     out('Running rest2web the Site Builder.', INFO)
     # for the logfile
