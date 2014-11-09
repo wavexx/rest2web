@@ -29,10 +29,10 @@ Requires PIL, pythonutils, and rest2web to be installed
 import os
 from posixpath import join as posixjoin
 from copy import deepcopy
+from configobj import ConfigObj
 
 from rest2web.pythonutils.urlpath import relpathto, pathjoin
-from rest2web.pythonutils.configobj import ConfigObj
-from rest2web.pythonutils.cgiutils import replace
+from rest2web.restutils import replace
 
 # image imports
 try:

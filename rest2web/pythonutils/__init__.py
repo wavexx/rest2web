@@ -24,7 +24,6 @@ It doesn't import cgiutils or validate.
 """
 
 from listquote import *
-from configobj import *
 from pathutils import *
 from standout import *
 from urlpath import *

@@ -25,6 +25,7 @@ import os
 import sys
 import random
 import locale
+import validate
 from docutils import core
 
 # do a quick test that we have a recent enough version of docutils
@@ -50,6 +51,8 @@ __all__ = (
         'interactive',
         'comparefiles',
         'decode',
+        'istrue',
+        'replace'
         )
 
 def gen_prefix(length = 4):
@@ -268,6 +271,34 @@ def listswap(inlist, val1, val2):
         i += 1
         if inlist[i] == val1:
             inlist[i] = val2
+
+def istrue(string):
+    v = validate.Validator()
+    return v.check('boolean', string)
+
+def replace(instring, indict):
+    """
+    This function provides a simple but effective template system for your html
+    pages. Effectively it is a convenient way of doing multiple replaces in a
+    single string.
+
+    Takes a string and a dictionary of replacements.
+
+    This function goes through the string and replaces every occurrence of every
+    dicitionary key with it's value.
+
+    ``indict`` can also be a list of tuples instead of a dictionary (or anything
+    accepted by the dict function).
+    """
+    indict = dict(indict)
+    if len(indict) > 40:
+        regex = re.compile("(%s)" % "|".join(map(re.escape, indict.keys())))
+        # For each match, look-up corresponding value in dictionary
+        return regex.sub(lambda mo: indict[mo.string[mo.start():mo.end()]],
+                                                                    instring)
+    for key in indict:
+        instring = instring.replace(key, indict[key])
+    return instring
 
 def interactive(localvars=None):
     """Interactive interpreter for debugging."""
