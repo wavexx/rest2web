@@ -5,6 +5,13 @@ This is a fork of rest2web_ based off 0.5.2 alpha (r248), the last available
 "development" release taken from SVN, which is also the same version as
 currently available on Debian.
 
+This repository contains two `independent` branches:
+
+:master: Development branch of "rest2web extended", which contains several
+	 changes in the original behavior (documented below).
+:rest2web-fixes: Contains the last `rest2web` stable release, with all the
+		 applicable bugfixes backported.
+
 
 Changes so far
 --------------
