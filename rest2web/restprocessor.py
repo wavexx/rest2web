@@ -1478,7 +1478,7 @@ class Processor(object):
             thepage = render_well(temp_file, namespace, final_encoding=final_encoding)
             #
             if self.typogrify and page['restindex']['typogrify']:
-                thepage = typogrify.filters.typogrify(thepage)
+                thepage = typogrify.filters.typogrify(thepage, ['title', 'tt', 'pre', 'code'])
             #
             # if final_encoding was ``None`` thepage is now unicode
             # so we need to re-encode
