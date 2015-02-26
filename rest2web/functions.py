@@ -23,6 +23,7 @@
 
 import os
 import urllib
+import HTMLParser
 
 __all__ = (
         'sidebar',
@@ -32,6 +33,7 @@ __all__ = (
         'section_contents',
         'formattime',
         'include',
+        'strip_tags',
             )
 
 uservalues = {}
@@ -506,6 +508,42 @@ def include(filename, alternative=None):
     if not os.path.isfile(filename) and alternative is not None:
         return alternative
     return open(filename).read() 
+
+
+
+class MLStripper(HTMLParser.HTMLParser):
+    def __init__(self):
+        self.reset()
+        self.fed = []
+
+    def handle_data(self, d):
+        self.fed.append(d)
+
+    def handle_entityref(self, name):
+        self.fed.append('&%s;' % name)
+
+    def handle_charref(self, name):
+        self.fed.append('&#%s;' % name)
+
+    def get_data(self):
+        return ''.join(self.fed)
+
+
+def strip_tags(value):
+    """
+    Strip tags from the supplied string.
+    """
+    s = MLStripper()
+    try:
+        s.feed(value)
+    except HTMLParseError:
+        return value
+    try:
+        s.close()
+    except HTMLParseError:
+        return s.get_data() + s.rawdata
+    else:
+        return s.get_data()
 
 
 """

@@ -36,6 +36,7 @@ from posixpath import split as posixsplit
 from StringIO import StringIO
 
 from rest2web import functions
+from rest2web.functions import strip_tags
 from rest2web import textmacros
 from rest2web.restutils import *
 from rest2web.restindex import read_restindex, default_keywords, default_restindex
@@ -967,7 +968,7 @@ class Processor(object):
                     'html_body': '',
                 }
             # FIXME: defaults to '' in the absence of a title
-            title = title or entry['title'] or ''
+            title = title or strip_tags(entry['title']) or ''
             # extract the body
             body = entry['html_body']
             rest_dict = entry
@@ -1261,7 +1262,7 @@ class Processor(object):
                     input_encoding = encoding, initial_header_level=int(restindex['initialheaderlevel']),
                     doctitle=doctitle)
                 # FIXME: defaults to '' in the absence of a title
-                title = title or entry['title'] or ''
+                title = title or strip_tags(entry['title']) or ''
                 # extract the body
                 body = entry['html_body']
                 rest_dict = entry
