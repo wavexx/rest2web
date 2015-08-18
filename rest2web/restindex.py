@@ -194,7 +194,7 @@ def read_restindex(infile):
         #
         if line == '/restindex':
             # the end
-            body = thefile[index+1:]
+            body = [''] * (index+1) + thefile[index+1:]
             return restindex, '\n'.join(body)
         #
         if line.find(':') == -1:

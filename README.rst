@@ -39,6 +39,11 @@ Changes so far
   * You now need to install `configobj
     <http://www.voidspace.org.uk/python/configobj.html>`_ separately.
 
+- Correct line numbers in ``docutils`` parsing errors:
+
+  When emitting parsing errors, line numbers as shown reflect the real line
+  numbers in the source file.
+
 
 Bug fixes
 ---------
